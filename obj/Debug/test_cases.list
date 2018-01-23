@@ -1,0 +1,14 @@
+GAS LISTING /tmp/cccHIYv1.s 			page 1
+
+
+   1              		.file	"test_cases.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              	.Letext0:
+GAS LISTING /tmp/cccHIYv1.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 test_cases.cpp
+
+NO UNDEFINED SYMBOLS

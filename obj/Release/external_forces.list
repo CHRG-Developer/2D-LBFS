@@ -1,0 +1,327 @@
+GAS LISTING /tmp/cc4qTWli.s 			page 1
+
+
+   1              		.file	"external_forces.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN15external_forcesD2Ev
+  11              	_ZN15external_forcesD2Ev:
+  12              	.LFB20:
+  13              		.cfi_startproc
+  14 0000 48C70700 		movq	$_ZTV15external_forces+16, (%rdi)
+  14      000000
+  15 0007 488B7F08 		movq	8(%rdi), %rdi
+  16 000b 4885FF   		testq	%rdi, %rdi
+  17 000e 7408     		je	.L1
+  18 0010 E9000000 		jmp	_ZdaPv
+  18      00
+  19              		.p2align 4,,10
+  20 0015 0F1F00   		.p2align 3
+  21              	.L1:
+  22 0018 F3C3     		rep ret
+  23              		.cfi_endproc
+  24              	.LFE20:
+  26              		.section	.text.unlikely
+  27              	.LCOLDE0:
+  28              		.text
+  29              	.LHOTE0:
+  30              		.globl	_ZN15external_forcesD1Ev
+  31              		.set	_ZN15external_forcesD1Ev,_ZN15external_forcesD2Ev
+  32              		.section	.text.unlikely
+  33              		.align 2
+  34              	.LCOLDB1:
+  35              		.text
+  36              	.LHOTB1:
+  37              		.align 2
+  38 001a 660F1F44 		.p2align 4,,15
+  38      0000
+  39              		.globl	_ZN15external_forcesD0Ev
+  41              	_ZN15external_forcesD0Ev:
+  42              	.LFB22:
+  43              		.cfi_startproc
+  44 0020 53       		pushq	%rbx
+  45              		.cfi_def_cfa_offset 16
+  46              		.cfi_offset 3, -16
+  47 0021 4889FB   		movq	%rdi, %rbx
+  48 0024 48C70700 		movq	$_ZTV15external_forces+16, (%rdi)
+  48      000000
+  49 002b 488B7F08 		movq	8(%rdi), %rdi
+  50 002f 4885FF   		testq	%rdi, %rdi
+  51 0032 7405     		je	.L5
+  52 0034 E8000000 		call	_ZdaPv
+  52      00
+  53              	.L5:
+  54 0039 4889DF   		movq	%rbx, %rdi
+  55 003c 5B       		popq	%rbx
+GAS LISTING /tmp/cc4qTWli.s 			page 2
+
+
+  56              		.cfi_def_cfa_offset 8
+  57 003d E9000000 		jmp	_ZdlPv
+  57      00
+  58              		.cfi_endproc
+  59              	.LFE22:
+  61              		.section	.text.unlikely
+  62              	.LCOLDE1:
+  63              		.text
+  64              	.LHOTE1:
+  65              		.section	.text.unlikely
+  66              		.align 2
+  67              	.LCOLDB2:
+  68              		.text
+  69              	.LHOTB2:
+  70              		.align 2
+  71 0042 0F1F4000 		.p2align 4,,15
+  71      662E0F1F 
+  71      84000000 
+  71      0000
+  72              		.globl	_ZN15external_forcesC2Ei
+  74              	_ZN15external_forcesC2Ei:
+  75              	.LFB17:
+  76              		.cfi_startproc
+  77 0050 53       		pushq	%rbx
+  78              		.cfi_def_cfa_offset 16
+  79              		.cfi_offset 3, -16
+  80 0051 48B80000 		movabsq	$1143914305352105984, %rax
+  80      00000000 
+  80      E00F
+  81 005b 897710   		movl	%esi, 16(%rdi)
+  82 005e 4863F6   		movslq	%esi, %rsi
+  83 0061 48C70700 		movq	$_ZTV15external_forces+16, (%rdi)
+  83      000000
+  84 0068 4839C6   		cmpq	%rax, %rsi
+  85 006b 7716     		ja	.L11
+  86 006d 4889FB   		movq	%rdi, %rbx
+  87 0070 488D3CF5 		leaq	0(,%rsi,8), %rdi
+  87      00000000 
+  88 0078 E8000000 		call	_Znam
+  88      00
+  89 007d 48894308 		movq	%rax, 8(%rbx)
+  90 0081 5B       		popq	%rbx
+  91              		.cfi_remember_state
+  92              		.cfi_def_cfa_offset 8
+  93 0082 C3       		ret
+  94              	.L11:
+  95              		.cfi_restore_state
+  96 0083 E8000000 		call	__cxa_throw_bad_array_new_length
+  96      00
+  97              		.cfi_endproc
+  98              	.LFE17:
+ 100              		.section	.text.unlikely
+ 101              	.LCOLDE2:
+ 102              		.text
+ 103              	.LHOTE2:
+ 104              		.globl	_ZN15external_forcesC1Ei
+ 105              		.set	_ZN15external_forcesC1Ei,_ZN15external_forcesC2Ei
+GAS LISTING /tmp/cc4qTWli.s 			page 3
+
+
+ 106              		.section	.text.unlikely
+ 107              		.align 2
+ 108              	.LCOLDB3:
+ 109              		.text
+ 110              	.LHOTB3:
+ 111              		.align 2
+ 112 0088 0F1F8400 		.p2align 4,,15
+ 112      00000000 
+ 113              		.globl	_ZN15external_forces17set_uniform_forceEd
+ 115              	_ZN15external_forces17set_uniform_forceEd:
+ 116              	.LFB23:
+ 117              		.cfi_startproc
+ 118 0090 8B5710   		movl	16(%rdi), %edx
+ 119 0093 85D2     		testl	%edx, %edx
+ 120 0095 0F8EB600 		jle	.L14
+ 120      0000
+ 121 009b 488B7708 		movq	8(%rdi), %rsi
+ 122 009f 4889F0   		movq	%rsi, %rax
+ 123 00a2 48C1E03C 		salq	$60, %rax
+ 124 00a6 48C1E83F 		shrq	$63, %rax
+ 125 00aa 39D0     		cmpl	%edx, %eax
+ 126 00ac 0F47C2   		cmova	%edx, %eax
+ 127 00af 83FA06   		cmpl	$6, %edx
+ 128 00b2 0F8FA800 		jg	.L35
+ 128      0000
+ 129 00b8 89D0     		movl	%edx, %eax
+ 130              	.L16:
+ 131 00ba 83F801   		cmpl	$1, %eax
+ 132 00bd F20F1106 		movsd	%xmm0, (%rsi)
+ 133 00c1 0F84A900 		je	.L26
+ 133      0000
+ 134 00c7 83F802   		cmpl	$2, %eax
+ 135 00ca F20F1146 		movsd	%xmm0, 8(%rsi)
+ 135      08
+ 136 00cf 0F84AB00 		je	.L27
+ 136      0000
+ 137 00d5 83F803   		cmpl	$3, %eax
+ 138 00d8 F20F1146 		movsd	%xmm0, 16(%rsi)
+ 138      10
+ 139 00dd 0F84AD00 		je	.L28
+ 139      0000
+ 140 00e3 83F804   		cmpl	$4, %eax
+ 141 00e6 F20F1146 		movsd	%xmm0, 24(%rsi)
+ 141      18
+ 142 00eb 0F84AF00 		je	.L29
+ 142      0000
+ 143 00f1 83F805   		cmpl	$5, %eax
+ 144 00f4 F20F1146 		movsd	%xmm0, 32(%rsi)
+ 144      20
+ 145 00f9 0F84B100 		je	.L30
+ 145      0000
+ 146 00ff F20F1146 		movsd	%xmm0, 40(%rsi)
+ 146      28
+ 147 0104 41B80600 		movl	$6, %r8d
+ 147      0000
+ 148              	.L18:
+ 149 010a 39C2     		cmpl	%eax, %edx
+GAS LISTING /tmp/cc4qTWli.s 			page 4
+
+
+ 150 010c 744A     		je	.L36
+ 151              	.L17:
+ 152 010e 29C2     		subl	%eax, %edx
+ 153 0110 89C1     		movl	%eax, %ecx
+ 154 0112 8D7AFE   		leal	-2(%rdx), %edi
+ 155 0115 D1EF     		shrl	%edi
+ 156 0117 83C701   		addl	$1, %edi
+ 157 011a 83FA01   		cmpl	$1, %edx
+ 158 011d 448D0C3F 		leal	(%rdi,%rdi), %r9d
+ 159 0121 7425     		je	.L20
+ 160 0123 660F28C8 		movapd	%xmm0, %xmm1
+ 161 0127 488D0CCE 		leaq	(%rsi,%rcx,8), %rcx
+ 162 012b 31C0     		xorl	%eax, %eax
+ 163 012d 660F14C9 		unpcklpd	%xmm1, %xmm1
+ 164              	.L21:
+ 165 0131 83C001   		addl	$1, %eax
+ 166 0134 4883C110 		addq	$16, %rcx
+ 167 0138 0F2949F0 		movaps	%xmm1, -16(%rcx)
+ 168 013c 39C7     		cmpl	%eax, %edi
+ 169 013e 77F1     		ja	.L21
+ 170 0140 4501C8   		addl	%r9d, %r8d
+ 171 0143 4439CA   		cmpl	%r9d, %edx
+ 172 0146 7409     		je	.L14
+ 173              	.L20:
+ 174 0148 4D63C0   		movslq	%r8d, %r8
+ 175 014b F2420F11 		movsd	%xmm0, (%rsi,%r8,8)
+ 175      04C6
+ 176              	.L14:
+ 177 0151 F3C3     		rep ret
+ 178              		.p2align 4,,10
+ 179 0153 0F1F4400 		.p2align 3
+ 179      00
+ 180              	.L36:
+ 181 0158 F3C3     		rep ret
+ 182 015a 660F1F44 		.p2align 4,,10
+ 182      0000
+ 183              		.p2align 3
+ 184              	.L35:
+ 185 0160 85C0     		testl	%eax, %eax
+ 186 0162 0F8552FF 		jne	.L16
+ 186      FFFF
+ 187 0168 4531C0   		xorl	%r8d, %r8d
+ 188 016b EBA1     		jmp	.L17
+ 189 016d 0F1F00   		.p2align 4,,10
+ 190              		.p2align 3
+ 191              	.L26:
+ 192 0170 41B80100 		movl	$1, %r8d
+ 192      0000
+ 193 0176 EB92     		jmp	.L18
+ 194 0178 0F1F8400 		.p2align 4,,10
+ 194      00000000 
+ 195              		.p2align 3
+ 196              	.L27:
+ 197 0180 41B80200 		movl	$2, %r8d
+ 197      0000
+ 198 0186 EB82     		jmp	.L18
+ 199 0188 0F1F8400 		.p2align 4,,10
+GAS LISTING /tmp/cc4qTWli.s 			page 5
+
+
+ 199      00000000 
+ 200              		.p2align 3
+ 201              	.L28:
+ 202 0190 41B80300 		movl	$3, %r8d
+ 202      0000
+ 203 0196 E96FFFFF 		jmp	.L18
+ 203      FF
+ 204 019b 0F1F4400 		.p2align 4,,10
+ 204      00
+ 205              		.p2align 3
+ 206              	.L29:
+ 207 01a0 41B80400 		movl	$4, %r8d
+ 207      0000
+ 208 01a6 E95FFFFF 		jmp	.L18
+ 208      FF
+ 209 01ab 0F1F4400 		.p2align 4,,10
+ 209      00
+ 210              		.p2align 3
+ 211              	.L30:
+ 212 01b0 41B80500 		movl	$5, %r8d
+ 212      0000
+ 213 01b6 E94FFFFF 		jmp	.L18
+ 213      FF
+ 214              		.cfi_endproc
+ 215              	.LFE23:
+ 217              		.section	.text.unlikely
+ 218              	.LCOLDE3:
+ 219              		.text
+ 220              	.LHOTE3:
+ 221              		.weak	_ZTS15external_forces
+ 222              		.section	.rodata._ZTS15external_forces,"aG",@progbits,_ZTS15external_forces,comdat
+ 223              		.align 16
+ 226              	_ZTS15external_forces:
+ 227 0000 31356578 		.string	"15external_forces"
+ 227      7465726E 
+ 227      616C5F66 
+ 227      6F726365 
+ 227      7300
+ 228              		.weak	_ZTI15external_forces
+ 229              		.section	.rodata._ZTI15external_forces,"aG",@progbits,_ZTI15external_forces,comdat
+ 230              		.align 8
+ 233              	_ZTI15external_forces:
+ 234 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 234      00000000 
+ 235 0008 00000000 		.quad	_ZTS15external_forces
+ 235      00000000 
+ 236              		.weak	_ZTV15external_forces
+ 237              		.section	.rodata._ZTV15external_forces,"aG",@progbits,_ZTV15external_forces,comdat
+ 238              		.align 8
+ 241              	_ZTV15external_forces:
+ 242 0000 00000000 		.quad	0
+ 242      00000000 
+ 243 0008 00000000 		.quad	_ZTI15external_forces
+ 243      00000000 
+ 244 0010 00000000 		.quad	_ZN15external_forcesD1Ev
+ 244      00000000 
+ 245 0018 00000000 		.quad	_ZN15external_forcesD0Ev
+GAS LISTING /tmp/cc4qTWli.s 			page 6
+
+
+ 245      00000000 
+ 246              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 247              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/cc4qTWli.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 external_forces.cpp
+     /tmp/cc4qTWli.s:11     .text:0000000000000000 _ZN15external_forcesD2Ev
+     /tmp/cc4qTWli.s:241    .rodata._ZTV15external_forces:0000000000000000 _ZTV15external_forces
+     /tmp/cc4qTWli.s:11     .text:0000000000000000 _ZN15external_forcesD1Ev
+     /tmp/cc4qTWli.s:41     .text:0000000000000020 _ZN15external_forcesD0Ev
+     /tmp/cc4qTWli.s:74     .text:0000000000000050 _ZN15external_forcesC2Ei
+     /tmp/cc4qTWli.s:74     .text:0000000000000050 _ZN15external_forcesC1Ei
+     /tmp/cc4qTWli.s:115    .text:0000000000000090 _ZN15external_forces17set_uniform_forceEd
+     /tmp/cc4qTWli.s:226    .rodata._ZTS15external_forces:0000000000000000 _ZTS15external_forces
+     /tmp/cc4qTWli.s:233    .rodata._ZTI15external_forces:0000000000000000 _ZTI15external_forces
+
+UNDEFINED SYMBOLS
+_ZdaPv
+_ZdlPv
+_Znam
+__cxa_throw_bad_array_new_length
+_ZTVN10__cxxabiv117__class_type_infoE

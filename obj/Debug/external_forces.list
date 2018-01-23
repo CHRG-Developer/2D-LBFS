@@ -1,0 +1,301 @@
+GAS LISTING /tmp/cciV5SVd.s 			page 1
+
+
+   1              		.file	"external_forces.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              		.align 2
+   5              		.globl	_ZN15external_forcesC2Ei
+   7              	_ZN15external_forcesC2Ei:
+   8              	.LFB4:
+   9              		.file 1 "/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp"
+   1:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** #include "external_forces.h"
+   2:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** #include <stdlib.h>
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** using namespace std;
+   4:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** external_forces::external_forces(int _total_nodes)
+  10              		.loc 1 4 0
+  11              		.cfi_startproc
+  12 0000 55       		pushq	%rbp
+  13              		.cfi_def_cfa_offset 16
+  14              		.cfi_offset 6, -16
+  15 0001 4889E5   		movq	%rsp, %rbp
+  16              		.cfi_def_cfa_register 6
+  17 0004 4883EC10 		subq	$16, %rsp
+  18 0008 48897DF8 		movq	%rdi, -8(%rbp)
+  19 000c 8975F4   		movl	%esi, -12(%rbp)
+  20              	.LBB2:
+  21              		.loc 1 4 0
+  22 000f BA000000 		movl	$_ZTV15external_forces+16, %edx
+  22      00
+  23 0014 488B45F8 		movq	-8(%rbp), %rax
+  24 0018 488910   		movq	%rdx, (%rax)
+   5:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** {
+   6:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     //ctor
+   7:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     total_nodes = _total_nodes;
+  25              		.loc 1 7 0
+  26 001b 488B45F8 		movq	-8(%rbp), %rax
+  27 001f 8B55F4   		movl	-12(%rbp), %edx
+  28 0022 895010   		movl	%edx, 16(%rax)
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     force = new double [total_nodes ];
+  29              		.loc 1 9 0
+  30 0025 488B45F8 		movq	-8(%rbp), %rax
+  31 0029 8B4010   		movl	16(%rax), %eax
+  32 002c 4898     		cltq
+  33 002e 48BA0000 		movabsq	$1143914305352105984, %rdx
+  33      00000000 
+  33      E00F
+  34 0038 4839D0   		cmpq	%rdx, %rax
+  35 003b 7726     		ja	.L2
+  36              		.loc 1 9 0 is_stmt 0 discriminator 1
+  37 003d 48C1E003 		salq	$3, %rax
+  38 0041 4889C7   		movq	%rax, %rdi
+  39 0044 E8000000 		call	_Znam
+  39      00
+  40 0049 4889C2   		movq	%rax, %rdx
+  41 004c 488B45F8 		movq	-8(%rbp), %rax
+  42 0050 48895008 		movq	%rdx, 8(%rax)
+  10:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     if (force==NULL) exit (1);
+  43              		.loc 1 10 0 is_stmt 1 discriminator 1
+  44 0054 488B45F8 		movq	-8(%rbp), %rax
+GAS LISTING /tmp/cciV5SVd.s 			page 2
+
+
+  45 0058 488B4008 		movq	8(%rax), %rax
+  46 005c 4885C0   		testq	%rax, %rax
+  47 005f 7511     		jne	.L6
+  48 0061 EB05     		jmp	.L5
+  49              	.L2:
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     if (force==NULL) exit (1);
+  50              		.loc 1 9 0 discriminator 2
+  51 0063 E8000000 		call	__cxa_throw_bad_array_new_length
+  51      00
+  52              	.L5:
+  53              		.loc 1 10 0 discriminator 1
+  54 0068 BF010000 		movl	$1, %edi
+  54      00
+  55 006d E8000000 		call	exit
+  55      00
+  56              	.L6:
+  57              	.LBE2:
+  11:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** }
+  58              		.loc 1 11 0
+  59 0072 90       		nop
+  60 0073 C9       		leave
+  61              		.cfi_def_cfa 7, 8
+  62 0074 C3       		ret
+  63              		.cfi_endproc
+  64              	.LFE4:
+  66              		.globl	_ZN15external_forcesC1Ei
+  67              		.set	_ZN15external_forcesC1Ei,_ZN15external_forcesC2Ei
+  68 0075 90       		.align 2
+  69              		.globl	_ZN15external_forcesD2Ev
+  71              	_ZN15external_forcesD2Ev:
+  72              	.LFB7:
+  12:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  13:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** external_forces::~external_forces()
+  73              		.loc 1 13 0
+  74              		.cfi_startproc
+  75 0076 55       		pushq	%rbp
+  76              		.cfi_def_cfa_offset 16
+  77              		.cfi_offset 6, -16
+  78 0077 4889E5   		movq	%rsp, %rbp
+  79              		.cfi_def_cfa_register 6
+  80 007a 4883EC10 		subq	$16, %rsp
+  81 007e 48897DF8 		movq	%rdi, -8(%rbp)
+  82              	.LBB3:
+  83              		.loc 1 13 0
+  84 0082 BA000000 		movl	$_ZTV15external_forces+16, %edx
+  84      00
+  85 0087 488B45F8 		movq	-8(%rbp), %rax
+  86 008b 488910   		movq	%rdx, (%rax)
+  14:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** {
+  15:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     //dtor
+  16:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     delete [] force;
+  87              		.loc 1 16 0
+  88 008e 488B45F8 		movq	-8(%rbp), %rax
+  89 0092 488B4008 		movq	8(%rax), %rax
+  90 0096 4885C0   		testq	%rax, %rax
+  91 0099 7410     		je	.L8
+  92              		.loc 1 16 0 is_stmt 0 discriminator 1
+GAS LISTING /tmp/cciV5SVd.s 			page 3
+
+
+  93 009b 488B45F8 		movq	-8(%rbp), %rax
+  94 009f 488B4008 		movq	8(%rax), %rax
+  95 00a3 4889C7   		movq	%rax, %rdi
+  96 00a6 E8000000 		call	_ZdaPv
+  96      00
+  97              	.L8:
+  17:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     force = NULL;
+  98              		.loc 1 17 0 is_stmt 1
+  99 00ab 488B45F8 		movq	-8(%rbp), %rax
+ 100 00af 48C74008 		movq	$0, 8(%rax)
+ 100      00000000 
+ 101              	.LBE3:
+  18:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** }
+ 102              		.loc 1 18 0
+ 103 00b7 B8000000 		movl	$0, %eax
+ 103      00
+ 104 00bc 85C0     		testl	%eax, %eax
+ 105 00be 740C     		je	.L7
+ 106              		.loc 1 18 0 is_stmt 0 discriminator 1
+ 107 00c0 488B45F8 		movq	-8(%rbp), %rax
+ 108 00c4 4889C7   		movq	%rax, %rdi
+ 109 00c7 E8000000 		call	_ZdlPv
+ 109      00
+ 110              	.L7:
+ 111              		.loc 1 18 0
+ 112 00cc C9       		leave
+ 113              		.cfi_def_cfa 7, 8
+ 114 00cd C3       		ret
+ 115              		.cfi_endproc
+ 116              	.LFE7:
+ 118              		.globl	_ZN15external_forcesD1Ev
+ 119              		.set	_ZN15external_forcesD1Ev,_ZN15external_forcesD2Ev
+ 120              		.align 2
+ 121              		.globl	_ZN15external_forcesD0Ev
+ 123              	_ZN15external_forcesD0Ev:
+ 124              	.LFB9:
+  13:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** {
+ 125              		.loc 1 13 0 is_stmt 1
+ 126              		.cfi_startproc
+ 127 00ce 55       		pushq	%rbp
+ 128              		.cfi_def_cfa_offset 16
+ 129              		.cfi_offset 6, -16
+ 130 00cf 4889E5   		movq	%rsp, %rbp
+ 131              		.cfi_def_cfa_register 6
+ 132 00d2 4883EC10 		subq	$16, %rsp
+ 133 00d6 48897DF8 		movq	%rdi, -8(%rbp)
+ 134              		.loc 1 18 0
+ 135 00da 488B45F8 		movq	-8(%rbp), %rax
+ 136 00de 4889C7   		movq	%rax, %rdi
+ 137 00e1 E8000000 		call	_ZN15external_forcesD1Ev
+ 137      00
+ 138 00e6 488B45F8 		movq	-8(%rbp), %rax
+ 139 00ea 4889C7   		movq	%rax, %rdi
+ 140 00ed E8000000 		call	_ZdlPv
+ 140      00
+ 141 00f2 C9       		leave
+ 142              		.cfi_def_cfa 7, 8
+GAS LISTING /tmp/cciV5SVd.s 			page 4
+
+
+ 143 00f3 C3       		ret
+ 144              		.cfi_endproc
+ 145              	.LFE9:
+ 147              		.align 2
+ 148              		.globl	_ZN15external_forces17set_uniform_forceEd
+ 150              	_ZN15external_forces17set_uniform_forceEd:
+ 151              	.LFB10:
+  19:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  20:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  21:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** void external_forces::set_uniform_force(double magnitude){
+ 152              		.loc 1 21 0
+ 153              		.cfi_startproc
+ 154 00f4 55       		pushq	%rbp
+ 155              		.cfi_def_cfa_offset 16
+ 156              		.cfi_offset 6, -16
+ 157 00f5 4889E5   		movq	%rsp, %rbp
+ 158              		.cfi_def_cfa_register 6
+ 159 00f8 48897DE8 		movq	%rdi, -24(%rbp)
+ 160 00fc F20F1145 		movsd	%xmm0, -32(%rbp)
+ 160      E0
+ 161              	.LBB4:
+  22:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  23:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     for( int i =0; i< total_nodes; i++){
+ 162              		.loc 1 23 0
+ 163 0101 C745FC00 		movl	$0, -4(%rbp)
+ 163      000000
+ 164              	.L13:
+ 165              		.loc 1 23 0 is_stmt 0 discriminator 3
+ 166 0108 488B45E8 		movq	-24(%rbp), %rax
+ 167 010c 8B4010   		movl	16(%rax), %eax
+ 168 010f 3B45FC   		cmpl	-4(%rbp), %eax
+ 169 0112 7E24     		jle	.L14
+  24:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****         force[i] = magnitude;
+ 170              		.loc 1 24 0 is_stmt 1 discriminator 2
+ 171 0114 488B45E8 		movq	-24(%rbp), %rax
+ 172 0118 488B4008 		movq	8(%rax), %rax
+ 173 011c 8B55FC   		movl	-4(%rbp), %edx
+ 174 011f 4863D2   		movslq	%edx, %rdx
+ 175 0122 48C1E203 		salq	$3, %rdx
+ 176 0126 4801D0   		addq	%rdx, %rax
+ 177 0129 F20F1045 		movsd	-32(%rbp), %xmm0
+ 177      E0
+ 178 012e F20F1100 		movsd	%xmm0, (%rax)
+  23:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****         force[i] = magnitude;
+ 179              		.loc 1 23 0 discriminator 2
+ 180 0132 8345FC01 		addl	$1, -4(%rbp)
+ 181 0136 EBD0     		jmp	.L13
+ 182              	.L14:
+ 183              	.LBE4:
+  25:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  26:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp ****     }
+  27:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** 
+  28:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/external_forces.cpp **** }
+ 184              		.loc 1 28 0
+ 185 0138 90       		nop
+ 186 0139 5D       		popq	%rbp
+ 187              		.cfi_def_cfa 7, 8
+GAS LISTING /tmp/cciV5SVd.s 			page 5
+
+
+ 188 013a C3       		ret
+ 189              		.cfi_endproc
+ 190              	.LFE10:
+ 192              		.weak	_ZTV15external_forces
+ 193              		.section	.rodata._ZTV15external_forces,"aG",@progbits,_ZTV15external_forces,comdat
+ 194              		.align 8
+ 197              	_ZTV15external_forces:
+ 198 0000 00000000 		.quad	0
+ 198      00000000 
+ 199 0008 00000000 		.quad	_ZTI15external_forces
+ 199      00000000 
+ 200 0010 00000000 		.quad	_ZN15external_forcesD1Ev
+ 200      00000000 
+ 201 0018 00000000 		.quad	_ZN15external_forcesD0Ev
+ 201      00000000 
+ 202              		.weak	_ZTI15external_forces
+ 203              		.section	.rodata._ZTI15external_forces,"aG",@progbits,_ZTI15external_forces,comdat
+ 204              		.align 8
+ 207              	_ZTI15external_forces:
+ 208 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 208      00000000 
+ 209 0008 00000000 		.quad	_ZTS15external_forces
+ 209      00000000 
+ 210              		.weak	_ZTS15external_forces
+ 211              		.section	.rodata._ZTS15external_forces,"aG",@progbits,_ZTS15external_forces,comdat
+ 212              		.align 16
+ 215              	_ZTS15external_forces:
+ 216 0000 31356578 		.string	"15external_forces"
+ 216      7465726E 
+ 216      616C5F66 
+ 216      6F726365 
+ 216      7300
+ 217              		.text
+ 218              	.Letext0:
+ 219              		.file 2 "include/external_forces.h"
+ 220              		.file 3 "<built-in>"
+GAS LISTING /tmp/cciV5SVd.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 external_forces.cpp
+     /tmp/cciV5SVd.s:7      .text:0000000000000000 _ZN15external_forcesC2Ei
+     /tmp/cciV5SVd.s:197    .rodata._ZTV15external_forces:0000000000000000 _ZTV15external_forces
+     /tmp/cciV5SVd.s:7      .text:0000000000000000 _ZN15external_forcesC1Ei
+     /tmp/cciV5SVd.s:71     .text:0000000000000076 _ZN15external_forcesD2Ev
+     /tmp/cciV5SVd.s:71     .text:0000000000000076 _ZN15external_forcesD1Ev
+     /tmp/cciV5SVd.s:123    .text:00000000000000ce _ZN15external_forcesD0Ev
+     /tmp/cciV5SVd.s:150    .text:00000000000000f4 _ZN15external_forces17set_uniform_forceEd
+     /tmp/cciV5SVd.s:207    .rodata._ZTI15external_forces:0000000000000000 _ZTI15external_forces
+     /tmp/cciV5SVd.s:215    .rodata._ZTS15external_forces:0000000000000000 _ZTS15external_forces
+
+UNDEFINED SYMBOLS
+_Znam
+__cxa_throw_bad_array_new_length
+exit
+_ZdaPv
+_ZdlPv
+_ZTVN10__cxxabiv117__class_type_infoE

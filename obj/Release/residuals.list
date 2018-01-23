@@ -1,0 +1,660 @@
+GAS LISTING /tmp/ccoh7B7t.s 			page 1
+
+
+   1              		.file	"residuals.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN9residualsD2Ev
+  11              	_ZN9residualsD2Ev:
+  12              	.LFB951:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE951:
+  18              		.section	.text.unlikely
+  19              	.LCOLDE0:
+  20              		.text
+  21              	.LHOTE0:
+  22              		.globl	_ZN9residualsD1Ev
+  23              		.set	_ZN9residualsD1Ev,_ZN9residualsD2Ev
+  24              		.section	.text.unlikely
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.text
+  28              	.LHOTB1:
+  29              		.align 2
+  30 0002 0F1F4000 		.p2align 4,,15
+  30      662E0F1F 
+  30      84000000 
+  30      0000
+  31              		.globl	_ZN9residualsD0Ev
+  33              	_ZN9residualsD0Ev:
+  34              	.LFB953:
+  35              		.cfi_startproc
+  36 0010 E9000000 		jmp	_ZdlPv
+  36      00
+  37              		.cfi_endproc
+  38              	.LFE953:
+  40              		.section	.text.unlikely
+  41              	.LCOLDE1:
+  42              		.text
+  43              	.LHOTE1:
+  44              		.section	.text.unlikely
+  45              		.align 2
+  46              	.LCOLDB3:
+  47              		.text
+  48              	.LHOTB3:
+  49 0015 90       		.align 2
+  50 0016 662E0F1F 		.p2align 4,,15
+  50      84000000 
+  50      0000
+  51              		.globl	_ZN9residualsC2Ev
+  53              	_ZN9residualsC2Ev:
+  54              	.LFB948:
+  55              		.cfi_startproc
+  56 0020 660FEFC0 		pxor	%xmm0, %xmm0
+GAS LISTING /tmp/ccoh7B7t.s 			page 2
+
+
+  57 0024 48C70700 		movq	$_ZTV9residuals+16, (%rdi)
+  57      000000
+  58 002b F20F1147 		movsd	%xmm0, 112(%rdi)
+  58      70
+  59 0030 F20F1147 		movsd	%xmm0, 120(%rdi)
+  59      78
+  60 0035 F20F1187 		movsd	%xmm0, 128(%rdi)
+  60      80000000 
+  61 003d C3       		ret
+  62              		.cfi_endproc
+  63              	.LFE948:
+  65              		.section	.text.unlikely
+  66              	.LCOLDE3:
+  67              		.text
+  68              	.LHOTE3:
+  69              		.globl	_ZN9residualsC1Ev
+  70              		.set	_ZN9residualsC1Ev,_ZN9residualsC2Ev
+  71              		.section	.text.unlikely
+  72              		.align 2
+  73              	.LCOLDB4:
+  74              		.text
+  75              	.LHOTB4:
+  76              		.align 2
+  77 003e 6690     		.p2align 4,,15
+  78              		.globl	_ZN9residuals5resetEv
+  80              	_ZN9residuals5resetEv:
+  81              	.LFB954:
+  82              		.cfi_startproc
+  83 0040 660FEFC0 		pxor	%xmm0, %xmm0
+  84 0044 F20F1147 		movsd	%xmm0, 8(%rdi)
+  84      08
+  85 0049 F20F1147 		movsd	%xmm0, 16(%rdi)
+  85      10
+  86 004e F20F1147 		movsd	%xmm0, 24(%rdi)
+  86      18
+  87 0053 F20F1147 		movsd	%xmm0, 32(%rdi)
+  87      20
+  88 0058 F20F1147 		movsd	%xmm0, 40(%rdi)
+  88      28
+  89 005d F20F1147 		movsd	%xmm0, 48(%rdi)
+  89      30
+  90 0062 F20F1147 		movsd	%xmm0, 56(%rdi)
+  90      38
+  91 0067 F20F1147 		movsd	%xmm0, 64(%rdi)
+  91      40
+  92 006c F20F1147 		movsd	%xmm0, 80(%rdi)
+  92      50
+  93 0071 F20F1147 		movsd	%xmm0, 88(%rdi)
+  93      58
+  94 0076 F20F1147 		movsd	%xmm0, 96(%rdi)
+  94      60
+  95 007b F20F1147 		movsd	%xmm0, 104(%rdi)
+  95      68
+  96 0080 C3       		ret
+  97              		.cfi_endproc
+  98              	.LFE954:
+ 100              		.section	.text.unlikely
+GAS LISTING /tmp/ccoh7B7t.s 			page 3
+
+
+ 101              	.LCOLDE4:
+ 102              		.text
+ 103              	.LHOTE4:
+ 104              		.section	.text.unlikely
+ 105              		.align 2
+ 106              	.LCOLDB6:
+ 107              		.text
+ 108              	.LHOTB6:
+ 109 0081 90       		.align 2
+ 110 0082 0F1F4000 		.p2align 4,,15
+ 110      662E0F1F 
+ 110      84000000 
+ 110      0000
+ 111              		.globl	_ZN9residuals21add_l2_norm_residualsEdddddd
+ 113              	_ZN9residuals21add_l2_norm_residualsEdddddd:
+ 114              	.LFB955:
+ 115              		.cfi_startproc
+ 116 0090 660F28F0 		movapd	%xmm0, %xmm6
+ 117 0094 F20F5CF1 		subsd	%xmm1, %xmm6
+ 118 0098 660F28CE 		movapd	%xmm6, %xmm1
+ 119 009c F20F59CE 		mulsd	%xmm6, %xmm1
+ 120 00a0 F20F584F 		addsd	40(%rdi), %xmm1
+ 120      28
+ 121 00a5 F20F114F 		movsd	%xmm1, 40(%rdi)
+ 121      28
+ 122 00aa F20F100D 		movsd	.LC5(%rip), %xmm1
+ 122      00000000 
+ 123 00b2 660F2EC8 		ucomisd	%xmm0, %xmm1
+ 124 00b6 7760     		ja	.L12
+ 125 00b8 F20F59C0 		mulsd	%xmm0, %xmm0
+ 126 00bc F20F5847 		addsd	80(%rdi), %xmm0
+ 126      50
+ 127 00c1 F20F1147 		movsd	%xmm0, 80(%rdi)
+ 127      50
+ 128              	.L8:
+ 129 00c6 660F28C2 		movapd	%xmm2, %xmm0
+ 130 00ca F20F59D2 		mulsd	%xmm2, %xmm2
+ 131 00ce F20F5CC3 		subsd	%xmm3, %xmm0
+ 132 00d2 F20F5857 		addsd	88(%rdi), %xmm2
+ 132      58
+ 133 00d7 F20F59C0 		mulsd	%xmm0, %xmm0
+ 134 00db F20F5847 		addsd	48(%rdi), %xmm0
+ 134      30
+ 135 00e0 F20F1157 		movsd	%xmm2, 88(%rdi)
+ 135      58
+ 136 00e5 F20F1147 		movsd	%xmm0, 48(%rdi)
+ 136      30
+ 137 00ea 660F28C4 		movapd	%xmm4, %xmm0
+ 138 00ee F20F59E4 		mulsd	%xmm4, %xmm4
+ 139 00f2 F20F5CC5 		subsd	%xmm5, %xmm0
+ 140 00f6 F20F5867 		addsd	96(%rdi), %xmm4
+ 140      60
+ 141 00fb F20F59C0 		mulsd	%xmm0, %xmm0
+ 142 00ff F20F5847 		addsd	56(%rdi), %xmm0
+ 142      38
+ 143 0104 F20F58E1 		addsd	%xmm1, %xmm4
+ 144 0108 F20F1167 		movsd	%xmm4, 96(%rdi)
+GAS LISTING /tmp/ccoh7B7t.s 			page 4
+
+
+ 144      60
+ 145 010d F20F1147 		movsd	%xmm0, 56(%rdi)
+ 145      38
+ 146 0112 C3       		ret
+ 147              		.p2align 4,,10
+ 148 0113 0F1F4400 		.p2align 3
+ 148      00
+ 149              	.L12:
+ 150 0118 F20F1047 		movsd	80(%rdi), %xmm0
+ 150      50
+ 151 011d F20F58C1 		addsd	%xmm1, %xmm0
+ 152 0121 F20F1147 		movsd	%xmm0, 80(%rdi)
+ 152      50
+ 153 0126 EB9E     		jmp	.L8
+ 154              		.cfi_endproc
+ 155              	.LFE955:
+ 157              		.section	.text.unlikely
+ 158              	.LCOLDE6:
+ 159              		.text
+ 160              	.LHOTE6:
+ 161              		.section	.text.unlikely
+ 162              		.align 2
+ 163              	.LCOLDB7:
+ 164              		.text
+ 165              	.LHOTB7:
+ 166              		.align 2
+ 167 0128 0F1F8400 		.p2align 4,,15
+ 167      00000000 
+ 168              		.globl	_ZN9residuals9max_errorEv
+ 170              	_ZN9residuals9max_errorEv:
+ 171              	.LFB957:
+ 172              		.cfi_startproc
+ 173 0130 53       		pushq	%rbx
+ 174              		.cfi_def_cfa_offset 16
+ 175              		.cfi_offset 3, -16
+ 176 0131 F20F104F 		movsd	16(%rdi), %xmm1
+ 176      10
+ 177 0136 F20F1047 		movsd	8(%rdi), %xmm0
+ 177      08
+ 178 013b 4889FB   		movq	%rdi, %rbx
+ 179 013e E8000000 		call	fmax
+ 179      00
+ 180 0143 F20F104B 		movsd	24(%rbx), %xmm1
+ 180      18
+ 181 0148 5B       		popq	%rbx
+ 182              		.cfi_def_cfa_offset 8
+ 183 0149 E9000000 		jmp	fmax
+ 183      00
+ 184              		.cfi_endproc
+ 185              	.LFE957:
+ 187              		.section	.text.unlikely
+ 188              	.LCOLDE7:
+ 189              		.text
+ 190              	.LHOTE7:
+ 191              		.section	.text.unlikely
+ 192              		.align 2
+ 193              	.LCOLDB8:
+GAS LISTING /tmp/ccoh7B7t.s 			page 5
+
+
+ 194              		.text
+ 195              	.LHOTB8:
+ 196              		.align 2
+ 197 014e 6690     		.p2align 4,,15
+ 198              		.globl	_ZN9residuals27add_ansys_l2_norm_residualsEddddddd
+ 200              	_ZN9residuals27add_ansys_l2_norm_residualsEddddddd:
+ 201              	.LFB958:
+ 202              		.cfi_startproc
+ 203 0150 F20F5CC1 		subsd	%xmm1, %xmm0
+ 204 0154 F20F5CD3 		subsd	%xmm3, %xmm2
+ 205 0158 F20F5CE5 		subsd	%xmm5, %xmm4
+ 206 015c F20F5EC6 		divsd	%xmm6, %xmm0
+ 207 0160 F20F5ED6 		divsd	%xmm6, %xmm2
+ 208 0164 F20F5EE6 		divsd	%xmm6, %xmm4
+ 209 0168 F20F59C0 		mulsd	%xmm0, %xmm0
+ 210 016c F20F59D2 		mulsd	%xmm2, %xmm2
+ 211 0170 F20F59E4 		mulsd	%xmm4, %xmm4
+ 212 0174 F20F5847 		addsd	40(%rdi), %xmm0
+ 212      28
+ 213 0179 F20F5857 		addsd	48(%rdi), %xmm2
+ 213      30
+ 214 017e F20F5867 		addsd	56(%rdi), %xmm4
+ 214      38
+ 215 0183 F20F1147 		movsd	%xmm0, 40(%rdi)
+ 215      28
+ 216 0188 F20F1157 		movsd	%xmm2, 48(%rdi)
+ 216      30
+ 217 018d F20F1167 		movsd	%xmm4, 56(%rdi)
+ 217      38
+ 218 0192 C3       		ret
+ 219              		.cfi_endproc
+ 220              	.LFE958:
+ 222              		.section	.text.unlikely
+ 223              	.LCOLDE8:
+ 224              		.text
+ 225              	.LHOTE8:
+ 226              		.section	.text.unlikely
+ 227              		.align 2
+ 228              	.LCOLDB9:
+ 229              		.text
+ 230              	.LHOTB9:
+ 231 0193 90       		.align 2
+ 232 0194 6690662E 		.p2align 4,,15
+ 232      0F1F8400 
+ 232      00000000 
+ 233              		.globl	_ZN9residuals11l2_norm_rmsEv
+ 235              	_ZN9residuals11l2_norm_rmsEv:
+ 236              	.LFB956:
+ 237              		.cfi_startproc
+ 238 01a0 53       		pushq	%rbx
+ 239              		.cfi_def_cfa_offset 16
+ 240              		.cfi_offset 3, -16
+ 241 01a1 4889FB   		movq	%rdi, %rbx
+ 242 01a4 4881EC20 		subq	$288, %rsp
+ 242      010000
+ 243              		.cfi_def_cfa_offset 304
+ 244 01ab 4889E7   		movq	%rsp, %rdi
+GAS LISTING /tmp/ccoh7B7t.s 			page 6
+
+
+ 245 01ae 64488B04 		movq	%fs:40, %rax
+ 245      25280000 
+ 245      00
+ 246 01b7 48898424 		movq	%rax, 280(%rsp)
+ 246      18010000 
+ 247 01bf 31C0     		xorl	%eax, %eax
+ 248 01c1 E8000000 		call	_ZN16global_variablesC1Ev
+ 248      00
+ 249 01c6 F20F1053 		movsd	80(%rbx), %xmm2
+ 249      50
+ 250 01cb F20F104C 		movsd	24(%rsp), %xmm1
+ 250      2418
+ 251 01d1 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 252 01d5 0F868D00 		jbe	.L30
+ 252      0000
+ 253 01db 48C74308 		movq	$0, 8(%rbx)
+ 253      00000000 
+ 254              	.L19:
+ 255 01e3 F20F1053 		movsd	88(%rbx), %xmm2
+ 255      58
+ 256 01e8 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 257 01ec 765A     		jbe	.L32
+ 258              	.L22:
+ 259 01ee F20F1053 		movsd	96(%rbx), %xmm2
+ 259      60
+ 260 01f3 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 261 01f7 762F     		jbe	.L33
+ 262              	.L25:
+ 263 01f9 4889E7   		movq	%rsp, %rdi
+ 264 01fc E8000000 		call	_ZN16global_variablesD1Ev
+ 264      00
+ 265 0201 488B8424 		movq	280(%rsp), %rax
+ 265      18010000 
+ 266 0209 64483304 		xorq	%fs:40, %rax
+ 266      25280000 
+ 266      00
+ 267 0212 0F859A00 		jne	.L34
+ 267      0000
+ 268 0218 4881C420 		addq	$288, %rsp
+ 268      010000
+ 269              		.cfi_remember_state
+ 270              		.cfi_def_cfa_offset 16
+ 271 021f 5B       		popq	%rbx
+ 272              		.cfi_def_cfa_offset 8
+ 273 0220 C3       		ret
+ 274              		.p2align 4,,10
+ 275 0221 0F1F8000 		.p2align 3
+ 275      000000
+ 276              	.L33:
+ 277              		.cfi_restore_state
+ 278 0228 F20F1043 		movsd	56(%rbx), %xmm0
+ 278      38
+ 279 022d F20F5EC2 		divsd	%xmm2, %xmm0
+ 280 0231 F20F51C8 		sqrtsd	%xmm0, %xmm1
+ 281 0235 660F2EC9 		ucomisd	%xmm1, %xmm1
+ 282 0239 7A4A     		jp	.L35
+ 283              	.L26:
+GAS LISTING /tmp/ccoh7B7t.s 			page 7
+
+
+ 284 023b F20F114B 		movsd	%xmm1, 24(%rbx)
+ 284      18
+ 285 0240 EBB7     		jmp	.L25
+ 286              		.p2align 4,,10
+ 287 0242 660F1F44 		.p2align 3
+ 287      0000
+ 288              	.L32:
+ 289 0248 F20F1043 		movsd	48(%rbx), %xmm0
+ 289      30
+ 290 024d F20F5EC2 		divsd	%xmm2, %xmm0
+ 291 0251 F20F51D0 		sqrtsd	%xmm0, %xmm2
+ 292 0255 660F2ED2 		ucomisd	%xmm2, %xmm2
+ 293 0259 7A35     		jp	.L36
+ 294              	.L23:
+ 295 025b F20F1153 		movsd	%xmm2, 16(%rbx)
+ 295      10
+ 296 0260 EB8C     		jmp	.L22
+ 297              		.p2align 4,,10
+ 298 0262 660F1F44 		.p2align 3
+ 298      0000
+ 299              	.L30:
+ 300 0268 F20F1043 		movsd	40(%rbx), %xmm0
+ 300      28
+ 301 026d F20F5EC2 		divsd	%xmm2, %xmm0
+ 302 0271 F20F51D0 		sqrtsd	%xmm0, %xmm2
+ 303 0275 660F2ED2 		ucomisd	%xmm2, %xmm2
+ 304 0279 7A26     		jp	.L37
+ 305              	.L20:
+ 306 027b F20F1153 		movsd	%xmm2, 8(%rbx)
+ 306      08
+ 307 0280 E95EFFFF 		jmp	.L19
+ 307      FF
+ 308              	.L35:
+ 309 0285 E8000000 		call	sqrt
+ 309      00
+ 310 028a 660F28C8 		movapd	%xmm0, %xmm1
+ 311 028e EBAB     		jmp	.L26
+ 312              	.L36:
+ 313 0290 E8000000 		call	sqrt
+ 313      00
+ 314 0295 F20F104C 		movsd	24(%rsp), %xmm1
+ 314      2418
+ 315 029b 660F28D0 		movapd	%xmm0, %xmm2
+ 316 029f EBBA     		jmp	.L23
+ 317              	.L37:
+ 318 02a1 E8000000 		call	sqrt
+ 318      00
+ 319 02a6 F20F104C 		movsd	24(%rsp), %xmm1
+ 319      2418
+ 320 02ac 660F28D0 		movapd	%xmm0, %xmm2
+ 321 02b0 EBC9     		jmp	.L20
+ 322              	.L34:
+ 323 02b2 E8000000 		call	__stack_chk_fail
+ 323      00
+ 324              		.cfi_endproc
+ 325              	.LFE956:
+ 327              		.section	.text.unlikely
+GAS LISTING /tmp/ccoh7B7t.s 			page 8
+
+
+ 328              	.LCOLDE9:
+ 329              		.text
+ 330              	.LHOTE9:
+ 331              		.section	.text.unlikely
+ 332              		.align 2
+ 333              	.LCOLDB10:
+ 334              		.text
+ 335              	.LHOTB10:
+ 336 02b7 90       		.align 2
+ 337 02b8 0F1F8400 		.p2align 4,,15
+ 337      00000000 
+ 338              		.globl	_ZN9residuals16ansys_5_iter_rmsEi
+ 340              	_ZN9residuals16ansys_5_iter_rmsEi:
+ 341              	.LFB959:
+ 342              		.cfi_startproc
+ 343 02c0 53       		pushq	%rbx
+ 344              		.cfi_def_cfa_offset 16
+ 345              		.cfi_offset 3, -16
+ 346 02c1 4889FB   		movq	%rdi, %rbx
+ 347 02c4 4881EC20 		subq	$288, %rsp
+ 347      010000
+ 348              		.cfi_def_cfa_offset 304
+ 349 02cb 64488B04 		movq	%fs:40, %rax
+ 349      25280000 
+ 349      00
+ 350 02d4 48898424 		movq	%rax, 280(%rsp)
+ 350      18010000 
+ 351 02dc 31C0     		xorl	%eax, %eax
+ 352 02de 83FE04   		cmpl	$4, %esi
+ 353 02e1 7F42     		jg	.L39
+ 354 02e3 F20F104F 		movsd	112(%rdi), %xmm1
+ 354      70
+ 355 02e8 F20F1047 		movsd	40(%rdi), %xmm0
+ 355      28
+ 356 02ed E8000000 		call	fmax
+ 356      00
+ 357 02f2 F20F104B 		movsd	120(%rbx), %xmm1
+ 357      78
+ 358 02f7 F20F1143 		movsd	%xmm0, 112(%rbx)
+ 358      70
+ 359 02fc F20F1043 		movsd	48(%rbx), %xmm0
+ 359      30
+ 360 0301 E8000000 		call	fmax
+ 360      00
+ 361 0306 F20F108B 		movsd	128(%rbx), %xmm1
+ 361      80000000 
+ 362 030e F20F1143 		movsd	%xmm0, 120(%rbx)
+ 362      78
+ 363 0313 F20F1043 		movsd	56(%rbx), %xmm0
+ 363      38
+ 364 0318 E8000000 		call	fmax
+ 364      00
+ 365 031d F20F1183 		movsd	%xmm0, 128(%rbx)
+ 365      80000000 
+ 366              	.L39:
+ 367 0325 4889E7   		movq	%rsp, %rdi
+ 368 0328 E8000000 		call	_ZN16global_variablesC1Ev
+GAS LISTING /tmp/ccoh7B7t.s 			page 9
+
+
+ 368      00
+ 369 032d F20F1053 		movsd	112(%rbx), %xmm2
+ 369      70
+ 370 0332 F20F104C 		movsd	24(%rsp), %xmm1
+ 370      2418
+ 371 0338 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 372 033c 0F868600 		jbe	.L51
+ 372      0000
+ 373              	.L40:
+ 374 0342 F20F1053 		movsd	120(%rbx), %xmm2
+ 374      78
+ 375 0347 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 376 034b 765B     		jbe	.L52
+ 377              	.L43:
+ 378 034d F20F1093 		movsd	128(%rbx), %xmm2
+ 378      80000000 
+ 379 0355 660F2ECA 		ucomisd	%xmm2, %xmm1
+ 380 0359 762D     		jbe	.L53
+ 381              	.L46:
+ 382 035b 4889E7   		movq	%rsp, %rdi
+ 383 035e E8000000 		call	_ZN16global_variablesD1Ev
+ 383      00
+ 384 0363 488B8424 		movq	280(%rsp), %rax
+ 384      18010000 
+ 385 036b 64483304 		xorq	%fs:40, %rax
+ 385      25280000 
+ 385      00
+ 386 0374 0F859800 		jne	.L54
+ 386      0000
+ 387 037a 4881C420 		addq	$288, %rsp
+ 387      010000
+ 388              		.cfi_remember_state
+ 389              		.cfi_def_cfa_offset 16
+ 390 0381 5B       		popq	%rbx
+ 391              		.cfi_def_cfa_offset 8
+ 392 0382 C3       		ret
+ 393              		.p2align 4,,10
+ 394 0383 0F1F4400 		.p2align 3
+ 394      00
+ 395              	.L53:
+ 396              		.cfi_restore_state
+ 397 0388 F20F1043 		movsd	56(%rbx), %xmm0
+ 397      38
+ 398 038d F20F5EC2 		divsd	%xmm2, %xmm0
+ 399 0391 F20F51C8 		sqrtsd	%xmm0, %xmm1
+ 400 0395 660F2EC9 		ucomisd	%xmm1, %xmm1
+ 401 0399 7A4A     		jp	.L55
+ 402              	.L47:
+ 403 039b F20F114B 		movsd	%xmm1, 24(%rbx)
+ 403      18
+ 404 03a0 EBB9     		jmp	.L46
+ 405              		.p2align 4,,10
+ 406 03a2 660F1F44 		.p2align 3
+ 406      0000
+ 407              	.L52:
+ 408 03a8 F20F1043 		movsd	48(%rbx), %xmm0
+ 408      30
+GAS LISTING /tmp/ccoh7B7t.s 			page 10
+
+
+ 409 03ad F20F5EC2 		divsd	%xmm2, %xmm0
+ 410 03b1 F20F51D0 		sqrtsd	%xmm0, %xmm2
+ 411 03b5 660F2ED2 		ucomisd	%xmm2, %xmm2
+ 412 03b9 7A35     		jp	.L56
+ 413              	.L44:
+ 414 03bb F20F1153 		movsd	%xmm2, 16(%rbx)
+ 414      10
+ 415 03c0 EB8B     		jmp	.L43
+ 416              		.p2align 4,,10
+ 417 03c2 660F1F44 		.p2align 3
+ 417      0000
+ 418              	.L51:
+ 419 03c8 F20F1043 		movsd	40(%rbx), %xmm0
+ 419      28
+ 420 03cd F20F5EC2 		divsd	%xmm2, %xmm0
+ 421 03d1 F20F51D0 		sqrtsd	%xmm0, %xmm2
+ 422 03d5 660F2ED2 		ucomisd	%xmm2, %xmm2
+ 423 03d9 7A26     		jp	.L57
+ 424              	.L41:
+ 425 03db F20F1153 		movsd	%xmm2, 8(%rbx)
+ 425      08
+ 426 03e0 E95DFFFF 		jmp	.L40
+ 426      FF
+ 427              	.L55:
+ 428 03e5 E8000000 		call	sqrt
+ 428      00
+ 429 03ea 660F28C8 		movapd	%xmm0, %xmm1
+ 430 03ee EBAB     		jmp	.L47
+ 431              	.L56:
+ 432 03f0 E8000000 		call	sqrt
+ 432      00
+ 433 03f5 F20F104C 		movsd	24(%rsp), %xmm1
+ 433      2418
+ 434 03fb 660F28D0 		movapd	%xmm0, %xmm2
+ 435 03ff EBBA     		jmp	.L44
+ 436              	.L57:
+ 437 0401 E8000000 		call	sqrt
+ 437      00
+ 438 0406 F20F104C 		movsd	24(%rsp), %xmm1
+ 438      2418
+ 439 040c 660F28D0 		movapd	%xmm0, %xmm2
+ 440 0410 EBC9     		jmp	.L41
+ 441              	.L54:
+ 442 0412 E8000000 		call	__stack_chk_fail
+ 442      00
+ 443              		.cfi_endproc
+ 444              	.LFE959:
+ 446              		.section	.text.unlikely
+ 447              	.LCOLDE10:
+ 448              		.text
+ 449              	.LHOTE10:
+ 450              		.weak	_ZTS9residuals
+ 451              		.section	.rodata._ZTS9residuals,"aG",@progbits,_ZTS9residuals,comdat
+ 452              		.align 8
+ 455              	_ZTS9residuals:
+ 456 0000 39726573 		.string	"9residuals"
+ 456      69647561 
+GAS LISTING /tmp/ccoh7B7t.s 			page 11
+
+
+ 456      6C7300
+ 457              		.weak	_ZTI9residuals
+ 458              		.section	.rodata._ZTI9residuals,"aG",@progbits,_ZTI9residuals,comdat
+ 459              		.align 8
+ 462              	_ZTI9residuals:
+ 463 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 463      00000000 
+ 464 0008 00000000 		.quad	_ZTS9residuals
+ 464      00000000 
+ 465              		.weak	_ZTV9residuals
+ 466              		.section	.rodata._ZTV9residuals,"aG",@progbits,_ZTV9residuals,comdat
+ 467              		.align 8
+ 470              	_ZTV9residuals:
+ 471 0000 00000000 		.quad	0
+ 471      00000000 
+ 472 0008 00000000 		.quad	_ZTI9residuals
+ 472      00000000 
+ 473 0010 00000000 		.quad	_ZN9residualsD1Ev
+ 473      00000000 
+ 474 0018 00000000 		.quad	_ZN9residualsD0Ev
+ 474      00000000 
+ 475              		.section	.rodata.cst8,"aM",@progbits,8
+ 476              		.align 8
+ 477              	.LC5:
+ 478 0000 00000000 		.long	0
+ 479 0004 0000F03F 		.long	1072693248
+ 480              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 481              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccoh7B7t.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 residuals.cpp
+     /tmp/ccoh7B7t.s:11     .text:0000000000000000 _ZN9residualsD2Ev
+     /tmp/ccoh7B7t.s:11     .text:0000000000000000 _ZN9residualsD1Ev
+     /tmp/ccoh7B7t.s:33     .text:0000000000000010 _ZN9residualsD0Ev
+     /tmp/ccoh7B7t.s:53     .text:0000000000000020 _ZN9residualsC2Ev
+     /tmp/ccoh7B7t.s:470    .rodata._ZTV9residuals:0000000000000000 _ZTV9residuals
+     /tmp/ccoh7B7t.s:53     .text:0000000000000020 _ZN9residualsC1Ev
+     /tmp/ccoh7B7t.s:80     .text:0000000000000040 _ZN9residuals5resetEv
+     /tmp/ccoh7B7t.s:113    .text:0000000000000090 _ZN9residuals21add_l2_norm_residualsEdddddd
+     /tmp/ccoh7B7t.s:170    .text:0000000000000130 _ZN9residuals9max_errorEv
+     /tmp/ccoh7B7t.s:200    .text:0000000000000150 _ZN9residuals27add_ansys_l2_norm_residualsEddddddd
+     /tmp/ccoh7B7t.s:235    .text:00000000000001a0 _ZN9residuals11l2_norm_rmsEv
+     /tmp/ccoh7B7t.s:340    .text:00000000000002c0 _ZN9residuals16ansys_5_iter_rmsEi
+     /tmp/ccoh7B7t.s:455    .rodata._ZTS9residuals:0000000000000000 _ZTS9residuals
+     /tmp/ccoh7B7t.s:462    .rodata._ZTI9residuals:0000000000000000 _ZTI9residuals
+     /tmp/ccoh7B7t.s:477    .rodata.cst8:0000000000000000 .LC5
+
+UNDEFINED SYMBOLS
+_ZdlPv
+fmax
+_ZN16global_variablesC1Ev
+_ZN16global_variablesD1Ev
+sqrt
+__stack_chk_fail
+_ZTVN10__cxxabiv117__class_type_infoE

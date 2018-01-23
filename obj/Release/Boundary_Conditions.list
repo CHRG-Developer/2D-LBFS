@@ -1,0 +1,969 @@
+GAS LISTING /tmp/ccgELzE3.s 			page 1
+
+
+   1              		.file	"Boundary_Conditions.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN19Boundary_ConditionsD2Ev
+  11              	_ZN19Boundary_ConditionsD2Ev:
+  12              	.LFB28:
+  13              		.cfi_startproc
+  14 0000 53       		pushq	%rbx
+  15              		.cfi_def_cfa_offset 16
+  16              		.cfi_offset 3, -16
+  17 0001 4889FB   		movq	%rdi, %rbx
+  18 0004 48C70700 		movq	$_ZTV19Boundary_Conditions+16, (%rdi)
+  18      000000
+  19 000b 488B7F08 		movq	8(%rdi), %rdi
+  20 000f 4885FF   		testq	%rdi, %rdi
+  21 0012 7405     		je	.L2
+  22 0014 E8000000 		call	_ZdaPv
+  22      00
+  23              	.L2:
+  24 0019 488B7B10 		movq	16(%rbx), %rdi
+  25 001d 48C74308 		movq	$0, 8(%rbx)
+  25      00000000 
+  26 0025 4885FF   		testq	%rdi, %rdi
+  27 0028 7405     		je	.L3
+  28 002a E8000000 		call	_ZdaPv
+  28      00
+  29              	.L3:
+  30 002f 488B7B20 		movq	32(%rbx), %rdi
+  31 0033 48C74310 		movq	$0, 16(%rbx)
+  31      00000000 
+  32 003b 4885FF   		testq	%rdi, %rdi
+  33 003e 7405     		je	.L4
+  34 0040 E8000000 		call	_ZdaPv
+  34      00
+  35              	.L4:
+  36 0045 488B7B28 		movq	40(%rbx), %rdi
+  37 0049 48C74320 		movq	$0, 32(%rbx)
+  37      00000000 
+  38 0051 4885FF   		testq	%rdi, %rdi
+  39 0054 7405     		je	.L5
+  40 0056 E8000000 		call	_ZdaPv
+  40      00
+  41              	.L5:
+  42 005b 488B7B18 		movq	24(%rbx), %rdi
+  43 005f 48C74328 		movq	$0, 40(%rbx)
+  43      00000000 
+  44 0067 4885FF   		testq	%rdi, %rdi
+  45 006a 7405     		je	.L6
+  46 006c E8000000 		call	_ZdaPv
+  46      00
+  47              	.L6:
+  48 0071 488B7B30 		movq	48(%rbx), %rdi
+GAS LISTING /tmp/ccgELzE3.s 			page 2
+
+
+  49 0075 48C74318 		movq	$0, 24(%rbx)
+  49      00000000 
+  50 007d 4885FF   		testq	%rdi, %rdi
+  51 0080 7405     		je	.L7
+  52 0082 E8000000 		call	_ZdaPv
+  52      00
+  53              	.L7:
+  54 0087 488B7B38 		movq	56(%rbx), %rdi
+  55 008b 48C74330 		movq	$0, 48(%rbx)
+  55      00000000 
+  56 0093 4885FF   		testq	%rdi, %rdi
+  57 0096 7405     		je	.L8
+  58 0098 E8000000 		call	_ZdaPv
+  58      00
+  59              	.L8:
+  60 009d 488B7B40 		movq	64(%rbx), %rdi
+  61 00a1 48C74338 		movq	$0, 56(%rbx)
+  61      00000000 
+  62 00a9 4885FF   		testq	%rdi, %rdi
+  63 00ac 7405     		je	.L9
+  64 00ae E8000000 		call	_ZdaPv
+  64      00
+  65              	.L9:
+  66 00b3 488B7B48 		movq	72(%rbx), %rdi
+  67 00b7 48C74340 		movq	$0, 64(%rbx)
+  67      00000000 
+  68 00bf 4885FF   		testq	%rdi, %rdi
+  69 00c2 740C     		je	.L1
+  70 00c4 5B       		popq	%rbx
+  71              		.cfi_remember_state
+  72              		.cfi_def_cfa_offset 8
+  73 00c5 E9000000 		jmp	_ZdaPv
+  73      00
+  74 00ca 660F1F44 		.p2align 4,,10
+  74      0000
+  75              		.p2align 3
+  76              	.L1:
+  77              		.cfi_restore_state
+  78 00d0 5B       		popq	%rbx
+  79              		.cfi_def_cfa_offset 8
+  80 00d1 C3       		ret
+  81              		.cfi_endproc
+  82              	.LFE28:
+  84              		.section	.text.unlikely
+  85              	.LCOLDE0:
+  86              		.text
+  87              	.LHOTE0:
+  88              		.globl	_ZN19Boundary_ConditionsD1Ev
+  89              		.set	_ZN19Boundary_ConditionsD1Ev,_ZN19Boundary_ConditionsD2Ev
+  90              		.section	.text.unlikely
+  91              		.align 2
+  92              	.LCOLDB1:
+  93              		.text
+  94              	.LHOTB1:
+  95              		.align 2
+  96 00d2 0F1F4000 		.p2align 4,,15
+  96      662E0F1F 
+GAS LISTING /tmp/ccgELzE3.s 			page 3
+
+
+  96      84000000 
+  96      0000
+  97              		.globl	_ZN19Boundary_ConditionsD0Ev
+  99              	_ZN19Boundary_ConditionsD0Ev:
+ 100              	.LFB30:
+ 101              		.cfi_startproc
+ 102 00e0 53       		pushq	%rbx
+ 103              		.cfi_def_cfa_offset 16
+ 104              		.cfi_offset 3, -16
+ 105 00e1 4889FB   		movq	%rdi, %rbx
+ 106 00e4 E8000000 		call	_ZN19Boundary_ConditionsD1Ev
+ 106      00
+ 107 00e9 4889DF   		movq	%rbx, %rdi
+ 108 00ec 5B       		popq	%rbx
+ 109              		.cfi_def_cfa_offset 8
+ 110 00ed E9000000 		jmp	_ZdlPv
+ 110      00
+ 111              		.cfi_endproc
+ 112              	.LFE30:
+ 114              		.section	.text.unlikely
+ 115              	.LCOLDE1:
+ 116              		.text
+ 117              	.LHOTE1:
+ 118              		.section	.text.unlikely
+ 119              		.align 2
+ 120              	.LCOLDB2:
+ 121              		.text
+ 122              	.LHOTB2:
+ 123              		.align 2
+ 124 00f2 0F1F4000 		.p2align 4,,15
+ 124      662E0F1F 
+ 124      84000000 
+ 124      0000
+ 125              		.globl	_ZN19Boundary_ConditionsC2Eii
+ 127              	_ZN19Boundary_ConditionsC2Eii:
+ 128              	.LFB25:
+ 129              		.cfi_startproc
+ 130 0100 0FAFD6   		imull	%esi, %edx
+ 131 0103 4154     		pushq	%r12
+ 132              		.cfi_def_cfa_offset 16
+ 133              		.cfi_offset 12, -16
+ 134 0105 55       		pushq	%rbp
+ 135              		.cfi_def_cfa_offset 24
+ 136              		.cfi_offset 6, -24
+ 137 0106 53       		pushq	%rbx
+ 138              		.cfi_def_cfa_offset 32
+ 139              		.cfi_offset 3, -32
+ 140 0107 4889FD   		movq	%rdi, %rbp
+ 141 010a 48C70700 		movq	$_ZTV19Boundary_Conditions+16, (%rdi)
+ 141      000000
+ 142 0111 8D5A01   		leal	1(%rdx), %ebx
+ 143 0114 4863DB   		movslq	%ebx, %rbx
+ 144 0117 4889DF   		movq	%rbx, %rdi
+ 145 011a E8000000 		call	_Znam
+ 145      00
+ 146 011f 4889DF   		movq	%rbx, %rdi
+ 147 0122 48894508 		movq	%rax, 8(%rbp)
+GAS LISTING /tmp/ccgELzE3.s 			page 4
+
+
+ 148 0126 E8000000 		call	_Znam
+ 148      00
+ 149 012b 48894510 		movq	%rax, 16(%rbp)
+ 150 012f 48B80000 		movabsq	$1143914305352105984, %rax
+ 150      00000000 
+ 150      E00F
+ 151 0139 4839C3   		cmpq	%rax, %rbx
+ 152 013c 7765     		ja	.L40
+ 153 013e 4C8D24DD 		leaq	0(,%rbx,8), %r12
+ 153      00000000 
+ 154 0146 48C1E302 		salq	$2, %rbx
+ 155 014a 4C89E7   		movq	%r12, %rdi
+ 156 014d E8000000 		call	_Znam
+ 156      00
+ 157 0152 4C89E7   		movq	%r12, %rdi
+ 158 0155 48894518 		movq	%rax, 24(%rbp)
+ 159 0159 E8000000 		call	_Znam
+ 159      00
+ 160 015e 4C89E7   		movq	%r12, %rdi
+ 161 0161 48894520 		movq	%rax, 32(%rbp)
+ 162 0165 E8000000 		call	_Znam
+ 162      00
+ 163 016a 4889DF   		movq	%rbx, %rdi
+ 164 016d 48894528 		movq	%rax, 40(%rbp)
+ 165 0171 E8000000 		call	_Znam
+ 165      00
+ 166 0176 4889DF   		movq	%rbx, %rdi
+ 167 0179 48894530 		movq	%rax, 48(%rbp)
+ 168 017d E8000000 		call	_Znam
+ 168      00
+ 169 0182 4889DF   		movq	%rbx, %rdi
+ 170 0185 48894538 		movq	%rax, 56(%rbp)
+ 171 0189 E8000000 		call	_Znam
+ 171      00
+ 172 018e 4889DF   		movq	%rbx, %rdi
+ 173 0191 48894540 		movq	%rax, 64(%rbp)
+ 174 0195 E8000000 		call	_Znam
+ 174      00
+ 175 019a 48894548 		movq	%rax, 72(%rbp)
+ 176 019e 5B       		popq	%rbx
+ 177              		.cfi_remember_state
+ 178              		.cfi_def_cfa_offset 24
+ 179 019f 5D       		popq	%rbp
+ 180              		.cfi_def_cfa_offset 16
+ 181 01a0 415C     		popq	%r12
+ 182              		.cfi_def_cfa_offset 8
+ 183 01a2 C3       		ret
+ 184              	.L40:
+ 185              		.cfi_restore_state
+ 186 01a3 E8000000 		call	__cxa_throw_bad_array_new_length
+ 186      00
+ 187              		.cfi_endproc
+ 188              	.LFE25:
+ 190              		.section	.text.unlikely
+ 191              	.LCOLDE2:
+ 192              		.text
+ 193              	.LHOTE2:
+GAS LISTING /tmp/ccgELzE3.s 			page 5
+
+
+ 194              		.globl	_ZN19Boundary_ConditionsC1Eii
+ 195              		.set	_ZN19Boundary_ConditionsC1Eii,_ZN19Boundary_ConditionsC2Eii
+ 196              		.section	.text.unlikely
+ 197              		.align 2
+ 198              	.LCOLDB3:
+ 199              		.text
+ 200              	.LHOTB3:
+ 201              		.align 2
+ 202 01a8 0F1F8400 		.p2align 4,,15
+ 202      00000000 
+ 203              		.globl	_ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus
+ 205              	_ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus:
+ 206              	.LFB31:
+ 207              		.cfi_startproc
+ 208 01b0 4157     		pushq	%r15
+ 209              		.cfi_def_cfa_offset 16
+ 210              		.cfi_offset 15, -16
+ 211 01b2 4156     		pushq	%r14
+ 212              		.cfi_def_cfa_offset 24
+ 213              		.cfi_offset 14, -24
+ 214 01b4 85D2     		testl	%edx, %edx
+ 215 01b6 4155     		pushq	%r13
+ 216              		.cfi_def_cfa_offset 32
+ 217              		.cfi_offset 13, -32
+ 218 01b8 4154     		pushq	%r12
+ 219              		.cfi_def_cfa_offset 40
+ 220              		.cfi_offset 12, -40
+ 221 01ba 55       		pushq	%rbp
+ 222              		.cfi_def_cfa_offset 48
+ 223              		.cfi_offset 6, -48
+ 224 01bb 53       		pushq	%rbx
+ 225              		.cfi_def_cfa_offset 56
+ 226              		.cfi_offset 3, -56
+ 227 01bc 895424F4 		movl	%edx, -12(%rsp)
+ 228 01c0 0F8EE101 		jle	.L43
+ 228      0000
+ 229 01c6 89D0     		movl	%edx, %eax
+ 230 01c8 4189F6   		movl	%esi, %r14d
+ 231 01cb 4531ED   		xorl	%r13d, %r13d
+ 232 01ce 83E802   		subl	$2, %eax
+ 233 01d1 4489F3   		movl	%r14d, %ebx
+ 234 01d4 458D66FF 		leal	-1(%r14), %r12d
+ 235 01d8 0FAFC6   		imull	%esi, %eax
+ 236 01db 4589EF   		movl	%r13d, %r15d
+ 237 01de 31ED     		xorl	%ebp, %ebp
+ 238 01e0 89C6     		movl	%eax, %esi
+ 239 01e2 894424F8 		movl	%eax, -8(%rsp)
+ 240 01e6 89D0     		movl	%edx, %eax
+ 241 01e8 83E801   		subl	$1, %eax
+ 242 01eb 29F3     		subl	%esi, %ebx
+ 243 01ed 89C2     		movl	%eax, %edx
+ 244 01ef 895C24EC 		movl	%ebx, -20(%rsp)
+ 245 01f3 4189D5   		movl	%edx, %r13d
+ 246 01f6 662E0F1F 		.p2align 4,,10
+ 246      84000000 
+ 246      0000
+ 247              		.p2align 3
+GAS LISTING /tmp/ccgELzE3.s 			page 6
+
+
+ 248              	.L55:
+ 249 0200 4585F6   		testl	%r14d, %r14d
+ 250 0203 0F8E9101 		jle	.L45
+ 250      0000
+ 251 0209 4963D7   		movslq	%r15d, %rdx
+ 252 020c 438D043E 		leal	(%r14,%r15), %eax
+ 253 0210 4589FA   		movl	%r15d, %r10d
+ 254 0213 458D5F01 		leal	1(%r15), %r11d
+ 255 0217 44037C24 		addl	-8(%rsp), %r15d
+ 255      F8
+ 256 021c 4889D6   		movq	%rdx, %rsi
+ 257 021f 4989D0   		movq	%rdx, %r8
+ 258 0222 4C8D0CD5 		leaq	0(,%rdx,8), %r9
+ 258      00000000 
+ 259 022a 894424F0 		movl	%eax, -16(%rsp)
+ 260 022e 89C3     		movl	%eax, %ebx
+ 261 0230 48037708 		addq	8(%rdi), %rsi
+ 262 0234 4C034710 		addq	16(%rdi), %r8
+ 263 0238 48C1E202 		salq	$2, %rdx
+ 264 023c 4529F2   		subl	%r14d, %r10d
+ 265 023f 31C0     		xorl	%eax, %eax
+ 266 0241 44897C24 		movl	%r15d, -4(%rsp)
+ 266      FC
+ 267 0246 44896C24 		movl	%r13d, -24(%rsp)
+ 267      E8
+ 268 024b EB40     		jmp	.L53
+ 269 024d 0F1F00   		.p2align 4,,10
+ 270              		.p2align 3
+ 271              	.L50:
+ 272 0250 85ED     		testl	%ebp, %ebp
+ 273 0252 0F84D401 		je	.L59
+ 273      0000
+ 274 0258 396C24E8 		cmpl	%ebp, -24(%rsp)
+ 275 025c 0F84B600 		je	.L60
+ 275      0000
+ 276 0262 C60600   		movb	$0, (%rsi)
+ 277              	.L48:
+ 278 0265 4883C001 		addq	$1, %rax
+ 279 0269 4883C601 		addq	$1, %rsi
+ 280 026d 4983C001 		addq	$1, %r8
+ 281 0271 4183C301 		addl	$1, %r11d
+ 282 0275 4983C108 		addq	$8, %r9
+ 283 0279 4883C204 		addq	$4, %rdx
+ 284 027d 4183C201 		addl	$1, %r10d
+ 285 0281 83C301   		addl	$1, %ebx
+ 286 0284 4139C6   		cmpl	%eax, %r14d
+ 287 0287 0F8E0301 		jle	.L61
+ 287      0000
+ 288              	.L53:
+ 289 028d 4885C0   		testq	%rax, %rax
+ 290 0290 C60600   		movb	$0, (%rsi)
+ 291 0293 41C60001 		movb	$1, (%r8)
+ 292 0297 0F841501 		je	.L62
+ 292      0000
+ 293 029d 4139C4   		cmpl	%eax, %r12d
+ 294 02a0 75AE     		jne	.L50
+ 295 02a2 4C8B7F18 		movq	24(%rdi), %r15
+GAS LISTING /tmp/ccgELzE3.s 			page 7
+
+
+ 296 02a6 F20F1041 		movsd	72(%rcx), %xmm0
+ 296      48
+ 297 02ab C60601   		movb	$1, (%rsi)
+ 298 02ae 4C8B6F38 		movq	56(%rdi), %r13
+ 299 02b2 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 299      040F
+ 300 02b8 4C8B7F20 		movq	32(%rdi), %r15
+ 301 02bc F20F1041 		movsd	80(%rcx), %xmm0
+ 301      50
+ 302 02c1 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 302      040F
+ 303 02c7 4C8B7F28 		movq	40(%rdi), %r15
+ 304 02cb F20F1041 		movsd	88(%rcx), %xmm0
+ 304      58
+ 305 02d0 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 305      040F
+ 306 02d6 448BB9A0 		movl	160(%rcx), %r15d
+ 306      000000
+ 307 02dd 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 307      00
+ 308 02e2 4C8B6F30 		movq	48(%rdi), %r13
+ 309 02e6 448BB990 		movl	144(%rcx), %r15d
+ 309      000000
+ 310 02ed 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 310      00
+ 311 02f2 4C8B6F40 		movq	64(%rdi), %r13
+ 312 02f6 458D7A02 		leal	2(%r10), %r15d
+ 313 02fa 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 313      00
+ 314 02ff 4C8B6F48 		movq	72(%rdi), %r13
+ 315 0303 458D7BFE 		leal	-2(%r11), %r15d
+ 316 0307 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 316      00
+ 317              	.L58:
+ 318 030c 41C60000 		movb	$0, (%r8)
+ 319 0310 E950FFFF 		jmp	.L48
+ 319      FF
+ 320              		.p2align 4,,10
+ 321 0315 0F1F00   		.p2align 3
+ 322              	.L60:
+ 323 0318 4C8B7F18 		movq	24(%rdi), %r15
+ 324 031c F20F1041 		movsd	104(%rcx), %xmm0
+ 324      68
+ 325 0321 C60601   		movb	$1, (%rsi)
+ 326 0324 4C8B6F38 		movq	56(%rdi), %r13
+ 327 0328 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 327      040F
+ 328 032e 4C8B7F20 		movq	32(%rdi), %r15
+ 329 0332 F20F1041 		movsd	112(%rcx), %xmm0
+ 329      70
+ 330 0337 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 330      040F
+ 331 033d 4C8B7F28 		movq	40(%rdi), %r15
+ 332 0341 F20F1041 		movsd	120(%rcx), %xmm0
+ 332      78
+ 333 0346 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 333      040F
+GAS LISTING /tmp/ccgELzE3.s 			page 8
+
+
+ 334 034c 448BB9A4 		movl	164(%rcx), %r15d
+ 334      000000
+ 335 0353 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 335      00
+ 336 0358 4C8B6F30 		movq	48(%rdi), %r13
+ 337 035c 448BB994 		movl	148(%rcx), %r15d
+ 337      000000
+ 338 0363 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 338      00
+ 339 0368 448B7C24 		movl	-20(%rsp), %r15d
+ 339      EC
+ 340 036d 4C8B6F40 		movq	64(%rdi), %r13
+ 341 0371 4501D7   		addl	%r10d, %r15d
+ 342 0374 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 342      00
+ 343 0379 4C8B7F48 		movq	72(%rdi), %r15
+ 344 037d 45891417 		movl	%r10d, (%r15,%rdx)
+ 345 0381 41C60000 		movb	$0, (%r8)
+ 346 0385 E9DBFEFF 		jmp	.L48
+ 346      FF
+ 347 038a 660F1F44 		.p2align 4,,10
+ 347      0000
+ 348              		.p2align 3
+ 349              	.L61:
+ 350 0390 448B6C24 		movl	-24(%rsp), %r13d
+ 350      E8
+ 351 0395 448B7C24 		movl	-16(%rsp), %r15d
+ 351      F0
+ 352              	.L45:
+ 353 039a 83C501   		addl	$1, %ebp
+ 354 039d 396C24F4 		cmpl	%ebp, -12(%rsp)
+ 355 03a1 0F8559FE 		jne	.L55
+ 355      FFFF
+ 356              	.L43:
+ 357 03a7 5B       		popq	%rbx
+ 358              		.cfi_remember_state
+ 359              		.cfi_def_cfa_offset 48
+ 360 03a8 5D       		popq	%rbp
+ 361              		.cfi_def_cfa_offset 40
+ 362 03a9 415C     		popq	%r12
+ 363              		.cfi_def_cfa_offset 32
+ 364 03ab 415D     		popq	%r13
+ 365              		.cfi_def_cfa_offset 24
+ 366 03ad 415E     		popq	%r14
+ 367              		.cfi_def_cfa_offset 16
+ 368 03af 415F     		popq	%r15
+ 369              		.cfi_def_cfa_offset 8
+ 370 03b1 C3       		ret
+ 371              	.L62:
+ 372              		.cfi_restore_state
+ 373 03b2 4C8B7F18 		movq	24(%rdi), %r15
+ 374 03b6 F20F1041 		movsd	8(%rcx), %xmm0
+ 374      08
+ 375 03bb C60601   		movb	$1, (%rsi)
+ 376 03be 4C8B6F38 		movq	56(%rdi), %r13
+ 377 03c2 85ED     		testl	%ebp, %ebp
+ 378 03c4 F2430F11 		movsd	%xmm0, (%r15,%r9)
+GAS LISTING /tmp/ccgELzE3.s 			page 9
+
+
+ 378      040F
+ 379 03ca 4C8B7F20 		movq	32(%rdi), %r15
+ 380 03ce F20F1041 		movsd	16(%rcx), %xmm0
+ 380      10
+ 381 03d3 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 381      040F
+ 382 03d9 4C8B7F28 		movq	40(%rdi), %r15
+ 383 03dd F20F1041 		movsd	24(%rcx), %xmm0
+ 383      18
+ 384 03e2 F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 384      040F
+ 385 03e8 448BB998 		movl	152(%rcx), %r15d
+ 385      000000
+ 386 03ef 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 386      00
+ 387 03f4 4C8B6F30 		movq	48(%rdi), %r13
+ 388 03f8 448BB988 		movl	136(%rcx), %r15d
+ 388      000000
+ 389 03ff 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 389      00
+ 390 0404 4C8B6F40 		movq	64(%rdi), %r13
+ 391 0408 448D7BFE 		leal	-2(%rbx), %r15d
+ 392 040c 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 392      00
+ 393 0411 4C8B7F48 		movq	72(%rdi), %r15
+ 394 0415 45891C17 		movl	%r11d, (%r15,%rdx)
+ 395 0419 0F84EDFE 		je	.L58
+ 395      FFFF
+ 396 041f 396C24E8 		cmpl	%ebp, -24(%rsp)
+ 397 0423 410F9500 		setne	(%r8)
+ 398 0427 E939FEFF 		jmp	.L48
+ 398      FF
+ 399              	.L59:
+ 400 042c 4C8B7F18 		movq	24(%rdi), %r15
+ 401 0430 F20F1041 		movsd	40(%rcx), %xmm0
+ 401      28
+ 402 0435 C60601   		movb	$1, (%rsi)
+ 403 0438 4C8B6F38 		movq	56(%rdi), %r13
+ 404 043c F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 404      040F
+ 405 0442 4C8B7F20 		movq	32(%rdi), %r15
+ 406 0446 F20F1041 		movsd	48(%rcx), %xmm0
+ 406      30
+ 407 044b F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 407      040F
+ 408 0451 4C8B7F28 		movq	40(%rdi), %r15
+ 409 0455 F20F1041 		movsd	56(%rcx), %xmm0
+ 409      38
+ 410 045a F2430F11 		movsd	%xmm0, (%r15,%r9)
+ 410      040F
+ 411 0460 448BB99C 		movl	156(%rcx), %r15d
+ 411      000000
+ 412 0467 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 412      00
+ 413 046c 4C8B6F30 		movq	48(%rdi), %r13
+ 414 0470 448BB98C 		movl	140(%rcx), %r15d
+ 414      000000
+GAS LISTING /tmp/ccgELzE3.s 			page 10
+
+
+ 415 0477 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 415      00
+ 416 047c 448B7C24 		movl	-4(%rsp), %r15d
+ 416      FC
+ 417 0481 4C8B6F40 		movq	64(%rdi), %r13
+ 418 0485 4101C7   		addl	%eax, %r15d
+ 419 0488 45897C15 		movl	%r15d, 0(%r13,%rdx)
+ 419      00
+ 420 048d 4C8B7F48 		movq	72(%rdi), %r15
+ 421 0491 41891C17 		movl	%ebx, (%r15,%rdx)
+ 422 0495 41C60001 		movb	$1, (%r8)
+ 423 0499 E9C7FDFF 		jmp	.L48
+ 423      FF
+ 424              		.cfi_endproc
+ 425              	.LFE31:
+ 427              		.section	.text.unlikely
+ 428              	.LCOLDE3:
+ 429              		.text
+ 430              	.LHOTE3:
+ 431              		.section	.text.unlikely
+ 432              		.align 2
+ 433              	.LCOLDB4:
+ 434              		.text
+ 435              	.LHOTB4:
+ 436              		.align 2
+ 437 049e 6690     		.p2align 4,,15
+ 438              		.globl	_ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs
+ 440              	_ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs:
+ 441              	.LFB32:
+ 442              		.cfi_startproc
+ 443 04a0 4157     		pushq	%r15
+ 444              		.cfi_def_cfa_offset 16
+ 445              		.cfi_offset 15, -16
+ 446 04a2 4156     		pushq	%r14
+ 447              		.cfi_def_cfa_offset 24
+ 448              		.cfi_offset 14, -24
+ 449 04a4 85D2     		testl	%edx, %edx
+ 450 04a6 4155     		pushq	%r13
+ 451              		.cfi_def_cfa_offset 32
+ 452              		.cfi_offset 13, -32
+ 453 04a8 4154     		pushq	%r12
+ 454              		.cfi_def_cfa_offset 40
+ 455              		.cfi_offset 12, -40
+ 456 04aa 55       		pushq	%rbp
+ 457              		.cfi_def_cfa_offset 48
+ 458              		.cfi_offset 6, -48
+ 459 04ab 53       		pushq	%rbx
+ 460              		.cfi_def_cfa_offset 56
+ 461              		.cfi_offset 3, -56
+ 462 04ac 48894C24 		movq	%rcx, -8(%rsp)
+ 462      F8
+ 463 04b1 0F8E1501 		jle	.L63
+ 463      0000
+ 464 04b7 8D42FE   		leal	-2(%rdx), %eax
+ 465 04ba 4189F7   		movl	%esi, %r15d
+ 466 04bd 448D62FF 		leal	-1(%rdx), %r12d
+ 467 04c1 418D5FFF 		leal	-1(%r15), %ebx
+GAS LISTING /tmp/ccgELzE3.s 			page 11
+
+
+ 468 04c5 4889FD   		movq	%rdi, %rbp
+ 469 04c8 4189D5   		movl	%edx, %r13d
+ 470 04cb 0FAFC6   		imull	%esi, %eax
+ 471 04ce 4531F6   		xorl	%r14d, %r14d
+ 472 04d1 31F6     		xorl	%esi, %esi
+ 473 04d3 4189C3   		movl	%eax, %r11d
+ 474 04d6 418D47FE 		leal	-2(%r15), %eax
+ 475 04da 894424D8 		movl	%eax, -40(%rsp)
+ 476 04de B8020000 		movl	$2, %eax
+ 476      00
+ 477 04e3 4429F8   		subl	%r15d, %eax
+ 478 04e6 894424DC 		movl	%eax, -36(%rsp)
+ 479 04ea 660F1F44 		.p2align 4,,10
+ 479      0000
+ 480              		.p2align 3
+ 481              	.L78:
+ 482 04f0 4585FF   		testl	%r15d, %r15d
+ 483 04f3 0F8EC700 		jle	.L65
+ 483      0000
+ 484 04f9 448B5424 		movl	-40(%rsp), %r10d
+ 484      D8
+ 485 04fe 4963CE   		movslq	%r14d, %rcx
+ 486 0501 458D4E01 		leal	1(%r14), %r9d
+ 487 0505 4889C8   		movq	%rcx, %rax
+ 488 0508 48034508 		addq	8(%rbp), %rax
+ 489 050c 4C8D04CD 		leaq	0(,%rcx,8), %r8
+ 489      00000000 
+ 490 0514 488D3C8D 		leaq	0(,%rcx,4), %rdi
+ 490      00000000 
+ 491 051c 31D2     		xorl	%edx, %edx
+ 492 051e 44895C24 		movl	%r11d, -48(%rsp)
+ 492      D0
+ 493 0523 4501F2   		addl	%r14d, %r10d
+ 494 0526 44896C24 		movl	%r13d, -44(%rsp)
+ 494      D4
+ 495 052b 44895424 		movl	%r10d, -32(%rsp)
+ 495      E0
+ 496 0530 478D142E 		leal	(%r14,%r13), %r10d
+ 497 0534 44895424 		movl	%r10d, -28(%rsp)
+ 497      E4
+ 498 0539 448B5424 		movl	-36(%rsp), %r10d
+ 498      DC
+ 499 053e 4501F2   		addl	%r14d, %r10d
+ 500 0541 44895424 		movl	%r10d, -24(%rsp)
+ 500      E8
+ 501 0546 4589F2   		movl	%r14d, %r10d
+ 502 0549 4529EA   		subl	%r13d, %r10d
+ 503 054c 44895424 		movl	%r10d, -20(%rsp)
+ 503      EC
+ 504 0551 478D1433 		leal	(%r11,%r14), %r10d
+ 505 0555 44895424 		movl	%r10d, -16(%rsp)
+ 505      F0
+ 506 055a 4589F2   		movl	%r14d, %r10d
+ 507 055d 4529DA   		subl	%r11d, %r10d
+ 508 0560 44895424 		movl	%r10d, -12(%rsp)
+ 508      F4
+ 509              		.p2align 4,,10
+GAS LISTING /tmp/ccgELzE3.s 			page 12
+
+
+ 510 0565 0F1F00   		.p2align 3
+ 511              	.L76:
+ 512 0568 4885D2   		testq	%rdx, %rdx
+ 513 056b 4189D2   		movl	%edx, %r10d
+ 514 056e 7467     		je	.L82
+ 515 0570 C60000   		movb	$0, (%rax)
+ 516              	.L68:
+ 517 0573 4439D3   		cmpl	%r10d, %ebx
+ 518 0576 0F84FF01 		je	.L83
+ 518      0000
+ 519 057c C60000   		movb	$0, (%rax)
+ 520              	.L71:
+ 521 057f 85F6     		testl	%esi, %esi
+ 522 0581 0F84E600 		je	.L84
+ 522      0000
+ 523 0587 C60000   		movb	$0, (%rax)
+ 524              	.L73:
+ 525 058a 4139F4   		cmpl	%esi, %r12d
+ 526 058d 0F846401 		je	.L85
+ 526      0000
+ 527 0593 C60000   		movb	$0, (%rax)
+ 528              	.L75:
+ 529 0596 4883C201 		addq	$1, %rdx
+ 530 059a 4983C008 		addq	$8, %r8
+ 531 059e 4883C704 		addq	$4, %rdi
+ 532 05a2 4183C101 		addl	$1, %r9d
+ 533 05a6 4883C101 		addq	$1, %rcx
+ 534 05aa 4883C001 		addq	$1, %rax
+ 535 05ae 4139D7   		cmpl	%edx, %r15d
+ 536 05b1 7FB5     		jg	.L76
+ 537 05b3 448B5C24 		movl	-48(%rsp), %r11d
+ 537      D0
+ 538 05b8 448B6C24 		movl	-44(%rsp), %r13d
+ 538      D4
+ 539 05bd 4501FE   		addl	%r15d, %r14d
+ 540              	.L65:
+ 541 05c0 83C601   		addl	$1, %esi
+ 542 05c3 4139F5   		cmpl	%esi, %r13d
+ 543 05c6 0F8524FF 		jne	.L78
+ 543      FFFF
+ 544              	.L63:
+ 545 05cc 5B       		popq	%rbx
+ 546              		.cfi_remember_state
+ 547              		.cfi_def_cfa_offset 48
+ 548 05cd 5D       		popq	%rbp
+ 549              		.cfi_def_cfa_offset 40
+ 550 05ce 415C     		popq	%r12
+ 551              		.cfi_def_cfa_offset 32
+ 552 05d0 415D     		popq	%r13
+ 553              		.cfi_def_cfa_offset 24
+ 554 05d2 415E     		popq	%r14
+ 555              		.cfi_def_cfa_offset 16
+ 556 05d4 415F     		popq	%r15
+ 557              		.cfi_def_cfa_offset 8
+ 558 05d6 C3       		ret
+ 559              	.L82:
+ 560              		.cfi_restore_state
+GAS LISTING /tmp/ccgELzE3.s 			page 13
+
+
+ 561 05d7 4C8B6C24 		movq	-8(%rsp), %r13
+ 561      F8
+ 562 05dc 4C8B5D18 		movq	24(%rbp), %r11
+ 563 05e0 85F6     		testl	%esi, %esi
+ 564 05e2 C60001   		movb	$1, (%rax)
+ 565 05e5 F2410F10 		movsd	8(%r13), %xmm0
+ 565      4508
+ 566 05eb F2430F11 		movsd	%xmm0, (%r11,%r8)
+ 566      0403
+ 567 05f1 4C8B5D20 		movq	32(%rbp), %r11
+ 568 05f5 F2410F10 		movsd	16(%r13), %xmm0
+ 568      4510
+ 569 05fb F2430F11 		movsd	%xmm0, (%r11,%r8)
+ 569      0403
+ 570 0601 4C8B5D28 		movq	40(%rbp), %r11
+ 571 0605 F2410F10 		movsd	24(%r13), %xmm0
+ 571      4518
+ 572 060b F2430F11 		movsd	%xmm0, (%r11,%r8)
+ 572      0403
+ 573 0611 458B9D88 		movl	136(%r13), %r11d
+ 573      000000
+ 574 0618 4C8B6D38 		movq	56(%rbp), %r13
+ 575 061c 45895C3D 		movl	%r11d, 0(%r13,%rdi)
+ 575      00
+ 576 0621 4C8B5C24 		movq	-8(%rsp), %r11
+ 576      F8
+ 577 0626 4C8B6D30 		movq	48(%rbp), %r13
+ 578 062a 458B9B88 		movl	136(%r11), %r11d
+ 578      000000
+ 579 0631 45895C3D 		movl	%r11d, 0(%r13,%rdi)
+ 579      00
+ 580 0636 4C8B5D40 		movq	64(%rbp), %r11
+ 581 063a 448B6C24 		movl	-32(%rsp), %r13d
+ 581      E0
+ 582 063f 45892C3B 		movl	%r13d, (%r11,%rdi)
+ 583 0643 4C8B5D48 		movq	72(%rbp), %r11
+ 584 0647 448B6C24 		movl	-28(%rsp), %r13d
+ 584      E4
+ 585 064c 45892C3B 		movl	%r13d, (%r11,%rdi)
+ 586 0650 4C8B5D10 		movq	16(%rbp), %r11
+ 587 0654 0F849300 		je	.L81
+ 587      0000
+ 588 065a 4139F4   		cmpl	%esi, %r12d
+ 589 065d 0F848A00 		je	.L81
+ 589      0000
+ 590 0663 41C6040B 		movb	$1, (%r11,%rcx)
+ 590      01
+ 591 0668 E906FFFF 		jmp	.L68
+ 591      FF
+ 592              	.L84:
+ 593 066d 4C8B5C24 		movq	-8(%rsp), %r11
+ 593      F8
+ 594 0672 4C8B5518 		movq	24(%rbp), %r10
+ 595 0676 C60001   		movb	$1, (%rax)
+ 596 0679 F2410F10 		movsd	40(%r11), %xmm0
+ 596      4328
+ 597 067f F2430F11 		movsd	%xmm0, (%r10,%r8)
+GAS LISTING /tmp/ccgELzE3.s 			page 14
+
+
+ 597      0402
+ 598 0685 4C8B5520 		movq	32(%rbp), %r10
+ 599 0689 F2410F10 		movsd	48(%r11), %xmm0
+ 599      4330
+ 600 068f F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 600      0402
+ 601 0695 4C8B5528 		movq	40(%rbp), %r10
+ 602 0699 F2410F10 		movsd	56(%r11), %xmm0
+ 602      4338
+ 603 069f F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 603      0402
+ 604 06a5 458B938C 		movl	140(%r11), %r10d
+ 604      000000
+ 605 06ac 4589D5   		movl	%r10d, %r13d
+ 606 06af 4C8B5538 		movq	56(%rbp), %r10
+ 607 06b3 45892C3A 		movl	%r13d, (%r10,%rdi)
+ 608 06b7 4C8B5530 		movq	48(%rbp), %r10
+ 609 06bb 458B9B8C 		movl	140(%r11), %r11d
+ 609      000000
+ 610 06c2 45891C3A 		movl	%r11d, (%r10,%rdi)
+ 611 06c6 448B5C24 		movl	-16(%rsp), %r11d
+ 611      F0
+ 612 06cb 458D1413 		leal	(%r11,%rdx), %r10d
+ 613 06cf 4C8B5D40 		movq	64(%rbp), %r11
+ 614 06d3 4589143B 		movl	%r10d, (%r11,%rdi)
+ 615 06d7 4C8B5548 		movq	72(%rbp), %r10
+ 616 06db 45890C3A 		movl	%r9d, (%r10,%rdi)
+ 617 06df 4C8B5510 		movq	16(%rbp), %r10
+ 618 06e3 41C6040A 		movb	$1, (%r10,%rcx)
+ 618      01
+ 619 06e8 E99DFEFF 		jmp	.L73
+ 619      FF
+ 620              	.L81:
+ 621 06ed 41C6040B 		movb	$0, (%r11,%rcx)
+ 621      00
+ 622 06f2 E97CFEFF 		jmp	.L68
+ 622      FF
+ 623              	.L85:
+ 624 06f7 4C8B5C24 		movq	-8(%rsp), %r11
+ 624      F8
+ 625 06fc 4C8B5518 		movq	24(%rbp), %r10
+ 626 0700 C60001   		movb	$1, (%rax)
+ 627 0703 F2410F10 		movsd	104(%r11), %xmm0
+ 627      4368
+ 628 0709 F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 628      0402
+ 629 070f 4C8B5520 		movq	32(%rbp), %r10
+ 630 0713 F2410F10 		movsd	112(%r11), %xmm0
+ 630      4370
+ 631 0719 F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 631      0402
+ 632 071f 4C8B5528 		movq	40(%rbp), %r10
+ 633 0723 F2410F10 		movsd	120(%r11), %xmm0
+ 633      4378
+ 634 0729 F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 634      0402
+ 635 072f 458B9394 		movl	148(%r11), %r10d
+GAS LISTING /tmp/ccgELzE3.s 			page 15
+
+
+ 635      000000
+ 636 0736 4589D5   		movl	%r10d, %r13d
+ 637 0739 4C8B5538 		movq	56(%rbp), %r10
+ 638 073d 45892C3A 		movl	%r13d, (%r10,%rdi)
+ 639 0741 4C8B5530 		movq	48(%rbp), %r10
+ 640 0745 458B9B94 		movl	148(%r11), %r11d
+ 640      000000
+ 641 074c 45891C3A 		movl	%r11d, (%r10,%rdi)
+ 642 0750 448B5C24 		movl	-12(%rsp), %r11d
+ 642      F4
+ 643 0755 458D1413 		leal	(%r11,%rdx), %r10d
+ 644 0759 4C8B5D40 		movq	64(%rbp), %r11
+ 645 075d 4589143B 		movl	%r10d, (%r11,%rdi)
+ 646 0761 4C8B5D48 		movq	72(%rbp), %r11
+ 647 0765 458D51FE 		leal	-2(%r9), %r10d
+ 648 0769 4589143B 		movl	%r10d, (%r11,%rdi)
+ 649 076d 4C8B5510 		movq	16(%rbp), %r10
+ 650 0771 41C6040A 		movb	$0, (%r10,%rcx)
+ 650      00
+ 651 0776 E91BFEFF 		jmp	.L75
+ 651      FF
+ 652              	.L83:
+ 653 077b 4C8B5C24 		movq	-8(%rsp), %r11
+ 653      F8
+ 654 0780 4C8B5518 		movq	24(%rbp), %r10
+ 655 0784 C60001   		movb	$1, (%rax)
+ 656 0787 F2410F10 		movsd	72(%r11), %xmm0
+ 656      4348
+ 657 078d F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 657      0402
+ 658 0793 4C8B5520 		movq	32(%rbp), %r10
+ 659 0797 F2410F10 		movsd	80(%r11), %xmm0
+ 659      4350
+ 660 079d F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 660      0402
+ 661 07a3 4C8B5528 		movq	40(%rbp), %r10
+ 662 07a7 F2410F10 		movsd	88(%r11), %xmm0
+ 662      4358
+ 663 07ad F2430F11 		movsd	%xmm0, (%r10,%r8)
+ 663      0402
+ 664 07b3 458B9390 		movl	144(%r11), %r10d
+ 664      000000
+ 665 07ba 4589D5   		movl	%r10d, %r13d
+ 666 07bd 4C8B5538 		movq	56(%rbp), %r10
+ 667 07c1 45892C3A 		movl	%r13d, (%r10,%rdi)
+ 668 07c5 4C8B5530 		movq	48(%rbp), %r10
+ 669 07c9 458B9B90 		movl	144(%r11), %r11d
+ 669      000000
+ 670 07d0 45891C3A 		movl	%r11d, (%r10,%rdi)
+ 671 07d4 448B5C24 		movl	-24(%rsp), %r11d
+ 671      E8
+ 672 07d9 458D1413 		leal	(%r11,%rdx), %r10d
+ 673 07dd 4C8B5D40 		movq	64(%rbp), %r11
+ 674 07e1 4589143B 		movl	%r10d, (%r11,%rdi)
+ 675 07e5 448B5C24 		movl	-20(%rsp), %r11d
+ 675      EC
+ 676 07ea 458D1413 		leal	(%r11,%rdx), %r10d
+GAS LISTING /tmp/ccgELzE3.s 			page 16
+
+
+ 677 07ee 4C8B5D48 		movq	72(%rbp), %r11
+ 678 07f2 4589143B 		movl	%r10d, (%r11,%rdi)
+ 679 07f6 4C8B5510 		movq	16(%rbp), %r10
+ 680 07fa 41C6040A 		movb	$1, (%r10,%rcx)
+ 680      01
+ 681 07ff E97BFDFF 		jmp	.L71
+ 681      FF
+ 682              		.cfi_endproc
+ 683              	.LFE32:
+ 685              		.section	.text.unlikely
+ 686              	.LCOLDE4:
+ 687              		.text
+ 688              	.LHOTE4:
+ 689              		.weak	_ZTS19Boundary_Conditions
+ 690              		.section	.rodata._ZTS19Boundary_Conditions,"aG",@progbits,_ZTS19Boundary_Conditions,comdat
+ 691              		.align 16
+ 694              	_ZTS19Boundary_Conditions:
+ 695 0000 3139426F 		.string	"19Boundary_Conditions"
+ 695      756E6461 
+ 695      72795F43 
+ 695      6F6E6469 
+ 695      74696F6E 
+ 696              		.weak	_ZTI19Boundary_Conditions
+ 697              		.section	.rodata._ZTI19Boundary_Conditions,"aG",@progbits,_ZTI19Boundary_Conditions,comdat
+ 698              		.align 8
+ 701              	_ZTI19Boundary_Conditions:
+ 702 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 702      00000000 
+ 703 0008 00000000 		.quad	_ZTS19Boundary_Conditions
+ 703      00000000 
+ 704              		.weak	_ZTV19Boundary_Conditions
+ 705              		.section	.rodata._ZTV19Boundary_Conditions,"aG",@progbits,_ZTV19Boundary_Conditions,comdat
+ 706              		.align 8
+ 709              	_ZTV19Boundary_Conditions:
+ 710 0000 00000000 		.quad	0
+ 710      00000000 
+ 711 0008 00000000 		.quad	_ZTI19Boundary_Conditions
+ 711      00000000 
+ 712 0010 00000000 		.quad	_ZN19Boundary_ConditionsD1Ev
+ 712      00000000 
+ 713 0018 00000000 		.quad	_ZN19Boundary_ConditionsD0Ev
+ 713      00000000 
+ 714              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 715              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccgELzE3.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Boundary_Conditions.cpp
+     /tmp/ccgELzE3.s:11     .text:0000000000000000 _ZN19Boundary_ConditionsD2Ev
+     /tmp/ccgELzE3.s:709    .rodata._ZTV19Boundary_Conditions:0000000000000000 _ZTV19Boundary_Conditions
+     /tmp/ccgELzE3.s:11     .text:0000000000000000 _ZN19Boundary_ConditionsD1Ev
+     /tmp/ccgELzE3.s:99     .text:00000000000000e0 _ZN19Boundary_ConditionsD0Ev
+     /tmp/ccgELzE3.s:127    .text:0000000000000100 _ZN19Boundary_ConditionsC2Eii
+     /tmp/ccgELzE3.s:127    .text:0000000000000100 _ZN19Boundary_ConditionsC1Eii
+     /tmp/ccgELzE3.s:205    .text:00000000000001b0 _ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus
+     /tmp/ccgELzE3.s:440    .text:00000000000004a0 _ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs
+     /tmp/ccgELzE3.s:694    .rodata._ZTS19Boundary_Conditions:0000000000000000 _ZTS19Boundary_Conditions
+     /tmp/ccgELzE3.s:701    .rodata._ZTI19Boundary_Conditions:0000000000000000 _ZTI19Boundary_Conditions
+
+UNDEFINED SYMBOLS
+_ZdaPv
+_ZdlPv
+_Znam
+__cxa_throw_bad_array_new_length
+_ZTVN10__cxxabiv117__class_type_infoE

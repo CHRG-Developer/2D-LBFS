@@ -1,0 +1,163 @@
+GAS LISTING /tmp/ccqcoNDZ.s 			page 1
+
+
+   1              		.file	"main.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              	.LCOLDB0:
+   4              		.section	.text.startup,"ax",@progbits
+   5              	.LHOTB0:
+   6              		.p2align 4,,15
+   8              	_GLOBAL__sub_I_main:
+   9              	.LFB2055:
+  10              		.cfi_startproc
+  11 0000 4883EC08 		subq	$8, %rsp
+  12              		.cfi_def_cfa_offset 16
+  13 0004 BF000000 		movl	$_ZStL8__ioinit, %edi
+  13      00
+  14 0009 E8000000 		call	_ZNSt8ios_base4InitC1Ev
+  14      00
+  15 000e BA000000 		movl	$__dso_handle, %edx
+  15      00
+  16 0013 BE000000 		movl	$_ZStL8__ioinit, %esi
+  16      00
+  17 0018 BF000000 		movl	$_ZNSt8ios_base4InitD1Ev, %edi
+  17      00
+  18 001d 4883C408 		addq	$8, %rsp
+  19              		.cfi_def_cfa_offset 8
+  20 0021 E9000000 		jmp	__cxa_atexit
+  20      00
+  21              		.cfi_endproc
+  22              	.LFE2055:
+  24              		.section	.text.unlikely
+  25              	.LCOLDE0:
+  26              		.section	.text.startup
+  27              	.LHOTE0:
+  28              		.section	.init_array,"aw"
+  29              		.align 8
+  30 0000 00000000 		.quad	_GLOBAL__sub_I_main
+  30      00000000 
+  31              		.section	.text.unlikely
+  32              	.LCOLDB1:
+  33              		.section	.text.startup
+  34              	.LHOTB1:
+  35 0026 662E0F1F 		.p2align 4,,15
+  35      84000000 
+  35      0000
+  36              		.globl	main
+  38              	main:
+  39              	.LFB1858:
+  40              		.cfi_startproc
+  41              		.cfi_personality 0x3,__gxx_personality_v0
+  42              		.cfi_lsda 0x3,.LLSDA1858
+  43 0030 53       		pushq	%rbx
+  44              		.cfi_def_cfa_offset 16
+  45              		.cfi_offset 3, -16
+  46 0031 4883EC10 		subq	$16, %rsp
+  47              		.cfi_def_cfa_offset 32
+  48 0035 488B5E08 		movq	8(%rsi), %rbx
+  49 0039 4889E7   		movq	%rsp, %rdi
+  50 003c 64488B04 		movq	%fs:40, %rax
+  50      25280000 
+GAS LISTING /tmp/ccqcoNDZ.s 			page 2
+
+
+  50      00
+  51 0045 48894424 		movq	%rax, 8(%rsp)
+  51      08
+  52 004a 31C0     		xorl	%eax, %eax
+  53              	.LEHB0:
+  54 004c E8000000 		call	_ZN7programC1Ev
+  54      00
+  55              	.LEHE0:
+  56 0051 4889DE   		movq	%rbx, %rsi
+  57 0054 4889E7   		movq	%rsp, %rdi
+  58              	.LEHB1:
+  59 0057 E8000000 		call	_ZN7program3runEPc
+  59      00
+  60              	.LEHE1:
+  61 005c 4889E7   		movq	%rsp, %rdi
+  62 005f E8000000 		call	_ZN7programD1Ev
+  62      00
+  63 0064 31C0     		xorl	%eax, %eax
+  64 0066 488B5424 		movq	8(%rsp), %rdx
+  64      08
+  65 006b 64483314 		xorq	%fs:40, %rdx
+  65      25280000 
+  65      00
+  66 0074 7506     		jne	.L11
+  67 0076 4883C410 		addq	$16, %rsp
+  68              		.cfi_remember_state
+  69              		.cfi_def_cfa_offset 16
+  70 007a 5B       		popq	%rbx
+  71              		.cfi_def_cfa_offset 8
+  72 007b C3       		ret
+  73              	.L11:
+  74              		.cfi_restore_state
+  75 007c E8000000 		call	__stack_chk_fail
+  75      00
+  76              	.L6:
+  77 0081 4889C3   		movq	%rax, %rbx
+  78 0084 4889E7   		movq	%rsp, %rdi
+  79 0087 E8000000 		call	_ZN7programD1Ev
+  79      00
+  80 008c 4889DF   		movq	%rbx, %rdi
+  81              	.LEHB2:
+  82 008f E8000000 		call	_Unwind_Resume
+  82      00
+  83              	.LEHE2:
+  84              		.cfi_endproc
+  85              	.LFE1858:
+  86              		.globl	__gxx_personality_v0
+  87              		.section	.gcc_except_table,"a",@progbits
+  88              	.LLSDA1858:
+  89 0000 FF       		.byte	0xff
+  90 0001 FF       		.byte	0xff
+  91 0002 01       		.byte	0x1
+  92 0003 0C       		.uleb128 .LLSDACSE1858-.LLSDACSB1858
+  93              	.LLSDACSB1858:
+  94 0004 1C       		.uleb128 .LEHB0-.LFB1858
+  95 0005 05       		.uleb128 .LEHE0-.LEHB0
+  96 0006 00       		.uleb128 0
+GAS LISTING /tmp/ccqcoNDZ.s 			page 3
+
+
+  97 0007 00       		.uleb128 0
+  98 0008 27       		.uleb128 .LEHB1-.LFB1858
+  99 0009 05       		.uleb128 .LEHE1-.LEHB1
+ 100 000a 51       		.uleb128 .L6-.LFB1858
+ 101 000b 00       		.uleb128 0
+ 102 000c 5F       		.uleb128 .LEHB2-.LFB1858
+ 103 000d 05       		.uleb128 .LEHE2-.LEHB2
+ 104 000e 00       		.uleb128 0
+ 105 000f 00       		.uleb128 0
+ 106              	.LLSDACSE1858:
+ 107              		.section	.text.startup
+ 109              		.section	.text.unlikely
+ 110              	.LCOLDE1:
+ 111              		.section	.text.startup
+ 112              	.LHOTE1:
+ 113              		.local	_ZStL8__ioinit
+ 114              		.comm	_ZStL8__ioinit,1,1
+ 115              		.hidden	__dso_handle
+ 116              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 117              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccqcoNDZ.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.cpp
+     /tmp/ccqcoNDZ.s:8      .text.startup:0000000000000000 _GLOBAL__sub_I_main
+                             .bss:0000000000000000 _ZStL8__ioinit
+     /tmp/ccqcoNDZ.s:38     .text.startup:0000000000000030 main
+
+UNDEFINED SYMBOLS
+_ZNSt8ios_base4InitC1Ev
+__dso_handle
+_ZNSt8ios_base4InitD1Ev
+__cxa_atexit
+__gxx_personality_v0
+_ZN7programC1Ev
+_ZN7program3runEPc
+_ZN7programD1Ev
+__stack_chk_fail
+_Unwind_Resume

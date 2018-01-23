@@ -1,0 +1,858 @@
+GAS LISTING /tmp/cc10aVfq.s 			page 1
+
+
+   1              		.file	"vector_var.cpp"
+   2              		.section	.text.unlikely._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.weak	_ZN10vector_varD2Ev
+  11              	_ZN10vector_varD2Ev:
+  12              	.LFB1:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE1:
+  18              		.section	.text.unlikely._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  19              	.LCOLDE0:
+  20              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  21              	.LHOTE0:
+  22              		.weak	_ZN10vector_varD1Ev
+  23              		.set	_ZN10vector_varD1Ev,_ZN10vector_varD2Ev
+  24              		.section	.text.unlikely._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  28              	.LHOTB1:
+  29              		.align 2
+  30              		.p2align 4,,15
+  31              		.weak	_ZN10vector_varD0Ev
+  33              	_ZN10vector_varD0Ev:
+  34              	.LFB3:
+  35              		.cfi_startproc
+  36 0000 E9000000 		jmp	_ZdlPv
+  36      00
+  37              		.cfi_endproc
+  38              	.LFE3:
+  40              		.section	.text.unlikely._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  41              	.LCOLDE1:
+  42              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  43              	.LHOTE1:
+  44              		.section	.text.unlikely,"ax",@progbits
+  45              		.align 2
+  46              	.LCOLDB2:
+  47              		.text
+  48              	.LHOTB2:
+  49              		.align 2
+  50              		.p2align 4,,15
+  51              		.globl	_ZN10vector_varC2Ev
+  53              	_ZN10vector_varC2Ev:
+  54              	.LFB8:
+  55              		.cfi_startproc
+  56 0000 48C70700 		movq	$_ZTV10vector_var+16, (%rdi)
+  56      000000
+  57 0007 C3       		ret
+  58              		.cfi_endproc
+  59              	.LFE8:
+  61              		.section	.text.unlikely
+GAS LISTING /tmp/cc10aVfq.s 			page 2
+
+
+  62              	.LCOLDE2:
+  63              		.text
+  64              	.LHOTE2:
+  65              		.globl	_ZN10vector_varC1Ev
+  66              		.set	_ZN10vector_varC1Ev,_ZN10vector_varC2Ev
+  67              		.section	.text.unlikely
+  68              		.align 2
+  69              	.LCOLDB3:
+  70              		.text
+  71              	.LHOTB3:
+  72              		.align 2
+  73 0008 0F1F8400 		.p2align 4,,15
+  73      00000000 
+  74              		.globl	_ZN10vector_varC2Eddd
+  76              	_ZN10vector_varC2Eddd:
+  77              	.LFB11:
+  78              		.cfi_startproc
+  79 0010 48C70700 		movq	$_ZTV10vector_var+16, (%rdi)
+  79      000000
+  80 0017 F20F1147 		movsd	%xmm0, 8(%rdi)
+  80      08
+  81 001c F20F114F 		movsd	%xmm1, 16(%rdi)
+  81      10
+  82 0021 F20F1157 		movsd	%xmm2, 24(%rdi)
+  82      18
+  83 0026 C3       		ret
+  84              		.cfi_endproc
+  85              	.LFE11:
+  87              		.section	.text.unlikely
+  88              	.LCOLDE3:
+  89              		.text
+  90              	.LHOTE3:
+  91              		.globl	_ZN10vector_varC1Eddd
+  92              		.set	_ZN10vector_varC1Eddd,_ZN10vector_varC2Eddd
+  93              		.section	.text.unlikely
+  94              		.align 2
+  95              	.LCOLDB4:
+  96              		.text
+  97              	.LHOTB4:
+  98 0027 90       		.align 2
+  99 0028 0F1F8400 		.p2align 4,,15
+  99      00000000 
+ 100              		.globl	_ZN10vector_var11Dot_ProductES_
+ 102              	_ZN10vector_var11Dot_ProductES_:
+ 103              	.LFB13:
+ 104              		.cfi_startproc
+ 105 0030 F20F1047 		movsd	8(%rdi), %xmm0
+ 105      08
+ 106 0035 F20F104E 		movsd	8(%rsi), %xmm1
+ 106      08
+ 107 003a F20F59C8 		mulsd	%xmm0, %xmm1
+ 108 003e F20F1047 		movsd	16(%rdi), %xmm0
+ 108      10
+ 109 0043 F20F5946 		mulsd	16(%rsi), %xmm0
+ 109      10
+ 110 0048 F20F58C1 		addsd	%xmm1, %xmm0
+ 111 004c F20F104F 		movsd	24(%rdi), %xmm1
+GAS LISTING /tmp/cc10aVfq.s 			page 3
+
+
+ 111      18
+ 112 0051 F20F594E 		mulsd	24(%rsi), %xmm1
+ 112      18
+ 113 0056 F20F58C1 		addsd	%xmm1, %xmm0
+ 114 005a C3       		ret
+ 115              		.cfi_endproc
+ 116              	.LFE13:
+ 118              		.section	.text.unlikely
+ 119              	.LCOLDE4:
+ 120              		.text
+ 121              	.LHOTE4:
+ 122              		.section	.text.unlikely
+ 123              		.align 2
+ 124              	.LCOLDB5:
+ 125              		.text
+ 126              	.LHOTB5:
+ 127 005b 90       		.align 2
+ 128 005c 0F1F4000 		.p2align 4,,15
+ 129              		.globl	_ZN10vector_var3addES_
+ 131              	_ZN10vector_var3addES_:
+ 132              	.LFB14:
+ 133              		.cfi_startproc
+ 134 0060 F20F1047 		movsd	8(%rdi), %xmm0
+ 134      08
+ 135 0065 F20F5846 		addsd	8(%rsi), %xmm0
+ 135      08
+ 136 006a F20F1147 		movsd	%xmm0, 8(%rdi)
+ 136      08
+ 137 006f F20F1047 		movsd	16(%rdi), %xmm0
+ 137      10
+ 138 0074 F20F5846 		addsd	16(%rsi), %xmm0
+ 138      10
+ 139 0079 F20F1147 		movsd	%xmm0, 16(%rdi)
+ 139      10
+ 140 007e F20F1047 		movsd	24(%rdi), %xmm0
+ 140      18
+ 141 0083 F20F5846 		addsd	24(%rsi), %xmm0
+ 141      18
+ 142 0088 F20F1147 		movsd	%xmm0, 24(%rdi)
+ 142      18
+ 143 008d C3       		ret
+ 144              		.cfi_endproc
+ 145              	.LFE14:
+ 147              		.section	.text.unlikely
+ 148              	.LCOLDE5:
+ 149              		.text
+ 150              	.LHOTE5:
+ 151              		.section	.text.unlikely
+ 152              		.align 2
+ 153              	.LCOLDB6:
+ 154              		.text
+ 155              	.LHOTB6:
+ 156              		.align 2
+ 157 008e 6690     		.p2align 4,,15
+ 158              		.globl	_ZN10vector_var14line_magnitudeES_S_S_
+ 160              	_ZN10vector_var14line_magnitudeES_S_S_:
+ 161              	.LFB15:
+GAS LISTING /tmp/cc10aVfq.s 			page 4
+
+
+ 162              		.cfi_startproc
+ 163 0090 F20F1041 		movsd	8(%rcx), %xmm0
+ 163      08
+ 164 0095 4889F8   		movq	%rdi, %rax
+ 165 0098 48C70700 		movq	$_ZTV10vector_var+16, (%rdi)
+ 165      000000
+ 166 009f F2410F59 		mulsd	8(%r8), %xmm0
+ 166      4008
+ 167 00a5 F20F5842 		addsd	8(%rdx), %xmm0
+ 167      08
+ 168 00aa F20F1147 		movsd	%xmm0, 8(%rdi)
+ 168      08
+ 169 00af F20F1041 		movsd	16(%rcx), %xmm0
+ 169      10
+ 170 00b4 F2410F59 		mulsd	16(%r8), %xmm0
+ 170      4010
+ 171 00ba F20F5842 		addsd	16(%rdx), %xmm0
+ 171      10
+ 172 00bf F20F1147 		movsd	%xmm0, 16(%rdi)
+ 172      10
+ 173 00c4 F20F1041 		movsd	24(%rcx), %xmm0
+ 173      18
+ 174 00c9 F2410F59 		mulsd	24(%r8), %xmm0
+ 174      4018
+ 175 00cf F20F5842 		addsd	24(%rdx), %xmm0
+ 175      18
+ 176 00d4 F20F1147 		movsd	%xmm0, 24(%rdi)
+ 176      18
+ 177 00d9 C3       		ret
+ 178              		.cfi_endproc
+ 179              	.LFE15:
+ 181              		.section	.text.unlikely
+ 182              	.LCOLDE6:
+ 183              		.text
+ 184              	.LHOTE6:
+ 185              		.section	.text.unlikely
+ 186              		.align 2
+ 187              	.LCOLDB7:
+ 188              		.text
+ 189              	.LHOTB7:
+ 190              		.align 2
+ 191 00da 660F1F44 		.p2align 4,,15
+ 191      0000
+ 192              		.globl	_ZN10vector_var9MagnitudeEv
+ 194              	_ZN10vector_var9MagnitudeEv:
+ 195              	.LFB19:
+ 196              		.cfi_startproc
+ 197 00e0 F20F1057 		movsd	8(%rdi), %xmm2
+ 197      08
+ 198 00e5 F20F1047 		movsd	16(%rdi), %xmm0
+ 198      10
+ 199 00ea F20F59D2 		mulsd	%xmm2, %xmm2
+ 200 00ee F20F59C0 		mulsd	%xmm0, %xmm0
+ 201 00f2 F20F104F 		movsd	24(%rdi), %xmm1
+ 201      18
+ 202 00f7 F20F59C9 		mulsd	%xmm1, %xmm1
+ 203 00fb F20F58D0 		addsd	%xmm0, %xmm2
+GAS LISTING /tmp/cc10aVfq.s 			page 5
+
+
+ 204 00ff F20F58CA 		addsd	%xmm2, %xmm1
+ 205 0103 F20F51C1 		sqrtsd	%xmm1, %xmm0
+ 206 0107 660F2EC0 		ucomisd	%xmm0, %xmm0
+ 207 010b 7A03     		jp	.L15
+ 208 010d C3       		ret
+ 209 010e 6690     		.p2align 4,,10
+ 210              		.p2align 3
+ 211              	.L15:
+ 212 0110 660F28C1 		movapd	%xmm1, %xmm0
+ 213 0114 4883EC08 		subq	$8, %rsp
+ 214              		.cfi_def_cfa_offset 16
+ 215 0118 E8000000 		call	sqrt
+ 215      00
+ 216 011d 4883C408 		addq	$8, %rsp
+ 217              		.cfi_def_cfa_offset 8
+ 218 0121 C3       		ret
+ 219              		.cfi_endproc
+ 220              	.LFE19:
+ 222              		.section	.text.unlikely
+ 223              	.LCOLDE7:
+ 224              		.text
+ 225              	.LHOTE7:
+ 226              		.section	.text.unlikely
+ 227              		.align 2
+ 228              	.LCOLDB10:
+ 229              		.text
+ 230              	.LHOTB10:
+ 231              		.align 2
+ 232 0122 0F1F4000 		.p2align 4,,15
+ 232      662E0F1F 
+ 232      84000000 
+ 232      0000
+ 233              		.globl	_ZN10vector_var21Angle_Between_VectorsES_
+ 235              	_ZN10vector_var21Angle_Between_VectorsES_:
+ 236              	.LFB20:
+ 237              		.cfi_startproc
+ 238 0130 55       		pushq	%rbp
+ 239              		.cfi_def_cfa_offset 16
+ 240              		.cfi_offset 6, -16
+ 241 0131 53       		pushq	%rbx
+ 242              		.cfi_def_cfa_offset 24
+ 243              		.cfi_offset 3, -24
+ 244 0132 4889FD   		movq	%rdi, %rbp
+ 245 0135 4889F3   		movq	%rsi, %rbx
+ 246 0138 4883EC18 		subq	$24, %rsp
+ 247              		.cfi_def_cfa_offset 48
+ 248 013c F20F1057 		movsd	8(%rdi), %xmm2
+ 248      08
+ 249 0141 F20F105F 		movsd	16(%rdi), %xmm3
+ 249      10
+ 250 0146 F20F1066 		movsd	8(%rsi), %xmm4
+ 250      08
+ 251 014b F20F1046 		movsd	16(%rsi), %xmm0
+ 251      10
+ 252 0150 F20F59E2 		mulsd	%xmm2, %xmm4
+ 253 0154 F20F59C3 		mulsd	%xmm3, %xmm0
+ 254 0158 F20F59D2 		mulsd	%xmm2, %xmm2
+GAS LISTING /tmp/cc10aVfq.s 			page 6
+
+
+ 255 015c F20F59DB 		mulsd	%xmm3, %xmm3
+ 256 0160 F20F104F 		movsd	24(%rdi), %xmm1
+ 256      18
+ 257 0165 F20F58C4 		addsd	%xmm4, %xmm0
+ 258 0169 F20F1066 		movsd	24(%rsi), %xmm4
+ 258      18
+ 259 016e F20F58D3 		addsd	%xmm3, %xmm2
+ 260 0172 F20F59E1 		mulsd	%xmm1, %xmm4
+ 261 0176 F20F59C9 		mulsd	%xmm1, %xmm1
+ 262 017a F20F58E0 		addsd	%xmm0, %xmm4
+ 263 017e F20F58D1 		addsd	%xmm1, %xmm2
+ 264 0182 F20F51DA 		sqrtsd	%xmm2, %xmm3
+ 265 0186 660F2EDB 		ucomisd	%xmm3, %xmm3
+ 266 018a 0F8A0A01 		jp	.L29
+ 266      0000
+ 267              	.L17:
+ 268 0190 F20F1043 		movsd	8(%rbx), %xmm0
+ 268      08
+ 269 0195 F20F1053 		movsd	16(%rbx), %xmm2
+ 269      10
+ 270 019a F20F59C0 		mulsd	%xmm0, %xmm0
+ 271 019e F20F59D2 		mulsd	%xmm2, %xmm2
+ 272 01a2 F20F104B 		movsd	24(%rbx), %xmm1
+ 272      18
+ 273 01a7 F20F59C9 		mulsd	%xmm1, %xmm1
+ 274 01ab F20F58D0 		addsd	%xmm0, %xmm2
+ 275 01af F20F58CA 		addsd	%xmm2, %xmm1
+ 276 01b3 F20F51C1 		sqrtsd	%xmm1, %xmm0
+ 277 01b7 660F2EC0 		ucomisd	%xmm0, %xmm0
+ 278 01bb 0F8A2E01 		jp	.L30
+ 278      0000
+ 279              	.L19:
+ 280 01c1 F20F59D8 		mulsd	%xmm0, %xmm3
+ 281 01c5 F20F5EE3 		divsd	%xmm3, %xmm4
+ 282 01c9 660F2E25 		ucomisd	.LC8(%rip), %xmm4
+ 282      00000000 
+ 283 01d1 660F28C4 		movapd	%xmm4, %xmm0
+ 284 01d5 0F87B500 		ja	.L21
+ 284      0000
+ 285 01db F20F100D 		movsd	.LC9(%rip), %xmm1
+ 285      00000000 
+ 286 01e3 660F2ECC 		ucomisd	%xmm4, %xmm1
+ 287 01e7 0F87A300 		ja	.L21
+ 287      0000
+ 288              	.L22:
+ 289 01ed F20F105D 		movsd	8(%rbp), %xmm3
+ 289      08
+ 290 01f2 F20F1055 		movsd	16(%rbp), %xmm2
+ 290      10
+ 291 01f7 F20F1063 		movsd	8(%rbx), %xmm4
+ 291      08
+ 292 01fc F20F1043 		movsd	16(%rbx), %xmm0
+ 292      10
+ 293 0201 F20F59E3 		mulsd	%xmm3, %xmm4
+ 294 0205 F20F59C2 		mulsd	%xmm2, %xmm0
+ 295 0209 F20F59DB 		mulsd	%xmm3, %xmm3
+ 296 020d F20F59D2 		mulsd	%xmm2, %xmm2
+GAS LISTING /tmp/cc10aVfq.s 			page 7
+
+
+ 297 0211 F20F104D 		movsd	24(%rbp), %xmm1
+ 297      18
+ 298 0216 F20F58E0 		addsd	%xmm0, %xmm4
+ 299 021a F20F1043 		movsd	24(%rbx), %xmm0
+ 299      18
+ 300 021f F20F58D3 		addsd	%xmm3, %xmm2
+ 301 0223 F20F59C1 		mulsd	%xmm1, %xmm0
+ 302 0227 F20F59C9 		mulsd	%xmm1, %xmm1
+ 303 022b F20F58E0 		addsd	%xmm0, %xmm4
+ 304 022f F20F58D1 		addsd	%xmm1, %xmm2
+ 305 0233 F20F51DA 		sqrtsd	%xmm2, %xmm3
+ 306 0237 660F2EDB 		ucomisd	%xmm3, %xmm3
+ 307 023b 660F28C2 		movapd	%xmm2, %xmm0
+ 308 023f 0F8A9200 		jp	.L31
+ 308      0000
+ 309              	.L24:
+ 310 0245 F20F1043 		movsd	8(%rbx), %xmm0
+ 310      08
+ 311 024a F20F1053 		movsd	16(%rbx), %xmm2
+ 311      10
+ 312 024f F20F59C0 		mulsd	%xmm0, %xmm0
+ 313 0253 F20F59D2 		mulsd	%xmm2, %xmm2
+ 314 0257 F20F104B 		movsd	24(%rbx), %xmm1
+ 314      18
+ 315 025c F20F59C9 		mulsd	%xmm1, %xmm1
+ 316 0260 F20F58D0 		addsd	%xmm0, %xmm2
+ 317 0264 F20F58CA 		addsd	%xmm2, %xmm1
+ 318 0268 F20F51C1 		sqrtsd	%xmm1, %xmm0
+ 319 026c 660F2EC0 		ucomisd	%xmm0, %xmm0
+ 320 0270 7A44     		jp	.L32
+ 321              	.L26:
+ 322 0272 F20F59D8 		mulsd	%xmm0, %xmm3
+ 323 0276 4883C418 		addq	$24, %rsp
+ 324              		.cfi_remember_state
+ 325              		.cfi_def_cfa_offset 24
+ 326 027a 5B       		popq	%rbx
+ 327              		.cfi_def_cfa_offset 16
+ 328 027b 5D       		popq	%rbp
+ 329              		.cfi_def_cfa_offset 8
+ 330 027c F20F5EE3 		divsd	%xmm3, %xmm4
+ 331 0280 660F28C4 		movapd	%xmm4, %xmm0
+ 332 0284 E9000000 		jmp	acos
+ 332      00
+ 333 0289 0F1F8000 		.p2align 4,,10
+ 333      000000
+ 334              		.p2align 3
+ 335              	.L21:
+ 336              		.cfi_restore_state
+ 337 0290 E8000000 		call	acos
+ 337      00
+ 338 0295 E953FFFF 		jmp	.L22
+ 338      FF
+ 339              	.L29:
+ 340 029a 660F28C2 		movapd	%xmm2, %xmm0
+ 341 029e F20F1124 		movsd	%xmm4, (%rsp)
+ 341      24
+ 342 02a3 E8000000 		call	sqrt
+GAS LISTING /tmp/cc10aVfq.s 			page 8
+
+
+ 342      00
+ 343 02a8 F20F1024 		movsd	(%rsp), %xmm4
+ 343      24
+ 344 02ad 660F28D8 		movapd	%xmm0, %xmm3
+ 345 02b1 E9DAFEFF 		jmp	.L17
+ 345      FF
+ 346              	.L32:
+ 347 02b6 660F28C1 		movapd	%xmm1, %xmm0
+ 348 02ba F20F115C 		movsd	%xmm3, 8(%rsp)
+ 348      2408
+ 349 02c0 F20F1124 		movsd	%xmm4, (%rsp)
+ 349      24
+ 350 02c5 E8000000 		call	sqrt
+ 350      00
+ 351 02ca F20F105C 		movsd	8(%rsp), %xmm3
+ 351      2408
+ 352 02d0 F20F1024 		movsd	(%rsp), %xmm4
+ 352      24
+ 353 02d5 EB9B     		jmp	.L26
+ 354              	.L31:
+ 355 02d7 F20F1124 		movsd	%xmm4, (%rsp)
+ 355      24
+ 356 02dc E8000000 		call	sqrt
+ 356      00
+ 357 02e1 F20F1024 		movsd	(%rsp), %xmm4
+ 357      24
+ 358 02e6 660F28D8 		movapd	%xmm0, %xmm3
+ 359 02ea E956FFFF 		jmp	.L24
+ 359      FF
+ 360              	.L30:
+ 361 02ef 660F28C1 		movapd	%xmm1, %xmm0
+ 362 02f3 F20F115C 		movsd	%xmm3, 8(%rsp)
+ 362      2408
+ 363 02f9 F20F1124 		movsd	%xmm4, (%rsp)
+ 363      24
+ 364 02fe E8000000 		call	sqrt
+ 364      00
+ 365 0303 F20F105C 		movsd	8(%rsp), %xmm3
+ 365      2408
+ 366 0309 F20F1024 		movsd	(%rsp), %xmm4
+ 366      24
+ 367 030e E9AEFEFF 		jmp	.L19
+ 367      FF
+ 368              		.cfi_endproc
+ 369              	.LFE20:
+ 371              		.section	.text.unlikely
+ 372              	.LCOLDE10:
+ 373              		.text
+ 374              	.LHOTE10:
+ 375              		.section	.text.unlikely
+ 376              		.align 2
+ 377              	.LCOLDB11:
+ 378              		.text
+ 379              	.LHOTB11:
+ 380 0313 90       		.align 2
+ 381 0314 6690662E 		.p2align 4,,15
+ 381      0F1F8400 
+GAS LISTING /tmp/cc10aVfq.s 			page 9
+
+
+ 381      00000000 
+ 382              		.globl	_ZN10vector_var6factorEd
+ 384              	_ZN10vector_var6factorEd:
+ 385              	.LFB21:
+ 386              		.cfi_startproc
+ 387 0320 F20F104F 		movsd	8(%rdi), %xmm1
+ 387      08
+ 388 0325 F20F5EC8 		divsd	%xmm0, %xmm1
+ 389 0329 F20F114F 		movsd	%xmm1, 8(%rdi)
+ 389      08
+ 390 032e F20F104F 		movsd	16(%rdi), %xmm1
+ 390      10
+ 391 0333 F20F5EC8 		divsd	%xmm0, %xmm1
+ 392 0337 F20F114F 		movsd	%xmm1, 16(%rdi)
+ 392      10
+ 393 033c F20F104F 		movsd	24(%rdi), %xmm1
+ 393      18
+ 394 0341 F20F5EC8 		divsd	%xmm0, %xmm1
+ 395 0345 F20F114F 		movsd	%xmm1, 24(%rdi)
+ 395      18
+ 396 034a C3       		ret
+ 397              		.cfi_endproc
+ 398              	.LFE21:
+ 400              		.section	.text.unlikely
+ 401              	.LCOLDE11:
+ 402              		.text
+ 403              	.LHOTE11:
+ 404              		.section	.text.unlikely
+ 405              		.align 2
+ 406              	.LCOLDB16:
+ 407              		.text
+ 408              	.LHOTB16:
+ 409 034b 90       		.align 2
+ 410 034c 0F1F4000 		.p2align 4,,15
+ 411              		.globl	_ZN10vector_var5roundEi
+ 413              	_ZN10vector_var5roundEi:
+ 414              	.LFB22:
+ 415              		.cfi_startproc
+ 416 0350 660FEFC9 		pxor	%xmm1, %xmm1
+ 417 0354 53       		pushq	%rbx
+ 418              		.cfi_def_cfa_offset 16
+ 419              		.cfi_offset 3, -16
+ 420 0355 4889FB   		movq	%rdi, %rbx
+ 421 0358 4883EC10 		subq	$16, %rsp
+ 422              		.cfi_def_cfa_offset 32
+ 423 035c F20F2ACE 		cvtsi2sd	%esi, %xmm1
+ 424 0360 F20F1005 		movsd	.LC12(%rip), %xmm0
+ 424      00000000 
+ 425 0368 E8000000 		call	pow
+ 425      00
+ 426 036d F20F1053 		movsd	8(%rbx), %xmm2
+ 426      08
+ 427 0372 F20F1144 		movsd	%xmm0, 8(%rsp)
+ 427      2408
+ 428 0378 F20F59C2 		mulsd	%xmm2, %xmm0
+ 429 037c F20F1114 		movsd	%xmm2, (%rsp)
+ 429      24
+GAS LISTING /tmp/cc10aVfq.s 			page 10
+
+
+ 430 0381 660F5405 		andpd	.LC13(%rip), %xmm0
+ 430      00000000 
+ 431 0389 E8000000 		call	trunc
+ 431      00
+ 432 038e 660FEFDB 		pxor	%xmm3, %xmm3
+ 433 0392 F20F1014 		movsd	(%rsp), %xmm2
+ 433      24
+ 434 0397 F20F104C 		movsd	8(%rsp), %xmm1
+ 434      2408
+ 435 039d 660F2EDA 		ucomisd	%xmm2, %xmm3
+ 436 03a1 F20F5EC1 		divsd	%xmm1, %xmm0
+ 437 03a5 0F879500 		ja	.L51
+ 437      0000
+ 438              	.L35:
+ 439 03ab F20F1143 		movsd	%xmm0, 8(%rbx)
+ 439      08
+ 440 03b0 660F28C1 		movapd	%xmm1, %xmm0
+ 441 03b4 F20F114C 		movsd	%xmm1, 8(%rsp)
+ 441      2408
+ 442 03ba F20F1053 		movsd	16(%rbx), %xmm2
+ 442      10
+ 443 03bf F20F59C2 		mulsd	%xmm2, %xmm0
+ 444 03c3 F20F1114 		movsd	%xmm2, (%rsp)
+ 444      24
+ 445 03c8 660F5405 		andpd	.LC13(%rip), %xmm0
+ 445      00000000 
+ 446 03d0 E8000000 		call	trunc
+ 446      00
+ 447 03d5 660FEFE4 		pxor	%xmm4, %xmm4
+ 448 03d9 F20F1014 		movsd	(%rsp), %xmm2
+ 448      24
+ 449 03de F20F104C 		movsd	8(%rsp), %xmm1
+ 449      2408
+ 450 03e4 660F2EE2 		ucomisd	%xmm2, %xmm4
+ 451 03e8 F20F5EC1 		divsd	%xmm1, %xmm0
+ 452 03ec 776A     		ja	.L52
+ 453              	.L37:
+ 454 03ee F20F1143 		movsd	%xmm0, 16(%rbx)
+ 454      10
+ 455 03f3 660F28C1 		movapd	%xmm1, %xmm0
+ 456 03f7 F20F114C 		movsd	%xmm1, 8(%rsp)
+ 456      2408
+ 457 03fd F20F1053 		movsd	24(%rbx), %xmm2
+ 457      18
+ 458 0402 F20F59C2 		mulsd	%xmm2, %xmm0
+ 459 0406 F20F1114 		movsd	%xmm2, (%rsp)
+ 459      24
+ 460 040b 660F5405 		andpd	.LC13(%rip), %xmm0
+ 460      00000000 
+ 461 0413 E8000000 		call	trunc
+ 461      00
+ 462 0418 660FEFED 		pxor	%xmm5, %xmm5
+ 463 041c F20F1014 		movsd	(%rsp), %xmm2
+ 463      24
+ 464 0421 F20F104C 		movsd	8(%rsp), %xmm1
+ 464      2408
+ 465 0427 660F2EEA 		ucomisd	%xmm2, %xmm5
+GAS LISTING /tmp/cc10aVfq.s 			page 11
+
+
+ 466 042b F20F5EC1 		divsd	%xmm1, %xmm0
+ 467 042f 773F     		ja	.L53
+ 468 0431 F20F1143 		movsd	%xmm0, 24(%rbx)
+ 468      18
+ 469 0436 4883C410 		addq	$16, %rsp
+ 470              		.cfi_remember_state
+ 471              		.cfi_def_cfa_offset 16
+ 472 043a 5B       		popq	%rbx
+ 473              		.cfi_def_cfa_offset 8
+ 474 043b C3       		ret
+ 475 043c 0F1F4000 		.p2align 4,,10
+ 476              		.p2align 3
+ 477              	.L51:
+ 478              		.cfi_restore_state
+ 479 0440 F20F1015 		movsd	.LC15(%rip), %xmm2
+ 479      00000000 
+ 480 0448 660F57C2 		xorpd	%xmm2, %xmm0
+ 481 044c E95AFFFF 		jmp	.L35
+ 481      FF
+ 482              		.p2align 4,,10
+ 483 0451 0F1F8000 		.p2align 3
+ 483      000000
+ 484              	.L52:
+ 485 0458 F20F1015 		movsd	.LC15(%rip), %xmm2
+ 485      00000000 
+ 486 0460 660F57C2 		xorpd	%xmm2, %xmm0
+ 487 0464 EB88     		jmp	.L37
+ 488 0466 662E0F1F 		.p2align 4,,10
+ 488      84000000 
+ 488      0000
+ 489              		.p2align 3
+ 490              	.L53:
+ 491 0470 F20F100D 		movsd	.LC15(%rip), %xmm1
+ 491      00000000 
+ 492 0478 660F57C1 		xorpd	%xmm1, %xmm0
+ 493 047c F20F1143 		movsd	%xmm0, 24(%rbx)
+ 493      18
+ 494 0481 4883C410 		addq	$16, %rsp
+ 495              		.cfi_def_cfa_offset 16
+ 496 0485 5B       		popq	%rbx
+ 497              		.cfi_def_cfa_offset 8
+ 498 0486 C3       		ret
+ 499              		.cfi_endproc
+ 500              	.LFE22:
+ 502              		.section	.text.unlikely
+ 503              	.LCOLDE16:
+ 504              		.text
+ 505              	.LHOTE16:
+ 506              		.section	.text.unlikely
+ 507              		.align 2
+ 508              	.LCOLDB18:
+ 509              		.text
+ 510              	.LHOTB18:
+ 511 0487 90       		.align 2
+ 512 0488 0F1F8400 		.p2align 4,,15
+ 512      00000000 
+ 513              		.globl	_ZN10vector_var12Get_GradientEddS_S_
+GAS LISTING /tmp/cc10aVfq.s 			page 12
+
+
+ 515              	_ZN10vector_var12Get_GradientEddS_S_:
+ 516              	.LFB23:
+ 517              		.cfi_startproc
+ 518 0490 F20F5CC8 		subsd	%xmm0, %xmm1
+ 519 0494 F20F1005 		movsd	.LC13(%rip), %xmm0
+ 519      00000000 
+ 520 049c F20F101D 		movsd	.LC17(%rip), %xmm3
+ 520      00000000 
+ 521 04a4 660FEFE4 		pxor	%xmm4, %xmm4
+ 522 04a8 F20F114F 		movsd	%xmm1, 8(%rdi)
+ 522      08
+ 523 04ad F20F114F 		movsd	%xmm1, 16(%rdi)
+ 523      10
+ 524 04b2 F20F1052 		movsd	8(%rdx), %xmm2
+ 524      08
+ 525 04b7 F20F5C56 		subsd	8(%rsi), %xmm2
+ 525      08
+ 526 04bc 660F28EA 		movapd	%xmm2, %xmm5
+ 527 04c0 660F54E8 		andpd	%xmm0, %xmm5
+ 528 04c4 660F2EDD 		ucomisd	%xmm5, %xmm3
+ 529 04c8 7708     		ja	.L55
+ 530 04ca 660F28E1 		movapd	%xmm1, %xmm4
+ 531 04ce F20F5EE2 		divsd	%xmm2, %xmm4
+ 532              	.L55:
+ 533 04d2 F20F1167 		movsd	%xmm4, 8(%rdi)
+ 533      08
+ 534 04d7 F20F1052 		movsd	16(%rdx), %xmm2
+ 534      10
+ 535 04dc 660FEFE4 		pxor	%xmm4, %xmm4
+ 536 04e0 F20F5C56 		subsd	16(%rsi), %xmm2
+ 536      10
+ 537 04e5 660F54C2 		andpd	%xmm2, %xmm0
+ 538 04e9 660F2ED8 		ucomisd	%xmm0, %xmm3
+ 539 04ed 7708     		ja	.L56
+ 540 04ef 660F28E1 		movapd	%xmm1, %xmm4
+ 541 04f3 F20F5EE2 		divsd	%xmm2, %xmm4
+ 542              	.L56:
+ 543 04f7 F20F1167 		movsd	%xmm4, 16(%rdi)
+ 543      10
+ 544 04fc 48C74718 		movq	$0, 24(%rdi)
+ 544      00000000 
+ 545 0504 C3       		ret
+ 546              		.cfi_endproc
+ 547              	.LFE23:
+ 549              		.section	.text.unlikely
+ 550              	.LCOLDE18:
+ 551              		.text
+ 552              	.LHOTE18:
+ 553              		.section	.text.unlikely
+ 554              		.align 2
+ 555              	.LCOLDB19:
+ 556              		.text
+ 557              	.LHOTB19:
+ 558 0505 90       		.align 2
+ 559 0506 662E0F1F 		.p2align 4,,15
+ 559      84000000 
+ 559      0000
+GAS LISTING /tmp/cc10aVfq.s 			page 13
+
+
+ 560              		.globl	_ZN10vector_var16relative_vectorsES_S_S_d
+ 562              	_ZN10vector_var16relative_vectorsES_S_S_d:
+ 563              	.LFB24:
+ 564              		.cfi_startproc
+ 565 0510 F20F104E 		movsd	8(%rsi), %xmm1
+ 565      08
+ 566 0515 F20F1051 		movsd	8(%rcx), %xmm2
+ 566      08
+ 567 051a F20F5C4A 		subsd	8(%rdx), %xmm1
+ 567      08
+ 568 051f F20F59D0 		mulsd	%xmm0, %xmm2
+ 569 0523 F20F5941 		mulsd	16(%rcx), %xmm0
+ 569      10
+ 570 0528 F20F5CCA 		subsd	%xmm2, %xmm1
+ 571 052c F20F114F 		movsd	%xmm1, 8(%rdi)
+ 571      08
+ 572 0531 F20F104E 		movsd	16(%rsi), %xmm1
+ 572      10
+ 573 0536 F20F5C4A 		subsd	16(%rdx), %xmm1
+ 573      10
+ 574 053b 48C74718 		movq	$0, 24(%rdi)
+ 574      00000000 
+ 575 0543 F20F5CC8 		subsd	%xmm0, %xmm1
+ 576 0547 F20F114F 		movsd	%xmm1, 16(%rdi)
+ 576      10
+ 577 054c C3       		ret
+ 578              		.cfi_endproc
+ 579              	.LFE24:
+ 581              		.section	.text.unlikely
+ 582              	.LCOLDE19:
+ 583              		.text
+ 584              	.LHOTE19:
+ 585              		.weak	_ZTS10vector_var
+ 586              		.section	.rodata._ZTS10vector_var,"aG",@progbits,_ZTS10vector_var,comdat
+ 587              		.align 8
+ 590              	_ZTS10vector_var:
+ 591 0000 31307665 		.string	"10vector_var"
+ 591      63746F72 
+ 591      5F766172 
+ 591      00
+ 592              		.weak	_ZTI10vector_var
+ 593              		.section	.rodata._ZTI10vector_var,"aG",@progbits,_ZTI10vector_var,comdat
+ 594              		.align 8
+ 597              	_ZTI10vector_var:
+ 598 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 598      00000000 
+ 599 0008 00000000 		.quad	_ZTS10vector_var
+ 599      00000000 
+ 600              		.weak	_ZTV10vector_var
+ 601              		.section	.rodata._ZTV10vector_var,"aG",@progbits,_ZTV10vector_var,comdat
+ 602              		.align 8
+ 605              	_ZTV10vector_var:
+ 606 0000 00000000 		.quad	0
+ 606      00000000 
+ 607 0008 00000000 		.quad	_ZTI10vector_var
+ 607      00000000 
+ 608 0010 00000000 		.quad	_ZN10vector_varD1Ev
+GAS LISTING /tmp/cc10aVfq.s 			page 14
+
+
+ 608      00000000 
+ 609 0018 00000000 		.quad	_ZN10vector_varD0Ev
+ 609      00000000 
+ 610              		.section	.rodata.cst8,"aM",@progbits,8
+ 611              		.align 8
+ 612              	.LC8:
+ 613 0000 00000000 		.long	0
+ 614 0004 0000F03F 		.long	1072693248
+ 615              		.align 8
+ 616              	.LC9:
+ 617 0008 00000000 		.long	0
+ 618 000c 0000F0BF 		.long	-1074790400
+ 619              		.align 8
+ 620              	.LC12:
+ 621 0010 00000000 		.long	0
+ 622 0014 00002440 		.long	1076101120
+ 623              		.section	.rodata.cst16,"aM",@progbits,16
+ 624              		.align 16
+ 625              	.LC13:
+ 626 0000 FFFFFFFF 		.long	4294967295
+ 627 0004 FFFFFF7F 		.long	2147483647
+ 628 0008 00000000 		.long	0
+ 629 000c 00000000 		.long	0
+ 630              		.align 16
+ 631              	.LC15:
+ 632 0010 00000000 		.long	0
+ 633 0014 00000080 		.long	-2147483648
+ 634 0018 00000000 		.long	0
+ 635 001c 00000000 		.long	0
+ 636              		.section	.rodata.cst8
+ 637              		.align 8
+ 638              	.LC17:
+ 639 0018 F168E388 		.long	2296604913
+ 640 001c B5F8E43E 		.long	1055193269
+ 641              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 642              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/cc10aVfq.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 vector_var.cpp
+     /tmp/cc10aVfq.s:11     .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD2Ev
+     /tmp/cc10aVfq.s:11     .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD1Ev
+     /tmp/cc10aVfq.s:33     .text._ZN10vector_varD0Ev:0000000000000000 _ZN10vector_varD0Ev
+     /tmp/cc10aVfq.s:53     .text:0000000000000000 _ZN10vector_varC2Ev
+     /tmp/cc10aVfq.s:605    .rodata._ZTV10vector_var:0000000000000000 _ZTV10vector_var
+     /tmp/cc10aVfq.s:53     .text:0000000000000000 _ZN10vector_varC1Ev
+     /tmp/cc10aVfq.s:76     .text:0000000000000010 _ZN10vector_varC2Eddd
+     /tmp/cc10aVfq.s:76     .text:0000000000000010 _ZN10vector_varC1Eddd
+     /tmp/cc10aVfq.s:102    .text:0000000000000030 _ZN10vector_var11Dot_ProductES_
+     /tmp/cc10aVfq.s:131    .text:0000000000000060 _ZN10vector_var3addES_
+     /tmp/cc10aVfq.s:160    .text:0000000000000090 _ZN10vector_var14line_magnitudeES_S_S_
+     /tmp/cc10aVfq.s:194    .text:00000000000000e0 _ZN10vector_var9MagnitudeEv
+     /tmp/cc10aVfq.s:235    .text:0000000000000130 _ZN10vector_var21Angle_Between_VectorsES_
+     /tmp/cc10aVfq.s:384    .text:0000000000000320 _ZN10vector_var6factorEd
+     /tmp/cc10aVfq.s:413    .text:0000000000000350 _ZN10vector_var5roundEi
+     /tmp/cc10aVfq.s:515    .text:0000000000000490 _ZN10vector_var12Get_GradientEddS_S_
+     /tmp/cc10aVfq.s:562    .text:0000000000000510 _ZN10vector_var16relative_vectorsES_S_S_d
+     /tmp/cc10aVfq.s:590    .rodata._ZTS10vector_var:0000000000000000 _ZTS10vector_var
+     /tmp/cc10aVfq.s:597    .rodata._ZTI10vector_var:0000000000000000 _ZTI10vector_var
+     /tmp/cc10aVfq.s:612    .rodata.cst8:0000000000000000 .LC8
+     /tmp/cc10aVfq.s:616    .rodata.cst8:0000000000000008 .LC9
+     /tmp/cc10aVfq.s:620    .rodata.cst8:0000000000000010 .LC12
+     /tmp/cc10aVfq.s:625    .rodata.cst16:0000000000000000 .LC13
+     /tmp/cc10aVfq.s:631    .rodata.cst16:0000000000000010 .LC15
+     /tmp/cc10aVfq.s:638    .rodata.cst8:0000000000000018 .LC17
+                           .group:0000000000000000 _ZN10vector_varD5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
+sqrt
+acos
+pow
+trunc
+_ZTVN10__cxxabiv117__class_type_infoE

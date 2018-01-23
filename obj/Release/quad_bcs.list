@@ -1,0 +1,119 @@
+GAS LISTING /tmp/ccetnW0m.s 			page 1
+
+
+   1              		.file	"quad_bcs.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN8quad_bcsD2Ev
+  11              	_ZN8quad_bcsD2Ev:
+  12              	.LFB4:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE4:
+  18              		.section	.text.unlikely
+  19              	.LCOLDE0:
+  20              		.text
+  21              	.LHOTE0:
+  22              		.globl	_ZN8quad_bcsD1Ev
+  23              		.set	_ZN8quad_bcsD1Ev,_ZN8quad_bcsD2Ev
+  24              		.section	.text.unlikely
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.text
+  28              	.LHOTB1:
+  29              		.align 2
+  30 0002 0F1F4000 		.p2align 4,,15
+  30      662E0F1F 
+  30      84000000 
+  30      0000
+  31              		.globl	_ZN8quad_bcsD0Ev
+  33              	_ZN8quad_bcsD0Ev:
+  34              	.LFB6:
+  35              		.cfi_startproc
+  36 0010 E9000000 		jmp	_ZdlPv
+  36      00
+  37              		.cfi_endproc
+  38              	.LFE6:
+  40              		.section	.text.unlikely
+  41              	.LCOLDE1:
+  42              		.text
+  43              	.LHOTE1:
+  44              		.section	.text.unlikely
+  45              		.align 2
+  46              	.LCOLDB2:
+  47              		.text
+  48              	.LHOTB2:
+  49 0015 90       		.align 2
+  50 0016 662E0F1F 		.p2align 4,,15
+  50      84000000 
+  50      0000
+  51              		.globl	_ZN8quad_bcsC2Ev
+  53              	_ZN8quad_bcsC2Ev:
+  54              	.LFB1:
+  55              		.cfi_startproc
+  56 0020 48C70700 		movq	$_ZTV8quad_bcs+16, (%rdi)
+GAS LISTING /tmp/ccetnW0m.s 			page 2
+
+
+  56      000000
+  57 0027 C3       		ret
+  58              		.cfi_endproc
+  59              	.LFE1:
+  61              		.section	.text.unlikely
+  62              	.LCOLDE2:
+  63              		.text
+  64              	.LHOTE2:
+  65              		.globl	_ZN8quad_bcsC1Ev
+  66              		.set	_ZN8quad_bcsC1Ev,_ZN8quad_bcsC2Ev
+  67              		.weak	_ZTS8quad_bcs
+  68              		.section	.rodata._ZTS8quad_bcs,"aG",@progbits,_ZTS8quad_bcs,comdat
+  69              		.align 8
+  72              	_ZTS8quad_bcs:
+  73 0000 38717561 		.string	"8quad_bcs"
+  73      645F6263 
+  73      7300
+  74              		.weak	_ZTI8quad_bcs
+  75              		.section	.rodata._ZTI8quad_bcs,"aG",@progbits,_ZTI8quad_bcs,comdat
+  76              		.align 8
+  79              	_ZTI8quad_bcs:
+  80 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+  80      00000000 
+  81 0008 00000000 		.quad	_ZTS8quad_bcs
+  81      00000000 
+  82              		.weak	_ZTV8quad_bcs
+  83              		.section	.rodata._ZTV8quad_bcs,"aG",@progbits,_ZTV8quad_bcs,comdat
+  84              		.align 8
+  87              	_ZTV8quad_bcs:
+  88 0000 00000000 		.quad	0
+  88      00000000 
+  89 0008 00000000 		.quad	_ZTI8quad_bcs
+  89      00000000 
+  90 0010 00000000 		.quad	_ZN8quad_bcsD1Ev
+  90      00000000 
+  91 0018 00000000 		.quad	_ZN8quad_bcsD0Ev
+  91      00000000 
+  92              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+  93              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccetnW0m.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 quad_bcs.cpp
+     /tmp/ccetnW0m.s:11     .text:0000000000000000 _ZN8quad_bcsD2Ev
+     /tmp/ccetnW0m.s:11     .text:0000000000000000 _ZN8quad_bcsD1Ev
+     /tmp/ccetnW0m.s:33     .text:0000000000000010 _ZN8quad_bcsD0Ev
+     /tmp/ccetnW0m.s:53     .text:0000000000000020 _ZN8quad_bcsC2Ev
+     /tmp/ccetnW0m.s:87     .rodata._ZTV8quad_bcs:0000000000000000 _ZTV8quad_bcs
+     /tmp/ccetnW0m.s:53     .text:0000000000000020 _ZN8quad_bcsC1Ev
+     /tmp/ccetnW0m.s:72     .rodata._ZTS8quad_bcs:0000000000000000 _ZTS8quad_bcs
+     /tmp/ccetnW0m.s:79     .rodata._ZTI8quad_bcs:0000000000000000 _ZTI8quad_bcs
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZTVN10__cxxabiv117__class_type_infoE

@@ -1,0 +1,197 @@
+GAS LISTING /tmp/ccyGqzqk.s 			page 1
+
+
+   1              		.file	"initial_conditions.cpp"
+   2              		.section	.text.unlikely._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.weak	_ZN10vector_varD2Ev
+  11              	_ZN10vector_varD2Ev:
+  12              	.LFB1:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE1:
+  18              		.section	.text.unlikely._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  19              	.LCOLDE0:
+  20              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  21              	.LHOTE0:
+  22              		.weak	_ZN10vector_varD1Ev
+  23              		.set	_ZN10vector_varD1Ev,_ZN10vector_varD2Ev
+  24              		.section	.text.unlikely,"ax",@progbits
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.text
+  28              	.LHOTB1:
+  29              		.align 2
+  30              		.p2align 4,,15
+  31              		.globl	_ZN18initial_conditionsD2Ev
+  33              	_ZN18initial_conditionsD2Ev:
+  34              	.LFB8:
+  35              		.cfi_startproc
+  36 0000 F3C3     		rep ret
+  37              		.cfi_endproc
+  38              	.LFE8:
+  40              		.section	.text.unlikely
+  41              	.LCOLDE1:
+  42              		.text
+  43              	.LHOTE1:
+  44              		.globl	_ZN18initial_conditionsD1Ev
+  45              		.set	_ZN18initial_conditionsD1Ev,_ZN18initial_conditionsD2Ev
+  46              		.section	.text.unlikely._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  47              		.align 2
+  48              	.LCOLDB2:
+  49              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  50              	.LHOTB2:
+  51              		.align 2
+  52              		.p2align 4,,15
+  53              		.weak	_ZN10vector_varD0Ev
+  55              	_ZN10vector_varD0Ev:
+  56              	.LFB3:
+  57              		.cfi_startproc
+  58 0000 E9000000 		jmp	_ZdlPv
+  58      00
+  59              		.cfi_endproc
+  60              	.LFE3:
+  62              		.section	.text.unlikely._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+GAS LISTING /tmp/ccyGqzqk.s 			page 2
+
+
+  63              	.LCOLDE2:
+  64              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  65              	.LHOTE2:
+  66              		.section	.text.unlikely
+  67              		.align 2
+  68              	.LCOLDB3:
+  69              		.text
+  70              	.LHOTB3:
+  71              		.align 2
+  72 0002 0F1F4000 		.p2align 4,,15
+  72      662E0F1F 
+  72      84000000 
+  72      0000
+  73              		.globl	_ZN18initial_conditionsD0Ev
+  75              	_ZN18initial_conditionsD0Ev:
+  76              	.LFB10:
+  77              		.cfi_startproc
+  78 0010 E9000000 		jmp	_ZdlPv
+  78      00
+  79              		.cfi_endproc
+  80              	.LFE10:
+  82              		.section	.text.unlikely
+  83              	.LCOLDE3:
+  84              		.text
+  85              	.LHOTE3:
+  86              		.section	.text.unlikely
+  87              		.align 2
+  88              	.LCOLDB5:
+  89              		.text
+  90              	.LHOTB5:
+  91 0015 90       		.align 2
+  92 0016 662E0F1F 		.p2align 4,,15
+  92      84000000 
+  92      0000
+  93              		.globl	_ZN18initial_conditionsC2Ev
+  95              	_ZN18initial_conditionsC2Ev:
+  96              	.LFB5:
+  97              		.cfi_startproc
+  98 0020 53       		pushq	%rbx
+  99              		.cfi_def_cfa_offset 16
+ 100              		.cfi_offset 3, -16
+ 101 0021 4889FB   		movq	%rdi, %rbx
+ 102 0024 48C70700 		movq	$_ZTV18initial_conditions+16, (%rdi)
+ 102      000000
+ 103 002b 488D7F08 		leaq	8(%rdi), %rdi
+ 104 002f E8000000 		call	_ZN10vector_varC1Ev
+ 104      00
+ 105 0034 488D7B28 		leaq	40(%rbx), %rdi
+ 106 0038 E8000000 		call	_ZN10vector_varC1Ev
+ 106      00
+ 107 003d 488D7B48 		leaq	72(%rbx), %rdi
+ 108 0041 E8000000 		call	_ZN10vector_varC1Ev
+ 108      00
+ 109 0046 488D7B70 		leaq	112(%rbx), %rdi
+ 110 004a E8000000 		call	_ZN10vector_varC1Ev
+ 110      00
+ 111 004f 488DBB90 		leaq	144(%rbx), %rdi
+GAS LISTING /tmp/ccyGqzqk.s 			page 3
+
+
+ 111      000000
+ 112 0056 E8000000 		call	_ZN10vector_varC1Ev
+ 112      00
+ 113 005b 488DBBB0 		leaq	176(%rbx), %rdi
+ 113      000000
+ 114 0062 E8000000 		call	_ZN10vector_varC1Ev
+ 114      00
+ 115 0067 48C783D0 		movq	$0, 208(%rbx)
+ 115      00000000 
+ 115      000000
+ 116 0072 5B       		popq	%rbx
+ 117              		.cfi_def_cfa_offset 8
+ 118 0073 C3       		ret
+ 119              		.cfi_endproc
+ 120              	.LFE5:
+ 122              		.section	.text.unlikely
+ 123              	.LCOLDE5:
+ 124              		.text
+ 125              	.LHOTE5:
+ 126              		.globl	_ZN18initial_conditionsC1Ev
+ 127              		.set	_ZN18initial_conditionsC1Ev,_ZN18initial_conditionsC2Ev
+ 128              		.weak	_ZTS18initial_conditions
+ 129              		.section	.rodata._ZTS18initial_conditions,"aG",@progbits,_ZTS18initial_conditions,comdat
+ 130              		.align 16
+ 133              	_ZTS18initial_conditions:
+ 134 0000 3138696E 		.string	"18initial_conditions"
+ 134      69746961 
+ 134      6C5F636F 
+ 134      6E646974 
+ 134      696F6E73 
+ 135              		.weak	_ZTI18initial_conditions
+ 136              		.section	.rodata._ZTI18initial_conditions,"aG",@progbits,_ZTI18initial_conditions,comdat
+ 137              		.align 8
+ 140              	_ZTI18initial_conditions:
+ 141 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 141      00000000 
+ 142 0008 00000000 		.quad	_ZTS18initial_conditions
+ 142      00000000 
+ 143              		.weak	_ZTV18initial_conditions
+ 144              		.section	.rodata._ZTV18initial_conditions,"aG",@progbits,_ZTV18initial_conditions,comdat
+ 145              		.align 8
+ 148              	_ZTV18initial_conditions:
+ 149 0000 00000000 		.quad	0
+ 149      00000000 
+ 150 0008 00000000 		.quad	_ZTI18initial_conditions
+ 150      00000000 
+ 151 0010 00000000 		.quad	_ZN18initial_conditionsD1Ev
+ 151      00000000 
+ 152 0018 00000000 		.quad	_ZN18initial_conditionsD0Ev
+ 152      00000000 
+ 153              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 154              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccyGqzqk.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 initial_conditions.cpp
+     /tmp/ccyGqzqk.s:11     .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD2Ev
+     /tmp/ccyGqzqk.s:11     .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD1Ev
+     /tmp/ccyGqzqk.s:33     .text:0000000000000000 _ZN18initial_conditionsD2Ev
+     /tmp/ccyGqzqk.s:33     .text:0000000000000000 _ZN18initial_conditionsD1Ev
+     /tmp/ccyGqzqk.s:55     .text._ZN10vector_varD0Ev:0000000000000000 _ZN10vector_varD0Ev
+     /tmp/ccyGqzqk.s:75     .text:0000000000000010 _ZN18initial_conditionsD0Ev
+     /tmp/ccyGqzqk.s:95     .text:0000000000000020 _ZN18initial_conditionsC2Ev
+     /tmp/ccyGqzqk.s:148    .rodata._ZTV18initial_conditions:0000000000000000 _ZTV18initial_conditions
+     /tmp/ccyGqzqk.s:95     .text:0000000000000020 _ZN18initial_conditionsC1Ev
+     /tmp/ccyGqzqk.s:133    .rodata._ZTS18initial_conditions:0000000000000000 _ZTS18initial_conditions
+     /tmp/ccyGqzqk.s:140    .rodata._ZTI18initial_conditions:0000000000000000 _ZTI18initial_conditions
+                           .group:0000000000000000 _ZN10vector_varD5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZN10vector_varC1Ev
+_ZTVN10__cxxabiv117__class_type_infoE

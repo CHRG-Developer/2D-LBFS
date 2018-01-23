@@ -1,0 +1,494 @@
+GAS LISTING /tmp/ccgcjZsq.s 			page 1
+
+
+   1              		.file	"initial_conditions.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   5              		.align 2
+   6              		.weak	_ZN10vector_varD2Ev
+   8              	_ZN10vector_varD2Ev:
+   9              	.LFB1:
+  10              		.file 1 "include/vector_var.h"
+   1:include/vector_var.h **** #ifndef VECTOR_VAR_H
+   2:include/vector_var.h **** #define VECTOR_VAR_H
+   3:include/vector_var.h **** 
+   4:include/vector_var.h **** 
+   5:include/vector_var.h **** class vector_var
+   6:include/vector_var.h **** {
+   7:include/vector_var.h ****     public:
+   8:include/vector_var.h ****         vector_var();
+   9:include/vector_var.h ****         vector_var(double _x, double _y, double _z);
+  10:include/vector_var.h ****         virtual ~vector_var(){};
+  11              		.loc 1 10 0
+  12              		.cfi_startproc
+  13 0000 55       		pushq	%rbp
+  14              		.cfi_def_cfa_offset 16
+  15              		.cfi_offset 6, -16
+  16 0001 4889E5   		movq	%rsp, %rbp
+  17              		.cfi_def_cfa_register 6
+  18 0004 4883EC10 		subq	$16, %rsp
+  19 0008 48897DF8 		movq	%rdi, -8(%rbp)
+  20              	.LBB2:
+  21              		.loc 1 10 0
+  22 000c BA000000 		movl	$_ZTV10vector_var+16, %edx
+  22      00
+  23 0011 488B45F8 		movq	-8(%rbp), %rax
+  24 0015 488910   		movq	%rdx, (%rax)
+  25              	.LBE2:
+  26 0018 B8000000 		movl	$0, %eax
+  26      00
+  27 001d 85C0     		testl	%eax, %eax
+  28 001f 740C     		je	.L1
+  29              		.loc 1 10 0 is_stmt 0 discriminator 2
+  30 0021 488B45F8 		movq	-8(%rbp), %rax
+  31 0025 4889C7   		movq	%rax, %rdi
+  32 0028 E8000000 		call	_ZdlPv
+  32      00
+  33              	.L1:
+  34              		.loc 1 10 0
+  35 002d C9       		leave
+  36              		.cfi_def_cfa 7, 8
+  37 002e C3       		ret
+  38              		.cfi_endproc
+  39              	.LFE1:
+  41              		.weak	_ZN10vector_varD1Ev
+  42              		.set	_ZN10vector_varD1Ev,_ZN10vector_varD2Ev
+  43              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  44              		.align 2
+  45              		.weak	_ZN10vector_varD0Ev
+  47              	_ZN10vector_varD0Ev:
+GAS LISTING /tmp/ccgcjZsq.s 			page 2
+
+
+  48              	.LFB3:
+  49              		.loc 1 10 0 is_stmt 1
+  50              		.cfi_startproc
+  51 0000 55       		pushq	%rbp
+  52              		.cfi_def_cfa_offset 16
+  53              		.cfi_offset 6, -16
+  54 0001 4889E5   		movq	%rsp, %rbp
+  55              		.cfi_def_cfa_register 6
+  56 0004 4883EC10 		subq	$16, %rsp
+  57 0008 48897DF8 		movq	%rdi, -8(%rbp)
+  58              		.loc 1 10 0
+  59 000c 488B45F8 		movq	-8(%rbp), %rax
+  60 0010 4889C7   		movq	%rax, %rdi
+  61 0013 E8000000 		call	_ZN10vector_varD1Ev
+  61      00
+  62 0018 488B45F8 		movq	-8(%rbp), %rax
+  63 001c 4889C7   		movq	%rax, %rdi
+  64 001f E8000000 		call	_ZdlPv
+  64      00
+  65 0024 C9       		leave
+  66              		.cfi_def_cfa 7, 8
+  67 0025 C3       		ret
+  68              		.cfi_endproc
+  69              	.LFE3:
+  71              		.text
+  72              		.align 2
+  73              		.globl	_ZN18initial_conditionsC2Ev
+  75              	_ZN18initial_conditionsC2Ev:
+  76              	.LFB5:
+  77              		.file 2 "/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp"
+   1:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** #include "initial_conditions.h"
+   2:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** 
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** initial_conditions::initial_conditions()
+  78              		.loc 2 3 0
+  79              		.cfi_startproc
+  80              		.cfi_personality 0x3,__gxx_personality_v0
+  81              		.cfi_lsda 0x3,.LLSDA5
+  82 0000 55       		pushq	%rbp
+  83              		.cfi_def_cfa_offset 16
+  84              		.cfi_offset 6, -16
+  85 0001 4889E5   		movq	%rsp, %rbp
+  86              		.cfi_def_cfa_register 6
+  87 0004 53       		pushq	%rbx
+  88 0005 4883EC18 		subq	$24, %rsp
+  89              		.cfi_offset 3, -24
+  90 0009 48897DE8 		movq	%rdi, -24(%rbp)
+  91              	.LBB3:
+  92              		.loc 2 3 0
+  93 000d BA000000 		movl	$_ZTV18initial_conditions+16, %edx
+  93      00
+  94 0012 488B45E8 		movq	-24(%rbp), %rax
+  95 0016 488910   		movq	%rdx, (%rax)
+  96 0019 488B45E8 		movq	-24(%rbp), %rax
+  97 001d 4883C008 		addq	$8, %rax
+  98 0021 4889C7   		movq	%rax, %rdi
+  99              	.LEHB0:
+ 100 0024 E8000000 		call	_ZN10vector_varC1Ev
+GAS LISTING /tmp/ccgcjZsq.s 			page 3
+
+
+ 100      00
+ 101              	.LEHE0:
+ 102 0029 488B45E8 		movq	-24(%rbp), %rax
+ 103 002d 4883C028 		addq	$40, %rax
+ 104 0031 4889C7   		movq	%rax, %rdi
+ 105              	.LEHB1:
+ 106 0034 E8000000 		call	_ZN10vector_varC1Ev
+ 106      00
+ 107              	.LEHE1:
+ 108              		.loc 2 3 0 is_stmt 0 discriminator 2
+ 109 0039 488B45E8 		movq	-24(%rbp), %rax
+ 110 003d 4883C048 		addq	$72, %rax
+ 111 0041 4889C7   		movq	%rax, %rdi
+ 112              	.LEHB2:
+ 113 0044 E8000000 		call	_ZN10vector_varC1Ev
+ 113      00
+ 114              	.LEHE2:
+ 115              		.loc 2 3 0 discriminator 4
+ 116 0049 488B45E8 		movq	-24(%rbp), %rax
+ 117 004d 4883C070 		addq	$112, %rax
+ 118 0051 4889C7   		movq	%rax, %rdi
+ 119              	.LEHB3:
+ 120 0054 E8000000 		call	_ZN10vector_varC1Ev
+ 120      00
+ 121              	.LEHE3:
+ 122              		.loc 2 3 0 discriminator 6
+ 123 0059 488B45E8 		movq	-24(%rbp), %rax
+ 124 005d 48059000 		addq	$144, %rax
+ 124      0000
+ 125 0063 4889C7   		movq	%rax, %rdi
+ 126              	.LEHB4:
+ 127 0066 E8000000 		call	_ZN10vector_varC1Ev
+ 127      00
+ 128              	.LEHE4:
+ 129              		.loc 2 3 0 discriminator 8
+ 130 006b 488B45E8 		movq	-24(%rbp), %rax
+ 131 006f 4805B000 		addq	$176, %rax
+ 131      0000
+ 132 0075 4889C7   		movq	%rax, %rdi
+ 133              	.LEHB5:
+ 134 0078 E8000000 		call	_ZN10vector_varC1Ev
+ 134      00
+ 135              	.LEHE5:
+ 136              		.loc 2 3 0 discriminator 10
+ 137 007d 488B45E8 		movq	-24(%rbp), %rax
+ 138 0081 660FEFC0 		pxor	%xmm0, %xmm0
+ 139 0085 F20F1180 		movsd	%xmm0, 208(%rax)
+ 139      D0000000 
+ 140              	.LBE3:
+   4:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** {
+   5:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+   6:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** }
+ 141              		.loc 2 6 0 is_stmt 1 discriminator 10
+ 142 008d EB74     		jmp	.L15
+ 143              	.L14:
+ 144 008f 4889C3   		movq	%rax, %rbx
+ 145              	.LBB4:
+GAS LISTING /tmp/ccgcjZsq.s 			page 4
+
+
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+ 146              		.loc 2 3 0
+ 147 0092 488B45E8 		movq	-24(%rbp), %rax
+ 148 0096 48059000 		addq	$144, %rax
+ 148      0000
+ 149 009c 4889C7   		movq	%rax, %rdi
+ 150 009f E8000000 		call	_ZN10vector_varD1Ev
+ 150      00
+ 151 00a4 EB03     		jmp	.L6
+ 152              	.L13:
+ 153 00a6 4889C3   		movq	%rax, %rbx
+ 154              	.L6:
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+ 155              		.loc 2 3 0 is_stmt 0 discriminator 7
+ 156 00a9 488B45E8 		movq	-24(%rbp), %rax
+ 157 00ad 4883C070 		addq	$112, %rax
+ 158 00b1 4889C7   		movq	%rax, %rdi
+ 159 00b4 E8000000 		call	_ZN10vector_varD1Ev
+ 159      00
+ 160 00b9 EB03     		jmp	.L7
+ 161              	.L12:
+ 162 00bb 4889C3   		movq	%rax, %rbx
+ 163              	.L7:
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+ 164              		.loc 2 3 0 discriminator 5
+ 165 00be 488B45E8 		movq	-24(%rbp), %rax
+ 166 00c2 4883C048 		addq	$72, %rax
+ 167 00c6 4889C7   		movq	%rax, %rdi
+ 168 00c9 E8000000 		call	_ZN10vector_varD1Ev
+ 168      00
+ 169 00ce EB03     		jmp	.L8
+ 170              	.L11:
+ 171 00d0 4889C3   		movq	%rax, %rbx
+ 172              	.L8:
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+ 173              		.loc 2 3 0 discriminator 3
+ 174 00d3 488B45E8 		movq	-24(%rbp), %rax
+ 175 00d7 4883C028 		addq	$40, %rax
+ 176 00db 4889C7   		movq	%rax, %rdi
+ 177 00de E8000000 		call	_ZN10vector_varD1Ev
+ 177      00
+ 178 00e3 EB03     		jmp	.L9
+ 179              	.L10:
+ 180 00e5 4889C3   		movq	%rax, %rbx
+ 181              	.L9:
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //ctor
+ 182              		.loc 2 3 0 discriminator 1
+ 183 00e8 488B45E8 		movq	-24(%rbp), %rax
+ 184 00ec 4883C008 		addq	$8, %rax
+ 185 00f0 4889C7   		movq	%rax, %rdi
+ 186 00f3 E8000000 		call	_ZN10vector_varD1Ev
+ 186      00
+ 187 00f8 4889D8   		movq	%rbx, %rax
+ 188 00fb 4889C7   		movq	%rax, %rdi
+ 189              	.LEHB6:
+ 190 00fe E8000000 		call	_Unwind_Resume
+ 190      00
+GAS LISTING /tmp/ccgcjZsq.s 			page 5
+
+
+ 191              	.LEHE6:
+ 192              	.L15:
+ 193              	.LBE4:
+ 194              		.loc 2 6 0 is_stmt 1
+ 195 0103 4883C418 		addq	$24, %rsp
+ 196 0107 5B       		popq	%rbx
+ 197 0108 5D       		popq	%rbp
+ 198              		.cfi_def_cfa 7, 8
+ 199 0109 C3       		ret
+ 200              		.cfi_endproc
+ 201              	.LFE5:
+ 202              		.globl	__gxx_personality_v0
+ 203              		.section	.gcc_except_table,"a",@progbits
+ 204              	.LLSDA5:
+ 205 0000 FF       		.byte	0xff
+ 206 0001 FF       		.byte	0xff
+ 207 0002 01       		.byte	0x1
+ 208 0003 22       		.uleb128 .LLSDACSE5-.LLSDACSB5
+ 209              	.LLSDACSB5:
+ 210 0004 24       		.uleb128 .LEHB0-.LFB5
+ 211 0005 05       		.uleb128 .LEHE0-.LEHB0
+ 212 0006 00       		.uleb128 0
+ 213 0007 00       		.uleb128 0
+ 214 0008 34       		.uleb128 .LEHB1-.LFB5
+ 215 0009 05       		.uleb128 .LEHE1-.LEHB1
+ 216 000a E501     		.uleb128 .L10-.LFB5
+ 217 000c 00       		.uleb128 0
+ 218 000d 44       		.uleb128 .LEHB2-.LFB5
+ 219 000e 05       		.uleb128 .LEHE2-.LEHB2
+ 220 000f D001     		.uleb128 .L11-.LFB5
+ 221 0011 00       		.uleb128 0
+ 222 0012 54       		.uleb128 .LEHB3-.LFB5
+ 223 0013 05       		.uleb128 .LEHE3-.LEHB3
+ 224 0014 BB01     		.uleb128 .L12-.LFB5
+ 225 0016 00       		.uleb128 0
+ 226 0017 66       		.uleb128 .LEHB4-.LFB5
+ 227 0018 05       		.uleb128 .LEHE4-.LEHB4
+ 228 0019 A601     		.uleb128 .L13-.LFB5
+ 229 001b 00       		.uleb128 0
+ 230 001c 78       		.uleb128 .LEHB5-.LFB5
+ 231 001d 05       		.uleb128 .LEHE5-.LEHB5
+ 232 001e 8F01     		.uleb128 .L14-.LFB5
+ 233 0020 00       		.uleb128 0
+ 234 0021 FE01     		.uleb128 .LEHB6-.LFB5
+ 235 0023 05       		.uleb128 .LEHE6-.LEHB6
+ 236 0024 00       		.uleb128 0
+ 237 0025 00       		.uleb128 0
+ 238              	.LLSDACSE5:
+ 239              		.text
+ 241              		.globl	_ZN18initial_conditionsC1Ev
+ 242              		.set	_ZN18initial_conditionsC1Ev,_ZN18initial_conditionsC2Ev
+ 243              		.align 2
+ 244              		.globl	_ZN18initial_conditionsD2Ev
+ 246              	_ZN18initial_conditionsD2Ev:
+ 247              	.LFB8:
+   7:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** 
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** initial_conditions::~initial_conditions()
+GAS LISTING /tmp/ccgcjZsq.s 			page 6
+
+
+ 248              		.loc 2 8 0
+ 249              		.cfi_startproc
+ 250 010a 55       		pushq	%rbp
+ 251              		.cfi_def_cfa_offset 16
+ 252              		.cfi_offset 6, -16
+ 253 010b 4889E5   		movq	%rsp, %rbp
+ 254              		.cfi_def_cfa_register 6
+ 255 010e 4883EC10 		subq	$16, %rsp
+ 256 0112 48897DF8 		movq	%rdi, -8(%rbp)
+ 257              	.LBB5:
+ 258              		.loc 2 8 0
+ 259 0116 BA000000 		movl	$_ZTV18initial_conditions+16, %edx
+ 259      00
+ 260 011b 488B45F8 		movq	-8(%rbp), %rax
+ 261 011f 488910   		movq	%rdx, (%rax)
+ 262 0122 488B45F8 		movq	-8(%rbp), %rax
+ 263 0126 4805B000 		addq	$176, %rax
+ 263      0000
+ 264 012c 4889C7   		movq	%rax, %rdi
+ 265 012f E8000000 		call	_ZN10vector_varD1Ev
+ 265      00
+ 266 0134 488B45F8 		movq	-8(%rbp), %rax
+ 267 0138 48059000 		addq	$144, %rax
+ 267      0000
+ 268 013e 4889C7   		movq	%rax, %rdi
+ 269 0141 E8000000 		call	_ZN10vector_varD1Ev
+ 269      00
+ 270 0146 488B45F8 		movq	-8(%rbp), %rax
+ 271 014a 4883C070 		addq	$112, %rax
+ 272 014e 4889C7   		movq	%rax, %rdi
+ 273 0151 E8000000 		call	_ZN10vector_varD1Ev
+ 273      00
+ 274 0156 488B45F8 		movq	-8(%rbp), %rax
+ 275 015a 4883C048 		addq	$72, %rax
+ 276 015e 4889C7   		movq	%rax, %rdi
+ 277 0161 E8000000 		call	_ZN10vector_varD1Ev
+ 277      00
+ 278 0166 488B45F8 		movq	-8(%rbp), %rax
+ 279 016a 4883C028 		addq	$40, %rax
+ 280 016e 4889C7   		movq	%rax, %rdi
+ 281 0171 E8000000 		call	_ZN10vector_varD1Ev
+ 281      00
+ 282 0176 488B45F8 		movq	-8(%rbp), %rax
+ 283 017a 4883C008 		addq	$8, %rax
+ 284 017e 4889C7   		movq	%rax, %rdi
+ 285 0181 E8000000 		call	_ZN10vector_varD1Ev
+ 285      00
+ 286              	.LBE5:
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** {
+  10:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp ****     //dtor
+  11:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** }
+ 287              		.loc 2 11 0
+ 288 0186 B8000000 		movl	$0, %eax
+ 288      00
+ 289 018b 85C0     		testl	%eax, %eax
+ 290 018d 740C     		je	.L16
+ 291              		.loc 2 11 0 is_stmt 0 discriminator 1
+GAS LISTING /tmp/ccgcjZsq.s 			page 7
+
+
+ 292 018f 488B45F8 		movq	-8(%rbp), %rax
+ 293 0193 4889C7   		movq	%rax, %rdi
+ 294 0196 E8000000 		call	_ZdlPv
+ 294      00
+ 295              	.L16:
+ 296              		.loc 2 11 0
+ 297 019b C9       		leave
+ 298              		.cfi_def_cfa 7, 8
+ 299 019c C3       		ret
+ 300              		.cfi_endproc
+ 301              	.LFE8:
+ 303              		.globl	_ZN18initial_conditionsD1Ev
+ 304              		.set	_ZN18initial_conditionsD1Ev,_ZN18initial_conditionsD2Ev
+ 305 019d 90       		.align 2
+ 306              		.globl	_ZN18initial_conditionsD0Ev
+ 308              	_ZN18initial_conditionsD0Ev:
+ 309              	.LFB10:
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/initial_conditions.cpp **** {
+ 310              		.loc 2 8 0 is_stmt 1
+ 311              		.cfi_startproc
+ 312 019e 55       		pushq	%rbp
+ 313              		.cfi_def_cfa_offset 16
+ 314              		.cfi_offset 6, -16
+ 315 019f 4889E5   		movq	%rsp, %rbp
+ 316              		.cfi_def_cfa_register 6
+ 317 01a2 4883EC10 		subq	$16, %rsp
+ 318 01a6 48897DF8 		movq	%rdi, -8(%rbp)
+ 319              		.loc 2 11 0
+ 320 01aa 488B45F8 		movq	-8(%rbp), %rax
+ 321 01ae 4889C7   		movq	%rax, %rdi
+ 322 01b1 E8000000 		call	_ZN18initial_conditionsD1Ev
+ 322      00
+ 323 01b6 488B45F8 		movq	-8(%rbp), %rax
+ 324 01ba 4889C7   		movq	%rax, %rdi
+ 325 01bd E8000000 		call	_ZdlPv
+ 325      00
+ 326 01c2 C9       		leave
+ 327              		.cfi_def_cfa 7, 8
+ 328 01c3 C3       		ret
+ 329              		.cfi_endproc
+ 330              	.LFE10:
+ 332              		.weak	_ZTV18initial_conditions
+ 333              		.section	.rodata._ZTV18initial_conditions,"aG",@progbits,_ZTV18initial_conditions,comdat
+ 334              		.align 8
+ 337              	_ZTV18initial_conditions:
+ 338 0000 00000000 		.quad	0
+ 338      00000000 
+ 339 0008 00000000 		.quad	_ZTI18initial_conditions
+ 339      00000000 
+ 340 0010 00000000 		.quad	_ZN18initial_conditionsD1Ev
+ 340      00000000 
+ 341 0018 00000000 		.quad	_ZN18initial_conditionsD0Ev
+ 341      00000000 
+ 342              		.weak	_ZTV10vector_var
+ 343              		.section	.rodata._ZTV10vector_var,"aG",@progbits,_ZTV10vector_var,comdat
+ 344              		.align 8
+ 347              	_ZTV10vector_var:
+GAS LISTING /tmp/ccgcjZsq.s 			page 8
+
+
+ 348 0000 00000000 		.quad	0
+ 348      00000000 
+ 349 0008 00000000 		.quad	_ZTI10vector_var
+ 349      00000000 
+ 350 0010 00000000 		.quad	_ZN10vector_varD1Ev
+ 350      00000000 
+ 351 0018 00000000 		.quad	_ZN10vector_varD0Ev
+ 351      00000000 
+ 352              		.weak	_ZTI18initial_conditions
+ 353              		.section	.rodata._ZTI18initial_conditions,"aG",@progbits,_ZTI18initial_conditions,comdat
+ 354              		.align 8
+ 357              	_ZTI18initial_conditions:
+ 358 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 358      00000000 
+ 359 0008 00000000 		.quad	_ZTS18initial_conditions
+ 359      00000000 
+ 360              		.weak	_ZTS18initial_conditions
+ 361              		.section	.rodata._ZTS18initial_conditions,"aG",@progbits,_ZTS18initial_conditions,comdat
+ 362              		.align 16
+ 365              	_ZTS18initial_conditions:
+ 366 0000 3138696E 		.string	"18initial_conditions"
+ 366      69746961 
+ 366      6C5F636F 
+ 366      6E646974 
+ 366      696F6E73 
+ 367              		.weak	_ZTI10vector_var
+ 368              		.section	.rodata._ZTI10vector_var,"aG",@progbits,_ZTI10vector_var,comdat
+ 369              		.align 8
+ 372              	_ZTI10vector_var:
+ 373 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 373      00000000 
+ 374 0008 00000000 		.quad	_ZTS10vector_var
+ 374      00000000 
+ 375              		.weak	_ZTS10vector_var
+ 376              		.section	.rodata._ZTS10vector_var,"aG",@progbits,_ZTS10vector_var,comdat
+ 377              		.align 8
+ 380              	_ZTS10vector_var:
+ 381 0000 31307665 		.string	"10vector_var"
+ 381      63746F72 
+ 381      5F766172 
+ 381      00
+ 382              		.text
+ 383              	.Letext0:
+ 384              		.file 3 "include/initial_conditions.h"
+GAS LISTING /tmp/ccgcjZsq.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 initial_conditions.cpp
+     /tmp/ccgcjZsq.s:8      .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD2Ev
+     /tmp/ccgcjZsq.s:347    .rodata._ZTV10vector_var:0000000000000000 _ZTV10vector_var
+     /tmp/ccgcjZsq.s:8      .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD1Ev
+     /tmp/ccgcjZsq.s:47     .text._ZN10vector_varD0Ev:0000000000000000 _ZN10vector_varD0Ev
+     /tmp/ccgcjZsq.s:75     .text:0000000000000000 _ZN18initial_conditionsC2Ev
+     /tmp/ccgcjZsq.s:337    .rodata._ZTV18initial_conditions:0000000000000000 _ZTV18initial_conditions
+     /tmp/ccgcjZsq.s:75     .text:0000000000000000 _ZN18initial_conditionsC1Ev
+     /tmp/ccgcjZsq.s:246    .text:000000000000010a _ZN18initial_conditionsD2Ev
+     /tmp/ccgcjZsq.s:246    .text:000000000000010a _ZN18initial_conditionsD1Ev
+     /tmp/ccgcjZsq.s:308    .text:000000000000019e _ZN18initial_conditionsD0Ev
+     /tmp/ccgcjZsq.s:357    .rodata._ZTI18initial_conditions:0000000000000000 _ZTI18initial_conditions
+     /tmp/ccgcjZsq.s:372    .rodata._ZTI10vector_var:0000000000000000 _ZTI10vector_var
+     /tmp/ccgcjZsq.s:365    .rodata._ZTS18initial_conditions:0000000000000000 _ZTS18initial_conditions
+     /tmp/ccgcjZsq.s:380    .rodata._ZTS10vector_var:0000000000000000 _ZTS10vector_var
+                           .group:0000000000000000 _ZN10vector_varD5Ev
+
+UNDEFINED SYMBOLS
+_ZdlPv
+__gxx_personality_v0
+_ZN10vector_varC1Ev
+_Unwind_Resume
+_ZTVN10__cxxabiv117__class_type_infoE

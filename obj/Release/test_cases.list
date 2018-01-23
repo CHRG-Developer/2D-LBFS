@@ -1,0 +1,13 @@
+GAS LISTING /tmp/ccWGC8lF.s 			page 1
+
+
+   1              		.file	"test_cases.cpp"
+   2              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+   3              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccWGC8lF.s 			page 2
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 test_cases.cpp
+
+NO UNDEFINED SYMBOLS

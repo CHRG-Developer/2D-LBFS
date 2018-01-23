@@ -1,0 +1,167 @@
+GAS LISTING /tmp/cctzjZ51.s 			page 1
+
+
+   1              		.file	"quad_bcs_plus.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              		.align 2
+   5              		.globl	_ZN13quad_bcs_plusC2Ev
+   7              	_ZN13quad_bcs_plusC2Ev:
+   8              	.LFB1:
+   9              		.file 1 "/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp"
+   1:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** #include "quad_bcs_plus.h"
+   2:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** 
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** quad_bcs_plus::quad_bcs_plus()
+  10              		.loc 1 3 0
+  11              		.cfi_startproc
+  12 0000 55       		pushq	%rbp
+  13              		.cfi_def_cfa_offset 16
+  14              		.cfi_offset 6, -16
+  15 0001 4889E5   		movq	%rsp, %rbp
+  16              		.cfi_def_cfa_register 6
+  17 0004 48897DF8 		movq	%rdi, -8(%rbp)
+  18              	.LBB2:
+  19              		.loc 1 3 0
+  20 0008 BA000000 		movl	$_ZTV13quad_bcs_plus+16, %edx
+  20      00
+  21 000d 488B45F8 		movq	-8(%rbp), %rax
+  22 0011 488910   		movq	%rdx, (%rax)
+  23              	.LBE2:
+   4:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** {
+   5:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp ****     //ctor
+   6:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** }
+  24              		.loc 1 6 0
+  25 0014 90       		nop
+  26 0015 5D       		popq	%rbp
+  27              		.cfi_def_cfa 7, 8
+  28 0016 C3       		ret
+  29              		.cfi_endproc
+  30              	.LFE1:
+  32              		.globl	_ZN13quad_bcs_plusC1Ev
+  33              		.set	_ZN13quad_bcs_plusC1Ev,_ZN13quad_bcs_plusC2Ev
+  34 0017 90       		.align 2
+  35              		.globl	_ZN13quad_bcs_plusD2Ev
+  37              	_ZN13quad_bcs_plusD2Ev:
+  38              	.LFB4:
+   7:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** 
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** quad_bcs_plus::~quad_bcs_plus()
+  39              		.loc 1 8 0
+  40              		.cfi_startproc
+  41 0018 55       		pushq	%rbp
+  42              		.cfi_def_cfa_offset 16
+  43              		.cfi_offset 6, -16
+  44 0019 4889E5   		movq	%rsp, %rbp
+  45              		.cfi_def_cfa_register 6
+  46 001c 4883EC10 		subq	$16, %rsp
+  47 0020 48897DF8 		movq	%rdi, -8(%rbp)
+  48              	.LBB3:
+  49              		.loc 1 8 0
+  50 0024 BA000000 		movl	$_ZTV13quad_bcs_plus+16, %edx
+  50      00
+GAS LISTING /tmp/cctzjZ51.s 			page 2
+
+
+  51 0029 488B45F8 		movq	-8(%rbp), %rax
+  52 002d 488910   		movq	%rdx, (%rax)
+  53              	.LBE3:
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** {
+  10:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp ****     //dtor
+  11:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** }
+  54              		.loc 1 11 0
+  55 0030 B8000000 		movl	$0, %eax
+  55      00
+  56 0035 85C0     		testl	%eax, %eax
+  57 0037 740C     		je	.L2
+  58              		.loc 1 11 0 is_stmt 0 discriminator 1
+  59 0039 488B45F8 		movq	-8(%rbp), %rax
+  60 003d 4889C7   		movq	%rax, %rdi
+  61 0040 E8000000 		call	_ZdlPv
+  61      00
+  62              	.L2:
+  63              		.loc 1 11 0
+  64 0045 C9       		leave
+  65              		.cfi_def_cfa 7, 8
+  66 0046 C3       		ret
+  67              		.cfi_endproc
+  68              	.LFE4:
+  70              		.globl	_ZN13quad_bcs_plusD1Ev
+  71              		.set	_ZN13quad_bcs_plusD1Ev,_ZN13quad_bcs_plusD2Ev
+  72 0047 90       		.align 2
+  73              		.globl	_ZN13quad_bcs_plusD0Ev
+  75              	_ZN13quad_bcs_plusD0Ev:
+  76              	.LFB6:
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/quad_bcs_plus.cpp **** {
+  77              		.loc 1 8 0 is_stmt 1
+  78              		.cfi_startproc
+  79 0048 55       		pushq	%rbp
+  80              		.cfi_def_cfa_offset 16
+  81              		.cfi_offset 6, -16
+  82 0049 4889E5   		movq	%rsp, %rbp
+  83              		.cfi_def_cfa_register 6
+  84 004c 4883EC10 		subq	$16, %rsp
+  85 0050 48897DF8 		movq	%rdi, -8(%rbp)
+  86              		.loc 1 11 0
+  87 0054 488B45F8 		movq	-8(%rbp), %rax
+  88 0058 4889C7   		movq	%rax, %rdi
+  89 005b E8000000 		call	_ZN13quad_bcs_plusD1Ev
+  89      00
+  90 0060 488B45F8 		movq	-8(%rbp), %rax
+  91 0064 4889C7   		movq	%rax, %rdi
+  92 0067 E8000000 		call	_ZdlPv
+  92      00
+  93 006c C9       		leave
+  94              		.cfi_def_cfa 7, 8
+  95 006d C3       		ret
+  96              		.cfi_endproc
+  97              	.LFE6:
+  99              		.weak	_ZTV13quad_bcs_plus
+ 100              		.section	.rodata._ZTV13quad_bcs_plus,"aG",@progbits,_ZTV13quad_bcs_plus,comdat
+ 101              		.align 8
+ 104              	_ZTV13quad_bcs_plus:
+GAS LISTING /tmp/cctzjZ51.s 			page 3
+
+
+ 105 0000 00000000 		.quad	0
+ 105      00000000 
+ 106 0008 00000000 		.quad	_ZTI13quad_bcs_plus
+ 106      00000000 
+ 107 0010 00000000 		.quad	_ZN13quad_bcs_plusD1Ev
+ 107      00000000 
+ 108 0018 00000000 		.quad	_ZN13quad_bcs_plusD0Ev
+ 108      00000000 
+ 109              		.weak	_ZTI13quad_bcs_plus
+ 110              		.section	.rodata._ZTI13quad_bcs_plus,"aG",@progbits,_ZTI13quad_bcs_plus,comdat
+ 111              		.align 8
+ 114              	_ZTI13quad_bcs_plus:
+ 115 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 115      00000000 
+ 116 0008 00000000 		.quad	_ZTS13quad_bcs_plus
+ 116      00000000 
+ 117              		.weak	_ZTS13quad_bcs_plus
+ 118              		.section	.rodata._ZTS13quad_bcs_plus,"aG",@progbits,_ZTS13quad_bcs_plus,comdat
+ 119              		.align 16
+ 122              	_ZTS13quad_bcs_plus:
+ 123 0000 31337175 		.string	"13quad_bcs_plus"
+ 123      61645F62 
+ 123      63735F70 
+ 123      6C757300 
+ 124              		.text
+ 125              	.Letext0:
+ 126              		.file 2 "include/quad_bcs_plus.h"
+GAS LISTING /tmp/cctzjZ51.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 quad_bcs_plus.cpp
+     /tmp/cctzjZ51.s:7      .text:0000000000000000 _ZN13quad_bcs_plusC2Ev
+     /tmp/cctzjZ51.s:104    .rodata._ZTV13quad_bcs_plus:0000000000000000 _ZTV13quad_bcs_plus
+     /tmp/cctzjZ51.s:7      .text:0000000000000000 _ZN13quad_bcs_plusC1Ev
+     /tmp/cctzjZ51.s:37     .text:0000000000000018 _ZN13quad_bcs_plusD2Ev
+     /tmp/cctzjZ51.s:37     .text:0000000000000018 _ZN13quad_bcs_plusD1Ev
+     /tmp/cctzjZ51.s:75     .text:0000000000000048 _ZN13quad_bcs_plusD0Ev
+     /tmp/cctzjZ51.s:114    .rodata._ZTI13quad_bcs_plus:0000000000000000 _ZTI13quad_bcs_plus
+     /tmp/cctzjZ51.s:122    .rodata._ZTS13quad_bcs_plus:0000000000000000 _ZTS13quad_bcs_plus
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZTVN10__cxxabiv117__class_type_infoE

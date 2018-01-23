@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="2D LBFS" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Data Objects/;helper functions/;external code/;archive/;workflow objects/;Data Objects/Include/;Data Objects/src/;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/2D LBFS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;/home/brendan/Dropbox/PhD/Code/XML Schema/template.xml&quot;' />
+				<Compiler>
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/2D LBFS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;/home/brendan/Dropbox/PhD/Code/XML Schema/template.xml&quot;' />
+				<Compiler>
+					<Add option="-O3" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Boundary_Conditions.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/Mesh.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/RungeKutta.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/Solution.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/Solver.h">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="include/artificial_dissipation.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/domain_geometry.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/external_forces.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/flux_var.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/global_variables.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/initial_conditions.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/post_processing.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/preprocessor.h">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="include/program.h">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="include/quad_bcs.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/quad_bcs_plus.h">
+			<Option virtualFolder="Data Objects/Include/" />
+		</Unit>
+		<Unit filename="include/residuals.h">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="include/tecplot_output.h">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="include/test_cases.h">
+			<Option virtualFolder="archive/" />
+		</Unit>
+		<Unit filename="include/tinyxml2.h">
+			<Option virtualFolder="external code/" />
+		</Unit>
+		<Unit filename="include/vector_var.h">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="src/Boundary_Conditions.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/Mesh.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/RungeKutta.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/Solution.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/Solver.cpp">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="src/artificial_dissipation.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/domain_geometry.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/external_forces.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/flux_var.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/global_variables.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/initial_conditions.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/post_processing.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/preprocessor.cpp">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="src/program.cpp">
+			<Option virtualFolder="workflow objects/" />
+		</Unit>
+		<Unit filename="src/quad_bcs.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/quad_bcs_plus.cpp">
+			<Option virtualFolder="Data Objects/src/" />
+		</Unit>
+		<Unit filename="src/residuals.cpp">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="src/tecplot_output.cpp">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="src/test_cases.cpp">
+			<Option virtualFolder="archive/" />
+		</Unit>
+		<Unit filename="src/tinyxml2.cpp">
+			<Option virtualFolder="external code/" />
+		</Unit>
+		<Unit filename="src/vector_var.cpp">
+			<Option virtualFolder="helper functions/" />
+		</Unit>
+		<Unit filename="src/xmltest.cpp">
+			<Option virtualFolder="archive/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

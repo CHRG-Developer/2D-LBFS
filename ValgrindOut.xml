@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</line>
+</preamble>
+
+<pid>5625</pid>
+<ppid>5436</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--track-origins=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</exe>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.091 </time>
+</status>
+
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>SyscallParam</kind>
+  <what>Syscall param open(filename) points to unaddressable byte(s)</what>
+  <stack>
+    <frame>
+      <ip>0x5946620</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>__open_nocancel</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/io/../sysdeps/unix</dir>
+      <file>syscall-template.S</file>
+      <line>81</line>
+    </frame>
+    <frame>
+      <ip>0x58D4FC7</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>_IO_file_open</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/libio</dir>
+      <file>fileops.c</file>
+      <line>228</line>
+    </frame>
+    <frame>
+      <ip>0x58D4FC7</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>_IO_file_fopen@@GLIBC_2.2.5</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/libio</dir>
+      <file>fileops.c</file>
+      <line>333</line>
+    </frame>
+    <frame>
+      <ip>0x58C94A3</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>__fopen_internal</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/libio</dir>
+      <file>iofopen.c</file>
+      <line>90</line>
+    </frame>
+    <frame>
+      <ip>0x50B69BF</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::__basic_file&lt;char&gt;::open(char const*, std::_Ios_Openmode, int)</fn>
+    </frame>
+    <frame>
+      <ip>0x50EEEA9</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.19</obj>
+      <fn>std::basic_filebuf&lt;char, std::char_traits&lt;char&gt; &gt;::open(char const*, std::_Ios_Openmode)</fn>
+    </frame>
+    <frame>
+      <ip>0x4052A1</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x40557D</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x403CDF</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x587CEC4</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>(below main)</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/csu</dir>
+      <file>libc-start.c</file>
+      <line>287</line>
+    </frame>
+  </stack>
+  <auxwhat>Address 0x0 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+</error>
+
+<error>
+  <unique>0x2</unique>
+  <tid>1</tid>
+  <kind>FishyValue</kind>
+  <what>Argument 'size' of function __builtin_vec_new has a fishy (possibly negative) value: -1
+</what>  <stack>
+    <frame>
+      <ip>0x4C2B800</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x405300</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x40557D</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x403CDF</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x587CEC4</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>(below main)</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/csu</dir>
+      <file>libc-start.c</file>
+      <line>287</line>
+    </frame>
+  </stack>
+</error>
+
+<clientmsg>
+  <tid>1</tid>
+  <text>new/new[] failed and should throw an exception, but Valgrind
+  </text>
+</clientmsg>
+<clientmsg>
+  <tid>1</tid>
+  <text>   cannot throw exceptions and so is aborting instead.  Sorry.
+  </text>
+  <stack>
+    <frame>
+      <ip>0x4C2A95C</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+    </frame>
+    <frame>
+      <ip>0x4C2B870</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x405300</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x40557D</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x403CDF</ip>
+      <obj>/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/bin/Release/2D LBFS</obj>
+    </frame>
+    <frame>
+      <ip>0x587CEC4</ip>
+      <obj>/lib/x86_64-linux-gnu/libc-2.19.so</obj>
+      <fn>(below main)</fn>
+      <dir>/build/eglibc-3GlaMS/eglibc-2.19/csu</dir>
+      <file>libc-start.c</file>
+      <line>287</line>
+    </frame>
+  </stack>
+</clientmsg>
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:00.827 </time>
+</status>
+
+<errorcounts>
+  <pair>
+    <count>1</count>
+    <unique>0x2</unique>
+  </pair>
+  <pair>
+    <count>2</count>
+    <unique>0x0</unique>
+  </pair>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+

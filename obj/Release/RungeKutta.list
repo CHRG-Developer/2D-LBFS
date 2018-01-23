@@ -1,0 +1,170 @@
+GAS LISTING /tmp/ccOIhsOI.s 			page 1
+
+
+   1              		.file	"RungeKutta.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN10RungeKuttaD2Ev
+  11              	_ZN10RungeKuttaD2Ev:
+  12              	.LFB4:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE4:
+  18              		.section	.text.unlikely
+  19              	.LCOLDE0:
+  20              		.text
+  21              	.LHOTE0:
+  22              		.globl	_ZN10RungeKuttaD1Ev
+  23              		.set	_ZN10RungeKuttaD1Ev,_ZN10RungeKuttaD2Ev
+  24              		.section	.text.unlikely
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.text
+  28              	.LHOTB1:
+  29              		.align 2
+  30 0002 0F1F4000 		.p2align 4,,15
+  30      662E0F1F 
+  30      84000000 
+  30      0000
+  31              		.globl	_ZN10RungeKuttaD0Ev
+  33              	_ZN10RungeKuttaD0Ev:
+  34              	.LFB6:
+  35              		.cfi_startproc
+  36 0010 E9000000 		jmp	_ZdlPv
+  36      00
+  37              		.cfi_endproc
+  38              	.LFE6:
+  40              		.section	.text.unlikely
+  41              	.LCOLDE1:
+  42              		.text
+  43              	.LHOTE1:
+  44              		.section	.text.unlikely
+  45              		.align 2
+  46              	.LCOLDB6:
+  47              		.text
+  48              	.LHOTB6:
+  49 0015 90       		.align 2
+  50 0016 662E0F1F 		.p2align 4,,15
+  50      84000000 
+  50      0000
+  51              		.globl	_ZN10RungeKuttaC2Ev
+  53              	_ZN10RungeKuttaC2Ev:
+  54              	.LFB1:
+  55              		.cfi_startproc
+  56 0020 F20F1005 		movsd	.LC2(%rip), %xmm0
+GAS LISTING /tmp/ccOIhsOI.s 			page 2
+
+
+  56      00000000 
+  57 0028 48C70700 		movq	$_ZTV10RungeKutta+16, (%rdi)
+  57      000000
+  58 002f F20F100D 		movsd	.LC3(%rip), %xmm1
+  58      00000000 
+  59 0037 C7474804 		movl	$4, 72(%rdi)
+  59      000000
+  60 003e F20F1147 		movsd	%xmm0, 8(%rdi)
+  60      08
+  61 0043 F20F114F 		movsd	%xmm1, 16(%rdi)
+  61      10
+  62 0048 F20F114F 		movsd	%xmm1, 24(%rdi)
+  62      18
+  63 004d F20F1147 		movsd	%xmm0, 32(%rdi)
+  63      20
+  64 0052 F20F100D 		movsd	.LC5(%rip), %xmm1
+  64      00000000 
+  65 005a F20F1005 		movsd	.LC4(%rip), %xmm0
+  65      00000000 
+  66 0062 F20F114F 		movsd	%xmm1, 48(%rdi)
+  66      30
+  67 0067 F20F1147 		movsd	%xmm0, 40(%rdi)
+  67      28
+  68 006c F20F114F 		movsd	%xmm1, 56(%rdi)
+  68      38
+  69 0071 F20F1147 		movsd	%xmm0, 64(%rdi)
+  69      40
+  70 0076 C3       		ret
+  71              		.cfi_endproc
+  72              	.LFE1:
+  74              		.section	.text.unlikely
+  75              	.LCOLDE6:
+  76              		.text
+  77              	.LHOTE6:
+  78              		.globl	_ZN10RungeKuttaC1Ev
+  79              		.set	_ZN10RungeKuttaC1Ev,_ZN10RungeKuttaC2Ev
+  80              		.weak	_ZTS10RungeKutta
+  81              		.section	.rodata._ZTS10RungeKutta,"aG",@progbits,_ZTS10RungeKutta,comdat
+  82              		.align 8
+  85              	_ZTS10RungeKutta:
+  86 0000 31305275 		.string	"10RungeKutta"
+  86      6E67654B 
+  86      75747461 
+  86      00
+  87              		.weak	_ZTI10RungeKutta
+  88              		.section	.rodata._ZTI10RungeKutta,"aG",@progbits,_ZTI10RungeKutta,comdat
+  89              		.align 8
+  92              	_ZTI10RungeKutta:
+  93 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+  93      00000000 
+  94 0008 00000000 		.quad	_ZTS10RungeKutta
+  94      00000000 
+  95              		.weak	_ZTV10RungeKutta
+  96              		.section	.rodata._ZTV10RungeKutta,"aG",@progbits,_ZTV10RungeKutta,comdat
+  97              		.align 8
+ 100              	_ZTV10RungeKutta:
+ 101 0000 00000000 		.quad	0
+GAS LISTING /tmp/ccOIhsOI.s 			page 3
+
+
+ 101      00000000 
+ 102 0008 00000000 		.quad	_ZTI10RungeKutta
+ 102      00000000 
+ 103 0010 00000000 		.quad	_ZN10RungeKuttaD1Ev
+ 103      00000000 
+ 104 0018 00000000 		.quad	_ZN10RungeKuttaD0Ev
+ 104      00000000 
+ 105              		.section	.rodata.cst8,"aM",@progbits,8
+ 106              		.align 8
+ 107              	.LC2:
+ 108 0000 00000000 		.long	0
+ 109 0004 0000F03F 		.long	1072693248
+ 110              		.align 8
+ 111              	.LC3:
+ 112 0008 00000000 		.long	0
+ 113 000c 0000E03F 		.long	1071644672
+ 114              		.align 8
+ 115              	.LC4:
+ 116 0010 55555555 		.long	1431655765
+ 117 0014 5555C53F 		.long	1069897045
+ 118              		.align 8
+ 119              	.LC5:
+ 120 0018 55555555 		.long	1431655765
+ 121 001c 5555D53F 		.long	1070945621
+ 122              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 123              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccOIhsOI.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 RungeKutta.cpp
+     /tmp/ccOIhsOI.s:11     .text:0000000000000000 _ZN10RungeKuttaD2Ev
+     /tmp/ccOIhsOI.s:11     .text:0000000000000000 _ZN10RungeKuttaD1Ev
+     /tmp/ccOIhsOI.s:33     .text:0000000000000010 _ZN10RungeKuttaD0Ev
+     /tmp/ccOIhsOI.s:53     .text:0000000000000020 _ZN10RungeKuttaC2Ev
+     /tmp/ccOIhsOI.s:100    .rodata._ZTV10RungeKutta:0000000000000000 _ZTV10RungeKutta
+     /tmp/ccOIhsOI.s:53     .text:0000000000000020 _ZN10RungeKuttaC1Ev
+     /tmp/ccOIhsOI.s:85     .rodata._ZTS10RungeKutta:0000000000000000 _ZTS10RungeKutta
+     /tmp/ccOIhsOI.s:92     .rodata._ZTI10RungeKutta:0000000000000000 _ZTI10RungeKutta
+     /tmp/ccOIhsOI.s:107    .rodata.cst8:0000000000000000 .LC2
+     /tmp/ccOIhsOI.s:111    .rodata.cst8:0000000000000008 .LC3
+     /tmp/ccOIhsOI.s:119    .rodata.cst8:0000000000000018 .LC5
+     /tmp/ccOIhsOI.s:115    .rodata.cst8:0000000000000010 .LC4
+
+UNDEFINED SYMBOLS
+_ZdlPv
+_ZTVN10__cxxabiv117__class_type_infoE

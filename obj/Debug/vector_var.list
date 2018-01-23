@@ -1,0 +1,1269 @@
+GAS LISTING /tmp/ccr0cyRJ.s 			page 1
+
+
+   1              		.file	"vector_var.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              		.section	.text._ZN10vector_varD2Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+   5              		.align 2
+   6              		.weak	_ZN10vector_varD2Ev
+   8              	_ZN10vector_varD2Ev:
+   9              	.LFB1:
+  10              		.file 1 "include/vector_var.h"
+   1:include/vector_var.h **** #ifndef VECTOR_VAR_H
+   2:include/vector_var.h **** #define VECTOR_VAR_H
+   3:include/vector_var.h **** 
+   4:include/vector_var.h **** 
+   5:include/vector_var.h **** class vector_var
+   6:include/vector_var.h **** {
+   7:include/vector_var.h ****     public:
+   8:include/vector_var.h ****         vector_var();
+   9:include/vector_var.h ****         vector_var(double _x, double _y, double _z);
+  10:include/vector_var.h ****         virtual ~vector_var(){};
+  11              		.loc 1 10 0
+  12              		.cfi_startproc
+  13 0000 55       		pushq	%rbp
+  14              		.cfi_def_cfa_offset 16
+  15              		.cfi_offset 6, -16
+  16 0001 4889E5   		movq	%rsp, %rbp
+  17              		.cfi_def_cfa_register 6
+  18 0004 4883EC10 		subq	$16, %rsp
+  19 0008 48897DF8 		movq	%rdi, -8(%rbp)
+  20              	.LBB2:
+  21              		.loc 1 10 0
+  22 000c BA000000 		movl	$_ZTV10vector_var+16, %edx
+  22      00
+  23 0011 488B45F8 		movq	-8(%rbp), %rax
+  24 0015 488910   		movq	%rdx, (%rax)
+  25              	.LBE2:
+  26 0018 B8000000 		movl	$0, %eax
+  26      00
+  27 001d 85C0     		testl	%eax, %eax
+  28 001f 740C     		je	.L1
+  29              		.loc 1 10 0 is_stmt 0 discriminator 2
+  30 0021 488B45F8 		movq	-8(%rbp), %rax
+  31 0025 4889C7   		movq	%rax, %rdi
+  32 0028 E8000000 		call	_ZdlPv
+  32      00
+  33              	.L1:
+  34              		.loc 1 10 0
+  35 002d C9       		leave
+  36              		.cfi_def_cfa 7, 8
+  37 002e C3       		ret
+  38              		.cfi_endproc
+  39              	.LFE1:
+  41              		.weak	_ZN10vector_varD1Ev
+  42              		.set	_ZN10vector_varD1Ev,_ZN10vector_varD2Ev
+  43              		.section	.text._ZN10vector_varD0Ev,"axG",@progbits,_ZN10vector_varD5Ev,comdat
+  44              		.align 2
+  45              		.weak	_ZN10vector_varD0Ev
+  47              	_ZN10vector_varD0Ev:
+GAS LISTING /tmp/ccr0cyRJ.s 			page 2
+
+
+  48              	.LFB3:
+  49              		.loc 1 10 0 is_stmt 1
+  50              		.cfi_startproc
+  51 0000 55       		pushq	%rbp
+  52              		.cfi_def_cfa_offset 16
+  53              		.cfi_offset 6, -16
+  54 0001 4889E5   		movq	%rsp, %rbp
+  55              		.cfi_def_cfa_register 6
+  56 0004 4883EC10 		subq	$16, %rsp
+  57 0008 48897DF8 		movq	%rdi, -8(%rbp)
+  58              		.loc 1 10 0
+  59 000c 488B45F8 		movq	-8(%rbp), %rax
+  60 0010 4889C7   		movq	%rax, %rdi
+  61 0013 E8000000 		call	_ZN10vector_varD1Ev
+  61      00
+  62 0018 488B45F8 		movq	-8(%rbp), %rax
+  63 001c 4889C7   		movq	%rax, %rdi
+  64 001f E8000000 		call	_ZdlPv
+  64      00
+  65 0024 C9       		leave
+  66              		.cfi_def_cfa 7, 8
+  67 0025 C3       		ret
+  68              		.cfi_endproc
+  69              	.LFE3:
+  71              		.text
+  72              		.align 2
+  73              		.globl	_ZN10vector_varC2Ev
+  75              	_ZN10vector_varC2Ev:
+  76              	.LFB5:
+  77              		.file 2 "/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp"
+   1:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** #include "vector_var.h"
+   2:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** #include <math.h>       /* pow ,cosh */
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+   4:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** vector_var::vector_var()
+  78              		.loc 2 4 0
+  79              		.cfi_startproc
+  80 0000 55       		pushq	%rbp
+  81              		.cfi_def_cfa_offset 16
+  82              		.cfi_offset 6, -16
+  83 0001 4889E5   		movq	%rsp, %rbp
+  84              		.cfi_def_cfa_register 6
+  85 0004 48897DF8 		movq	%rdi, -8(%rbp)
+  86              	.LBB3:
+  87              		.loc 2 4 0
+  88 0008 BA000000 		movl	$_ZTV10vector_var+16, %edx
+  88      00
+  89 000d 488B45F8 		movq	-8(%rbp), %rax
+  90 0011 488910   		movq	%rdx, (%rax)
+  91              	.LBE3:
+   5:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** {
+   6:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     //ctor
+   7:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+  92              		.loc 2 7 0
+  93 0014 90       		nop
+  94 0015 5D       		popq	%rbp
+  95              		.cfi_def_cfa 7, 8
+  96 0016 C3       		ret
+GAS LISTING /tmp/ccr0cyRJ.s 			page 3
+
+
+  97              		.cfi_endproc
+  98              	.LFE5:
+ 100              		.globl	_ZN10vector_varC1Ev
+ 101              		.set	_ZN10vector_varC1Ev,_ZN10vector_varC2Ev
+ 102 0017 90       		.align 2
+ 103              		.globl	_ZN10vector_varC2Eddd
+ 105              	_ZN10vector_varC2Eddd:
+ 106              	.LFB8:
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** vector_var::vector_var(double _x, double _y, double _z)
+ 107              		.loc 2 8 0
+ 108              		.cfi_startproc
+ 109 0018 55       		pushq	%rbp
+ 110              		.cfi_def_cfa_offset 16
+ 111              		.cfi_offset 6, -16
+ 112 0019 4889E5   		movq	%rsp, %rbp
+ 113              		.cfi_def_cfa_register 6
+ 114 001c 48897DF8 		movq	%rdi, -8(%rbp)
+ 115 0020 F20F1145 		movsd	%xmm0, -16(%rbp)
+ 115      F0
+ 116 0025 F20F114D 		movsd	%xmm1, -24(%rbp)
+ 116      E8
+ 117 002a F20F1155 		movsd	%xmm2, -32(%rbp)
+ 117      E0
+ 118              	.LBB4:
+ 119              		.loc 2 8 0
+ 120 002f BA000000 		movl	$_ZTV10vector_var+16, %edx
+ 120      00
+ 121 0034 488B45F8 		movq	-8(%rbp), %rax
+ 122 0038 488910   		movq	%rdx, (%rax)
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** {
+  10:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     //ctor
+  11:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     x = _x;
+ 123              		.loc 2 11 0
+ 124 003b 488B45F8 		movq	-8(%rbp), %rax
+ 125 003f F20F1045 		movsd	-16(%rbp), %xmm0
+ 125      F0
+ 126 0044 F20F1140 		movsd	%xmm0, 8(%rax)
+ 126      08
+  12:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     y = _y;
+ 127              		.loc 2 12 0
+ 128 0049 488B45F8 		movq	-8(%rbp), %rax
+ 129 004d F20F1045 		movsd	-24(%rbp), %xmm0
+ 129      E8
+ 130 0052 F20F1140 		movsd	%xmm0, 16(%rax)
+ 130      10
+  13:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     z = _z;
+ 131              		.loc 2 13 0
+ 132 0057 488B45F8 		movq	-8(%rbp), %rax
+ 133 005b F20F1045 		movsd	-32(%rbp), %xmm0
+ 133      E0
+ 134 0060 F20F1140 		movsd	%xmm0, 24(%rax)
+ 134      18
+ 135              	.LBE4:
+  14:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 136              		.loc 2 14 0
+ 137 0065 90       		nop
+ 138 0066 5D       		popq	%rbp
+GAS LISTING /tmp/ccr0cyRJ.s 			page 4
+
+
+ 139              		.cfi_def_cfa 7, 8
+ 140 0067 C3       		ret
+ 141              		.cfi_endproc
+ 142              	.LFE8:
+ 144              		.globl	_ZN10vector_varC1Eddd
+ 145              		.set	_ZN10vector_varC1Eddd,_ZN10vector_varC2Eddd
+ 146              		.align 2
+ 147              		.globl	_ZN10vector_var11Dot_ProductES_
+ 149              	_ZN10vector_var11Dot_ProductES_:
+ 150              	.LFB10:
+  15:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** //vector_var::~vector_var()
+  16:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** //{
+  17:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** //    //dtor
+  18:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** //}
+  19:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  20:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** double  vector_var::Dot_Product(vector_var b){
+ 151              		.loc 2 20 0
+ 152              		.cfi_startproc
+ 153 0068 55       		pushq	%rbp
+ 154              		.cfi_def_cfa_offset 16
+ 155              		.cfi_offset 6, -16
+ 156 0069 4889E5   		movq	%rsp, %rbp
+ 157              		.cfi_def_cfa_register 6
+ 158 006c 48897DF8 		movq	%rdi, -8(%rbp)
+ 159 0070 488975F0 		movq	%rsi, -16(%rbp)
+  21:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  22:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     return x * b.x + y *b.y + z * b.z;
+ 160              		.loc 2 22 0
+ 161 0074 488B45F8 		movq	-8(%rbp), %rax
+ 162 0078 F20F1048 		movsd	8(%rax), %xmm1
+ 162      08
+ 163 007d 488B45F0 		movq	-16(%rbp), %rax
+ 164 0081 F20F1040 		movsd	8(%rax), %xmm0
+ 164      08
+ 165 0086 F20F59C8 		mulsd	%xmm0, %xmm1
+ 166 008a 488B45F8 		movq	-8(%rbp), %rax
+ 167 008e F20F1050 		movsd	16(%rax), %xmm2
+ 167      10
+ 168 0093 488B45F0 		movq	-16(%rbp), %rax
+ 169 0097 F20F1040 		movsd	16(%rax), %xmm0
+ 169      10
+ 170 009c F20F59C2 		mulsd	%xmm2, %xmm0
+ 171 00a0 F20F58C8 		addsd	%xmm0, %xmm1
+ 172 00a4 488B45F8 		movq	-8(%rbp), %rax
+ 173 00a8 F20F1050 		movsd	24(%rax), %xmm2
+ 173      18
+ 174 00ad 488B45F0 		movq	-16(%rbp), %rax
+ 175 00b1 F20F1040 		movsd	24(%rax), %xmm0
+ 175      18
+ 176 00b6 F20F59C2 		mulsd	%xmm2, %xmm0
+ 177 00ba F20F58C1 		addsd	%xmm1, %xmm0
+  23:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  24:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 178              		.loc 2 24 0
+ 179 00be 5D       		popq	%rbp
+ 180              		.cfi_def_cfa 7, 8
+ 181 00bf C3       		ret
+GAS LISTING /tmp/ccr0cyRJ.s 			page 5
+
+
+ 182              		.cfi_endproc
+ 183              	.LFE10:
+ 185              		.align 2
+ 186              		.globl	_ZN10vector_var3addES_
+ 188              	_ZN10vector_var3addES_:
+ 189              	.LFB11:
+  25:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** void  vector_var::add(vector_var b){
+ 190              		.loc 2 25 0
+ 191              		.cfi_startproc
+ 192 00c0 55       		pushq	%rbp
+ 193              		.cfi_def_cfa_offset 16
+ 194              		.cfi_offset 6, -16
+ 195 00c1 4889E5   		movq	%rsp, %rbp
+ 196              		.cfi_def_cfa_register 6
+ 197 00c4 48897DF8 		movq	%rdi, -8(%rbp)
+ 198 00c8 488975F0 		movq	%rsi, -16(%rbp)
+  26:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  27:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     x = x + b.x;
+ 199              		.loc 2 27 0
+ 200 00cc 488B45F8 		movq	-8(%rbp), %rax
+ 201 00d0 F20F1048 		movsd	8(%rax), %xmm1
+ 201      08
+ 202 00d5 488B45F0 		movq	-16(%rbp), %rax
+ 203 00d9 F20F1040 		movsd	8(%rax), %xmm0
+ 203      08
+ 204 00de F20F58C1 		addsd	%xmm1, %xmm0
+ 205 00e2 488B45F8 		movq	-8(%rbp), %rax
+ 206 00e6 F20F1140 		movsd	%xmm0, 8(%rax)
+ 206      08
+  28:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     y = y + b.y;
+ 207              		.loc 2 28 0
+ 208 00eb 488B45F8 		movq	-8(%rbp), %rax
+ 209 00ef F20F1048 		movsd	16(%rax), %xmm1
+ 209      10
+ 210 00f4 488B45F0 		movq	-16(%rbp), %rax
+ 211 00f8 F20F1040 		movsd	16(%rax), %xmm0
+ 211      10
+ 212 00fd F20F58C1 		addsd	%xmm1, %xmm0
+ 213 0101 488B45F8 		movq	-8(%rbp), %rax
+ 214 0105 F20F1140 		movsd	%xmm0, 16(%rax)
+ 214      10
+  29:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     z = z + b.z;
+ 215              		.loc 2 29 0
+ 216 010a 488B45F8 		movq	-8(%rbp), %rax
+ 217 010e F20F1048 		movsd	24(%rax), %xmm1
+ 217      18
+ 218 0113 488B45F0 		movq	-16(%rbp), %rax
+ 219 0117 F20F1040 		movsd	24(%rax), %xmm0
+ 219      18
+ 220 011c F20F58C1 		addsd	%xmm1, %xmm0
+ 221 0120 488B45F8 		movq	-8(%rbp), %rax
+ 222 0124 F20F1140 		movsd	%xmm0, 24(%rax)
+ 222      18
+  30:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 223              		.loc 2 30 0
+ 224 0129 90       		nop
+ 225 012a 5D       		popq	%rbp
+GAS LISTING /tmp/ccr0cyRJ.s 			page 6
+
+
+ 226              		.cfi_def_cfa 7, 8
+ 227 012b C3       		ret
+ 228              		.cfi_endproc
+ 229              	.LFE11:
+ 231              		.section	.text._ZN10vector_varC2ERKS_,"axG",@progbits,_ZN10vector_varC5ERKS_,comdat
+ 232              		.align 2
+ 233              		.weak	_ZN10vector_varC2ERKS_
+ 235              	_ZN10vector_varC2ERKS_:
+ 236              	.LFB14:
+   5:include/vector_var.h **** {
+ 237              		.loc 1 5 0
+ 238              		.cfi_startproc
+ 239 0000 55       		pushq	%rbp
+ 240              		.cfi_def_cfa_offset 16
+ 241              		.cfi_offset 6, -16
+ 242 0001 4889E5   		movq	%rsp, %rbp
+ 243              		.cfi_def_cfa_register 6
+ 244 0004 48897DF8 		movq	%rdi, -8(%rbp)
+ 245 0008 488975F0 		movq	%rsi, -16(%rbp)
+ 246              	.LBB5:
+   5:include/vector_var.h **** {
+ 247              		.loc 1 5 0
+ 248 000c BA000000 		movl	$_ZTV10vector_var+16, %edx
+ 248      00
+ 249 0011 488B45F8 		movq	-8(%rbp), %rax
+ 250 0015 488910   		movq	%rdx, (%rax)
+ 251 0018 488B45F0 		movq	-16(%rbp), %rax
+ 252 001c F20F1040 		movsd	8(%rax), %xmm0
+ 252      08
+ 253 0021 488B45F8 		movq	-8(%rbp), %rax
+ 254 0025 F20F1140 		movsd	%xmm0, 8(%rax)
+ 254      08
+ 255 002a 488B45F0 		movq	-16(%rbp), %rax
+ 256 002e F20F1040 		movsd	16(%rax), %xmm0
+ 256      10
+ 257 0033 488B45F8 		movq	-8(%rbp), %rax
+ 258 0037 F20F1140 		movsd	%xmm0, 16(%rax)
+ 258      10
+ 259 003c 488B45F0 		movq	-16(%rbp), %rax
+ 260 0040 F20F1040 		movsd	24(%rax), %xmm0
+ 260      18
+ 261 0045 488B45F8 		movq	-8(%rbp), %rax
+ 262 0049 F20F1140 		movsd	%xmm0, 24(%rax)
+ 262      18
+ 263              	.LBE5:
+ 264 004e 90       		nop
+ 265 004f 5D       		popq	%rbp
+ 266              		.cfi_def_cfa 7, 8
+ 267 0050 C3       		ret
+ 268              		.cfi_endproc
+ 269              	.LFE14:
+ 271              		.weak	_ZN10vector_varC1ERKS_
+ 272              		.set	_ZN10vector_varC1ERKS_,_ZN10vector_varC2ERKS_
+ 273              		.text
+ 274              		.align 2
+ 275              		.globl	_ZN10vector_var14line_magnitudeES_S_S_
+ 277              	_ZN10vector_var14line_magnitudeES_S_S_:
+GAS LISTING /tmp/ccr0cyRJ.s 			page 7
+
+
+ 278              	.LFB12:
+  31:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** vector_var vector_var::line_magnitude(vector_var intercept, vector_var slope, vector_var displaceme
+ 279              		.loc 2 31 0
+ 280              		.cfi_startproc
+ 281 012c 55       		pushq	%rbp
+ 282              		.cfi_def_cfa_offset 16
+ 283              		.cfi_offset 6, -16
+ 284 012d 4889E5   		movq	%rsp, %rbp
+ 285              		.cfi_def_cfa_register 6
+ 286 0130 4883EC40 		subq	$64, %rsp
+ 287 0134 48897DE8 		movq	%rdi, -24(%rbp)
+ 288 0138 488975E0 		movq	%rsi, -32(%rbp)
+ 289 013c 488955D8 		movq	%rdx, -40(%rbp)
+ 290 0140 48894DD0 		movq	%rcx, -48(%rbp)
+ 291 0144 4C8945C8 		movq	%r8, -56(%rbp)
+ 292              		.loc 2 31 0
+ 293 0148 64488B04 		movq	%fs:40, %rax
+ 293      25280000 
+ 293      00
+ 294 0151 488945F8 		movq	%rax, -8(%rbp)
+ 295 0155 31C0     		xorl	%eax, %eax
+  32:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  33:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     vector_var temp;
+ 296              		.loc 2 33 0
+ 297 0157 488B45E8 		movq	-24(%rbp), %rax
+ 298 015b 4889C7   		movq	%rax, %rdi
+ 299 015e E8000000 		call	_ZN10vector_varC1Ev
+ 299      00
+  34:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  35:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp.x = intercept.x + slope.x * displacement.x;
+ 300              		.loc 2 35 0
+ 301 0163 488B45D8 		movq	-40(%rbp), %rax
+ 302 0167 F20F1048 		movsd	8(%rax), %xmm1
+ 302      08
+ 303 016c 488B45D0 		movq	-48(%rbp), %rax
+ 304 0170 F20F1050 		movsd	8(%rax), %xmm2
+ 304      08
+ 305 0175 488B45C8 		movq	-56(%rbp), %rax
+ 306 0179 F20F1040 		movsd	8(%rax), %xmm0
+ 306      08
+ 307 017e F20F59C2 		mulsd	%xmm2, %xmm0
+ 308 0182 F20F58C1 		addsd	%xmm1, %xmm0
+ 309 0186 488B45E8 		movq	-24(%rbp), %rax
+ 310 018a F20F1140 		movsd	%xmm0, 8(%rax)
+ 310      08
+  36:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp.y = intercept.y + slope.y *displacement.y;
+ 311              		.loc 2 36 0
+ 312 018f 488B45D8 		movq	-40(%rbp), %rax
+ 313 0193 F20F1048 		movsd	16(%rax), %xmm1
+ 313      10
+ 314 0198 488B45D0 		movq	-48(%rbp), %rax
+ 315 019c F20F1050 		movsd	16(%rax), %xmm2
+ 315      10
+ 316 01a1 488B45C8 		movq	-56(%rbp), %rax
+ 317 01a5 F20F1040 		movsd	16(%rax), %xmm0
+ 317      10
+ 318 01aa F20F59C2 		mulsd	%xmm2, %xmm0
+GAS LISTING /tmp/ccr0cyRJ.s 			page 8
+
+
+ 319 01ae F20F58C1 		addsd	%xmm1, %xmm0
+ 320 01b2 488B45E8 		movq	-24(%rbp), %rax
+ 321 01b6 F20F1140 		movsd	%xmm0, 16(%rax)
+ 321      10
+  37:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp.z = intercept.z + slope.z * displacement.z;
+ 322              		.loc 2 37 0
+ 323 01bb 488B45D8 		movq	-40(%rbp), %rax
+ 324 01bf F20F1048 		movsd	24(%rax), %xmm1
+ 324      18
+ 325 01c4 488B45D0 		movq	-48(%rbp), %rax
+ 326 01c8 F20F1050 		movsd	24(%rax), %xmm2
+ 326      18
+ 327 01cd 488B45C8 		movq	-56(%rbp), %rax
+ 328 01d1 F20F1040 		movsd	24(%rax), %xmm0
+ 328      18
+ 329 01d6 F20F59C2 		mulsd	%xmm2, %xmm0
+ 330 01da F20F58C1 		addsd	%xmm1, %xmm0
+ 331 01de 488B45E8 		movq	-24(%rbp), %rax
+ 332 01e2 F20F1140 		movsd	%xmm0, 24(%rax)
+ 332      18
+  38:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  39:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     return temp;
+ 333              		.loc 2 39 0
+ 334 01e7 90       		nop
+  40:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  41:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  42:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 335              		.loc 2 42 0
+ 336 01e8 488B45E8 		movq	-24(%rbp), %rax
+ 337 01ec 488B55F8 		movq	-8(%rbp), %rdx
+ 338 01f0 64483314 		xorq	%fs:40, %rdx
+ 338      25280000 
+ 338      00
+ 339 01f9 7405     		je	.L12
+ 340 01fb E8000000 		call	__stack_chk_fail
+ 340      00
+ 341              	.L12:
+ 342 0200 C9       		leave
+ 343              		.cfi_def_cfa 7, 8
+ 344 0201 C3       		ret
+ 345              		.cfi_endproc
+ 346              	.LFE12:
+ 348              		.align 2
+ 349              		.globl	_ZN10vector_var9MagnitudeEv
+ 351              	_ZN10vector_var9MagnitudeEv:
+ 352              	.LFB16:
+  43:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** double vector_var::Magnitude(){
+ 353              		.loc 2 43 0
+ 354              		.cfi_startproc
+ 355 0202 55       		pushq	%rbp
+ 356              		.cfi_def_cfa_offset 16
+ 357              		.cfi_offset 6, -16
+ 358 0203 4889E5   		movq	%rsp, %rbp
+ 359              		.cfi_def_cfa_register 6
+ 360 0206 4883EC20 		subq	$32, %rsp
+ 361 020a 48897DF8 		movq	%rdi, -8(%rbp)
+  44:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+GAS LISTING /tmp/ccr0cyRJ.s 			page 9
+
+
+  45:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     return sqrt(pow(x,2) + pow(y,2) + pow(z,2) );
+ 362              		.loc 2 45 0
+ 363 020e 488B45F8 		movq	-8(%rbp), %rax
+ 364 0212 488B4008 		movq	8(%rax), %rax
+ 365 0216 F20F1005 		movsd	.LC0(%rip), %xmm0
+ 365      00000000 
+ 366 021e 660F28C8 		movapd	%xmm0, %xmm1
+ 367 0222 488945F0 		movq	%rax, -16(%rbp)
+ 368 0226 F20F1045 		movsd	-16(%rbp), %xmm0
+ 368      F0
+ 369 022b E8000000 		call	pow
+ 369      00
+ 370 0230 F20F1145 		movsd	%xmm0, -16(%rbp)
+ 370      F0
+ 371 0235 488B45F8 		movq	-8(%rbp), %rax
+ 372 0239 488B4010 		movq	16(%rax), %rax
+ 373 023d F20F1005 		movsd	.LC0(%rip), %xmm0
+ 373      00000000 
+ 374 0245 660F28C8 		movapd	%xmm0, %xmm1
+ 375 0249 488945E8 		movq	%rax, -24(%rbp)
+ 376 024d F20F1045 		movsd	-24(%rbp), %xmm0
+ 376      E8
+ 377 0252 E8000000 		call	pow
+ 377      00
+ 378 0257 660F28D0 		movapd	%xmm0, %xmm2
+ 379 025b F20F5855 		addsd	-16(%rbp), %xmm2
+ 379      F0
+ 380 0260 F20F1155 		movsd	%xmm2, -16(%rbp)
+ 380      F0
+ 381 0265 488B45F8 		movq	-8(%rbp), %rax
+ 382 0269 488B4018 		movq	24(%rax), %rax
+ 383 026d F20F1005 		movsd	.LC0(%rip), %xmm0
+ 383      00000000 
+ 384 0275 660F28C8 		movapd	%xmm0, %xmm1
+ 385 0279 488945E8 		movq	%rax, -24(%rbp)
+ 386 027d F20F1045 		movsd	-24(%rbp), %xmm0
+ 386      E8
+ 387 0282 E8000000 		call	pow
+ 387      00
+ 388 0287 F20F5845 		addsd	-16(%rbp), %xmm0
+ 388      F0
+ 389 028c E8000000 		call	sqrt
+ 389      00
+ 390 0291 66480F7E 		movq	%xmm0, %rax
+ 390      C0
+ 391 0296 488945F0 		movq	%rax, -16(%rbp)
+ 392 029a F20F1045 		movsd	-16(%rbp), %xmm0
+ 392      F0
+  46:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 393              		.loc 2 46 0
+ 394 029f C9       		leave
+ 395              		.cfi_def_cfa 7, 8
+ 396 02a0 C3       		ret
+ 397              		.cfi_endproc
+ 398              	.LFE16:
+ 400 02a1 90       		.align 2
+ 401              		.globl	_ZN10vector_var21Angle_Between_VectorsES_
+GAS LISTING /tmp/ccr0cyRJ.s 			page 10
+
+
+ 403              	_ZN10vector_var21Angle_Between_VectorsES_:
+ 404              	.LFB17:
+  47:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  48:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** double  vector_var::Angle_Between_Vectors(vector_var b){
+ 405              		.loc 2 48 0
+ 406              		.cfi_startproc
+ 407 02a2 55       		pushq	%rbp
+ 408              		.cfi_def_cfa_offset 16
+ 409              		.cfi_offset 6, -16
+ 410 02a3 4889E5   		movq	%rsp, %rbp
+ 411              		.cfi_def_cfa_register 6
+ 412 02a6 53       		pushq	%rbx
+ 413 02a7 4883EC68 		subq	$104, %rsp
+ 414              		.cfi_offset 3, -24
+ 415 02ab 48897DA8 		movq	%rdi, -88(%rbp)
+ 416 02af 488975A0 		movq	%rsi, -96(%rbp)
+ 417              		.loc 2 48 0
+ 418 02b3 64488B04 		movq	%fs:40, %rax
+ 418      25280000 
+ 418      00
+ 419 02bc 488945E8 		movq	%rax, -24(%rbp)
+ 420 02c0 31C0     		xorl	%eax, %eax
+  49:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     double num, denom;
+  50:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     num = Dot_Product(b);
+ 421              		.loc 2 50 0
+ 422 02c2 488B55A0 		movq	-96(%rbp), %rdx
+ 423 02c6 488D45C0 		leaq	-64(%rbp), %rax
+ 424 02ca 4889D6   		movq	%rdx, %rsi
+ 425 02cd 4889C7   		movq	%rax, %rdi
+ 426 02d0 E8000000 		call	_ZN10vector_varC1ERKS_
+ 426      00
+ 427 02d5 488D55C0 		leaq	-64(%rbp), %rdx
+ 428 02d9 488B45A8 		movq	-88(%rbp), %rax
+ 429 02dd 4889D6   		movq	%rdx, %rsi
+ 430 02e0 4889C7   		movq	%rax, %rdi
+ 431 02e3 E8000000 		call	_ZN10vector_var11Dot_ProductES_
+ 431      00
+ 432 02e8 66480F7E 		movq	%xmm0, %rax
+ 432      C0
+ 433 02ed 488945B0 		movq	%rax, -80(%rbp)
+ 434 02f1 488D45C0 		leaq	-64(%rbp), %rax
+ 435 02f5 4889C7   		movq	%rax, %rdi
+ 436 02f8 E8000000 		call	_ZN10vector_varD1Ev
+ 436      00
+  51:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     denom = Magnitude();
+ 437              		.loc 2 51 0
+ 438 02fd 488B45A8 		movq	-88(%rbp), %rax
+ 439 0301 4889C7   		movq	%rax, %rdi
+ 440 0304 E8000000 		call	_ZN10vector_var9MagnitudeEv
+ 440      00
+ 441 0309 66480F7E 		movq	%xmm0, %rax
+ 441      C0
+ 442 030e 488945B8 		movq	%rax, -72(%rbp)
+  52:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     denom = denom* b.Magnitude();
+ 443              		.loc 2 52 0
+ 444 0312 488B45A0 		movq	-96(%rbp), %rax
+ 445 0316 4889C7   		movq	%rax, %rdi
+GAS LISTING /tmp/ccr0cyRJ.s 			page 11
+
+
+ 446 0319 E8000000 		call	_ZN10vector_var9MagnitudeEv
+ 446      00
+ 447 031e 660F28C8 		movapd	%xmm0, %xmm1
+ 448 0322 F20F1045 		movsd	-72(%rbp), %xmm0
+ 448      B8
+ 449 0327 F20F59C1 		mulsd	%xmm1, %xmm0
+ 450 032b F20F1145 		movsd	%xmm0, -72(%rbp)
+ 450      B8
+  53:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     num = num/denom;
+ 451              		.loc 2 53 0
+ 452 0330 F20F1045 		movsd	-80(%rbp), %xmm0
+ 452      B0
+ 453 0335 F20F5E45 		divsd	-72(%rbp), %xmm0
+ 453      B8
+ 454 033a F20F1145 		movsd	%xmm0, -80(%rbp)
+ 454      B0
+  54:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     num = acos (num);
+ 455              		.loc 2 54 0
+ 456 033f 488B45B0 		movq	-80(%rbp), %rax
+ 457 0343 48894598 		movq	%rax, -104(%rbp)
+ 458 0347 F20F1045 		movsd	-104(%rbp), %xmm0
+ 458      98
+ 459 034c E8000000 		call	acos
+ 459      00
+ 460 0351 66480F7E 		movq	%xmm0, %rax
+ 460      C0
+ 461 0356 488945B0 		movq	%rax, -80(%rbp)
+  55:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  56:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     return acos (Dot_Product(b)/(Magnitude()* b.Magnitude())) ;
+ 462              		.loc 2 56 0
+ 463 035a 488B55A0 		movq	-96(%rbp), %rdx
+ 464 035e 488D45C0 		leaq	-64(%rbp), %rax
+ 465 0362 4889D6   		movq	%rdx, %rsi
+ 466 0365 4889C7   		movq	%rax, %rdi
+ 467 0368 E8000000 		call	_ZN10vector_varC1ERKS_
+ 467      00
+ 468 036d 488D55C0 		leaq	-64(%rbp), %rdx
+ 469 0371 488B45A8 		movq	-88(%rbp), %rax
+ 470 0375 4889D6   		movq	%rdx, %rsi
+ 471 0378 4889C7   		movq	%rax, %rdi
+ 472 037b E8000000 		call	_ZN10vector_var11Dot_ProductES_
+ 472      00
+ 473 0380 F20F1145 		movsd	%xmm0, -104(%rbp)
+ 473      98
+ 474 0385 488B45A8 		movq	-88(%rbp), %rax
+ 475 0389 4889C7   		movq	%rax, %rdi
+ 476 038c E8000000 		call	_ZN10vector_var9MagnitudeEv
+ 476      00
+ 477 0391 F20F1145 		movsd	%xmm0, -112(%rbp)
+ 477      90
+ 478 0396 488B45A0 		movq	-96(%rbp), %rax
+ 479 039a 4889C7   		movq	%rax, %rdi
+ 480 039d E8000000 		call	_ZN10vector_var9MagnitudeEv
+ 480      00
+ 481 03a2 F20F5945 		mulsd	-112(%rbp), %xmm0
+ 481      90
+ 482 03a7 F20F1055 		movsd	-104(%rbp), %xmm2
+GAS LISTING /tmp/ccr0cyRJ.s 			page 12
+
+
+ 482      98
+ 483 03ac F20F5ED0 		divsd	%xmm0, %xmm2
+ 484 03b0 660F28C2 		movapd	%xmm2, %xmm0
+ 485 03b4 E8000000 		call	acos
+ 485      00
+ 486 03b9 66480F7E 		movq	%xmm0, %rbx
+ 486      C3
+ 487 03be 488D45C0 		leaq	-64(%rbp), %rax
+ 488 03c2 4889C7   		movq	%rax, %rdi
+ 489 03c5 E8000000 		call	_ZN10vector_varD1Ev
+ 489      00
+ 490 03ca 48895D98 		movq	%rbx, -104(%rbp)
+ 491 03ce F20F1045 		movsd	-104(%rbp), %xmm0
+ 491      98
+  57:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  58:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 492              		.loc 2 58 0
+ 493 03d3 488B45E8 		movq	-24(%rbp), %rax
+ 494 03d7 64483304 		xorq	%fs:40, %rax
+ 494      25280000 
+ 494      00
+ 495 03e0 7405     		je	.L17
+ 496 03e2 E8000000 		call	__stack_chk_fail
+ 496      00
+ 497              	.L17:
+ 498 03e7 4883C468 		addq	$104, %rsp
+ 499 03eb 5B       		popq	%rbx
+ 500 03ec 5D       		popq	%rbp
+ 501              		.cfi_def_cfa 7, 8
+ 502 03ed C3       		ret
+ 503              		.cfi_endproc
+ 504              	.LFE17:
+ 506              		.align 2
+ 507              		.globl	_ZN10vector_var6factorEd
+ 509              	_ZN10vector_var6factorEd:
+ 510              	.LFB18:
+  59:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  60:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** void vector_var::factor(double a){
+ 511              		.loc 2 60 0
+ 512              		.cfi_startproc
+ 513 03ee 55       		pushq	%rbp
+ 514              		.cfi_def_cfa_offset 16
+ 515              		.cfi_offset 6, -16
+ 516 03ef 4889E5   		movq	%rsp, %rbp
+ 517              		.cfi_def_cfa_register 6
+ 518 03f2 48897DF8 		movq	%rdi, -8(%rbp)
+ 519 03f6 F20F1145 		movsd	%xmm0, -16(%rbp)
+ 519      F0
+  61:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  62:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     x = x/a;
+ 520              		.loc 2 62 0
+ 521 03fb 488B45F8 		movq	-8(%rbp), %rax
+ 522 03ff F20F1040 		movsd	8(%rax), %xmm0
+ 522      08
+ 523 0404 F20F5E45 		divsd	-16(%rbp), %xmm0
+ 523      F0
+ 524 0409 488B45F8 		movq	-8(%rbp), %rax
+GAS LISTING /tmp/ccr0cyRJ.s 			page 13
+
+
+ 525 040d F20F1140 		movsd	%xmm0, 8(%rax)
+ 525      08
+  63:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     y= y/a;
+ 526              		.loc 2 63 0
+ 527 0412 488B45F8 		movq	-8(%rbp), %rax
+ 528 0416 F20F1040 		movsd	16(%rax), %xmm0
+ 528      10
+ 529 041b F20F5E45 		divsd	-16(%rbp), %xmm0
+ 529      F0
+ 530 0420 488B45F8 		movq	-8(%rbp), %rax
+ 531 0424 F20F1140 		movsd	%xmm0, 16(%rax)
+ 531      10
+  64:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     z= z/a;
+ 532              		.loc 2 64 0
+ 533 0429 488B45F8 		movq	-8(%rbp), %rax
+ 534 042d F20F1040 		movsd	24(%rax), %xmm0
+ 534      18
+ 535 0432 F20F5E45 		divsd	-16(%rbp), %xmm0
+ 535      F0
+ 536 0437 488B45F8 		movq	-8(%rbp), %rax
+ 537 043b F20F1140 		movsd	%xmm0, 24(%rax)
+ 537      18
+  65:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 538              		.loc 2 65 0
+ 539 0440 90       		nop
+ 540 0441 5D       		popq	%rbp
+ 541              		.cfi_def_cfa 7, 8
+ 542 0442 C3       		ret
+ 543              		.cfi_endproc
+ 544              	.LFE18:
+ 546 0443 90       		.align 2
+ 547              		.globl	_ZN10vector_var5roundEi
+ 549              	_ZN10vector_var5roundEi:
+ 550              	.LFB19:
+  66:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** void vector_var::round(int precision){
+ 551              		.loc 2 66 0
+ 552              		.cfi_startproc
+ 553 0444 55       		pushq	%rbp
+ 554              		.cfi_def_cfa_offset 16
+ 555              		.cfi_offset 6, -16
+ 556 0445 4889E5   		movq	%rsp, %rbp
+ 557              		.cfi_def_cfa_register 6
+ 558 0448 4883EC30 		subq	$48, %rsp
+ 559 044c 48897DE8 		movq	%rdi, -24(%rbp)
+ 560 0450 8975E4   		movl	%esi, -28(%rbp)
+  67:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  68:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  69:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  70:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     double f = pow(10,precision);
+ 561              		.loc 2 70 0
+ 562 0453 660FEFC0 		pxor	%xmm0, %xmm0
+ 563 0457 F20F2A45 		cvtsi2sd	-28(%rbp), %xmm0
+ 563      E4
+ 564 045c 48B80000 		movabsq	$4621819117588971520, %rax
+ 564      00000000 
+ 564      2440
+ 565 0466 660F28C8 		movapd	%xmm0, %xmm1
+GAS LISTING /tmp/ccr0cyRJ.s 			page 14
+
+
+ 566 046a 488945D8 		movq	%rax, -40(%rbp)
+ 567 046e F20F1045 		movsd	-40(%rbp), %xmm0
+ 567      D8
+ 568 0473 E8000000 		call	pow
+ 568      00
+ 569 0478 66480F7E 		movq	%xmm0, %rax
+ 569      C0
+ 570 047d 488945F0 		movq	%rax, -16(%rbp)
+  71:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     double temp;
+  72:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  73:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  74:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp = floor(fabs(x *f))/f;
+ 571              		.loc 2 74 0
+ 572 0481 488B45E8 		movq	-24(%rbp), %rax
+ 573 0485 F20F1040 		movsd	8(%rax), %xmm0
+ 573      08
+ 574 048a F20F5945 		mulsd	-16(%rbp), %xmm0
+ 574      F0
+ 575 048f F20F100D 		movsd	.LC2(%rip), %xmm1
+ 575      00000000 
+ 576 0497 660F54C1 		andpd	%xmm1, %xmm0
+ 577 049b E8000000 		call	trunc
+ 577      00
+ 578 04a0 F20F5E45 		divsd	-16(%rbp), %xmm0
+ 578      F0
+ 579 04a5 F20F1145 		movsd	%xmm0, -8(%rbp)
+ 579      F8
+  75:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     if (x < 0.0){
+ 580              		.loc 2 75 0
+ 581 04aa 488B45E8 		movq	-24(%rbp), %rax
+ 582 04ae F20F1048 		movsd	8(%rax), %xmm1
+ 582      08
+ 583 04b3 660FEFC0 		pxor	%xmm0, %xmm0
+ 584 04b7 660F2EC1 		ucomisd	%xmm1, %xmm0
+ 585 04bb 761C     		jbe	.L32
+  76:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         x = -temp;
+ 586              		.loc 2 76 0
+ 587 04bd F20F104D 		movsd	-8(%rbp), %xmm1
+ 587      F8
+ 588 04c2 F20F1005 		movsd	.LC4(%rip), %xmm0
+ 588      00000000 
+ 589 04ca 660F57C1 		xorpd	%xmm1, %xmm0
+ 590 04ce 488B45E8 		movq	-24(%rbp), %rax
+ 591 04d2 F20F1140 		movsd	%xmm0, 8(%rax)
+ 591      08
+ 592 04d7 EB0E     		jmp	.L22
+ 593              	.L32:
+  77:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }else{
+  78:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         x = temp;
+ 594              		.loc 2 78 0
+ 595 04d9 488B45E8 		movq	-24(%rbp), %rax
+ 596 04dd F20F1045 		movsd	-8(%rbp), %xmm0
+ 596      F8
+ 597 04e2 F20F1140 		movsd	%xmm0, 8(%rax)
+ 597      08
+ 598              	.L22:
+  79:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }
+GAS LISTING /tmp/ccr0cyRJ.s 			page 15
+
+
+  80:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp = floor(fabs(y *f))/f;
+ 599              		.loc 2 80 0
+ 600 04e7 488B45E8 		movq	-24(%rbp), %rax
+ 601 04eb F20F1040 		movsd	16(%rax), %xmm0
+ 601      10
+ 602 04f0 F20F5945 		mulsd	-16(%rbp), %xmm0
+ 602      F0
+ 603 04f5 F20F100D 		movsd	.LC2(%rip), %xmm1
+ 603      00000000 
+ 604 04fd 660F54C1 		andpd	%xmm1, %xmm0
+ 605 0501 E8000000 		call	trunc
+ 605      00
+ 606 0506 F20F5E45 		divsd	-16(%rbp), %xmm0
+ 606      F0
+ 607 050b F20F1145 		movsd	%xmm0, -8(%rbp)
+ 607      F8
+  81:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     if (y < 0.0){
+ 608              		.loc 2 81 0
+ 609 0510 488B45E8 		movq	-24(%rbp), %rax
+ 610 0514 F20F1048 		movsd	16(%rax), %xmm1
+ 610      10
+ 611 0519 660FEFC0 		pxor	%xmm0, %xmm0
+ 612 051d 660F2EC1 		ucomisd	%xmm1, %xmm0
+ 613 0521 761C     		jbe	.L33
+  82:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         y = -temp;
+ 614              		.loc 2 82 0
+ 615 0523 F20F104D 		movsd	-8(%rbp), %xmm1
+ 615      F8
+ 616 0528 F20F1005 		movsd	.LC4(%rip), %xmm0
+ 616      00000000 
+ 617 0530 660F57C1 		xorpd	%xmm1, %xmm0
+ 618 0534 488B45E8 		movq	-24(%rbp), %rax
+ 619 0538 F20F1140 		movsd	%xmm0, 16(%rax)
+ 619      10
+ 620 053d EB0E     		jmp	.L25
+ 621              	.L33:
+  83:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }else{
+  84:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         y = temp;
+ 622              		.loc 2 84 0
+ 623 053f 488B45E8 		movq	-24(%rbp), %rax
+ 624 0543 F20F1045 		movsd	-8(%rbp), %xmm0
+ 624      F8
+ 625 0548 F20F1140 		movsd	%xmm0, 16(%rax)
+ 625      10
+ 626              	.L25:
+  85:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }
+  86:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     temp = floor(fabs(z *f))/f;
+ 627              		.loc 2 86 0
+ 628 054d 488B45E8 		movq	-24(%rbp), %rax
+ 629 0551 F20F1040 		movsd	24(%rax), %xmm0
+ 629      18
+ 630 0556 F20F5945 		mulsd	-16(%rbp), %xmm0
+ 630      F0
+ 631 055b F20F100D 		movsd	.LC2(%rip), %xmm1
+ 631      00000000 
+ 632 0563 660F54C1 		andpd	%xmm1, %xmm0
+ 633 0567 E8000000 		call	trunc
+GAS LISTING /tmp/ccr0cyRJ.s 			page 16
+
+
+ 633      00
+ 634 056c F20F5E45 		divsd	-16(%rbp), %xmm0
+ 634      F0
+ 635 0571 F20F1145 		movsd	%xmm0, -8(%rbp)
+ 635      F8
+  87:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     if (z < 0.0){
+ 636              		.loc 2 87 0
+ 637 0576 488B45E8 		movq	-24(%rbp), %rax
+ 638 057a F20F1048 		movsd	24(%rax), %xmm1
+ 638      18
+ 639 057f 660FEFC0 		pxor	%xmm0, %xmm0
+ 640 0583 660F2EC1 		ucomisd	%xmm1, %xmm0
+ 641 0587 761C     		jbe	.L34
+  88:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         z = -temp;
+ 642              		.loc 2 88 0
+ 643 0589 F20F104D 		movsd	-8(%rbp), %xmm1
+ 643      F8
+ 644 058e F20F1005 		movsd	.LC4(%rip), %xmm0
+ 644      00000000 
+ 645 0596 660F57C1 		xorpd	%xmm1, %xmm0
+ 646 059a 488B45E8 		movq	-24(%rbp), %rax
+ 647 059e F20F1140 		movsd	%xmm0, 24(%rax)
+ 647      18
+  89:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }else{
+  90:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         z = temp;
+  91:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }
+  92:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  93:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 648              		.loc 2 93 0
+ 649 05a3 EB0E     		jmp	.L35
+ 650              	.L34:
+  90:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     }
+ 651              		.loc 2 90 0
+ 652 05a5 488B45E8 		movq	-24(%rbp), %rax
+ 653 05a9 F20F1045 		movsd	-8(%rbp), %xmm0
+ 653      F8
+ 654 05ae F20F1140 		movsd	%xmm0, 24(%rax)
+ 654      18
+ 655              	.L35:
+ 656              		.loc 2 93 0
+ 657 05b3 90       		nop
+ 658 05b4 C9       		leave
+ 659              		.cfi_def_cfa 7, 8
+ 660 05b5 C3       		ret
+ 661              		.cfi_endproc
+ 662              	.LFE19:
+ 664              		.align 2
+ 665              		.globl	_ZN10vector_var12Get_GradientEddS_S_
+ 667              	_ZN10vector_var12Get_GradientEddS_S_:
+ 668              	.LFB20:
+  94:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** void vector_var::Get_Gradient(double y1, double y2, vector_var x1, vector_var x2 ){
+ 669              		.loc 2 94 0
+ 670              		.cfi_startproc
+ 671 05b6 55       		pushq	%rbp
+ 672              		.cfi_def_cfa_offset 16
+ 673              		.cfi_offset 6, -16
+ 674 05b7 4889E5   		movq	%rsp, %rbp
+GAS LISTING /tmp/ccr0cyRJ.s 			page 17
+
+
+ 675              		.cfi_def_cfa_register 6
+ 676 05ba 48897DF8 		movq	%rdi, -8(%rbp)
+ 677 05be F20F1145 		movsd	%xmm0, -16(%rbp)
+ 677      F0
+ 678 05c3 F20F114D 		movsd	%xmm1, -24(%rbp)
+ 678      E8
+ 679 05c8 488975E0 		movq	%rsi, -32(%rbp)
+ 680 05cc 488955D8 		movq	%rdx, -40(%rbp)
+  95:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  96:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         x = y2 -y1 ;
+ 681              		.loc 2 96 0
+ 682 05d0 F20F1045 		movsd	-24(%rbp), %xmm0
+ 682      E8
+ 683 05d5 F20F5C45 		subsd	-16(%rbp), %xmm0
+ 683      F0
+ 684 05da 488B45F8 		movq	-8(%rbp), %rax
+ 685 05de F20F1140 		movsd	%xmm0, 8(%rax)
+ 685      08
+  97:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         y = y2 -y1 ;
+ 686              		.loc 2 97 0
+ 687 05e3 F20F1045 		movsd	-24(%rbp), %xmm0
+ 687      E8
+ 688 05e8 F20F5C45 		subsd	-16(%rbp), %xmm0
+ 688      F0
+ 689 05ed 488B45F8 		movq	-8(%rbp), %rax
+ 690 05f1 F20F1140 		movsd	%xmm0, 16(%rax)
+ 690      10
+  98:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+  99:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         //check if x1 and x2 are same co-ordinate -> zero gradient
+ 100:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         if( fabs(x2.x - x1.x ) < pow(10,-5) ){
+ 691              		.loc 2 100 0
+ 692 05f6 488B45D8 		movq	-40(%rbp), %rax
+ 693 05fa F20F1040 		movsd	8(%rax), %xmm0
+ 693      08
+ 694 05ff 488B45E0 		movq	-32(%rbp), %rax
+ 695 0603 F20F1048 		movsd	8(%rax), %xmm1
+ 695      08
+ 696 0608 F20F5CC1 		subsd	%xmm1, %xmm0
+ 697 060c F20F100D 		movsd	.LC2(%rip), %xmm1
+ 697      00000000 
+ 698 0614 660F54C1 		andpd	%xmm1, %xmm0
+ 699 0618 F20F100D 		movsd	.LC5(%rip), %xmm1
+ 699      00000000 
+ 700 0620 660F2EC8 		ucomisd	%xmm0, %xmm1
+ 701 0624 760F     		jbe	.L45
+ 101:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****             x = 0;
+ 702              		.loc 2 101 0
+ 703 0626 488B45F8 		movq	-8(%rbp), %rax
+ 704 062a 660FEFC0 		pxor	%xmm0, %xmm0
+ 705 062e F20F1140 		movsd	%xmm0, 8(%rax)
+ 705      08
+ 706 0633 EB30     		jmp	.L39
+ 707              	.L45:
+ 102:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         }else{
+ 103:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****             x =  x / (x2.x - x1.x );
+ 708              		.loc 2 103 0
+ 709 0635 488B45F8 		movq	-8(%rbp), %rax
+GAS LISTING /tmp/ccr0cyRJ.s 			page 18
+
+
+ 710 0639 F20F1048 		movsd	8(%rax), %xmm1
+ 710      08
+ 711 063e 488B45D8 		movq	-40(%rbp), %rax
+ 712 0642 F20F1040 		movsd	8(%rax), %xmm0
+ 712      08
+ 713 0647 488B45E0 		movq	-32(%rbp), %rax
+ 714 064b F20F1050 		movsd	8(%rax), %xmm2
+ 714      08
+ 715 0650 F20F5CC2 		subsd	%xmm2, %xmm0
+ 716 0654 F20F5EC8 		divsd	%xmm0, %xmm1
+ 717 0658 660F28C1 		movapd	%xmm1, %xmm0
+ 718 065c 488B45F8 		movq	-8(%rbp), %rax
+ 719 0660 F20F1140 		movsd	%xmm0, 8(%rax)
+ 719      08
+ 720              	.L39:
+ 104:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         }
+ 105:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         if( fabs(x2.y -x1.y) < pow(10,-5) ){
+ 721              		.loc 2 105 0
+ 722 0665 488B45D8 		movq	-40(%rbp), %rax
+ 723 0669 F20F1040 		movsd	16(%rax), %xmm0
+ 723      10
+ 724 066e 488B45E0 		movq	-32(%rbp), %rax
+ 725 0672 F20F1048 		movsd	16(%rax), %xmm1
+ 725      10
+ 726 0677 F20F5CC1 		subsd	%xmm1, %xmm0
+ 727 067b F20F100D 		movsd	.LC2(%rip), %xmm1
+ 727      00000000 
+ 728 0683 660F54C1 		andpd	%xmm1, %xmm0
+ 729 0687 F20F100D 		movsd	.LC5(%rip), %xmm1
+ 729      00000000 
+ 730 068f 660F2EC8 		ucomisd	%xmm0, %xmm1
+ 731 0693 760F     		jbe	.L46
+ 106:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****             y = 0;
+ 732              		.loc 2 106 0
+ 733 0695 488B45F8 		movq	-8(%rbp), %rax
+ 734 0699 660FEFC0 		pxor	%xmm0, %xmm0
+ 735 069d F20F1140 		movsd	%xmm0, 16(%rax)
+ 735      10
+ 736 06a2 EB30     		jmp	.L42
+ 737              	.L46:
+ 107:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         }else{
+ 108:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****             y = y / (x2.y -x1.y);
+ 738              		.loc 2 108 0
+ 739 06a4 488B45F8 		movq	-8(%rbp), %rax
+ 740 06a8 F20F1048 		movsd	16(%rax), %xmm1
+ 740      10
+ 741 06ad 488B45D8 		movq	-40(%rbp), %rax
+ 742 06b1 F20F1040 		movsd	16(%rax), %xmm0
+ 742      10
+ 743 06b6 488B45E0 		movq	-32(%rbp), %rax
+ 744 06ba F20F1050 		movsd	16(%rax), %xmm2
+ 744      10
+ 745 06bf F20F5CC2 		subsd	%xmm2, %xmm0
+ 746 06c3 F20F5EC8 		divsd	%xmm0, %xmm1
+ 747 06c7 660F28C1 		movapd	%xmm1, %xmm0
+ 748 06cb 488B45F8 		movq	-8(%rbp), %rax
+ 749 06cf F20F1140 		movsd	%xmm0, 16(%rax)
+GAS LISTING /tmp/ccr0cyRJ.s 			page 19
+
+
+ 749      10
+ 750              	.L42:
+ 109:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         }
+ 110:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****         z = 0; //update for 3d
+ 751              		.loc 2 110 0
+ 752 06d4 488B45F8 		movq	-8(%rbp), %rax
+ 753 06d8 660FEFC0 		pxor	%xmm0, %xmm0
+ 754 06dc F20F1140 		movsd	%xmm0, 24(%rax)
+ 754      18
+ 111:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 112:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 113:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 755              		.loc 2 113 0
+ 756 06e1 90       		nop
+ 757 06e2 5D       		popq	%rbp
+ 758              		.cfi_def_cfa 7, 8
+ 759 06e3 C3       		ret
+ 760              		.cfi_endproc
+ 761              	.LFE20:
+ 763              		.align 2
+ 764              		.globl	_ZN10vector_var16relative_vectorsES_S_S_d
+ 766              	_ZN10vector_var16relative_vectorsES_S_S_d:
+ 767              	.LFB21:
+ 114:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 115:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** void vector_var::relative_vectors(vector_var origin, vector_var ref1, vector_var ref2, double const
+ 768              		.loc 2 115 0
+ 769              		.cfi_startproc
+ 770 06e4 55       		pushq	%rbp
+ 771              		.cfi_def_cfa_offset 16
+ 772              		.cfi_offset 6, -16
+ 773 06e5 4889E5   		movq	%rsp, %rbp
+ 774              		.cfi_def_cfa_register 6
+ 775 06e8 48897DF8 		movq	%rdi, -8(%rbp)
+ 776 06ec 488975F0 		movq	%rsi, -16(%rbp)
+ 777 06f0 488955E8 		movq	%rdx, -24(%rbp)
+ 778 06f4 48894DE0 		movq	%rcx, -32(%rbp)
+ 779 06f8 F20F1145 		movsd	%xmm0, -40(%rbp)
+ 779      D8
+ 116:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 117:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     x = origin.x -ref1.x - ref2.x * const2;
+ 780              		.loc 2 117 0
+ 781 06fd 488B45F0 		movq	-16(%rbp), %rax
+ 782 0701 F20F1040 		movsd	8(%rax), %xmm0
+ 782      08
+ 783 0706 488B45E8 		movq	-24(%rbp), %rax
+ 784 070a F20F1048 		movsd	8(%rax), %xmm1
+ 784      08
+ 785 070f F20F5CC1 		subsd	%xmm1, %xmm0
+ 786 0713 488B45E0 		movq	-32(%rbp), %rax
+ 787 0717 F20F1048 		movsd	8(%rax), %xmm1
+ 787      08
+ 788 071c F20F594D 		mulsd	-40(%rbp), %xmm1
+ 788      D8
+ 789 0721 F20F5CC1 		subsd	%xmm1, %xmm0
+ 790 0725 488B45F8 		movq	-8(%rbp), %rax
+ 791 0729 F20F1140 		movsd	%xmm0, 8(%rax)
+ 791      08
+GAS LISTING /tmp/ccr0cyRJ.s 			page 20
+
+
+ 118:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     y = origin.y -ref1.y - ref2.y * const2;
+ 792              		.loc 2 118 0
+ 793 072e 488B45F0 		movq	-16(%rbp), %rax
+ 794 0732 F20F1040 		movsd	16(%rax), %xmm0
+ 794      10
+ 795 0737 488B45E8 		movq	-24(%rbp), %rax
+ 796 073b F20F1048 		movsd	16(%rax), %xmm1
+ 796      10
+ 797 0740 F20F5CC1 		subsd	%xmm1, %xmm0
+ 798 0744 488B45E0 		movq	-32(%rbp), %rax
+ 799 0748 F20F1048 		movsd	16(%rax), %xmm1
+ 799      10
+ 800 074d F20F594D 		mulsd	-40(%rbp), %xmm1
+ 800      D8
+ 801 0752 F20F5CC1 		subsd	%xmm1, %xmm0
+ 802 0756 488B45F8 		movq	-8(%rbp), %rax
+ 803 075a F20F1140 		movsd	%xmm0, 16(%rax)
+ 803      10
+ 119:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp ****     z = 0; // update in 3d
+ 804              		.loc 2 119 0
+ 805 075f 488B45F8 		movq	-8(%rbp), %rax
+ 806 0763 660FEFC0 		pxor	%xmm0, %xmm0
+ 807 0767 F20F1140 		movsd	%xmm0, 24(%rax)
+ 807      18
+ 120:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 121:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** 
+ 122:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/vector_var.cpp **** }
+ 808              		.loc 2 122 0
+ 809 076c 90       		nop
+ 810 076d 5D       		popq	%rbp
+ 811              		.cfi_def_cfa 7, 8
+ 812 076e C3       		ret
+ 813              		.cfi_endproc
+ 814              	.LFE21:
+ 816              		.weak	_ZTV10vector_var
+ 817              		.section	.rodata._ZTV10vector_var,"aG",@progbits,_ZTV10vector_var,comdat
+ 818              		.align 8
+ 821              	_ZTV10vector_var:
+ 822 0000 00000000 		.quad	0
+ 822      00000000 
+ 823 0008 00000000 		.quad	_ZTI10vector_var
+ 823      00000000 
+ 824 0010 00000000 		.quad	_ZN10vector_varD1Ev
+ 824      00000000 
+ 825 0018 00000000 		.quad	_ZN10vector_varD0Ev
+ 825      00000000 
+ 826              		.weak	_ZTI10vector_var
+ 827              		.section	.rodata._ZTI10vector_var,"aG",@progbits,_ZTI10vector_var,comdat
+ 828              		.align 8
+ 831              	_ZTI10vector_var:
+ 832 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 832      00000000 
+ 833 0008 00000000 		.quad	_ZTS10vector_var
+ 833      00000000 
+ 834              		.weak	_ZTS10vector_var
+ 835              		.section	.rodata._ZTS10vector_var,"aG",@progbits,_ZTS10vector_var,comdat
+ 836              		.align 8
+GAS LISTING /tmp/ccr0cyRJ.s 			page 21
+
+
+ 839              	_ZTS10vector_var:
+ 840 0000 31307665 		.string	"10vector_var"
+ 840      63746F72 
+ 840      5F766172 
+ 840      00
+ 841              		.section	.rodata
+ 842              		.align 8
+ 843              	.LC0:
+ 844 0000 00000000 		.long	0
+ 845 0004 00000040 		.long	1073741824
+ 846 0008 00000000 		.align 16
+ 846      00000000 
+ 847              	.LC2:
+ 848 0010 FFFFFFFF 		.long	4294967295
+ 849 0014 FFFFFF7F 		.long	2147483647
+ 850 0018 00000000 		.long	0
+ 851 001c 00000000 		.long	0
+ 852              		.align 16
+ 853              	.LC4:
+ 854 0020 00000000 		.long	0
+ 855 0024 00000080 		.long	-2147483648
+ 856 0028 00000000 		.long	0
+ 857 002c 00000000 		.long	0
+ 858              		.align 8
+ 859              	.LC5:
+ 860 0030 F168E388 		.long	2296604913
+ 861 0034 B5F8E43E 		.long	1055193269
+ 862              		.text
+ 863              	.Letext0:
+GAS LISTING /tmp/ccr0cyRJ.s 			page 22
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 vector_var.cpp
+     /tmp/ccr0cyRJ.s:8      .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD2Ev
+     /tmp/ccr0cyRJ.s:821    .rodata._ZTV10vector_var:0000000000000000 _ZTV10vector_var
+     /tmp/ccr0cyRJ.s:8      .text._ZN10vector_varD2Ev:0000000000000000 _ZN10vector_varD1Ev
+     /tmp/ccr0cyRJ.s:47     .text._ZN10vector_varD0Ev:0000000000000000 _ZN10vector_varD0Ev
+     /tmp/ccr0cyRJ.s:75     .text:0000000000000000 _ZN10vector_varC2Ev
+     /tmp/ccr0cyRJ.s:75     .text:0000000000000000 _ZN10vector_varC1Ev
+     /tmp/ccr0cyRJ.s:105    .text:0000000000000018 _ZN10vector_varC2Eddd
+     /tmp/ccr0cyRJ.s:105    .text:0000000000000018 _ZN10vector_varC1Eddd
+     /tmp/ccr0cyRJ.s:149    .text:0000000000000068 _ZN10vector_var11Dot_ProductES_
+     /tmp/ccr0cyRJ.s:188    .text:00000000000000c0 _ZN10vector_var3addES_
+     /tmp/ccr0cyRJ.s:235    .text._ZN10vector_varC2ERKS_:0000000000000000 _ZN10vector_varC2ERKS_
+     /tmp/ccr0cyRJ.s:235    .text._ZN10vector_varC2ERKS_:0000000000000000 _ZN10vector_varC1ERKS_
+     /tmp/ccr0cyRJ.s:277    .text:000000000000012c _ZN10vector_var14line_magnitudeES_S_S_
+     /tmp/ccr0cyRJ.s:351    .text:0000000000000202 _ZN10vector_var9MagnitudeEv
+     /tmp/ccr0cyRJ.s:403    .text:00000000000002a2 _ZN10vector_var21Angle_Between_VectorsES_
+     /tmp/ccr0cyRJ.s:509    .text:00000000000003ee _ZN10vector_var6factorEd
+     /tmp/ccr0cyRJ.s:549    .text:0000000000000444 _ZN10vector_var5roundEi
+     /tmp/ccr0cyRJ.s:667    .text:00000000000005b6 _ZN10vector_var12Get_GradientEddS_S_
+     /tmp/ccr0cyRJ.s:766    .text:00000000000006e4 _ZN10vector_var16relative_vectorsES_S_S_d
+     /tmp/ccr0cyRJ.s:831    .rodata._ZTI10vector_var:0000000000000000 _ZTI10vector_var
+     /tmp/ccr0cyRJ.s:839    .rodata._ZTS10vector_var:0000000000000000 _ZTS10vector_var
+                           .group:0000000000000000 _ZN10vector_varD5Ev
+                           .group:0000000000000000 _ZN10vector_varC5ERKS_
+
+UNDEFINED SYMBOLS
+_ZdlPv
+__stack_chk_fail
+pow
+sqrt
+acos
+trunc
+_ZTVN10__cxxabiv117__class_type_infoE

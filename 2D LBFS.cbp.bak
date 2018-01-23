@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="2D LBFS" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/2D LBFS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/2D LBFS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Boundary_Conditions.h" />
+		<Unit filename="include/Solution.h" />
+		<Unit filename="include/Solver.h" />
+		<Unit filename="include/Uniform_Mesh.h" />
+		<Unit filename="include/external_forces.h" />
+		<Unit filename="include/global_variables.h" />
+		<Unit filename="include/quad_bcs.h" />
+		<Unit filename="include/quad_bcs_plus.h" />
+		<Unit filename="include/test_cases.h" />
+		<Unit filename="include/vector_var.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Boundary_Conditions.cpp" />
+		<Unit filename="src/Solution.cpp" />
+		<Unit filename="src/Solver.cpp" />
+		<Unit filename="src/Uniform_Mesh.cpp" />
+		<Unit filename="src/external_forces.cpp" />
+		<Unit filename="src/global_variables.cpp" />
+		<Unit filename="src/quad_bcs.cpp" />
+		<Unit filename="src/quad_bcs_plus.cpp" />
+		<Unit filename="src/test_cases.cpp" />
+		<Unit filename="src/vector_var.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

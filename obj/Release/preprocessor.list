@@ -1,0 +1,3418 @@
+GAS LISTING /tmp/cczEKvce.s 			page 1
+
+
+   1              		.file	"preprocessor.cpp"
+   2              		.section	.text.unlikely,"ax",@progbits
+   3              		.align 2
+   4              	.LCOLDB0:
+   5              		.text
+   6              	.LHOTB0:
+   7              		.align 2
+   8              		.p2align 4,,15
+   9              		.globl	_ZN12preprocessorD2Ev
+  11              	_ZN12preprocessorD2Ev:
+  12              	.LFB1876:
+  13              		.cfi_startproc
+  14 0000 F3C3     		rep ret
+  15              		.cfi_endproc
+  16              	.LFE1876:
+  18              		.section	.text.unlikely
+  19              	.LCOLDE0:
+  20              		.text
+  21              	.LHOTE0:
+  22              		.globl	_ZN12preprocessorD1Ev
+  23              		.set	_ZN12preprocessorD1Ev,_ZN12preprocessorD2Ev
+  24              		.section	.text.unlikely
+  25              		.align 2
+  26              	.LCOLDB1:
+  27              		.text
+  28              	.LHOTB1:
+  29              		.align 2
+  30 0002 0F1F4000 		.p2align 4,,15
+  30      662E0F1F 
+  30      84000000 
+  30      0000
+  31              		.globl	_ZN12preprocessorD0Ev
+  33              	_ZN12preprocessorD0Ev:
+  34              	.LFB1878:
+  35              		.cfi_startproc
+  36 0010 E9000000 		jmp	_ZdlPv
+  36      00
+  37              		.cfi_endproc
+  38              	.LFE1878:
+  40              		.section	.text.unlikely
+  41              	.LCOLDE1:
+  42              		.text
+  43              	.LHOTE1:
+  44              		.section	.text.unlikely
+  45              		.align 2
+  46              	.LCOLDB2:
+  47              		.text
+  48              	.LHOTB2:
+  49 0015 90       		.align 2
+  50 0016 662E0F1F 		.p2align 4,,15
+  50      84000000 
+  50      0000
+  51              		.globl	_ZN12preprocessorC2Ev
+  53              	_ZN12preprocessorC2Ev:
+  54              	.LFB1873:
+  55              		.cfi_startproc
+  56 0020 48C70700 		movq	$_ZTV12preprocessor+16, (%rdi)
+GAS LISTING /tmp/cczEKvce.s 			page 2
+
+
+  56      000000
+  57 0027 C3       		ret
+  58              		.cfi_endproc
+  59              	.LFE1873:
+  61              		.section	.text.unlikely
+  62              	.LCOLDE2:
+  63              		.text
+  64              	.LHOTE2:
+  65              		.globl	_ZN12preprocessorC1Ev
+  66              		.set	_ZN12preprocessorC1Ev,_ZN12preprocessorC2Ev
+  67              		.section	.text.unlikely
+  68              		.align 2
+  69              	.LCOLDB4:
+  70              		.text
+  71              	.LHOTB4:
+  72              		.align 2
+  73 0028 0F1F8400 		.p2align 4,,15
+  73      00000000 
+  74              		.globl	_ZN12preprocessor18mach_number_factorER16global_variablesR13quad_bcs_plusR18initial_conditi
+  76              	_ZN12preprocessor18mach_number_factorER16global_variablesR13quad_bcs_plusR18initial_conditionsR15do
+  77              	.LFB1883:
+  78              		.cfi_startproc
+  79 0030 F20F1046 		movsd	80(%rsi), %xmm0
+  79      50
+  80 0035 F20F104A 		movsd	80(%rdx), %xmm1
+  80      50
+  81 003a F20F5E05 		divsd	.LC3(%rip), %xmm0
+  81      00000000 
+  82 0042 F20F59C8 		mulsd	%xmm0, %xmm1
+  83 0046 F20F114A 		movsd	%xmm1, 80(%rdx)
+  83      50
+  84 004b F20F104A 		movsd	16(%rdx), %xmm1
+  84      10
+  85 0050 F20F59C8 		mulsd	%xmm0, %xmm1
+  86 0054 F20F114A 		movsd	%xmm1, 16(%rdx)
+  86      10
+  87 0059 F20F104A 		movsd	112(%rdx), %xmm1
+  87      70
+  88 005e F20F59C8 		mulsd	%xmm0, %xmm1
+  89 0062 F20F114A 		movsd	%xmm1, 112(%rdx)
+  89      70
+  90 0067 F20F104A 		movsd	48(%rdx), %xmm1
+  90      30
+  91 006c F20F59C8 		mulsd	%xmm0, %xmm1
+  92 0070 F20F114A 		movsd	%xmm1, 48(%rdx)
+  92      30
+  93 0075 F20F104A 		movsd	88(%rdx), %xmm1
+  93      58
+  94 007a F20F59C8 		mulsd	%xmm0, %xmm1
+  95 007e F20F114A 		movsd	%xmm1, 88(%rdx)
+  95      58
+  96 0083 F20F104A 		movsd	24(%rdx), %xmm1
+  96      18
+  97 0088 F20F59C8 		mulsd	%xmm0, %xmm1
+  98 008c F20F114A 		movsd	%xmm1, 24(%rdx)
+  98      18
+  99 0091 F20F104A 		movsd	120(%rdx), %xmm1
+GAS LISTING /tmp/cczEKvce.s 			page 3
+
+
+  99      78
+ 100 0096 F20F59C8 		mulsd	%xmm0, %xmm1
+ 101 009a F20F114A 		movsd	%xmm1, 120(%rdx)
+ 101      78
+ 102 009f F20F104A 		movsd	56(%rdx), %xmm1
+ 102      38
+ 103 00a4 F20F59C8 		mulsd	%xmm0, %xmm1
+ 104 00a8 F20F114A 		movsd	%xmm1, 56(%rdx)
+ 104      38
+ 105 00ad F20F1089 		movsd	152(%rcx), %xmm1
+ 105      98000000 
+ 106 00b5 F20F59C8 		mulsd	%xmm0, %xmm1
+ 107 00b9 F20F1189 		movsd	%xmm1, 152(%rcx)
+ 107      98000000 
+ 108 00c1 F20F1089 		movsd	160(%rcx), %xmm1
+ 108      A0000000 
+ 109 00c9 F20F59C8 		mulsd	%xmm0, %xmm1
+ 110 00cd F20F1189 		movsd	%xmm1, 160(%rcx)
+ 110      A0000000 
+ 111 00d5 F20F1089 		movsd	168(%rcx), %xmm1
+ 111      A8000000 
+ 112 00dd F20F59C8 		mulsd	%xmm0, %xmm1
+ 113 00e1 F20F1189 		movsd	%xmm1, 168(%rcx)
+ 113      A8000000 
+ 114 00e9 F20F1089 		movsd	184(%rcx), %xmm1
+ 114      B8000000 
+ 115 00f1 F20F59C8 		mulsd	%xmm0, %xmm1
+ 116 00f5 F20F1189 		movsd	%xmm1, 184(%rcx)
+ 116      B8000000 
+ 117 00fd F20F1089 		movsd	192(%rcx), %xmm1
+ 117      C0000000 
+ 118 0105 F20F59C8 		mulsd	%xmm0, %xmm1
+ 119 0109 F20F1189 		movsd	%xmm1, 192(%rcx)
+ 119      C0000000 
+ 120 0111 F20F1089 		movsd	200(%rcx), %xmm1
+ 120      C8000000 
+ 121 0119 F20F59C8 		mulsd	%xmm0, %xmm1
+ 122 011d F20F1189 		movsd	%xmm1, 200(%rcx)
+ 122      C8000000 
+ 123 0125 F20F1049 		movsd	120(%rcx), %xmm1
+ 123      78
+ 124 012a F20F59C8 		mulsd	%xmm0, %xmm1
+ 125 012e F20F1149 		movsd	%xmm1, 120(%rcx)
+ 125      78
+ 126 0133 F20F1089 		movsd	128(%rcx), %xmm1
+ 126      80000000 
+ 127 013b F20F59C8 		mulsd	%xmm0, %xmm1
+ 128 013f F20F5981 		mulsd	136(%rcx), %xmm0
+ 128      88000000 
+ 129 0147 F20F1189 		movsd	%xmm1, 128(%rcx)
+ 129      80000000 
+ 130 014f F20F1181 		movsd	%xmm0, 136(%rcx)
+ 130      88000000 
+ 131 0157 C3       		ret
+ 132              		.cfi_endproc
+ 133              	.LFE1883:
+ 135              		.section	.text.unlikely
+GAS LISTING /tmp/cczEKvce.s 			page 4
+
+
+ 136              	.LCOLDE4:
+ 137              		.text
+ 138              	.LHOTE4:
+ 139              		.section	.rodata.str1.1,"aMS",@progbits,1
+ 140              	.LC5:
+ 141 0000 626F756E 		.string	"boundary_conditions"
+ 141      64617279 
+ 141      5F636F6E 
+ 141      64697469 
+ 141      6F6E7300 
+ 142              	.LC6:
+ 143 0014 77657374 		.string	"west"
+ 143      00
+ 144              	.LC7:
+ 145 0019 72686F00 		.string	"rho"
+ 146              	.LC8:
+ 147 001d 7500     		.string	"u"
+ 148              	.LC9:
+ 149 001f 7600     		.string	"v"
+ 150              	.LC10:
+ 151 0021 76656C5F 		.string	"vel_type"
+ 151      74797065 
+ 151      00
+ 152              	.LC11:
+ 153 002a 64697269 		.string	"dirichlet"
+ 153      63686C65 
+ 153      7400
+ 154              	.LC12:
+ 155 0034 6E65756D 		.string	"neumann"
+ 155      616E6E00 
+ 156              	.LC13:
+ 157 003c 70657269 		.string	"periodic"
+ 157      6F646963 
+ 157      00
+ 158              	.LC14:
+ 159 0045 70617261 		.string	"parabolic-N"
+ 159      626F6C69 
+ 159      632D4E00 
+ 160              	.LC15:
+ 161 0051 70617261 		.string	"parabolic-W"
+ 161      626F6C69 
+ 161      632D5700 
+ 162              	.LC16:
+ 163 005d 72686F5F 		.string	"rho_type"
+ 163      74797065 
+ 163      00
+ 164              	.LC17:
+ 165 0066 65617374 		.string	"east"
+ 165      00
+ 166              	.LC18:
+ 167 006b 6E6F7274 		.string	"north"
+ 167      6800
+ 168              	.LC19:
+ 169 0071 736F7574 		.string	"south"
+ 169      6800
+ 170              		.section	.text.unlikely
+ 171              		.align 2
+GAS LISTING /tmp/cczEKvce.s 			page 5
+
+
+ 172              	.LCOLDB20:
+ 173              		.text
+ 174              	.LHOTB20:
+ 175              		.align 2
+ 176 0158 0F1F8400 		.p2align 4,,15
+ 176      00000000 
+ 177              		.globl	_ZN12preprocessor25parse_boundary_conditionsERN8tinyxml211XMLDocumentER13quad_bcs_plus
+ 179              	_ZN12preprocessor25parse_boundary_conditionsERN8tinyxml211XMLDocumentER13quad_bcs_plus:
+ 180              	.LFB1884:
+ 181              		.cfi_startproc
+ 182              		.cfi_personality 0x3,__gxx_personality_v0
+ 183              		.cfi_lsda 0x3,.LLSDA1884
+ 184 0160 4154     		pushq	%r12
+ 185              		.cfi_def_cfa_offset 16
+ 186              		.cfi_offset 12, -16
+ 187 0162 55       		pushq	%rbp
+ 188              		.cfi_def_cfa_offset 24
+ 189              		.cfi_offset 6, -24
+ 190 0163 4889D5   		movq	%rdx, %rbp
+ 191 0166 53       		pushq	%rbx
+ 192              		.cfi_def_cfa_offset 32
+ 193              		.cfi_offset 3, -32
+ 194 0167 4889F3   		movq	%rsi, %rbx
+ 195 016a 4883C480 		addq	$-128, %rsp
+ 196              		.cfi_def_cfa_offset 160
+ 197 016e 488B7E30 		movq	48(%rsi), %rdi
+ 198 0172 BE000000 		movl	$.LC5, %esi
+ 198      00
+ 199 0177 64488B04 		movq	%fs:40, %rax
+ 199      25280000 
+ 199      00
+ 200 0180 48894424 		movq	%rax, 120(%rsp)
+ 200      78
+ 201 0185 31C0     		xorl	%eax, %eax
+ 202              	.LEHB0:
+ 203 0187 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 203      00
+ 204 018c BE000000 		movl	$.LC6, %esi
+ 204      00
+ 205 0191 4889C7   		movq	%rax, %rdi
+ 206 0194 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 206      00
+ 207 0199 BE000000 		movl	$.LC7, %esi
+ 207      00
+ 208 019e 4889C7   		movq	%rax, %rdi
+ 209 01a1 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 209      00
+ 210 01a6 488D7424 		leaq	72(%rsp), %rsi
+ 210      48
+ 211 01ab 4889C7   		movq	%rax, %rdi
+ 212 01ae E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 212      00
+ 213 01b3 F20F1044 		movsd	72(%rsp), %xmm0
+ 213      2448
+ 214 01b9 488B7B30 		movq	48(%rbx), %rdi
+ 215 01bd BE000000 		movl	$.LC5, %esi
+ 215      00
+GAS LISTING /tmp/cczEKvce.s 			page 6
+
+
+ 216 01c2 F20F1145 		movsd	%xmm0, 8(%rbp)
+ 216      08
+ 217 01c7 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 217      00
+ 218 01cc BE000000 		movl	$.LC6, %esi
+ 218      00
+ 219 01d1 4889C7   		movq	%rax, %rdi
+ 220 01d4 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 220      00
+ 221 01d9 BE000000 		movl	$.LC8, %esi
+ 221      00
+ 222 01de 4889C7   		movq	%rax, %rdi
+ 223 01e1 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 223      00
+ 224 01e6 488D7424 		leaq	72(%rsp), %rsi
+ 224      48
+ 225 01eb 4889C7   		movq	%rax, %rdi
+ 226 01ee E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 226      00
+ 227 01f3 F20F1044 		movsd	72(%rsp), %xmm0
+ 227      2448
+ 228 01f9 488B7B30 		movq	48(%rbx), %rdi
+ 229 01fd BE000000 		movl	$.LC5, %esi
+ 229      00
+ 230 0202 F20F1145 		movsd	%xmm0, 16(%rbp)
+ 230      10
+ 231 0207 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 231      00
+ 232 020c BE000000 		movl	$.LC6, %esi
+ 232      00
+ 233 0211 4889C7   		movq	%rax, %rdi
+ 234 0214 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 234      00
+ 235 0219 BE000000 		movl	$.LC9, %esi
+ 235      00
+ 236 021e 4889C7   		movq	%rax, %rdi
+ 237 0221 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 237      00
+ 238 0226 488D7424 		leaq	72(%rsp), %rsi
+ 238      48
+ 239 022b 4889C7   		movq	%rax, %rdi
+ 240 022e E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 240      00
+ 241              	.LEHE0:
+ 242 0233 F20F1044 		movsd	72(%rsp), %xmm0
+ 242      2448
+ 243 0239 488B7B30 		movq	48(%rbx), %rdi
+ 244 023d 488D4424 		leaq	96(%rsp), %rax
+ 244      60
+ 245 0242 BE000000 		movl	$.LC5, %esi
+ 245      00
+ 246 0247 48C74424 		movq	$0, 88(%rsp)
+ 246      58000000 
+ 246      00
+ 247 0250 F20F1145 		movsd	%xmm0, 24(%rbp)
+ 247      18
+ 248 0255 C6442460 		movb	$0, 96(%rsp)
+GAS LISTING /tmp/cczEKvce.s 			page 7
+
+
+ 248      00
+ 249 025a 48894424 		movq	%rax, 80(%rsp)
+ 249      50
+ 250              	.LEHB1:
+ 251 025f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 251      00
+ 252 0264 BE000000 		movl	$.LC6, %esi
+ 252      00
+ 253 0269 4889C7   		movq	%rax, %rdi
+ 254 026c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 254      00
+ 255 0271 BE000000 		movl	$.LC10, %esi
+ 255      00
+ 256 0276 4889C7   		movq	%rax, %rdi
+ 257 0279 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 257      00
+ 258 027e 4889C7   		movq	%rax, %rdi
+ 259 0281 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 259      00
+ 260 0286 4889C7   		movq	%rax, %rdi
+ 261 0289 4989C4   		movq	%rax, %r12
+ 262 028c E8000000 		call	strlen
+ 262      00
+ 263 0291 488B5424 		movq	88(%rsp), %rdx
+ 263      58
+ 264 0296 488D7C24 		leaq	80(%rsp), %rdi
+ 264      50
+ 265 029b 4989C0   		movq	%rax, %r8
+ 266 029e 4C89E1   		movq	%r12, %rcx
+ 267 02a1 31F6     		xorl	%esi, %esi
+ 268 02a3 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 268      00
+ 269 02a8 488D7C24 		leaq	80(%rsp), %rdi
+ 269      50
+ 270 02ad BE000000 		movl	$.LC11, %esi
+ 270      00
+ 271 02b2 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 271      00
+ 272 02b7 85C0     		testl	%eax, %eax
+ 273 02b9 0F85A105 		jne	.L6
+ 273      0000
+ 274 02bf C7859800 		movl	$1, 152(%rbp)
+ 274      00000100 
+ 274      0000
+ 275              	.L7:
+ 276 02c9 488B7B30 		movq	48(%rbx), %rdi
+ 277 02cd BE000000 		movl	$.LC5, %esi
+ 277      00
+ 278 02d2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 278      00
+ 279 02d7 BE000000 		movl	$.LC6, %esi
+ 279      00
+ 280 02dc 4889C7   		movq	%rax, %rdi
+ 281 02df E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 281      00
+ 282 02e4 BE000000 		movl	$.LC16, %esi
+ 282      00
+GAS LISTING /tmp/cczEKvce.s 			page 8
+
+
+ 283 02e9 4889C7   		movq	%rax, %rdi
+ 284 02ec E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 284      00
+ 285 02f1 4889C7   		movq	%rax, %rdi
+ 286 02f4 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 286      00
+ 287 02f9 4889C7   		movq	%rax, %rdi
+ 288 02fc 4989C4   		movq	%rax, %r12
+ 289 02ff E8000000 		call	strlen
+ 289      00
+ 290 0304 488B5424 		movq	88(%rsp), %rdx
+ 290      58
+ 291 0309 488D7C24 		leaq	80(%rsp), %rdi
+ 291      50
+ 292 030e 4989C0   		movq	%rax, %r8
+ 293 0311 4C89E1   		movq	%r12, %rcx
+ 294 0314 31F6     		xorl	%esi, %esi
+ 295 0316 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 295      00
+ 296 031b 488D7C24 		leaq	80(%rsp), %rdi
+ 296      50
+ 297 0320 BE000000 		movl	$.LC11, %esi
+ 297      00
+ 298 0325 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 298      00
+ 299 032a 85C0     		testl	%eax, %eax
+ 300 032c 0F857E06 		jne	.L11
+ 300      0000
+ 301 0332 C7858800 		movl	$1, 136(%rbp)
+ 301      00000100 
+ 301      0000
+ 302              	.L12:
+ 303 033c 488B7B30 		movq	48(%rbx), %rdi
+ 304 0340 BE000000 		movl	$.LC5, %esi
+ 304      00
+ 305 0345 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 305      00
+ 306 034a BE000000 		movl	$.LC17, %esi
+ 306      00
+ 307 034f 4889C7   		movq	%rax, %rdi
+ 308 0352 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 308      00
+ 309 0357 BE000000 		movl	$.LC7, %esi
+ 309      00
+ 310 035c 4889C7   		movq	%rax, %rdi
+ 311 035f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 311      00
+ 312 0364 488D7424 		leaq	8(%rsp), %rsi
+ 312      08
+ 313 0369 4889C7   		movq	%rax, %rdi
+ 314 036c E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 314      00
+ 315 0371 F20F1044 		movsd	8(%rsp), %xmm0
+ 315      2408
+ 316 0377 488B7B30 		movq	48(%rbx), %rdi
+ 317 037b BE000000 		movl	$.LC5, %esi
+ 317      00
+GAS LISTING /tmp/cczEKvce.s 			page 9
+
+
+ 318 0380 F20F1145 		movsd	%xmm0, 72(%rbp)
+ 318      48
+ 319 0385 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 319      00
+ 320 038a BE000000 		movl	$.LC17, %esi
+ 320      00
+ 321 038f 4889C7   		movq	%rax, %rdi
+ 322 0392 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 322      00
+ 323 0397 BE000000 		movl	$.LC8, %esi
+ 323      00
+ 324 039c 4889C7   		movq	%rax, %rdi
+ 325 039f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 325      00
+ 326 03a4 488D7424 		leaq	16(%rsp), %rsi
+ 326      10
+ 327 03a9 4889C7   		movq	%rax, %rdi
+ 328 03ac E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 328      00
+ 329 03b1 F20F1044 		movsd	16(%rsp), %xmm0
+ 329      2410
+ 330 03b7 488B7B30 		movq	48(%rbx), %rdi
+ 331 03bb BE000000 		movl	$.LC5, %esi
+ 331      00
+ 332 03c0 F20F1145 		movsd	%xmm0, 80(%rbp)
+ 332      50
+ 333 03c5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 333      00
+ 334 03ca BE000000 		movl	$.LC17, %esi
+ 334      00
+ 335 03cf 4889C7   		movq	%rax, %rdi
+ 336 03d2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 336      00
+ 337 03d7 BE000000 		movl	$.LC9, %esi
+ 337      00
+ 338 03dc 4889C7   		movq	%rax, %rdi
+ 339 03df E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 339      00
+ 340 03e4 488D7424 		leaq	24(%rsp), %rsi
+ 340      18
+ 341 03e9 4889C7   		movq	%rax, %rdi
+ 342 03ec E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 342      00
+ 343 03f1 F20F1044 		movsd	24(%rsp), %xmm0
+ 343      2418
+ 344 03f7 488B7B30 		movq	48(%rbx), %rdi
+ 345 03fb BE000000 		movl	$.LC5, %esi
+ 345      00
+ 346 0400 F20F1145 		movsd	%xmm0, 88(%rbp)
+ 346      58
+ 347 0405 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 347      00
+ 348 040a BE000000 		movl	$.LC17, %esi
+ 348      00
+ 349 040f 4889C7   		movq	%rax, %rdi
+ 350 0412 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 350      00
+GAS LISTING /tmp/cczEKvce.s 			page 10
+
+
+ 351 0417 BE000000 		movl	$.LC10, %esi
+ 351      00
+ 352 041c 4889C7   		movq	%rax, %rdi
+ 353 041f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 353      00
+ 354 0424 4889C7   		movq	%rax, %rdi
+ 355 0427 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 355      00
+ 356 042c 4889C7   		movq	%rax, %rdi
+ 357 042f 4989C4   		movq	%rax, %r12
+ 358 0432 E8000000 		call	strlen
+ 358      00
+ 359 0437 488B5424 		movq	88(%rsp), %rdx
+ 359      58
+ 360 043c 488D7C24 		leaq	80(%rsp), %rdi
+ 360      50
+ 361 0441 4989C0   		movq	%rax, %r8
+ 362 0444 4C89E1   		movq	%r12, %rcx
+ 363 0447 31F6     		xorl	%esi, %esi
+ 364 0449 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 364      00
+ 365 044e 488D7C24 		leaq	80(%rsp), %rdi
+ 365      50
+ 366 0453 BE000000 		movl	$.LC11, %esi
+ 366      00
+ 367 0458 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 367      00
+ 368 045d 85C0     		testl	%eax, %eax
+ 369 045f 0F851B05 		jne	.L14
+ 369      0000
+ 370 0465 C785A000 		movl	$1, 160(%rbp)
+ 370      00000100 
+ 370      0000
+ 371              	.L15:
+ 372 046f 488B7B30 		movq	48(%rbx), %rdi
+ 373 0473 BE000000 		movl	$.LC5, %esi
+ 373      00
+ 374 0478 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 374      00
+ 375 047d BE000000 		movl	$.LC17, %esi
+ 375      00
+ 376 0482 4889C7   		movq	%rax, %rdi
+ 377 0485 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 377      00
+ 378 048a BE000000 		movl	$.LC16, %esi
+ 378      00
+ 379 048f 4889C7   		movq	%rax, %rdi
+ 380 0492 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 380      00
+ 381 0497 4889C7   		movq	%rax, %rdi
+ 382 049a E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 382      00
+ 383 049f 4889C7   		movq	%rax, %rdi
+ 384 04a2 4989C4   		movq	%rax, %r12
+ 385 04a5 E8000000 		call	strlen
+ 385      00
+ 386 04aa 488B5424 		movq	88(%rsp), %rdx
+GAS LISTING /tmp/cczEKvce.s 			page 11
+
+
+ 386      58
+ 387 04af 488D7C24 		leaq	80(%rsp), %rdi
+ 387      50
+ 388 04b4 4989C0   		movq	%rax, %r8
+ 389 04b7 4C89E1   		movq	%r12, %rcx
+ 390 04ba 31F6     		xorl	%esi, %esi
+ 391 04bc E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 391      00
+ 392 04c1 488D7C24 		leaq	80(%rsp), %rdi
+ 392      50
+ 393 04c6 BE000000 		movl	$.LC11, %esi
+ 393      00
+ 394 04cb E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 394      00
+ 395 04d0 85C0     		testl	%eax, %eax
+ 396 04d2 0F857804 		jne	.L19
+ 396      0000
+ 397 04d8 C7859000 		movl	$1, 144(%rbp)
+ 397      00000100 
+ 397      0000
+ 398              	.L20:
+ 399 04e2 488B7B30 		movq	48(%rbx), %rdi
+ 400 04e6 BE000000 		movl	$.LC5, %esi
+ 400      00
+ 401 04eb E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 401      00
+ 402 04f0 BE000000 		movl	$.LC18, %esi
+ 402      00
+ 403 04f5 4889C7   		movq	%rax, %rdi
+ 404 04f8 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 404      00
+ 405 04fd BE000000 		movl	$.LC7, %esi
+ 405      00
+ 406 0502 4889C7   		movq	%rax, %rdi
+ 407 0505 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 407      00
+ 408 050a 488D7424 		leaq	32(%rsp), %rsi
+ 408      20
+ 409 050f 4889C7   		movq	%rax, %rdi
+ 410 0512 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 410      00
+ 411 0517 F20F1044 		movsd	32(%rsp), %xmm0
+ 411      2420
+ 412 051d 488B7B30 		movq	48(%rbx), %rdi
+ 413 0521 BE000000 		movl	$.LC5, %esi
+ 413      00
+ 414 0526 F20F1145 		movsd	%xmm0, 104(%rbp)
+ 414      68
+ 415 052b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 415      00
+ 416 0530 BE000000 		movl	$.LC18, %esi
+ 416      00
+ 417 0535 4889C7   		movq	%rax, %rdi
+ 418 0538 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 418      00
+ 419 053d BE000000 		movl	$.LC8, %esi
+ 419      00
+GAS LISTING /tmp/cczEKvce.s 			page 12
+
+
+ 420 0542 4889C7   		movq	%rax, %rdi
+ 421 0545 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 421      00
+ 422 054a 488D7424 		leaq	40(%rsp), %rsi
+ 422      28
+ 423 054f 4889C7   		movq	%rax, %rdi
+ 424 0552 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 424      00
+ 425 0557 F20F1044 		movsd	40(%rsp), %xmm0
+ 425      2428
+ 426 055d 488B7B30 		movq	48(%rbx), %rdi
+ 427 0561 BE000000 		movl	$.LC5, %esi
+ 427      00
+ 428 0566 F20F1145 		movsd	%xmm0, 112(%rbp)
+ 428      70
+ 429 056b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 429      00
+ 430 0570 BE000000 		movl	$.LC18, %esi
+ 430      00
+ 431 0575 4889C7   		movq	%rax, %rdi
+ 432 0578 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 432      00
+ 433 057d BE000000 		movl	$.LC9, %esi
+ 433      00
+ 434 0582 4889C7   		movq	%rax, %rdi
+ 435 0585 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 435      00
+ 436 058a 488D7424 		leaq	48(%rsp), %rsi
+ 436      30
+ 437 058f 4889C7   		movq	%rax, %rdi
+ 438 0592 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 438      00
+ 439 0597 F20F1044 		movsd	48(%rsp), %xmm0
+ 439      2430
+ 440 059d 488B7B30 		movq	48(%rbx), %rdi
+ 441 05a1 BE000000 		movl	$.LC5, %esi
+ 441      00
+ 442 05a6 F20F1145 		movsd	%xmm0, 120(%rbp)
+ 442      78
+ 443 05ab E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 443      00
+ 444 05b0 BE000000 		movl	$.LC18, %esi
+ 444      00
+ 445 05b5 4889C7   		movq	%rax, %rdi
+ 446 05b8 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 446      00
+ 447 05bd BE000000 		movl	$.LC10, %esi
+ 447      00
+ 448 05c2 4889C7   		movq	%rax, %rdi
+ 449 05c5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 449      00
+ 450 05ca 4889C7   		movq	%rax, %rdi
+ 451 05cd E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 451      00
+ 452 05d2 4889C7   		movq	%rax, %rdi
+ 453 05d5 4989C4   		movq	%rax, %r12
+ 454 05d8 E8000000 		call	strlen
+GAS LISTING /tmp/cczEKvce.s 			page 13
+
+
+ 454      00
+ 455 05dd 488B5424 		movq	88(%rsp), %rdx
+ 455      58
+ 456 05e2 488D7C24 		leaq	80(%rsp), %rdi
+ 456      50
+ 457 05e7 4989C0   		movq	%rax, %r8
+ 458 05ea 4C89E1   		movq	%r12, %rcx
+ 459 05ed 31F6     		xorl	%esi, %esi
+ 460 05ef E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 460      00
+ 461 05f4 488D7C24 		leaq	80(%rsp), %rdi
+ 461      50
+ 462 05f9 BE000000 		movl	$.LC11, %esi
+ 462      00
+ 463 05fe E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 463      00
+ 464 0603 85C0     		testl	%eax, %eax
+ 465 0605 0F851503 		jne	.L22
+ 465      0000
+ 466 060b C785A400 		movl	$1, 164(%rbp)
+ 466      00000100 
+ 466      0000
+ 467              	.L23:
+ 468 0615 488B7B30 		movq	48(%rbx), %rdi
+ 469 0619 BE000000 		movl	$.LC5, %esi
+ 469      00
+ 470 061e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 470      00
+ 471 0623 BE000000 		movl	$.LC18, %esi
+ 471      00
+ 472 0628 4889C7   		movq	%rax, %rdi
+ 473 062b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 473      00
+ 474 0630 BE000000 		movl	$.LC16, %esi
+ 474      00
+ 475 0635 4889C7   		movq	%rax, %rdi
+ 476 0638 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 476      00
+ 477 063d 4889C7   		movq	%rax, %rdi
+ 478 0640 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 478      00
+ 479 0645 4889C7   		movq	%rax, %rdi
+ 480 0648 4989C4   		movq	%rax, %r12
+ 481 064b E8000000 		call	strlen
+ 481      00
+ 482 0650 488B5424 		movq	88(%rsp), %rdx
+ 482      58
+ 483 0655 488D7C24 		leaq	80(%rsp), %rdi
+ 483      50
+ 484 065a 4989C0   		movq	%rax, %r8
+ 485 065d 4C89E1   		movq	%r12, %rcx
+ 486 0660 31F6     		xorl	%esi, %esi
+ 487 0662 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 487      00
+ 488 0667 488D7C24 		leaq	80(%rsp), %rdi
+ 488      50
+ 489 066c BE000000 		movl	$.LC11, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 14
+
+
+ 489      00
+ 490 0671 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 490      00
+ 491 0676 85C0     		testl	%eax, %eax
+ 492 0678 0F857202 		jne	.L27
+ 492      0000
+ 493 067e C7859400 		movl	$1, 148(%rbp)
+ 493      00000100 
+ 493      0000
+ 494              	.L28:
+ 495 0688 488B7B30 		movq	48(%rbx), %rdi
+ 496 068c BE000000 		movl	$.LC5, %esi
+ 496      00
+ 497 0691 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 497      00
+ 498 0696 BE000000 		movl	$.LC19, %esi
+ 498      00
+ 499 069b 4889C7   		movq	%rax, %rdi
+ 500 069e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 500      00
+ 501 06a3 BE000000 		movl	$.LC7, %esi
+ 501      00
+ 502 06a8 4889C7   		movq	%rax, %rdi
+ 503 06ab E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 503      00
+ 504 06b0 488D7424 		leaq	56(%rsp), %rsi
+ 504      38
+ 505 06b5 4889C7   		movq	%rax, %rdi
+ 506 06b8 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 506      00
+ 507 06bd F20F1044 		movsd	56(%rsp), %xmm0
+ 507      2438
+ 508 06c3 488B7B30 		movq	48(%rbx), %rdi
+ 509 06c7 BE000000 		movl	$.LC5, %esi
+ 509      00
+ 510 06cc F20F1145 		movsd	%xmm0, 40(%rbp)
+ 510      28
+ 511 06d1 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 511      00
+ 512 06d6 BE000000 		movl	$.LC19, %esi
+ 512      00
+ 513 06db 4889C7   		movq	%rax, %rdi
+ 514 06de E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 514      00
+ 515 06e3 BE000000 		movl	$.LC8, %esi
+ 515      00
+ 516 06e8 4889C7   		movq	%rax, %rdi
+ 517 06eb E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 517      00
+ 518 06f0 488D7424 		leaq	64(%rsp), %rsi
+ 518      40
+ 519 06f5 4889C7   		movq	%rax, %rdi
+ 520 06f8 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 520      00
+ 521 06fd F20F1044 		movsd	64(%rsp), %xmm0
+ 521      2440
+ 522 0703 488B7B30 		movq	48(%rbx), %rdi
+GAS LISTING /tmp/cczEKvce.s 			page 15
+
+
+ 523 0707 BE000000 		movl	$.LC5, %esi
+ 523      00
+ 524 070c F20F1145 		movsd	%xmm0, 48(%rbp)
+ 524      30
+ 525 0711 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 525      00
+ 526 0716 BE000000 		movl	$.LC19, %esi
+ 526      00
+ 527 071b 4889C7   		movq	%rax, %rdi
+ 528 071e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 528      00
+ 529 0723 BE000000 		movl	$.LC9, %esi
+ 529      00
+ 530 0728 4889C7   		movq	%rax, %rdi
+ 531 072b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 531      00
+ 532 0730 488D7424 		leaq	72(%rsp), %rsi
+ 532      48
+ 533 0735 4889C7   		movq	%rax, %rdi
+ 534 0738 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 534      00
+ 535 073d F20F1044 		movsd	72(%rsp), %xmm0
+ 535      2448
+ 536 0743 488B7B30 		movq	48(%rbx), %rdi
+ 537 0747 BE000000 		movl	$.LC5, %esi
+ 537      00
+ 538 074c F20F1145 		movsd	%xmm0, 56(%rbp)
+ 538      38
+ 539 0751 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 539      00
+ 540 0756 BE000000 		movl	$.LC19, %esi
+ 540      00
+ 541 075b 4889C7   		movq	%rax, %rdi
+ 542 075e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 542      00
+ 543 0763 BE000000 		movl	$.LC10, %esi
+ 543      00
+ 544 0768 4889C7   		movq	%rax, %rdi
+ 545 076b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 545      00
+ 546 0770 4889C7   		movq	%rax, %rdi
+ 547 0773 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 547      00
+ 548 0778 4889C7   		movq	%rax, %rdi
+ 549 077b 4989C4   		movq	%rax, %r12
+ 550 077e E8000000 		call	strlen
+ 550      00
+ 551 0783 488B5424 		movq	88(%rsp), %rdx
+ 551      58
+ 552 0788 488D7C24 		leaq	80(%rsp), %rdi
+ 552      50
+ 553 078d 4989C0   		movq	%rax, %r8
+ 554 0790 4C89E1   		movq	%r12, %rcx
+ 555 0793 31F6     		xorl	%esi, %esi
+ 556 0795 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 556      00
+ 557 079a 488D7C24 		leaq	80(%rsp), %rdi
+GAS LISTING /tmp/cczEKvce.s 			page 16
+
+
+ 557      50
+ 558 079f BE000000 		movl	$.LC11, %esi
+ 558      00
+ 559 07a4 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 559      00
+ 560 07a9 85C0     		testl	%eax, %eax
+ 561 07ab 0F850F01 		jne	.L30
+ 561      0000
+ 562 07b1 C7859C00 		movl	$1, 156(%rbp)
+ 562      00000100 
+ 562      0000
+ 563              	.L31:
+ 564 07bb 488B7B30 		movq	48(%rbx), %rdi
+ 565 07bf BE000000 		movl	$.LC5, %esi
+ 565      00
+ 566 07c4 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 566      00
+ 567 07c9 BE000000 		movl	$.LC19, %esi
+ 567      00
+ 568 07ce 4889C7   		movq	%rax, %rdi
+ 569 07d1 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 569      00
+ 570 07d6 BE000000 		movl	$.LC16, %esi
+ 570      00
+ 571 07db 4889C7   		movq	%rax, %rdi
+ 572 07de E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 572      00
+ 573 07e3 4889C7   		movq	%rax, %rdi
+ 574 07e6 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 574      00
+ 575 07eb 4889C7   		movq	%rax, %rdi
+ 576 07ee 4889C3   		movq	%rax, %rbx
+ 577 07f1 E8000000 		call	strlen
+ 577      00
+ 578 07f6 488B5424 		movq	88(%rsp), %rdx
+ 578      58
+ 579 07fb 488D7C24 		leaq	80(%rsp), %rdi
+ 579      50
+ 580 0800 4989C0   		movq	%rax, %r8
+ 581 0803 4889D9   		movq	%rbx, %rcx
+ 582 0806 31F6     		xorl	%esi, %esi
+ 583 0808 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 583      00
+ 584 080d 488D7C24 		leaq	80(%rsp), %rdi
+ 584      50
+ 585 0812 BE000000 		movl	$.LC11, %esi
+ 585      00
+ 586 0817 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 586      00
+ 587 081c 85C0     		testl	%eax, %eax
+ 588 081e 7570     		jne	.L35
+ 589 0820 C7858C00 		movl	$1, 140(%rbp)
+ 589      00000100 
+ 589      0000
+ 590              	.L36:
+ 591 082a 488B7C24 		movq	80(%rsp), %rdi
+ 591      50
+GAS LISTING /tmp/cczEKvce.s 			page 17
+
+
+ 592 082f 488D4424 		leaq	96(%rsp), %rax
+ 592      60
+ 593 0834 4839C7   		cmpq	%rax, %rdi
+ 594 0837 7405     		je	.L5
+ 595 0839 E8000000 		call	_ZdlPv
+ 595      00
+ 596              	.L5:
+ 597 083e 488B4424 		movq	120(%rsp), %rax
+ 597      78
+ 598 0843 64483304 		xorq	%fs:40, %rax
+ 598      25280000 
+ 598      00
+ 599 084c 0F853804 		jne	.L45
+ 599      0000
+ 600 0852 4883EC80 		subq	$-128, %rsp
+ 601              		.cfi_remember_state
+ 602              		.cfi_def_cfa_offset 32
+ 603 0856 5B       		popq	%rbx
+ 604              		.cfi_def_cfa_offset 24
+ 605 0857 5D       		popq	%rbp
+ 606              		.cfi_def_cfa_offset 16
+ 607 0858 415C     		popq	%r12
+ 608              		.cfi_def_cfa_offset 8
+ 609 085a C3       		ret
+ 610 085b 0F1F4400 		.p2align 4,,10
+ 610      00
+ 611              		.p2align 3
+ 612              	.L6:
+ 613              		.cfi_restore_state
+ 614 0860 488D7C24 		leaq	80(%rsp), %rdi
+ 614      50
+ 615 0865 BE000000 		movl	$.LC12, %esi
+ 615      00
+ 616 086a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 616      00
+ 617 086f 85C0     		testl	%eax, %eax
+ 618 0871 0F856101 		jne	.L8
+ 618      0000
+ 619 0877 C7859800 		movl	$2, 152(%rbp)
+ 619      00000200 
+ 619      0000
+ 620 0881 E943FAFF 		jmp	.L7
+ 620      FF
+ 621 0886 662E0F1F 		.p2align 4,,10
+ 621      84000000 
+ 621      0000
+ 622              		.p2align 3
+ 623              	.L35:
+ 624 0890 488D7C24 		leaq	80(%rsp), %rdi
+ 624      50
+ 625 0895 BE000000 		movl	$.LC12, %esi
+ 625      00
+ 626 089a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 626      00
+ 627 089f 85C0     		testl	%eax, %eax
+ 628 08a1 0F857102 		jne	.L37
+ 628      0000
+GAS LISTING /tmp/cczEKvce.s 			page 18
+
+
+ 629 08a7 C7858C00 		movl	$2, 140(%rbp)
+ 629      00000200 
+ 629      0000
+ 630 08b1 E974FFFF 		jmp	.L36
+ 630      FF
+ 631 08b6 662E0F1F 		.p2align 4,,10
+ 631      84000000 
+ 631      0000
+ 632              		.p2align 3
+ 633              	.L30:
+ 634 08c0 488D7C24 		leaq	80(%rsp), %rdi
+ 634      50
+ 635 08c5 BE000000 		movl	$.LC12, %esi
+ 635      00
+ 636 08ca E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 636      00
+ 637 08cf 85C0     		testl	%eax, %eax
+ 638 08d1 0F851902 		jne	.L32
+ 638      0000
+ 639 08d7 C7859C00 		movl	$2, 156(%rbp)
+ 639      00000200 
+ 639      0000
+ 640 08e1 E9D5FEFF 		jmp	.L31
+ 640      FF
+ 641 08e6 662E0F1F 		.p2align 4,,10
+ 641      84000000 
+ 641      0000
+ 642              		.p2align 3
+ 643              	.L27:
+ 644 08f0 488D7C24 		leaq	80(%rsp), %rdi
+ 644      50
+ 645 08f5 BE000000 		movl	$.LC12, %esi
+ 645      00
+ 646 08fa E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 646      00
+ 647 08ff 85C0     		testl	%eax, %eax
+ 648 0901 0F85B901 		jne	.L29
+ 648      0000
+ 649 0907 C7859400 		movl	$2, 148(%rbp)
+ 649      00000200 
+ 649      0000
+ 650 0911 E972FDFF 		jmp	.L28
+ 650      FF
+ 651 0916 662E0F1F 		.p2align 4,,10
+ 651      84000000 
+ 651      0000
+ 652              		.p2align 3
+ 653              	.L22:
+ 654 0920 488D7C24 		leaq	80(%rsp), %rdi
+ 654      50
+ 655 0925 BE000000 		movl	$.LC12, %esi
+ 655      00
+ 656 092a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 656      00
+ 657 092f 85C0     		testl	%eax, %eax
+ 658 0931 0F855901 		jne	.L24
+ 658      0000
+GAS LISTING /tmp/cczEKvce.s 			page 19
+
+
+ 659 0937 C785A400 		movl	$2, 164(%rbp)
+ 659      00000200 
+ 659      0000
+ 660 0941 E9CFFCFF 		jmp	.L23
+ 660      FF
+ 661 0946 662E0F1F 		.p2align 4,,10
+ 661      84000000 
+ 661      0000
+ 662              		.p2align 3
+ 663              	.L19:
+ 664 0950 488D7C24 		leaq	80(%rsp), %rdi
+ 664      50
+ 665 0955 BE000000 		movl	$.LC12, %esi
+ 665      00
+ 666 095a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 666      00
+ 667 095f 85C0     		testl	%eax, %eax
+ 668 0961 0F85F900 		jne	.L21
+ 668      0000
+ 669 0967 C7859000 		movl	$2, 144(%rbp)
+ 669      00000200 
+ 669      0000
+ 670 0971 E96CFBFF 		jmp	.L20
+ 670      FF
+ 671 0976 662E0F1F 		.p2align 4,,10
+ 671      84000000 
+ 671      0000
+ 672              		.p2align 3
+ 673              	.L14:
+ 674 0980 488D7C24 		leaq	80(%rsp), %rdi
+ 674      50
+ 675 0985 BE000000 		movl	$.LC12, %esi
+ 675      00
+ 676 098a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 676      00
+ 677 098f 85C0     		testl	%eax, %eax
+ 678 0991 0F859900 		jne	.L16
+ 678      0000
+ 679 0997 C785A000 		movl	$2, 160(%rbp)
+ 679      00000200 
+ 679      0000
+ 680 09a1 E9C9FAFF 		jmp	.L15
+ 680      FF
+ 681 09a6 662E0F1F 		.p2align 4,,10
+ 681      84000000 
+ 681      0000
+ 682              		.p2align 3
+ 683              	.L11:
+ 684 09b0 488D7C24 		leaq	80(%rsp), %rdi
+ 684      50
+ 685 09b5 BE000000 		movl	$.LC12, %esi
+ 685      00
+ 686 09ba E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 686      00
+ 687 09bf 85C0     		testl	%eax, %eax
+ 688 09c1 753D     		jne	.L13
+ 689 09c3 C7858800 		movl	$2, 136(%rbp)
+GAS LISTING /tmp/cczEKvce.s 			page 20
+
+
+ 689      00000200 
+ 689      0000
+ 690 09cd E96AF9FF 		jmp	.L12
+ 690      FF
+ 691              		.p2align 4,,10
+ 692 09d2 660F1F44 		.p2align 3
+ 692      0000
+ 693              	.L8:
+ 694 09d8 488D7C24 		leaq	80(%rsp), %rdi
+ 694      50
+ 695 09dd BE000000 		movl	$.LC13, %esi
+ 695      00
+ 696 09e2 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 696      00
+ 697 09e7 85C0     		testl	%eax, %eax
+ 698 09e9 0F85E101 		jne	.L9
+ 698      0000
+ 699 09ef C7859800 		movl	$3, 152(%rbp)
+ 699      00000300 
+ 699      0000
+ 700 09f9 E9CBF8FF 		jmp	.L7
+ 700      FF
+ 701 09fe 6690     		.p2align 4,,10
+ 702              		.p2align 3
+ 703              	.L13:
+ 704 0a00 488D7C24 		leaq	80(%rsp), %rdi
+ 704      50
+ 705 0a05 BE000000 		movl	$.LC13, %esi
+ 705      00
+ 706 0a0a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 706      00
+ 707 0a0f 85C0     		testl	%eax, %eax
+ 708 0a11 0F8525F9 		jne	.L12
+ 708      FFFF
+ 709 0a17 C7858800 		movl	$3, 136(%rbp)
+ 709      00000300 
+ 709      0000
+ 710 0a21 E916F9FF 		jmp	.L12
+ 710      FF
+ 711 0a26 662E0F1F 		.p2align 4,,10
+ 711      84000000 
+ 711      0000
+ 712              		.p2align 3
+ 713              	.L16:
+ 714 0a30 488D7C24 		leaq	80(%rsp), %rdi
+ 714      50
+ 715 0a35 BE000000 		movl	$.LC13, %esi
+ 715      00
+ 716 0a3a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 716      00
+ 717 0a3f 85C0     		testl	%eax, %eax
+ 718 0a41 0F855901 		jne	.L17
+ 718      0000
+ 719 0a47 C785A000 		movl	$3, 160(%rbp)
+ 719      00000300 
+ 719      0000
+ 720 0a51 E919FAFF 		jmp	.L15
+GAS LISTING /tmp/cczEKvce.s 			page 21
+
+
+ 720      FF
+ 721 0a56 662E0F1F 		.p2align 4,,10
+ 721      84000000 
+ 721      0000
+ 722              		.p2align 3
+ 723              	.L21:
+ 724 0a60 488D7C24 		leaq	80(%rsp), %rdi
+ 724      50
+ 725 0a65 BE000000 		movl	$.LC13, %esi
+ 725      00
+ 726 0a6a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 726      00
+ 727 0a6f 85C0     		testl	%eax, %eax
+ 728 0a71 0F856BFA 		jne	.L20
+ 728      FFFF
+ 729 0a77 C7859000 		movl	$3, 144(%rbp)
+ 729      00000300 
+ 729      0000
+ 730 0a81 E95CFAFF 		jmp	.L20
+ 730      FF
+ 731 0a86 662E0F1F 		.p2align 4,,10
+ 731      84000000 
+ 731      0000
+ 732              		.p2align 3
+ 733              	.L24:
+ 734 0a90 488D7C24 		leaq	80(%rsp), %rdi
+ 734      50
+ 735 0a95 BE000000 		movl	$.LC13, %esi
+ 735      00
+ 736 0a9a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 736      00
+ 737 0a9f 85C0     		testl	%eax, %eax
+ 738 0aa1 0F85C900 		jne	.L25
+ 738      0000
+ 739 0aa7 C785A400 		movl	$3, 164(%rbp)
+ 739      00000300 
+ 739      0000
+ 740 0ab1 E95FFBFF 		jmp	.L23
+ 740      FF
+ 741 0ab6 662E0F1F 		.p2align 4,,10
+ 741      84000000 
+ 741      0000
+ 742              		.p2align 3
+ 743              	.L29:
+ 744 0ac0 488D7C24 		leaq	80(%rsp), %rdi
+ 744      50
+ 745 0ac5 BE000000 		movl	$.LC13, %esi
+ 745      00
+ 746 0aca E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 746      00
+ 747 0acf 85C0     		testl	%eax, %eax
+ 748 0ad1 0F85B1FB 		jne	.L28
+ 748      FFFF
+ 749 0ad7 C7859400 		movl	$3, 148(%rbp)
+ 749      00000300 
+ 749      0000
+ 750 0ae1 E9A2FBFF 		jmp	.L28
+GAS LISTING /tmp/cczEKvce.s 			page 22
+
+
+ 750      FF
+ 751 0ae6 662E0F1F 		.p2align 4,,10
+ 751      84000000 
+ 751      0000
+ 752              		.p2align 3
+ 753              	.L32:
+ 754 0af0 488D7C24 		leaq	80(%rsp), %rdi
+ 754      50
+ 755 0af5 BE000000 		movl	$.LC13, %esi
+ 755      00
+ 756 0afa E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 756      00
+ 757 0aff 85C0     		testl	%eax, %eax
+ 758 0b01 753D     		jne	.L33
+ 759 0b03 C7859C00 		movl	$3, 156(%rbp)
+ 759      00000300 
+ 759      0000
+ 760 0b0d E9A9FCFF 		jmp	.L31
+ 760      FF
+ 761              		.p2align 4,,10
+ 762 0b12 660F1F44 		.p2align 3
+ 762      0000
+ 763              	.L37:
+ 764 0b18 488D7C24 		leaq	80(%rsp), %rdi
+ 764      50
+ 765 0b1d BE000000 		movl	$.LC13, %esi
+ 765      00
+ 766 0b22 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 766      00
+ 767 0b27 85C0     		testl	%eax, %eax
+ 768 0b29 0F85FBFC 		jne	.L36
+ 768      FFFF
+ 769 0b2f C7858C00 		movl	$3, 140(%rbp)
+ 769      00000300 
+ 769      0000
+ 770 0b39 E9ECFCFF 		jmp	.L36
+ 770      FF
+ 771 0b3e 6690     		.p2align 4,,10
+ 772              		.p2align 3
+ 773              	.L33:
+ 774 0b40 488D7C24 		leaq	80(%rsp), %rdi
+ 774      50
+ 775 0b45 BE000000 		movl	$.LC14, %esi
+ 775      00
+ 776 0b4a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 776      00
+ 777 0b4f 85C0     		testl	%eax, %eax
+ 778 0b51 0F859B00 		jne	.L34
+ 778      0000
+ 779 0b57 C7859800 		movl	$4, 152(%rbp)
+ 779      00000400 
+ 779      0000
+ 780 0b61 E955FCFF 		jmp	.L31
+ 780      FF
+ 781 0b66 662E0F1F 		.p2align 4,,10
+ 781      84000000 
+ 781      0000
+GAS LISTING /tmp/cczEKvce.s 			page 23
+
+
+ 782              		.p2align 3
+ 783              	.L25:
+ 784 0b70 488D7C24 		leaq	80(%rsp), %rdi
+ 784      50
+ 785 0b75 BE000000 		movl	$.LC14, %esi
+ 785      00
+ 786 0b7a E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 786      00
+ 787 0b7f 85C0     		testl	%eax, %eax
+ 788 0b81 0F85B700 		jne	.L26
+ 788      0000
+ 789 0b87 C7859800 		movl	$4, 152(%rbp)
+ 789      00000400 
+ 789      0000
+ 790 0b91 E97FFAFF 		jmp	.L23
+ 790      FF
+ 791 0b96 662E0F1F 		.p2align 4,,10
+ 791      84000000 
+ 791      0000
+ 792              		.p2align 3
+ 793              	.L17:
+ 794 0ba0 488D7C24 		leaq	80(%rsp), %rdi
+ 794      50
+ 795 0ba5 BE000000 		movl	$.LC14, %esi
+ 795      00
+ 796 0baa E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 796      00
+ 797 0baf 85C0     		testl	%eax, %eax
+ 798 0bb1 0F85AD00 		jne	.L18
+ 798      0000
+ 799 0bb7 C7859800 		movl	$4, 152(%rbp)
+ 799      00000400 
+ 799      0000
+ 800 0bc1 E9A9F8FF 		jmp	.L15
+ 800      FF
+ 801 0bc6 662E0F1F 		.p2align 4,,10
+ 801      84000000 
+ 801      0000
+ 802              		.p2align 3
+ 803              	.L9:
+ 804 0bd0 488D7C24 		leaq	80(%rsp), %rdi
+ 804      50
+ 805 0bd5 BE000000 		movl	$.LC14, %esi
+ 805      00
+ 806 0bda E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 806      00
+ 807 0bdf 85C0     		testl	%eax, %eax
+ 808 0be1 7535     		jne	.L10
+ 809 0be3 C7859800 		movl	$4, 152(%rbp)
+ 809      00000400 
+ 809      0000
+ 810 0bed E9D7F6FF 		jmp	.L7
+ 810      FF
+ 811              	.L34:
+ 812 0bf2 488D7C24 		leaq	80(%rsp), %rdi
+ 812      50
+ 813 0bf7 BE000000 		movl	$.LC15, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 24
+
+
+ 813      00
+ 814 0bfc E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 814      00
+ 815 0c01 85C0     		testl	%eax, %eax
+ 816 0c03 0F85B2FB 		jne	.L31
+ 816      FFFF
+ 817 0c09 C7859800 		movl	$5, 152(%rbp)
+ 817      00000500 
+ 817      0000
+ 818 0c13 E9A3FBFF 		jmp	.L31
+ 818      FF
+ 819              	.L10:
+ 820 0c18 488D7C24 		leaq	80(%rsp), %rdi
+ 820      50
+ 821 0c1d BE000000 		movl	$.LC15, %esi
+ 821      00
+ 822 0c22 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 822      00
+ 823 0c27 85C0     		testl	%eax, %eax
+ 824 0c29 0F859AF6 		jne	.L7
+ 824      FFFF
+ 825 0c2f C7859800 		movl	$5, 152(%rbp)
+ 825      00000500 
+ 825      0000
+ 826 0c39 E98BF6FF 		jmp	.L7
+ 826      FF
+ 827              	.L26:
+ 828 0c3e 488D7C24 		leaq	80(%rsp), %rdi
+ 828      50
+ 829 0c43 BE000000 		movl	$.LC15, %esi
+ 829      00
+ 830 0c48 E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 830      00
+ 831 0c4d 85C0     		testl	%eax, %eax
+ 832 0c4f 0F85C0F9 		jne	.L23
+ 832      FFFF
+ 833 0c55 C7859800 		movl	$5, 152(%rbp)
+ 833      00000500 
+ 833      0000
+ 834 0c5f E9B1F9FF 		jmp	.L23
+ 834      FF
+ 835              	.L18:
+ 836 0c64 488D7C24 		leaq	80(%rsp), %rdi
+ 836      50
+ 837 0c69 BE000000 		movl	$.LC15, %esi
+ 837      00
+ 838 0c6e E8000000 		call	_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+ 838      00
+ 839              	.LEHE1:
+ 840 0c73 85C0     		testl	%eax, %eax
+ 841 0c75 0F85F4F7 		jne	.L15
+ 841      FFFF
+ 842 0c7b C7859800 		movl	$5, 152(%rbp)
+ 842      00000500 
+ 842      0000
+ 843 0c85 E9E5F7FF 		jmp	.L15
+ 843      FF
+GAS LISTING /tmp/cczEKvce.s 			page 25
+
+
+ 844              	.L45:
+ 845 0c8a E8000000 		call	__stack_chk_fail
+ 845      00
+ 846              	.L42:
+ 847 0c8f 488B7C24 		movq	80(%rsp), %rdi
+ 847      50
+ 848 0c94 488D5424 		leaq	96(%rsp), %rdx
+ 848      60
+ 849 0c99 4889C3   		movq	%rax, %rbx
+ 850 0c9c 4839D7   		cmpq	%rdx, %rdi
+ 851 0c9f 7405     		je	.L40
+ 852 0ca1 E8000000 		call	_ZdlPv
+ 852      00
+ 853              	.L40:
+ 854 0ca6 4889DF   		movq	%rbx, %rdi
+ 855              	.LEHB2:
+ 856 0ca9 E8000000 		call	_Unwind_Resume
+ 856      00
+ 857              	.LEHE2:
+ 858              		.cfi_endproc
+ 859              	.LFE1884:
+ 860              		.globl	__gxx_personality_v0
+ 861              		.section	.gcc_except_table,"a",@progbits
+ 862              	.LLSDA1884:
+ 863 0000 FF       		.byte	0xff
+ 864 0001 FF       		.byte	0xff
+ 865 0002 01       		.byte	0x1
+ 866 0003 11       		.uleb128 .LLSDACSE1884-.LLSDACSB1884
+ 867              	.LLSDACSB1884:
+ 868 0004 27       		.uleb128 .LEHB0-.LFB1884
+ 869 0005 AC01     		.uleb128 .LEHE0-.LEHB0
+ 870 0007 00       		.uleb128 0
+ 871 0008 00       		.uleb128 0
+ 872 0009 FF01     		.uleb128 .LEHB1-.LFB1884
+ 873 000b 9414     		.uleb128 .LEHE1-.LEHB1
+ 874 000d AF16     		.uleb128 .L42-.LFB1884
+ 875 000f 00       		.uleb128 0
+ 876 0010 C916     		.uleb128 .LEHB2-.LFB1884
+ 877 0012 05       		.uleb128 .LEHE2-.LEHB2
+ 878 0013 00       		.uleb128 0
+ 879 0014 00       		.uleb128 0
+ 880              	.LLSDACSE1884:
+ 881              		.text
+ 883              		.section	.text.unlikely
+ 884              	.LCOLDE20:
+ 885              		.text
+ 886              	.LHOTE20:
+ 887              		.section	.rodata.str1.1
+ 888              	.LC21:
+ 889 0077 696E6974 		.string	"initial_conditions"
+ 889      69616C5F 
+ 889      636F6E64 
+ 889      6974696F 
+ 889      6E7300
+ 890              	.LC22:
+ 891 008a 61766572 		.string	"average_rho"
+ 891      6167655F 
+GAS LISTING /tmp/cczEKvce.s 			page 26
+
+
+ 891      72686F00 
+ 892              	.LC23:
+ 893 0096 67726164 		.string	"gradient"
+ 893      69656E74 
+ 893      00
+ 894              	.LC24:
+ 895 009f 7800     		.string	"x"
+ 896              	.LC25:
+ 897 00a1 7900     		.string	"y"
+ 898              	.LC26:
+ 899 00a3 7A00     		.string	"z"
+ 900              	.LC27:
+ 901 00a5 6F726967 		.string	"origin_magnitude"
+ 901      696E5F6D 
+ 901      61676E69 
+ 901      74756465 
+ 901      00
+ 902              	.LC28:
+ 903 00b6 6F726967 		.string	"origin_location"
+ 903      696E5F6C 
+ 903      6F636174 
+ 903      696F6E00 
+ 904              	.LC29:
+ 905 00c6 76656C00 		.string	"vel"
+ 906              	.LC30:
+ 907 00ca 7700     		.string	"w"
+ 908              		.section	.text.unlikely
+ 909              		.align 2
+ 910              	.LCOLDB31:
+ 911              		.text
+ 912              	.LHOTB31:
+ 913              		.align 2
+ 914 0cae 6690     		.p2align 4,,15
+ 915              		.globl	_ZN12preprocessor24parse_initial_conditionsERN8tinyxml211XMLDocumentER18initial_conditions
+ 917              	_ZN12preprocessor24parse_initial_conditionsERN8tinyxml211XMLDocumentER18initial_conditions:
+ 918              	.LFB1885:
+ 919              		.cfi_startproc
+ 920 0cb0 55       		pushq	%rbp
+ 921              		.cfi_def_cfa_offset 16
+ 922              		.cfi_offset 6, -16
+ 923 0cb1 53       		pushq	%rbx
+ 924              		.cfi_def_cfa_offset 24
+ 925              		.cfi_offset 3, -24
+ 926 0cb2 4889F5   		movq	%rsi, %rbp
+ 927 0cb5 4889D3   		movq	%rdx, %rbx
+ 928 0cb8 4883EC18 		subq	$24, %rsp
+ 929              		.cfi_def_cfa_offset 48
+ 930 0cbc 488B7E30 		movq	48(%rsi), %rdi
+ 931 0cc0 BE000000 		movl	$.LC21, %esi
+ 931      00
+ 932 0cc5 64488B04 		movq	%fs:40, %rax
+ 932      25280000 
+ 932      00
+ 933 0cce 48894424 		movq	%rax, 8(%rsp)
+ 933      08
+ 934 0cd3 31C0     		xorl	%eax, %eax
+ 935 0cd5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+GAS LISTING /tmp/cczEKvce.s 			page 27
+
+
+ 935      00
+ 936 0cda BE000000 		movl	$.LC22, %esi
+ 936      00
+ 937 0cdf 4889C7   		movq	%rax, %rdi
+ 938 0ce2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 938      00
+ 939 0ce7 4889E6   		movq	%rsp, %rsi
+ 940 0cea 4889C7   		movq	%rax, %rdi
+ 941 0ced E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 941      00
+ 942 0cf2 F20F1004 		movsd	(%rsp), %xmm0
+ 942      24
+ 943 0cf7 488B7D30 		movq	48(%rbp), %rdi
+ 944 0cfb BE000000 		movl	$.LC21, %esi
+ 944      00
+ 945 0d00 F20F1143 		movsd	%xmm0, 104(%rbx)
+ 945      68
+ 946 0d05 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 946      00
+ 947 0d0a BE000000 		movl	$.LC7, %esi
+ 947      00
+ 948 0d0f 4889C7   		movq	%rax, %rdi
+ 949 0d12 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 949      00
+ 950 0d17 BE000000 		movl	$.LC23, %esi
+ 950      00
+ 951 0d1c 4889C7   		movq	%rax, %rdi
+ 952 0d1f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 952      00
+ 953 0d24 BE000000 		movl	$.LC24, %esi
+ 953      00
+ 954 0d29 4889C7   		movq	%rax, %rdi
+ 955 0d2c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 955      00
+ 956 0d31 4889E6   		movq	%rsp, %rsi
+ 957 0d34 4889C7   		movq	%rax, %rdi
+ 958 0d37 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 958      00
+ 959 0d3c F20F1004 		movsd	(%rsp), %xmm0
+ 959      24
+ 960 0d41 488B7D30 		movq	48(%rbp), %rdi
+ 961 0d45 BE000000 		movl	$.LC21, %esi
+ 961      00
+ 962 0d4a F20F1143 		movsd	%xmm0, 16(%rbx)
+ 962      10
+ 963 0d4f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 963      00
+ 964 0d54 BE000000 		movl	$.LC7, %esi
+ 964      00
+ 965 0d59 4889C7   		movq	%rax, %rdi
+ 966 0d5c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 966      00
+ 967 0d61 BE000000 		movl	$.LC23, %esi
+ 967      00
+ 968 0d66 4889C7   		movq	%rax, %rdi
+ 969 0d69 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 969      00
+GAS LISTING /tmp/cczEKvce.s 			page 28
+
+
+ 970 0d6e BE000000 		movl	$.LC25, %esi
+ 970      00
+ 971 0d73 4889C7   		movq	%rax, %rdi
+ 972 0d76 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 972      00
+ 973 0d7b 4889E6   		movq	%rsp, %rsi
+ 974 0d7e 4889C7   		movq	%rax, %rdi
+ 975 0d81 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 975      00
+ 976 0d86 F20F1004 		movsd	(%rsp), %xmm0
+ 976      24
+ 977 0d8b 488B7D30 		movq	48(%rbp), %rdi
+ 978 0d8f BE000000 		movl	$.LC21, %esi
+ 978      00
+ 979 0d94 F20F1143 		movsd	%xmm0, 24(%rbx)
+ 979      18
+ 980 0d99 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 980      00
+ 981 0d9e BE000000 		movl	$.LC7, %esi
+ 981      00
+ 982 0da3 4889C7   		movq	%rax, %rdi
+ 983 0da6 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 983      00
+ 984 0dab BE000000 		movl	$.LC23, %esi
+ 984      00
+ 985 0db0 4889C7   		movq	%rax, %rdi
+ 986 0db3 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 986      00
+ 987 0db8 BE000000 		movl	$.LC26, %esi
+ 987      00
+ 988 0dbd 4889C7   		movq	%rax, %rdi
+ 989 0dc0 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 989      00
+ 990 0dc5 4889E6   		movq	%rsp, %rsi
+ 991 0dc8 4889C7   		movq	%rax, %rdi
+ 992 0dcb E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 992      00
+ 993 0dd0 F20F1004 		movsd	(%rsp), %xmm0
+ 993      24
+ 994 0dd5 488B7D30 		movq	48(%rbp), %rdi
+ 995 0dd9 BE000000 		movl	$.LC21, %esi
+ 995      00
+ 996 0dde F20F1143 		movsd	%xmm0, 32(%rbx)
+ 996      20
+ 997 0de3 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 997      00
+ 998 0de8 BE000000 		movl	$.LC7, %esi
+ 998      00
+ 999 0ded 4889C7   		movq	%rax, %rdi
+ 1000 0df0 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1000      00
+ 1001 0df5 BE000000 		movl	$.LC27, %esi
+ 1001      00
+ 1002 0dfa 4889C7   		movq	%rax, %rdi
+ 1003 0dfd E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1003      00
+ 1004 0e02 BE000000 		movl	$.LC24, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 29
+
+
+ 1004      00
+ 1005 0e07 4889C7   		movq	%rax, %rdi
+ 1006 0e0a E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1006      00
+ 1007 0e0f 4889E6   		movq	%rsp, %rsi
+ 1008 0e12 4889C7   		movq	%rax, %rdi
+ 1009 0e15 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1009      00
+ 1010 0e1a F20F1004 		movsd	(%rsp), %xmm0
+ 1010      24
+ 1011 0e1f 488B7D30 		movq	48(%rbp), %rdi
+ 1012 0e23 BE000000 		movl	$.LC21, %esi
+ 1012      00
+ 1013 0e28 F20F1143 		movsd	%xmm0, 48(%rbx)
+ 1013      30
+ 1014 0e2d E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1014      00
+ 1015 0e32 BE000000 		movl	$.LC7, %esi
+ 1015      00
+ 1016 0e37 4889C7   		movq	%rax, %rdi
+ 1017 0e3a E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1017      00
+ 1018 0e3f BE000000 		movl	$.LC27, %esi
+ 1018      00
+ 1019 0e44 4889C7   		movq	%rax, %rdi
+ 1020 0e47 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1020      00
+ 1021 0e4c BE000000 		movl	$.LC25, %esi
+ 1021      00
+ 1022 0e51 4889C7   		movq	%rax, %rdi
+ 1023 0e54 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1023      00
+ 1024 0e59 4889E6   		movq	%rsp, %rsi
+ 1025 0e5c 4889C7   		movq	%rax, %rdi
+ 1026 0e5f E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1026      00
+ 1027 0e64 F20F1004 		movsd	(%rsp), %xmm0
+ 1027      24
+ 1028 0e69 488B7D30 		movq	48(%rbp), %rdi
+ 1029 0e6d BE000000 		movl	$.LC21, %esi
+ 1029      00
+ 1030 0e72 F20F1143 		movsd	%xmm0, 56(%rbx)
+ 1030      38
+ 1031 0e77 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1031      00
+ 1032 0e7c BE000000 		movl	$.LC7, %esi
+ 1032      00
+ 1033 0e81 4889C7   		movq	%rax, %rdi
+ 1034 0e84 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1034      00
+ 1035 0e89 BE000000 		movl	$.LC27, %esi
+ 1035      00
+ 1036 0e8e 4889C7   		movq	%rax, %rdi
+ 1037 0e91 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1037      00
+ 1038 0e96 BE000000 		movl	$.LC26, %esi
+ 1038      00
+GAS LISTING /tmp/cczEKvce.s 			page 30
+
+
+ 1039 0e9b 4889C7   		movq	%rax, %rdi
+ 1040 0e9e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1040      00
+ 1041 0ea3 4889E6   		movq	%rsp, %rsi
+ 1042 0ea6 4889C7   		movq	%rax, %rdi
+ 1043 0ea9 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1043      00
+ 1044 0eae F20F1004 		movsd	(%rsp), %xmm0
+ 1044      24
+ 1045 0eb3 488B7D30 		movq	48(%rbp), %rdi
+ 1046 0eb7 BE000000 		movl	$.LC21, %esi
+ 1046      00
+ 1047 0ebc F20F1143 		movsd	%xmm0, 64(%rbx)
+ 1047      40
+ 1048 0ec1 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1048      00
+ 1049 0ec6 BE000000 		movl	$.LC28, %esi
+ 1049      00
+ 1050 0ecb 4889C7   		movq	%rax, %rdi
+ 1051 0ece E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1051      00
+ 1052 0ed3 BE000000 		movl	$.LC24, %esi
+ 1052      00
+ 1053 0ed8 4889C7   		movq	%rax, %rdi
+ 1054 0edb E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1054      00
+ 1055 0ee0 4889E6   		movq	%rsp, %rsi
+ 1056 0ee3 4889C7   		movq	%rax, %rdi
+ 1057 0ee6 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1057      00
+ 1058 0eeb F20F1004 		movsd	(%rsp), %xmm0
+ 1058      24
+ 1059 0ef0 488B7D30 		movq	48(%rbp), %rdi
+ 1060 0ef4 BE000000 		movl	$.LC21, %esi
+ 1060      00
+ 1061 0ef9 F20F1143 		movsd	%xmm0, 80(%rbx)
+ 1061      50
+ 1062 0efe E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1062      00
+ 1063 0f03 BE000000 		movl	$.LC28, %esi
+ 1063      00
+ 1064 0f08 4889C7   		movq	%rax, %rdi
+ 1065 0f0b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1065      00
+ 1066 0f10 BE000000 		movl	$.LC25, %esi
+ 1066      00
+ 1067 0f15 4889C7   		movq	%rax, %rdi
+ 1068 0f18 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1068      00
+ 1069 0f1d 4889E6   		movq	%rsp, %rsi
+ 1070 0f20 4889C7   		movq	%rax, %rdi
+ 1071 0f23 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1071      00
+ 1072 0f28 F20F1004 		movsd	(%rsp), %xmm0
+ 1072      24
+ 1073 0f2d 488B7D30 		movq	48(%rbp), %rdi
+ 1074 0f31 BE000000 		movl	$.LC21, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 31
+
+
+ 1074      00
+ 1075 0f36 F20F1143 		movsd	%xmm0, 88(%rbx)
+ 1075      58
+ 1076 0f3b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1076      00
+ 1077 0f40 BE000000 		movl	$.LC28, %esi
+ 1077      00
+ 1078 0f45 4889C7   		movq	%rax, %rdi
+ 1079 0f48 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1079      00
+ 1080 0f4d BE000000 		movl	$.LC26, %esi
+ 1080      00
+ 1081 0f52 4889C7   		movq	%rax, %rdi
+ 1082 0f55 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1082      00
+ 1083 0f5a 4889E6   		movq	%rsp, %rsi
+ 1084 0f5d 4889C7   		movq	%rax, %rdi
+ 1085 0f60 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1085      00
+ 1086 0f65 F20F1004 		movsd	(%rsp), %xmm0
+ 1086      24
+ 1087 0f6a 488B7D30 		movq	48(%rbp), %rdi
+ 1088 0f6e BE000000 		movl	$.LC21, %esi
+ 1088      00
+ 1089 0f73 F20F1143 		movsd	%xmm0, 96(%rbx)
+ 1089      60
+ 1090 0f78 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1090      00
+ 1091 0f7d BE000000 		movl	$.LC29, %esi
+ 1091      00
+ 1092 0f82 4889C7   		movq	%rax, %rdi
+ 1093 0f85 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1093      00
+ 1094 0f8a BE000000 		movl	$.LC23, %esi
+ 1094      00
+ 1095 0f8f 4889C7   		movq	%rax, %rdi
+ 1096 0f92 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1096      00
+ 1097 0f97 BE000000 		movl	$.LC24, %esi
+ 1097      00
+ 1098 0f9c 4889C7   		movq	%rax, %rdi
+ 1099 0f9f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1099      00
+ 1100 0fa4 4889E6   		movq	%rsp, %rsi
+ 1101 0fa7 4889C7   		movq	%rax, %rdi
+ 1102 0faa E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1102      00
+ 1103 0faf F20F1004 		movsd	(%rsp), %xmm0
+ 1103      24
+ 1104 0fb4 488B7D30 		movq	48(%rbp), %rdi
+ 1105 0fb8 BE000000 		movl	$.LC21, %esi
+ 1105      00
+ 1106 0fbd F20F1183 		movsd	%xmm0, 152(%rbx)
+ 1106      98000000 
+ 1107 0fc5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1107      00
+ 1108 0fca BE000000 		movl	$.LC29, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 32
+
+
+ 1108      00
+ 1109 0fcf 4889C7   		movq	%rax, %rdi
+ 1110 0fd2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1110      00
+ 1111 0fd7 BE000000 		movl	$.LC23, %esi
+ 1111      00
+ 1112 0fdc 4889C7   		movq	%rax, %rdi
+ 1113 0fdf E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1113      00
+ 1114 0fe4 BE000000 		movl	$.LC25, %esi
+ 1114      00
+ 1115 0fe9 4889C7   		movq	%rax, %rdi
+ 1116 0fec E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1116      00
+ 1117 0ff1 4889E6   		movq	%rsp, %rsi
+ 1118 0ff4 4889C7   		movq	%rax, %rdi
+ 1119 0ff7 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1119      00
+ 1120 0ffc F20F1004 		movsd	(%rsp), %xmm0
+ 1120      24
+ 1121 1001 488B7D30 		movq	48(%rbp), %rdi
+ 1122 1005 BE000000 		movl	$.LC21, %esi
+ 1122      00
+ 1123 100a F20F1183 		movsd	%xmm0, 160(%rbx)
+ 1123      A0000000 
+ 1124 1012 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1124      00
+ 1125 1017 BE000000 		movl	$.LC29, %esi
+ 1125      00
+ 1126 101c 4889C7   		movq	%rax, %rdi
+ 1127 101f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1127      00
+ 1128 1024 BE000000 		movl	$.LC23, %esi
+ 1128      00
+ 1129 1029 4889C7   		movq	%rax, %rdi
+ 1130 102c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1130      00
+ 1131 1031 BE000000 		movl	$.LC26, %esi
+ 1131      00
+ 1132 1036 4889C7   		movq	%rax, %rdi
+ 1133 1039 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1133      00
+ 1134 103e 4889E6   		movq	%rsp, %rsi
+ 1135 1041 4889C7   		movq	%rax, %rdi
+ 1136 1044 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1136      00
+ 1137 1049 F20F1004 		movsd	(%rsp), %xmm0
+ 1137      24
+ 1138 104e 488B7D30 		movq	48(%rbp), %rdi
+ 1139 1052 BE000000 		movl	$.LC21, %esi
+ 1139      00
+ 1140 1057 F20F1183 		movsd	%xmm0, 168(%rbx)
+ 1140      A8000000 
+ 1141 105f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1141      00
+ 1142 1064 BE000000 		movl	$.LC29, %esi
+ 1142      00
+GAS LISTING /tmp/cczEKvce.s 			page 33
+
+
+ 1143 1069 4889C7   		movq	%rax, %rdi
+ 1144 106c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1144      00
+ 1145 1071 BE000000 		movl	$.LC27, %esi
+ 1145      00
+ 1146 1076 4889C7   		movq	%rax, %rdi
+ 1147 1079 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1147      00
+ 1148 107e BE000000 		movl	$.LC24, %esi
+ 1148      00
+ 1149 1083 4889C7   		movq	%rax, %rdi
+ 1150 1086 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1150      00
+ 1151 108b 4889E6   		movq	%rsp, %rsi
+ 1152 108e 4889C7   		movq	%rax, %rdi
+ 1153 1091 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1153      00
+ 1154 1096 F20F1004 		movsd	(%rsp), %xmm0
+ 1154      24
+ 1155 109b 488B7D30 		movq	48(%rbp), %rdi
+ 1156 109f BE000000 		movl	$.LC21, %esi
+ 1156      00
+ 1157 10a4 F20F1183 		movsd	%xmm0, 184(%rbx)
+ 1157      B8000000 
+ 1158 10ac E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1158      00
+ 1159 10b1 BE000000 		movl	$.LC29, %esi
+ 1159      00
+ 1160 10b6 4889C7   		movq	%rax, %rdi
+ 1161 10b9 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1161      00
+ 1162 10be BE000000 		movl	$.LC27, %esi
+ 1162      00
+ 1163 10c3 4889C7   		movq	%rax, %rdi
+ 1164 10c6 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1164      00
+ 1165 10cb BE000000 		movl	$.LC25, %esi
+ 1165      00
+ 1166 10d0 4889C7   		movq	%rax, %rdi
+ 1167 10d3 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1167      00
+ 1168 10d8 4889E6   		movq	%rsp, %rsi
+ 1169 10db 4889C7   		movq	%rax, %rdi
+ 1170 10de E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1170      00
+ 1171 10e3 F20F1004 		movsd	(%rsp), %xmm0
+ 1171      24
+ 1172 10e8 488B7D30 		movq	48(%rbp), %rdi
+ 1173 10ec BE000000 		movl	$.LC21, %esi
+ 1173      00
+ 1174 10f1 F20F1183 		movsd	%xmm0, 192(%rbx)
+ 1174      C0000000 
+ 1175 10f9 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1175      00
+ 1176 10fe BE000000 		movl	$.LC29, %esi
+ 1176      00
+ 1177 1103 4889C7   		movq	%rax, %rdi
+GAS LISTING /tmp/cczEKvce.s 			page 34
+
+
+ 1178 1106 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1178      00
+ 1179 110b BE000000 		movl	$.LC27, %esi
+ 1179      00
+ 1180 1110 4889C7   		movq	%rax, %rdi
+ 1181 1113 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1181      00
+ 1182 1118 BE000000 		movl	$.LC26, %esi
+ 1182      00
+ 1183 111d 4889C7   		movq	%rax, %rdi
+ 1184 1120 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1184      00
+ 1185 1125 4889E6   		movq	%rsp, %rsi
+ 1186 1128 4889C7   		movq	%rax, %rdi
+ 1187 112b E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1187      00
+ 1188 1130 F20F1004 		movsd	(%rsp), %xmm0
+ 1188      24
+ 1189 1135 488B7D30 		movq	48(%rbp), %rdi
+ 1190 1139 BE000000 		movl	$.LC21, %esi
+ 1190      00
+ 1191 113e F20F1183 		movsd	%xmm0, 200(%rbx)
+ 1191      C8000000 
+ 1192 1146 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1192      00
+ 1193 114b BE000000 		movl	$.LC8, %esi
+ 1193      00
+ 1194 1150 4889C7   		movq	%rax, %rdi
+ 1195 1153 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1195      00
+ 1196 1158 4889E6   		movq	%rsp, %rsi
+ 1197 115b 4889C7   		movq	%rax, %rdi
+ 1198 115e E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1198      00
+ 1199 1163 F20F1004 		movsd	(%rsp), %xmm0
+ 1199      24
+ 1200 1168 488B7D30 		movq	48(%rbp), %rdi
+ 1201 116c BE000000 		movl	$.LC21, %esi
+ 1201      00
+ 1202 1171 F20F1143 		movsd	%xmm0, 120(%rbx)
+ 1202      78
+ 1203 1176 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1203      00
+ 1204 117b BE000000 		movl	$.LC9, %esi
+ 1204      00
+ 1205 1180 4889C7   		movq	%rax, %rdi
+ 1206 1183 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1206      00
+ 1207 1188 4889E6   		movq	%rsp, %rsi
+ 1208 118b 4889C7   		movq	%rax, %rdi
+ 1209 118e E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1209      00
+ 1210 1193 F20F1004 		movsd	(%rsp), %xmm0
+ 1210      24
+ 1211 1198 488B7D30 		movq	48(%rbp), %rdi
+ 1212 119c BE000000 		movl	$.LC21, %esi
+ 1212      00
+GAS LISTING /tmp/cczEKvce.s 			page 35
+
+
+ 1213 11a1 F20F1183 		movsd	%xmm0, 128(%rbx)
+ 1213      80000000 
+ 1214 11a9 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1214      00
+ 1215 11ae BE000000 		movl	$.LC30, %esi
+ 1215      00
+ 1216 11b3 4889C7   		movq	%rax, %rdi
+ 1217 11b6 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1217      00
+ 1218 11bb 4889E6   		movq	%rsp, %rsi
+ 1219 11be 4889C7   		movq	%rax, %rdi
+ 1220 11c1 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1220      00
+ 1221 11c6 F20F1004 		movsd	(%rsp), %xmm0
+ 1221      24
+ 1222 11cb 488B4424 		movq	8(%rsp), %rax
+ 1222      08
+ 1223 11d0 64483304 		xorq	%fs:40, %rax
+ 1223      25280000 
+ 1223      00
+ 1224 11d9 F20F1183 		movsd	%xmm0, 136(%rbx)
+ 1224      88000000 
+ 1225 11e1 7507     		jne	.L49
+ 1226 11e3 4883C418 		addq	$24, %rsp
+ 1227              		.cfi_remember_state
+ 1228              		.cfi_def_cfa_offset 24
+ 1229 11e7 5B       		popq	%rbx
+ 1230              		.cfi_def_cfa_offset 16
+ 1231 11e8 5D       		popq	%rbp
+ 1232              		.cfi_def_cfa_offset 8
+ 1233 11e9 C3       		ret
+ 1234              	.L49:
+ 1235              		.cfi_restore_state
+ 1236 11ea E8000000 		call	__stack_chk_fail
+ 1236      00
+ 1237              		.cfi_endproc
+ 1238              	.LFE1885:
+ 1240              		.section	.text.unlikely
+ 1241              	.LCOLDE31:
+ 1242              		.text
+ 1243              	.LHOTE31:
+ 1244              		.section	.rodata.str1.1
+ 1245              	.LC32:
+ 1246 00cc 67656F6D 		.string	"geometry"
+ 1246      65747279 
+ 1246      00
+ 1247              	.LC33:
+ 1248 00d5 647800   		.string	"dx"
+ 1249              	.LC34:
+ 1250 00d8 647900   		.string	"dy"
+ 1251              	.LC35:
+ 1252 00db 73747265 		.string	"streaming_dt"
+ 1252      616D696E 
+ 1252      675F6474 
+ 1252      00
+ 1253              		.section	.text.unlikely
+ 1254              		.align 2
+GAS LISTING /tmp/cczEKvce.s 			page 36
+
+
+ 1255              	.LCOLDB36:
+ 1256              		.text
+ 1257              	.LHOTB36:
+ 1258 11ef 90       		.align 2
+ 1259              		.p2align 4,,15
+ 1260              		.globl	_ZN12preprocessor24parse_geometry_variablesERN8tinyxml211XMLDocumentER15domain_geometry
+ 1262              	_ZN12preprocessor24parse_geometry_variablesERN8tinyxml211XMLDocumentER15domain_geometry:
+ 1263              	.LFB1886:
+ 1264              		.cfi_startproc
+ 1265 11f0 55       		pushq	%rbp
+ 1266              		.cfi_def_cfa_offset 16
+ 1267              		.cfi_offset 6, -16
+ 1268 11f1 53       		pushq	%rbx
+ 1269              		.cfi_def_cfa_offset 24
+ 1270              		.cfi_offset 3, -24
+ 1271 11f2 4889F5   		movq	%rsi, %rbp
+ 1272 11f5 4889D3   		movq	%rdx, %rbx
+ 1273 11f8 4883EC18 		subq	$24, %rsp
+ 1274              		.cfi_def_cfa_offset 48
+ 1275 11fc 488B7E30 		movq	48(%rsi), %rdi
+ 1276 1200 BE000000 		movl	$.LC32, %esi
+ 1276      00
+ 1277 1205 64488B04 		movq	%fs:40, %rax
+ 1277      25280000 
+ 1277      00
+ 1278 120e 48894424 		movq	%rax, 8(%rsp)
+ 1278      08
+ 1279 1213 31C0     		xorl	%eax, %eax
+ 1280 1215 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1280      00
+ 1281 121a BE000000 		movl	$.LC24, %esi
+ 1281      00
+ 1282 121f 4889C7   		movq	%rax, %rdi
+ 1283 1222 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1283      00
+ 1284 1227 4889E6   		movq	%rsp, %rsi
+ 1285 122a 4889C7   		movq	%rax, %rdi
+ 1286 122d E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1286      00
+ 1287 1232 F20F1004 		movsd	(%rsp), %xmm0
+ 1287      24
+ 1288 1237 488B7D30 		movq	48(%rbp), %rdi
+ 1289 123b BE000000 		movl	$.LC32, %esi
+ 1289      00
+ 1290 1240 F20F1143 		movsd	%xmm0, 8(%rbx)
+ 1290      08
+ 1291 1245 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1291      00
+ 1292 124a BE000000 		movl	$.LC25, %esi
+ 1292      00
+ 1293 124f 4889C7   		movq	%rax, %rdi
+ 1294 1252 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1294      00
+ 1295 1257 4889E6   		movq	%rsp, %rsi
+ 1296 125a 4889C7   		movq	%rax, %rdi
+ 1297 125d E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1297      00
+GAS LISTING /tmp/cczEKvce.s 			page 37
+
+
+ 1298 1262 F20F1004 		movsd	(%rsp), %xmm0
+ 1298      24
+ 1299 1267 488B7D30 		movq	48(%rbp), %rdi
+ 1300 126b BE000000 		movl	$.LC32, %esi
+ 1300      00
+ 1301 1270 F20F1143 		movsd	%xmm0, 16(%rbx)
+ 1301      10
+ 1302 1275 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1302      00
+ 1303 127a BE000000 		movl	$.LC33, %esi
+ 1303      00
+ 1304 127f 4889C7   		movq	%rax, %rdi
+ 1305 1282 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1305      00
+ 1306 1287 4889E6   		movq	%rsp, %rsi
+ 1307 128a 4889C7   		movq	%rax, %rdi
+ 1308 128d E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1308      00
+ 1309 1292 F20F1004 		movsd	(%rsp), %xmm0
+ 1309      24
+ 1310 1297 488B7D30 		movq	48(%rbp), %rdi
+ 1311 129b BE000000 		movl	$.LC32, %esi
+ 1311      00
+ 1312 12a0 F20F1143 		movsd	%xmm0, 24(%rbx)
+ 1312      18
+ 1313 12a5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1313      00
+ 1314 12aa BE000000 		movl	$.LC34, %esi
+ 1314      00
+ 1315 12af 4889C7   		movq	%rax, %rdi
+ 1316 12b2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1316      00
+ 1317 12b7 4889E6   		movq	%rsp, %rsi
+ 1318 12ba 4889C7   		movq	%rax, %rdi
+ 1319 12bd E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1319      00
+ 1320 12c2 F20F1004 		movsd	(%rsp), %xmm0
+ 1320      24
+ 1321 12c7 488B7D30 		movq	48(%rbp), %rdi
+ 1322 12cb BE000000 		movl	$.LC32, %esi
+ 1322      00
+ 1323 12d0 F20F1143 		movsd	%xmm0, 32(%rbx)
+ 1323      20
+ 1324 12d5 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1324      00
+ 1325 12da BE000000 		movl	$.LC35, %esi
+ 1325      00
+ 1326 12df 4889C7   		movq	%rax, %rdi
+ 1327 12e2 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1327      00
+ 1328 12e7 4889E6   		movq	%rsp, %rsi
+ 1329 12ea 4889C7   		movq	%rax, %rdi
+ 1330 12ed E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1330      00
+ 1331 12f2 F20F1004 		movsd	(%rsp), %xmm0
+ 1331      24
+ 1332 12f7 4889DF   		movq	%rbx, %rdi
+GAS LISTING /tmp/cczEKvce.s 			page 38
+
+
+ 1333 12fa F20F1143 		movsd	%xmm0, 40(%rbx)
+ 1333      28
+ 1334 12ff E8000000 		call	_ZN15domain_geometry10initialiseEv
+ 1334      00
+ 1335 1304 488B4424 		movq	8(%rsp), %rax
+ 1335      08
+ 1336 1309 64483304 		xorq	%fs:40, %rax
+ 1336      25280000 
+ 1336      00
+ 1337 1312 7507     		jne	.L53
+ 1338 1314 4883C418 		addq	$24, %rsp
+ 1339              		.cfi_remember_state
+ 1340              		.cfi_def_cfa_offset 24
+ 1341 1318 5B       		popq	%rbx
+ 1342              		.cfi_def_cfa_offset 16
+ 1343 1319 5D       		popq	%rbp
+ 1344              		.cfi_def_cfa_offset 8
+ 1345 131a C3       		ret
+ 1346              	.L53:
+ 1347              		.cfi_restore_state
+ 1348 131b E8000000 		call	__stack_chk_fail
+ 1348      00
+ 1349              		.cfi_endproc
+ 1350              	.LFE1886:
+ 1352              		.section	.text.unlikely
+ 1353              	.LCOLDE36:
+ 1354              		.text
+ 1355              	.LHOTE36:
+ 1356              		.section	.rodata.str1.1
+ 1357              	.LC37:
+ 1358 00e8 676C6F62 		.string	"global_variables"
+ 1358      616C5F76 
+ 1358      61726961 
+ 1358      626C6573 
+ 1358      00
+ 1359              	.LC38:
+ 1360 00f9 746F6C65 		.string	"tolerance"
+ 1360      72616E63 
+ 1360      6500
+ 1361              	.LC39:
+ 1362 0103 7072655F 		.string	"pre_condition_gamma"
+ 1362      636F6E64 
+ 1362      6974696F 
+ 1362      6E5F6761 
+ 1362      6D6D6100 
+ 1363              	.LC40:
+ 1364 0117 73696D75 		.string	"simulation_length"
+ 1364      6C617469 
+ 1364      6F6E5F6C 
+ 1364      656E6774 
+ 1364      6800
+ 1365              	.LC41:
+ 1366 0129 74696D65 		.string	"time_marching_step"
+ 1366      5F6D6172 
+ 1366      6368696E 
+ 1366      675F7374 
+ 1366      657000
+GAS LISTING /tmp/cczEKvce.s 			page 39
+
+
+ 1367              	.LC42:
+ 1368 013c 7265796E 		.string	"reynolds_no"
+ 1368      6F6C6473 
+ 1368      5F6E6F00 
+ 1369              	.LC43:
+ 1370 0148 6D616368 		.string	"mach_no"
+ 1370      5F6E6F00 
+ 1371              	.LC44:
+ 1372 0150 73696D75 		.string	"simulation_name"
+ 1372      6C617469 
+ 1372      6F6E5F6E 
+ 1372      616D6500 
+ 1373              	.LC45:
+ 1374 0160 6F757470 		.string	"output_directory"
+ 1374      75745F64 
+ 1374      69726563 
+ 1374      746F7279 
+ 1374      00
+ 1375              	.LC46:
+ 1376 0171 6D61785F 		.string	"max_multi_grid_levels"
+ 1376      6D756C74 
+ 1376      695F6772 
+ 1376      69645F6C 
+ 1376      6576656C 
+ 1377              	.LC47:
+ 1378 0187 464D475F 		.string	"FMG_levels"
+ 1378      6C657665 
+ 1378      6C7300
+ 1379              	.LC48:
+ 1380 0192 464D475F 		.string	"FMG_tolerance"
+ 1380      746F6C65 
+ 1380      72616E63 
+ 1380      6500
+ 1381              	.LC49:
+ 1382 01a0 64697373 		.string	"dissipation_kappa_2"
+ 1382      69706174 
+ 1382      696F6E5F 
+ 1382      6B617070 
+ 1382      615F3200 
+ 1383              	.LC50:
+ 1384 01b4 64697373 		.string	"dissipation_kappa_4"
+ 1384      69706174 
+ 1384      696F6E5F 
+ 1384      6B617070 
+ 1384      615F3400 
+ 1385              	.LC51:
+ 1386 01c8 6D617274 		.string	"martinelli_exponent"
+ 1386      696E656C 
+ 1386      6C695F65 
+ 1386      78706F6E 
+ 1386      656E7400 
+ 1387              	.LC52:
+ 1388 01dc 74657374 		.string	"testcase"
+ 1388      63617365 
+ 1388      00
+ 1389              	.LC53:
+ 1390 01e5 6D657368 		.string	"mesh_type"
+GAS LISTING /tmp/cczEKvce.s 			page 40
+
+
+ 1390      5F747970 
+ 1390      6500
+ 1391              		.section	.text.unlikely
+ 1392              		.align 2
+ 1393              	.LCOLDB54:
+ 1394              		.text
+ 1395              	.LHOTB54:
+ 1396              		.align 2
+ 1397              		.p2align 4,,15
+ 1398              		.globl	_ZN12preprocessor22parse_global_variablesERN8tinyxml211XMLDocumentER16global_variables
+ 1400              	_ZN12preprocessor22parse_global_variablesERN8tinyxml211XMLDocumentER16global_variables:
+ 1401              	.LFB1887:
+ 1402              		.cfi_startproc
+ 1403 1320 4154     		pushq	%r12
+ 1404              		.cfi_def_cfa_offset 16
+ 1405              		.cfi_offset 12, -16
+ 1406 1322 55       		pushq	%rbp
+ 1407              		.cfi_def_cfa_offset 24
+ 1408              		.cfi_offset 6, -24
+ 1409 1323 4889F5   		movq	%rsi, %rbp
+ 1410 1326 53       		pushq	%rbx
+ 1411              		.cfi_def_cfa_offset 32
+ 1412              		.cfi_offset 3, -32
+ 1413 1327 4889D3   		movq	%rdx, %rbx
+ 1414 132a 4883EC10 		subq	$16, %rsp
+ 1415              		.cfi_def_cfa_offset 48
+ 1416 132e 488B7E30 		movq	48(%rsi), %rdi
+ 1417 1332 BE000000 		movl	$.LC37, %esi
+ 1417      00
+ 1418 1337 64488B04 		movq	%fs:40, %rax
+ 1418      25280000 
+ 1418      00
+ 1419 1340 48894424 		movq	%rax, 8(%rsp)
+ 1419      08
+ 1420 1345 31C0     		xorl	%eax, %eax
+ 1421 1347 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1421      00
+ 1422 134c BE000000 		movl	$.LC38, %esi
+ 1422      00
+ 1423 1351 4889C7   		movq	%rax, %rdi
+ 1424 1354 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1424      00
+ 1425 1359 4889E6   		movq	%rsp, %rsi
+ 1426 135c 4889C7   		movq	%rax, %rdi
+ 1427 135f E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1427      00
+ 1428 1364 F20F1004 		movsd	(%rsp), %xmm0
+ 1428      24
+ 1429 1369 488B7D30 		movq	48(%rbp), %rdi
+ 1430 136d BE000000 		movl	$.LC37, %esi
+ 1430      00
+ 1431 1372 F20F1143 		movsd	%xmm0, 40(%rbx)
+ 1431      28
+ 1432 1377 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1432      00
+ 1433 137c BE000000 		movl	$.LC39, %esi
+ 1433      00
+GAS LISTING /tmp/cczEKvce.s 			page 41
+
+
+ 1434 1381 4889C7   		movq	%rax, %rdi
+ 1435 1384 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1435      00
+ 1436 1389 4889E6   		movq	%rsp, %rsi
+ 1437 138c 4889C7   		movq	%rax, %rdi
+ 1438 138f E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1438      00
+ 1439 1394 F20F1004 		movsd	(%rsp), %xmm0
+ 1439      24
+ 1440 1399 488B7D30 		movq	48(%rbp), %rdi
+ 1441 139d BE000000 		movl	$.LC37, %esi
+ 1441      00
+ 1442 13a2 F20F1143 		movsd	%xmm0, 48(%rbx)
+ 1442      30
+ 1443 13a7 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1443      00
+ 1444 13ac BE000000 		movl	$.LC40, %esi
+ 1444      00
+ 1445 13b1 4889C7   		movq	%rax, %rdi
+ 1446 13b4 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1446      00
+ 1447 13b9 4889E6   		movq	%rsp, %rsi
+ 1448 13bc 4889C7   		movq	%rax, %rdi
+ 1449 13bf E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1449      00
+ 1450 13c4 F20F1004 		movsd	(%rsp), %xmm0
+ 1450      24
+ 1451 13c9 488B7D30 		movq	48(%rbp), %rdi
+ 1452 13cd BE000000 		movl	$.LC37, %esi
+ 1452      00
+ 1453 13d2 F20F1143 		movsd	%xmm0, 56(%rbx)
+ 1453      38
+ 1454 13d7 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1454      00
+ 1455 13dc BE000000 		movl	$.LC41, %esi
+ 1455      00
+ 1456 13e1 4889C7   		movq	%rax, %rdi
+ 1457 13e4 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1457      00
+ 1458 13e9 4889E6   		movq	%rsp, %rsi
+ 1459 13ec 4889C7   		movq	%rax, %rdi
+ 1460 13ef E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1460      00
+ 1461 13f4 F20F1004 		movsd	(%rsp), %xmm0
+ 1461      24
+ 1462 13f9 488B7D30 		movq	48(%rbp), %rdi
+ 1463 13fd BE000000 		movl	$.LC37, %esi
+ 1463      00
+ 1464 1402 F20F1143 		movsd	%xmm0, 64(%rbx)
+ 1464      40
+ 1465 1407 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1465      00
+ 1466 140c BE000000 		movl	$.LC42, %esi
+ 1466      00
+ 1467 1411 4889C7   		movq	%rax, %rdi
+ 1468 1414 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1468      00
+GAS LISTING /tmp/cczEKvce.s 			page 42
+
+
+ 1469 1419 4889E6   		movq	%rsp, %rsi
+ 1470 141c 4889C7   		movq	%rax, %rdi
+ 1471 141f E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1471      00
+ 1472 1424 F20F1004 		movsd	(%rsp), %xmm0
+ 1472      24
+ 1473 1429 488B7D30 		movq	48(%rbp), %rdi
+ 1474 142d BE000000 		movl	$.LC37, %esi
+ 1474      00
+ 1475 1432 F20F1143 		movsd	%xmm0, 72(%rbx)
+ 1475      48
+ 1476 1437 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1476      00
+ 1477 143c BE000000 		movl	$.LC43, %esi
+ 1477      00
+ 1478 1441 4889C7   		movq	%rax, %rdi
+ 1479 1444 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1479      00
+ 1480 1449 4889E6   		movq	%rsp, %rsi
+ 1481 144c 4889C7   		movq	%rax, %rdi
+ 1482 144f E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1482      00
+ 1483 1454 F20F1004 		movsd	(%rsp), %xmm0
+ 1483      24
+ 1484 1459 488B7D30 		movq	48(%rbp), %rdi
+ 1485 145d BE000000 		movl	$.LC37, %esi
+ 1485      00
+ 1486 1462 F20F1143 		movsd	%xmm0, 80(%rbx)
+ 1486      50
+ 1487 1467 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1487      00
+ 1488 146c BE000000 		movl	$.LC44, %esi
+ 1488      00
+ 1489 1471 4889C7   		movq	%rax, %rdi
+ 1490 1474 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1490      00
+ 1491 1479 4889C7   		movq	%rax, %rdi
+ 1492 147c E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 1492      00
+ 1493 1481 4889C7   		movq	%rax, %rdi
+ 1494 1484 4989C4   		movq	%rax, %r12
+ 1495 1487 E8000000 		call	strlen
+ 1495      00
+ 1496 148c 488B93C0 		movq	192(%rbx), %rdx
+ 1496      000000
+ 1497 1493 488DBBB8 		leaq	184(%rbx), %rdi
+ 1497      000000
+ 1498 149a 4C89E1   		movq	%r12, %rcx
+ 1499 149d 4989C0   		movq	%rax, %r8
+ 1500 14a0 31F6     		xorl	%esi, %esi
+ 1501 14a2 E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 1501      00
+ 1502 14a7 488B7D30 		movq	48(%rbp), %rdi
+ 1503 14ab BE000000 		movl	$.LC37, %esi
+ 1503      00
+ 1504 14b0 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1504      00
+GAS LISTING /tmp/cczEKvce.s 			page 43
+
+
+ 1505 14b5 BE000000 		movl	$.LC45, %esi
+ 1505      00
+ 1506 14ba 4889C7   		movq	%rax, %rdi
+ 1507 14bd E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1507      00
+ 1508 14c2 4889C7   		movq	%rax, %rdi
+ 1509 14c5 E8000000 		call	_ZNK8tinyxml210XMLElement7GetTextEv
+ 1509      00
+ 1510 14ca 4889C7   		movq	%rax, %rdi
+ 1511 14cd 4989C4   		movq	%rax, %r12
+ 1512 14d0 E8000000 		call	strlen
+ 1512      00
+ 1513 14d5 488B93A0 		movq	160(%rbx), %rdx
+ 1513      000000
+ 1514 14dc 488DBB98 		leaq	152(%rbx), %rdi
+ 1514      000000
+ 1515 14e3 4989C0   		movq	%rax, %r8
+ 1516 14e6 4C89E1   		movq	%r12, %rcx
+ 1517 14e9 31F6     		xorl	%esi, %esi
+ 1518 14eb E8000000 		call	_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+ 1518      00
+ 1519 14f0 488B7D30 		movq	48(%rbp), %rdi
+ 1520 14f4 BE000000 		movl	$.LC37, %esi
+ 1520      00
+ 1521 14f9 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1521      00
+ 1522 14fe BE000000 		movl	$.LC46, %esi
+ 1522      00
+ 1523 1503 4889C7   		movq	%rax, %rdi
+ 1524 1506 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1524      00
+ 1525 150b 4889E6   		movq	%rsp, %rsi
+ 1526 150e 4889C7   		movq	%rax, %rdi
+ 1527 1511 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1527      00
+ 1528 1516 F20F2C04 		cvttsd2si	(%rsp), %eax
+ 1528      24
+ 1529 151b 488B7D30 		movq	48(%rbp), %rdi
+ 1530 151f BE000000 		movl	$.LC37, %esi
+ 1530      00
+ 1531 1524 89838000 		movl	%eax, 128(%rbx)
+ 1531      0000
+ 1532 152a E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1532      00
+ 1533 152f BE000000 		movl	$.LC47, %esi
+ 1533      00
+ 1534 1534 4889C7   		movq	%rax, %rdi
+ 1535 1537 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1535      00
+ 1536 153c 4889E6   		movq	%rsp, %rsi
+ 1537 153f 4889C7   		movq	%rax, %rdi
+ 1538 1542 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1538      00
+ 1539 1547 F20F2C04 		cvttsd2si	(%rsp), %eax
+ 1539      24
+ 1540 154c 488B7D30 		movq	48(%rbp), %rdi
+ 1541 1550 BE000000 		movl	$.LC37, %esi
+GAS LISTING /tmp/cczEKvce.s 			page 44
+
+
+ 1541      00
+ 1542 1555 89838400 		movl	%eax, 132(%rbx)
+ 1542      0000
+ 1543 155b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1543      00
+ 1544 1560 BE000000 		movl	$.LC48, %esi
+ 1544      00
+ 1545 1565 4889C7   		movq	%rax, %rdi
+ 1546 1568 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1546      00
+ 1547 156d 4889E6   		movq	%rsp, %rsi
+ 1548 1570 4889C7   		movq	%rax, %rdi
+ 1549 1573 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1549      00
+ 1550 1578 F20F1004 		movsd	(%rsp), %xmm0
+ 1550      24
+ 1551 157d 488B7D30 		movq	48(%rbp), %rdi
+ 1552 1581 BE000000 		movl	$.LC37, %esi
+ 1552      00
+ 1553 1586 F20F1183 		movsd	%xmm0, 144(%rbx)
+ 1553      90000000 
+ 1554 158e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1554      00
+ 1555 1593 BE000000 		movl	$.LC49, %esi
+ 1555      00
+ 1556 1598 4889C7   		movq	%rax, %rdi
+ 1557 159b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1557      00
+ 1558 15a0 4889E6   		movq	%rsp, %rsi
+ 1559 15a3 4889C7   		movq	%rax, %rdi
+ 1560 15a6 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1560      00
+ 1561 15ab F20F1004 		movsd	(%rsp), %xmm0
+ 1561      24
+ 1562 15b0 488B7D30 		movq	48(%rbp), %rdi
+ 1563 15b4 BE000000 		movl	$.LC37, %esi
+ 1563      00
+ 1564 15b9 F20F1143 		movsd	%xmm0, 104(%rbx)
+ 1564      68
+ 1565 15be E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1565      00
+ 1566 15c3 BE000000 		movl	$.LC50, %esi
+ 1566      00
+ 1567 15c8 4889C7   		movq	%rax, %rdi
+ 1568 15cb E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1568      00
+ 1569 15d0 4889E6   		movq	%rsp, %rsi
+ 1570 15d3 4889C7   		movq	%rax, %rdi
+ 1571 15d6 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1571      00
+ 1572 15db F20F1004 		movsd	(%rsp), %xmm0
+ 1572      24
+ 1573 15e0 488B7D30 		movq	48(%rbp), %rdi
+ 1574 15e4 BE000000 		movl	$.LC37, %esi
+ 1574      00
+ 1575 15e9 F20F1143 		movsd	%xmm0, 112(%rbx)
+ 1575      70
+GAS LISTING /tmp/cczEKvce.s 			page 45
+
+
+ 1576 15ee E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1576      00
+ 1577 15f3 BE000000 		movl	$.LC51, %esi
+ 1577      00
+ 1578 15f8 4889C7   		movq	%rax, %rdi
+ 1579 15fb E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1579      00
+ 1580 1600 4889E6   		movq	%rsp, %rsi
+ 1581 1603 4889C7   		movq	%rax, %rdi
+ 1582 1606 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1582      00
+ 1583 160b F20F1004 		movsd	(%rsp), %xmm0
+ 1583      24
+ 1584 1610 488B7D30 		movq	48(%rbp), %rdi
+ 1585 1614 BE000000 		movl	$.LC37, %esi
+ 1585      00
+ 1586 1619 F20F1143 		movsd	%xmm0, 120(%rbx)
+ 1586      78
+ 1587 161e E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1587      00
+ 1588 1623 BE000000 		movl	$.LC52, %esi
+ 1588      00
+ 1589 1628 4889C7   		movq	%rax, %rdi
+ 1590 162b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1590      00
+ 1591 1630 4889E6   		movq	%rsp, %rsi
+ 1592 1633 4889C7   		movq	%rax, %rdi
+ 1593 1636 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1593      00
+ 1594 163b F20F2C04 		cvttsd2si	(%rsp), %eax
+ 1594      24
+ 1595 1640 488B7D30 		movq	48(%rbp), %rdi
+ 1596 1644 BE000000 		movl	$.LC37, %esi
+ 1596      00
+ 1597 1649 89838800 		movl	%eax, 136(%rbx)
+ 1597      0000
+ 1598 164f E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1598      00
+ 1599 1654 BE000000 		movl	$.LC53, %esi
+ 1599      00
+ 1600 1659 4889C7   		movq	%rax, %rdi
+ 1601 165c E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1601      00
+ 1602 1661 4889E6   		movq	%rsp, %rsi
+ 1603 1664 4889C7   		movq	%rax, %rdi
+ 1604 1667 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1604      00
+ 1605 166c F20F2C04 		cvttsd2si	(%rsp), %eax
+ 1605      24
+ 1606 1671 89838C00 		movl	%eax, 140(%rbx)
+ 1606      0000
+ 1607 1677 488B4424 		movq	8(%rsp), %rax
+ 1607      08
+ 1608 167c 64483304 		xorq	%fs:40, %rax
+ 1608      25280000 
+ 1608      00
+ 1609 1685 7509     		jne	.L57
+GAS LISTING /tmp/cczEKvce.s 			page 46
+
+
+ 1610 1687 4883C410 		addq	$16, %rsp
+ 1611              		.cfi_remember_state
+ 1612              		.cfi_def_cfa_offset 32
+ 1613 168b 5B       		popq	%rbx
+ 1614              		.cfi_def_cfa_offset 24
+ 1615 168c 5D       		popq	%rbp
+ 1616              		.cfi_def_cfa_offset 16
+ 1617 168d 415C     		popq	%r12
+ 1618              		.cfi_def_cfa_offset 8
+ 1619 168f C3       		ret
+ 1620              	.L57:
+ 1621              		.cfi_restore_state
+ 1622 1690 E8000000 		call	__stack_chk_fail
+ 1622      00
+ 1623              		.cfi_endproc
+ 1624              	.LFE1887:
+ 1626              		.section	.text.unlikely
+ 1627              	.LCOLDE54:
+ 1628              		.text
+ 1629              	.LHOTE54:
+ 1630              		.section	.text.unlikely
+ 1631              		.align 2
+ 1632              	.LCOLDB55:
+ 1633              		.text
+ 1634              	.LHOTB55:
+ 1635 1695 90       		.align 2
+ 1636 1696 662E0F1F 		.p2align 4,,15
+ 1636      84000000 
+ 1636      0000
+ 1637              		.globl	_ZN12preprocessor14get_xml_doubleEPKcS1_RN8tinyxml211XMLDocumentE
+ 1639              	_ZN12preprocessor14get_xml_doubleEPKcS1_RN8tinyxml211XMLDocumentE:
+ 1640              	.LFB1888:
+ 1641              		.cfi_startproc
+ 1642 16a0 53       		pushq	%rbx
+ 1643              		.cfi_def_cfa_offset 16
+ 1644              		.cfi_offset 3, -16
+ 1645 16a1 4889D3   		movq	%rdx, %rbx
+ 1646 16a4 4883EC10 		subq	$16, %rsp
+ 1647              		.cfi_def_cfa_offset 32
+ 1648 16a8 488B7930 		movq	48(%rcx), %rdi
+ 1649 16ac 64488B04 		movq	%fs:40, %rax
+ 1649      25280000 
+ 1649      00
+ 1650 16b5 48894424 		movq	%rax, 8(%rsp)
+ 1650      08
+ 1651 16ba 31C0     		xorl	%eax, %eax
+ 1652 16bc E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1652      00
+ 1653 16c1 4889DE   		movq	%rbx, %rsi
+ 1654 16c4 4889C7   		movq	%rax, %rdi
+ 1655 16c7 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1655      00
+ 1656 16cc 4889E6   		movq	%rsp, %rsi
+ 1657 16cf 4889C7   		movq	%rax, %rdi
+ 1658 16d2 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1658      00
+ 1659 16d7 488B4424 		movq	8(%rsp), %rax
+GAS LISTING /tmp/cczEKvce.s 			page 47
+
+
+ 1659      08
+ 1660 16dc 64483304 		xorq	%fs:40, %rax
+ 1660      25280000 
+ 1660      00
+ 1661 16e5 F20F1004 		movsd	(%rsp), %xmm0
+ 1661      24
+ 1662 16ea 7506     		jne	.L61
+ 1663 16ec 4883C410 		addq	$16, %rsp
+ 1664              		.cfi_remember_state
+ 1665              		.cfi_def_cfa_offset 16
+ 1666 16f0 5B       		popq	%rbx
+ 1667              		.cfi_def_cfa_offset 8
+ 1668 16f1 C3       		ret
+ 1669              	.L61:
+ 1670              		.cfi_restore_state
+ 1671 16f2 E8000000 		call	__stack_chk_fail
+ 1671      00
+ 1672              		.cfi_endproc
+ 1673              	.LFE1888:
+ 1675              		.section	.text.unlikely
+ 1676              	.LCOLDE55:
+ 1677              		.text
+ 1678              	.LHOTE55:
+ 1679              		.section	.text.unlikely
+ 1680              		.align 2
+ 1681              	.LCOLDB56:
+ 1682              		.text
+ 1683              	.LHOTB56:
+ 1684 16f7 90       		.align 2
+ 1685 16f8 0F1F8400 		.p2align 4,,15
+ 1685      00000000 
+ 1686              		.globl	_ZN12preprocessor14get_xml_doubleEPKcS1_S1_S1_RN8tinyxml211XMLDocumentE
+ 1688              	_ZN12preprocessor14get_xml_doubleEPKcS1_S1_S1_RN8tinyxml211XMLDocumentE:
+ 1689              	.LFB1889:
+ 1690              		.cfi_startproc
+ 1691 1700 4154     		pushq	%r12
+ 1692              		.cfi_def_cfa_offset 16
+ 1693              		.cfi_offset 12, -16
+ 1694 1702 55       		pushq	%rbp
+ 1695              		.cfi_def_cfa_offset 24
+ 1696              		.cfi_offset 6, -24
+ 1697 1703 4989D4   		movq	%rdx, %r12
+ 1698 1706 53       		pushq	%rbx
+ 1699              		.cfi_def_cfa_offset 32
+ 1700              		.cfi_offset 3, -32
+ 1701 1707 4889CD   		movq	%rcx, %rbp
+ 1702 170a 4C89C3   		movq	%r8, %rbx
+ 1703 170d 4883EC10 		subq	$16, %rsp
+ 1704              		.cfi_def_cfa_offset 48
+ 1705 1711 498B7930 		movq	48(%r9), %rdi
+ 1706 1715 64488B04 		movq	%fs:40, %rax
+ 1706      25280000 
+ 1706      00
+ 1707 171e 48894424 		movq	%rax, 8(%rsp)
+ 1707      08
+ 1708 1723 31C0     		xorl	%eax, %eax
+ 1709 1725 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+GAS LISTING /tmp/cczEKvce.s 			page 48
+
+
+ 1709      00
+ 1710 172a 4C89E6   		movq	%r12, %rsi
+ 1711 172d 4889C7   		movq	%rax, %rdi
+ 1712 1730 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1712      00
+ 1713 1735 4889EE   		movq	%rbp, %rsi
+ 1714 1738 4889C7   		movq	%rax, %rdi
+ 1715 173b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1715      00
+ 1716 1740 4889DE   		movq	%rbx, %rsi
+ 1717 1743 4889C7   		movq	%rax, %rdi
+ 1718 1746 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1718      00
+ 1719 174b 4889E6   		movq	%rsp, %rsi
+ 1720 174e 4889C7   		movq	%rax, %rdi
+ 1721 1751 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1721      00
+ 1722 1756 488B4424 		movq	8(%rsp), %rax
+ 1722      08
+ 1723 175b 64483304 		xorq	%fs:40, %rax
+ 1723      25280000 
+ 1723      00
+ 1724 1764 F20F1004 		movsd	(%rsp), %xmm0
+ 1724      24
+ 1725 1769 7509     		jne	.L65
+ 1726 176b 4883C410 		addq	$16, %rsp
+ 1727              		.cfi_remember_state
+ 1728              		.cfi_def_cfa_offset 32
+ 1729 176f 5B       		popq	%rbx
+ 1730              		.cfi_def_cfa_offset 24
+ 1731 1770 5D       		popq	%rbp
+ 1732              		.cfi_def_cfa_offset 16
+ 1733 1771 415C     		popq	%r12
+ 1734              		.cfi_def_cfa_offset 8
+ 1735 1773 C3       		ret
+ 1736              	.L65:
+ 1737              		.cfi_restore_state
+ 1738 1774 E8000000 		call	__stack_chk_fail
+ 1738      00
+ 1739              		.cfi_endproc
+ 1740              	.LFE1889:
+ 1742              		.section	.text.unlikely
+ 1743              	.LCOLDE56:
+ 1744              		.text
+ 1745              	.LHOTE56:
+ 1746              		.section	.text.unlikely
+ 1747              		.align 2
+ 1748              	.LCOLDB57:
+ 1749              		.text
+ 1750              	.LHOTB57:
+ 1751 1779 90       		.align 2
+ 1752 177a 660F1F44 		.p2align 4,,15
+ 1752      0000
+ 1753              		.globl	_ZN12preprocessor14get_xml_doubleEPKcS1_S1_RN8tinyxml211XMLDocumentE
+ 1755              	_ZN12preprocessor14get_xml_doubleEPKcS1_S1_RN8tinyxml211XMLDocumentE:
+ 1756              	.LFB1890:
+ 1757              		.cfi_startproc
+GAS LISTING /tmp/cczEKvce.s 			page 49
+
+
+ 1758 1780 55       		pushq	%rbp
+ 1759              		.cfi_def_cfa_offset 16
+ 1760              		.cfi_offset 6, -16
+ 1761 1781 53       		pushq	%rbx
+ 1762              		.cfi_def_cfa_offset 24
+ 1763              		.cfi_offset 3, -24
+ 1764 1782 4889D5   		movq	%rdx, %rbp
+ 1765 1785 4889CB   		movq	%rcx, %rbx
+ 1766 1788 4883EC18 		subq	$24, %rsp
+ 1767              		.cfi_def_cfa_offset 48
+ 1768 178c 498B7830 		movq	48(%r8), %rdi
+ 1769 1790 64488B04 		movq	%fs:40, %rax
+ 1769      25280000 
+ 1769      00
+ 1770 1799 48894424 		movq	%rax, 8(%rsp)
+ 1770      08
+ 1771 179e 31C0     		xorl	%eax, %eax
+ 1772 17a0 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1772      00
+ 1773 17a5 4889EE   		movq	%rbp, %rsi
+ 1774 17a8 4889C7   		movq	%rax, %rdi
+ 1775 17ab E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1775      00
+ 1776 17b0 4889DE   		movq	%rbx, %rsi
+ 1777 17b3 4889C7   		movq	%rax, %rdi
+ 1778 17b6 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1778      00
+ 1779 17bb 4889E6   		movq	%rsp, %rsi
+ 1780 17be 4889C7   		movq	%rax, %rdi
+ 1781 17c1 E8000000 		call	_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+ 1781      00
+ 1782 17c6 488B4424 		movq	8(%rsp), %rax
+ 1782      08
+ 1783 17cb 64483304 		xorq	%fs:40, %rax
+ 1783      25280000 
+ 1783      00
+ 1784 17d4 F20F1004 		movsd	(%rsp), %xmm0
+ 1784      24
+ 1785 17d9 7507     		jne	.L69
+ 1786 17db 4883C418 		addq	$24, %rsp
+ 1787              		.cfi_remember_state
+ 1788              		.cfi_def_cfa_offset 24
+ 1789 17df 5B       		popq	%rbx
+ 1790              		.cfi_def_cfa_offset 16
+ 1791 17e0 5D       		popq	%rbp
+ 1792              		.cfi_def_cfa_offset 8
+ 1793 17e1 C3       		ret
+ 1794              	.L69:
+ 1795              		.cfi_restore_state
+ 1796 17e2 E8000000 		call	__stack_chk_fail
+ 1796      00
+ 1797              		.cfi_endproc
+ 1798              	.LFE1890:
+ 1800              		.section	.text.unlikely
+ 1801              	.LCOLDE57:
+ 1802              		.text
+ 1803              	.LHOTE57:
+GAS LISTING /tmp/cczEKvce.s 			page 50
+
+
+ 1804              		.section	.text.unlikely
+ 1805              		.align 2
+ 1806              	.LCOLDB58:
+ 1807              		.text
+ 1808              	.LHOTB58:
+ 1809 17e7 90       		.align 2
+ 1810 17e8 0F1F8400 		.p2align 4,,15
+ 1810      00000000 
+ 1811              		.globl	_ZN12preprocessor12get_xml_textEPKcS1_RN8tinyxml211XMLDocumentE
+ 1813              	_ZN12preprocessor12get_xml_textEPKcS1_RN8tinyxml211XMLDocumentE:
+ 1814              	.LFB1891:
+ 1815              		.cfi_startproc
+ 1816 17f0 488B7930 		movq	48(%rcx), %rdi
+ 1817 17f4 53       		pushq	%rbx
+ 1818              		.cfi_def_cfa_offset 16
+ 1819              		.cfi_offset 3, -16
+ 1820 17f5 4889D3   		movq	%rdx, %rbx
+ 1821 17f8 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1821      00
+ 1822 17fd 4889DE   		movq	%rbx, %rsi
+ 1823 1800 4889C7   		movq	%rax, %rdi
+ 1824 1803 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1824      00
+ 1825 1808 5B       		popq	%rbx
+ 1826              		.cfi_def_cfa_offset 8
+ 1827 1809 4889C7   		movq	%rax, %rdi
+ 1828 180c E9000000 		jmp	_ZNK8tinyxml210XMLElement7GetTextEv
+ 1828      00
+ 1829              		.cfi_endproc
+ 1830              	.LFE1891:
+ 1832              		.section	.text.unlikely
+ 1833              	.LCOLDE58:
+ 1834              		.text
+ 1835              	.LHOTE58:
+ 1836              		.section	.text.unlikely
+ 1837              		.align 2
+ 1838              	.LCOLDB59:
+ 1839              		.text
+ 1840              	.LHOTB59:
+ 1841 1811 90       		.align 2
+ 1842 1812 0F1F4000 		.p2align 4,,15
+ 1842      662E0F1F 
+ 1842      84000000 
+ 1842      0000
+ 1843              		.globl	_ZN12preprocessor12get_xml_textEPKcS1_S1_RN8tinyxml211XMLDocumentE
+ 1845              	_ZN12preprocessor12get_xml_textEPKcS1_S1_RN8tinyxml211XMLDocumentE:
+ 1846              	.LFB1892:
+ 1847              		.cfi_startproc
+ 1848 1820 55       		pushq	%rbp
+ 1849              		.cfi_def_cfa_offset 16
+ 1850              		.cfi_offset 6, -16
+ 1851 1821 53       		pushq	%rbx
+ 1852              		.cfi_def_cfa_offset 24
+ 1853              		.cfi_offset 3, -24
+ 1854 1822 4889D5   		movq	%rdx, %rbp
+ 1855 1825 4889CB   		movq	%rcx, %rbx
+ 1856 1828 4883EC08 		subq	$8, %rsp
+GAS LISTING /tmp/cczEKvce.s 			page 51
+
+
+ 1857              		.cfi_def_cfa_offset 32
+ 1858 182c 498B7830 		movq	48(%r8), %rdi
+ 1859 1830 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1859      00
+ 1860 1835 4889EE   		movq	%rbp, %rsi
+ 1861 1838 4889C7   		movq	%rax, %rdi
+ 1862 183b E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1862      00
+ 1863 1840 4889DE   		movq	%rbx, %rsi
+ 1864 1843 4889C7   		movq	%rax, %rdi
+ 1865 1846 E8000000 		call	_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+ 1865      00
+ 1866 184b 4883C408 		addq	$8, %rsp
+ 1867              		.cfi_def_cfa_offset 24
+ 1868 184f 4889C7   		movq	%rax, %rdi
+ 1869 1852 5B       		popq	%rbx
+ 1870              		.cfi_def_cfa_offset 16
+ 1871 1853 5D       		popq	%rbp
+ 1872              		.cfi_def_cfa_offset 8
+ 1873 1854 E9000000 		jmp	_ZNK8tinyxml210XMLElement7GetTextEv
+ 1873      00
+ 1874              		.cfi_endproc
+ 1875              	.LFE1892:
+ 1877              		.section	.text.unlikely
+ 1878              	.LCOLDE59:
+ 1879              		.text
+ 1880              	.LHOTE59:
+ 1881              		.section	.text.unlikely
+ 1882              		.align 2
+ 1883              	.LCOLDB60:
+ 1884              		.text
+ 1885              	.LHOTB60:
+ 1886 1859 90       		.align 2
+ 1887 185a 660F1F44 		.p2align 4,,15
+ 1887      0000
+ 1888              		.globl	_ZN12preprocessor28initialise_program_variablesEPcR16global_variablesR15domain_geometryR18i
+ 1890              	_ZN12preprocessor28initialise_program_variablesEPcR16global_variablesR15domain_geometryR18initial_c
+ 1891              	.LFB1879:
+ 1892              		.cfi_startproc
+ 1893              		.cfi_personality 0x3,__gxx_personality_v0
+ 1894              		.cfi_lsda 0x3,.LLSDA1879
+ 1895 1860 4157     		pushq	%r15
+ 1896              		.cfi_def_cfa_offset 16
+ 1897              		.cfi_offset 15, -16
+ 1898 1862 4156     		pushq	%r14
+ 1899              		.cfi_def_cfa_offset 24
+ 1900              		.cfi_offset 14, -24
+ 1901 1864 4989F7   		movq	%rsi, %r15
+ 1902 1867 4155     		pushq	%r13
+ 1903              		.cfi_def_cfa_offset 32
+ 1904              		.cfi_offset 13, -32
+ 1905 1869 4154     		pushq	%r12
+ 1906              		.cfi_def_cfa_offset 40
+ 1907              		.cfi_offset 12, -40
+ 1908 186b 4989FD   		movq	%rdi, %r13
+ 1909 186e 55       		pushq	%rbp
+ 1910              		.cfi_def_cfa_offset 48
+GAS LISTING /tmp/cczEKvce.s 			page 52
+
+
+ 1911              		.cfi_offset 6, -48
+ 1912 186f 53       		pushq	%rbx
+ 1913              		.cfi_def_cfa_offset 56
+ 1914              		.cfi_offset 3, -56
+ 1915 1870 BE010000 		movl	$1, %esi
+ 1915      00
+ 1916 1875 4989D6   		movq	%rdx, %r14
+ 1917 1878 31D2     		xorl	%edx, %edx
+ 1918 187a 4989CC   		movq	%rcx, %r12
+ 1919 187d 4881ECD8 		subq	$728, %rsp
+ 1919      020000
+ 1920              		.cfi_def_cfa_offset 784
+ 1921 1884 4C89C3   		movq	%r8, %rbx
+ 1922 1887 4C89CD   		movq	%r9, %rbp
+ 1923 188a 488D7C24 		leaq	64(%rsp), %rdi
+ 1923      40
+ 1924 188f 64488B04 		movq	%fs:40, %rax
+ 1924      25280000 
+ 1924      00
+ 1925 1898 48898424 		movq	%rax, 712(%rsp)
+ 1925      C8020000 
+ 1926 18a0 31C0     		xorl	%eax, %eax
+ 1927              	.LEHB3:
+ 1928 18a2 E8000000 		call	_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
+ 1928      00
+ 1929              	.LEHE3:
+ 1930 18a7 488D7C24 		leaq	64(%rsp), %rdi
+ 1930      40
+ 1931 18ac 4C89FE   		movq	%r15, %rsi
+ 1932              	.LEHB4:
+ 1933 18af E8000000 		call	_ZN8tinyxml211XMLDocument8LoadFileEPKc
+ 1933      00
+ 1934 18b4 488D7424 		leaq	64(%rsp), %rsi
+ 1934      40
+ 1935 18b9 4C89F2   		movq	%r14, %rdx
+ 1936 18bc 4C89EF   		movq	%r13, %rdi
+ 1937 18bf E8000000 		call	_ZN12preprocessor22parse_global_variablesERN8tinyxml211XMLDocumentER16global_variables
+ 1937      00
+ 1938 18c4 488D7424 		leaq	64(%rsp), %rsi
+ 1938      40
+ 1939 18c9 4C89E2   		movq	%r12, %rdx
+ 1940 18cc 4C89EF   		movq	%r13, %rdi
+ 1941 18cf E8000000 		call	_ZN12preprocessor24parse_geometry_variablesERN8tinyxml211XMLDocumentER15domain_geometry
+ 1941      00
+ 1942 18d4 488D7424 		leaq	64(%rsp), %rsi
+ 1942      40
+ 1943 18d9 4889DA   		movq	%rbx, %rdx
+ 1944 18dc 4C89EF   		movq	%r13, %rdi
+ 1945 18df E8000000 		call	_ZN12preprocessor24parse_initial_conditionsERN8tinyxml211XMLDocumentER18initial_conditions
+ 1945      00
+ 1946 18e4 488D7424 		leaq	64(%rsp), %rsi
+ 1946      40
+ 1947 18e9 4889EA   		movq	%rbp, %rdx
+ 1948 18ec 4C89EF   		movq	%r13, %rdi
+ 1949 18ef E8000000 		call	_ZN12preprocessor25parse_boundary_conditionsERN8tinyxml211XMLDocumentER13quad_bcs_plus
+ 1949      00
+ 1950              	.LEHE4:
+GAS LISTING /tmp/cczEKvce.s 			page 53
+
+
+ 1951 18f4 F2410F10 		movsd	80(%r14), %xmm0
+ 1951      4650
+ 1952 18fa 4889E6   		movq	%rsp, %rsi
+ 1953 18fd F20F104D 		movsd	80(%rbp), %xmm1
+ 1953      50
+ 1954 1902 4C89F7   		movq	%r14, %rdi
+ 1955 1905 F20F5E05 		divsd	.LC3(%rip), %xmm0
+ 1955      00000000 
+ 1956 190d F20F59C8 		mulsd	%xmm0, %xmm1
+ 1957 1911 F20F114D 		movsd	%xmm1, 80(%rbp)
+ 1957      50
+ 1958 1916 F20F104D 		movsd	16(%rbp), %xmm1
+ 1958      10
+ 1959 191b F20F59C8 		mulsd	%xmm0, %xmm1
+ 1960 191f F20F114D 		movsd	%xmm1, 16(%rbp)
+ 1960      10
+ 1961 1924 F20F104D 		movsd	112(%rbp), %xmm1
+ 1961      70
+ 1962 1929 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1963 192d F20F114D 		movsd	%xmm1, 112(%rbp)
+ 1963      70
+ 1964 1932 F20F104D 		movsd	48(%rbp), %xmm1
+ 1964      30
+ 1965 1937 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1966 193b F20F114D 		movsd	%xmm1, 48(%rbp)
+ 1966      30
+ 1967 1940 F20F104D 		movsd	88(%rbp), %xmm1
+ 1967      58
+ 1968 1945 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1969 1949 F20F114D 		movsd	%xmm1, 88(%rbp)
+ 1969      58
+ 1970 194e F20F104D 		movsd	24(%rbp), %xmm1
+ 1970      18
+ 1971 1953 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1972 1957 F20F114D 		movsd	%xmm1, 24(%rbp)
+ 1972      18
+ 1973 195c F20F104D 		movsd	120(%rbp), %xmm1
+ 1973      78
+ 1974 1961 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1975 1965 F20F114D 		movsd	%xmm1, 120(%rbp)
+ 1975      78
+ 1976 196a F20F104D 		movsd	56(%rbp), %xmm1
+ 1976      38
+ 1977 196f F20F59C8 		mulsd	%xmm0, %xmm1
+ 1978 1973 F20F114D 		movsd	%xmm1, 56(%rbp)
+ 1978      38
+ 1979 1978 F20F108B 		movsd	152(%rbx), %xmm1
+ 1979      98000000 
+ 1980 1980 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1981 1984 F20F118B 		movsd	%xmm1, 152(%rbx)
+ 1981      98000000 
+ 1982 198c F20F108B 		movsd	160(%rbx), %xmm1
+ 1982      A0000000 
+ 1983 1994 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1984 1998 F20F118B 		movsd	%xmm1, 160(%rbx)
+ 1984      A0000000 
+ 1985 19a0 F20F108B 		movsd	168(%rbx), %xmm1
+GAS LISTING /tmp/cczEKvce.s 			page 54
+
+
+ 1985      A8000000 
+ 1986 19a8 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1987 19ac F20F118B 		movsd	%xmm1, 168(%rbx)
+ 1987      A8000000 
+ 1988 19b4 F20F108B 		movsd	184(%rbx), %xmm1
+ 1988      B8000000 
+ 1989 19bc F20F59C8 		mulsd	%xmm0, %xmm1
+ 1990 19c0 F20F118B 		movsd	%xmm1, 184(%rbx)
+ 1990      B8000000 
+ 1991 19c8 F20F108B 		movsd	192(%rbx), %xmm1
+ 1991      C0000000 
+ 1992 19d0 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1993 19d4 F20F118B 		movsd	%xmm1, 192(%rbx)
+ 1993      C0000000 
+ 1994 19dc F20F108B 		movsd	200(%rbx), %xmm1
+ 1994      C8000000 
+ 1995 19e4 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1996 19e8 F20F118B 		movsd	%xmm1, 200(%rbx)
+ 1996      C8000000 
+ 1997 19f0 F20F104B 		movsd	120(%rbx), %xmm1
+ 1997      78
+ 1998 19f5 F20F59C8 		mulsd	%xmm0, %xmm1
+ 1999 19f9 F20F114B 		movsd	%xmm1, 120(%rbx)
+ 1999      78
+ 2000 19fe F20F108B 		movsd	128(%rbx), %xmm1
+ 2000      80000000 
+ 2001 1a06 48C70424 		movq	$_ZTV15domain_geometry+16, (%rsp)
+ 2001      00000000 
+ 2002 1a0e F20F59C8 		mulsd	%xmm0, %xmm1
+ 2003 1a12 F20F5983 		mulsd	136(%rbx), %xmm0
+ 2003      88000000 
+ 2004 1a1a F20F118B 		movsd	%xmm1, 128(%rbx)
+ 2004      80000000 
+ 2005 1a22 F20F1183 		movsd	%xmm0, 136(%rbx)
+ 2005      88000000 
+ 2006 1a2a F2410F10 		movsd	8(%r12), %xmm0
+ 2006      442408
+ 2007 1a31 F20F1144 		movsd	%xmm0, 8(%rsp)
+ 2007      2408
+ 2008 1a37 F2410F10 		movsd	16(%r12), %xmm0
+ 2008      442410
+ 2009 1a3e F20F1144 		movsd	%xmm0, 16(%rsp)
+ 2009      2410
+ 2010 1a44 F2410F10 		movsd	24(%r12), %xmm0
+ 2010      442418
+ 2011 1a4b F20F1144 		movsd	%xmm0, 24(%rsp)
+ 2011      2418
+ 2012 1a51 F2410F10 		movsd	32(%r12), %xmm0
+ 2012      442420
+ 2013 1a58 F20F1144 		movsd	%xmm0, 32(%rsp)
+ 2013      2420
+ 2014 1a5e F2410F10 		movsd	40(%r12), %xmm0
+ 2014      442428
+ 2015 1a65 F20F1144 		movsd	%xmm0, 40(%rsp)
+ 2015      2428
+ 2016 1a6b F2410F10 		movsd	48(%r12), %xmm0
+ 2016      442430
+GAS LISTING /tmp/cczEKvce.s 			page 55
+
+
+ 2017 1a72 F20F1144 		movsd	%xmm0, 48(%rsp)
+ 2017      2430
+ 2018              	.LEHB5:
+ 2019 1a78 E8000000 		call	_ZN16global_variables10initialiseE15domain_geometry
+ 2019      00
+ 2020              	.LEHE5:
+ 2021 1a7d 4889E7   		movq	%rsp, %rdi
+ 2022 1a80 E8000000 		call	_ZN15domain_geometryD1Ev
+ 2022      00
+ 2023 1a85 488D7C24 		leaq	64(%rsp), %rdi
+ 2023      40
+ 2024 1a8a E8000000 		call	_ZN8tinyxml211XMLDocumentD1Ev
+ 2024      00
+ 2025 1a8f 488B8424 		movq	712(%rsp), %rax
+ 2025      C8020000 
+ 2026 1a97 64483304 		xorq	%fs:40, %rax
+ 2026      25280000 
+ 2026      00
+ 2027 1aa0 7512     		jne	.L83
+ 2028 1aa2 4881C4D8 		addq	$728, %rsp
+ 2028      020000
+ 2029              		.cfi_remember_state
+ 2030              		.cfi_def_cfa_offset 56
+ 2031 1aa9 5B       		popq	%rbx
+ 2032              		.cfi_def_cfa_offset 48
+ 2033 1aaa 5D       		popq	%rbp
+ 2034              		.cfi_def_cfa_offset 40
+ 2035 1aab 415C     		popq	%r12
+ 2036              		.cfi_def_cfa_offset 32
+ 2037 1aad 415D     		popq	%r13
+ 2038              		.cfi_def_cfa_offset 24
+ 2039 1aaf 415E     		popq	%r14
+ 2040              		.cfi_def_cfa_offset 16
+ 2041 1ab1 415F     		popq	%r15
+ 2042              		.cfi_def_cfa_offset 8
+ 2043 1ab3 C3       		ret
+ 2044              	.L83:
+ 2045              		.cfi_restore_state
+ 2046 1ab4 E8000000 		call	__stack_chk_fail
+ 2046      00
+ 2047              	.L79:
+ 2048 1ab9 4889E7   		movq	%rsp, %rdi
+ 2049 1abc 4889C3   		movq	%rax, %rbx
+ 2050 1abf E8000000 		call	_ZN15domain_geometryD1Ev
+ 2050      00
+ 2051              	.L76:
+ 2052 1ac4 488D7C24 		leaq	64(%rsp), %rdi
+ 2052      40
+ 2053 1ac9 E8000000 		call	_ZN8tinyxml211XMLDocumentD1Ev
+ 2053      00
+ 2054 1ace 4889DF   		movq	%rbx, %rdi
+ 2055              	.LEHB6:
+ 2056 1ad1 E8000000 		call	_Unwind_Resume
+ 2056      00
+ 2057              	.LEHE6:
+ 2058              	.L78:
+ 2059 1ad6 4889C3   		movq	%rax, %rbx
+GAS LISTING /tmp/cczEKvce.s 			page 56
+
+
+ 2060 1ad9 EBE9     		jmp	.L76
+ 2061              		.cfi_endproc
+ 2062              	.LFE1879:
+ 2063              		.section	.gcc_except_table
+ 2064              	.LLSDA1879:
+ 2065 0015 FF       		.byte	0xff
+ 2066 0016 FF       		.byte	0xff
+ 2067 0017 01       		.byte	0x1
+ 2068 0018 14       		.uleb128 .LLSDACSE1879-.LLSDACSB1879
+ 2069              	.LLSDACSB1879:
+ 2070 0019 42       		.uleb128 .LEHB3-.LFB1879
+ 2071 001a 05       		.uleb128 .LEHE3-.LEHB3
+ 2072 001b 00       		.uleb128 0
+ 2073 001c 00       		.uleb128 0
+ 2074 001d 4F       		.uleb128 .LEHB4-.LFB1879
+ 2075 001e 45       		.uleb128 .LEHE4-.LEHB4
+ 2076 001f F604     		.uleb128 .L78-.LFB1879
+ 2077 0021 00       		.uleb128 0
+ 2078 0022 9804     		.uleb128 .LEHB5-.LFB1879
+ 2079 0024 05       		.uleb128 .LEHE5-.LEHB5
+ 2080 0025 D904     		.uleb128 .L79-.LFB1879
+ 2081 0027 00       		.uleb128 0
+ 2082 0028 F104     		.uleb128 .LEHB6-.LFB1879
+ 2083 002a 05       		.uleb128 .LEHE6-.LEHB6
+ 2084 002b 00       		.uleb128 0
+ 2085 002c 00       		.uleb128 0
+ 2086              	.LLSDACSE1879:
+ 2087              		.text
+ 2089              		.section	.text.unlikely
+ 2090              	.LCOLDE60:
+ 2091              		.text
+ 2092              	.LHOTE60:
+ 2093              		.weak	_ZTS12preprocessor
+ 2094              		.section	.rodata._ZTS12preprocessor,"aG",@progbits,_ZTS12preprocessor,comdat
+ 2095              		.align 8
+ 2098              	_ZTS12preprocessor:
+ 2099 0000 31327072 		.string	"12preprocessor"
+ 2099      6570726F 
+ 2099      63657373 
+ 2099      6F7200
+ 2100              		.weak	_ZTI12preprocessor
+ 2101              		.section	.rodata._ZTI12preprocessor,"aG",@progbits,_ZTI12preprocessor,comdat
+ 2102              		.align 8
+ 2105              	_ZTI12preprocessor:
+ 2106 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 2106      00000000 
+ 2107 0008 00000000 		.quad	_ZTS12preprocessor
+ 2107      00000000 
+ 2108              		.weak	_ZTV12preprocessor
+ 2109              		.section	.rodata._ZTV12preprocessor,"aG",@progbits,_ZTV12preprocessor,comdat
+ 2110              		.align 8
+ 2113              	_ZTV12preprocessor:
+ 2114 0000 00000000 		.quad	0
+ 2114      00000000 
+ 2115 0008 00000000 		.quad	_ZTI12preprocessor
+ 2115      00000000 
+ 2116 0010 00000000 		.quad	_ZN12preprocessorD1Ev
+GAS LISTING /tmp/cczEKvce.s 			page 57
+
+
+ 2116      00000000 
+ 2117 0018 00000000 		.quad	_ZN12preprocessorD0Ev
+ 2117      00000000 
+ 2118              		.section	.rodata.cst8,"aM",@progbits,8
+ 2119              		.align 8
+ 2120              	.LC3:
+ 2121 0000 AA4C58E8 		.long	3898100906
+ 2122 0004 7AB6FB3F 		.long	1073460858
+ 2123              		.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
+ 2124              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/cczEKvce.s 			page 58
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 preprocessor.cpp
+     /tmp/cczEKvce.s:11     .text:0000000000000000 _ZN12preprocessorD2Ev
+     /tmp/cczEKvce.s:11     .text:0000000000000000 _ZN12preprocessorD1Ev
+     /tmp/cczEKvce.s:33     .text:0000000000000010 _ZN12preprocessorD0Ev
+     /tmp/cczEKvce.s:53     .text:0000000000000020 _ZN12preprocessorC2Ev
+     /tmp/cczEKvce.s:2113   .rodata._ZTV12preprocessor:0000000000000000 _ZTV12preprocessor
+     /tmp/cczEKvce.s:53     .text:0000000000000020 _ZN12preprocessorC1Ev
+     /tmp/cczEKvce.s:76     .text:0000000000000030 _ZN12preprocessor18mach_number_factorER16global_variablesR13quad_bcs_plusR18initial_conditionsR15domain_geometry
+     /tmp/cczEKvce.s:179    .text:0000000000000160 _ZN12preprocessor25parse_boundary_conditionsERN8tinyxml211XMLDocumentER13quad_bcs_plus
+     /tmp/cczEKvce.s:917    .text:0000000000000cb0 _ZN12preprocessor24parse_initial_conditionsERN8tinyxml211XMLDocumentER18initial_conditions
+     /tmp/cczEKvce.s:1262   .text:00000000000011f0 _ZN12preprocessor24parse_geometry_variablesERN8tinyxml211XMLDocumentER15domain_geometry
+     /tmp/cczEKvce.s:1400   .text:0000000000001320 _ZN12preprocessor22parse_global_variablesERN8tinyxml211XMLDocumentER16global_variables
+     /tmp/cczEKvce.s:1639   .text:00000000000016a0 _ZN12preprocessor14get_xml_doubleEPKcS1_RN8tinyxml211XMLDocumentE
+     /tmp/cczEKvce.s:1688   .text:0000000000001700 _ZN12preprocessor14get_xml_doubleEPKcS1_S1_S1_RN8tinyxml211XMLDocumentE
+     /tmp/cczEKvce.s:1755   .text:0000000000001780 _ZN12preprocessor14get_xml_doubleEPKcS1_S1_RN8tinyxml211XMLDocumentE
+     /tmp/cczEKvce.s:1813   .text:00000000000017f0 _ZN12preprocessor12get_xml_textEPKcS1_RN8tinyxml211XMLDocumentE
+     /tmp/cczEKvce.s:1845   .text:0000000000001820 _ZN12preprocessor12get_xml_textEPKcS1_S1_RN8tinyxml211XMLDocumentE
+     /tmp/cczEKvce.s:1890   .text:0000000000001860 _ZN12preprocessor28initialise_program_variablesEPcR16global_variablesR15domain_geometryR18initial_conditionsR13quad_bcs_plus
+     /tmp/cczEKvce.s:2098   .rodata._ZTS12preprocessor:0000000000000000 _ZTS12preprocessor
+     /tmp/cczEKvce.s:2105   .rodata._ZTI12preprocessor:0000000000000000 _ZTI12preprocessor
+     /tmp/cczEKvce.s:2120   .rodata.cst8:0000000000000000 .LC3
+
+UNDEFINED SYMBOLS
+_ZdlPv
+__gxx_personality_v0
+_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+_ZNK8tinyxml210XMLElement7GetTextEv
+strlen
+_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
+_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
+__stack_chk_fail
+_Unwind_Resume
+_ZN15domain_geometry10initialiseEv
+_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
+_ZN8tinyxml211XMLDocument8LoadFileEPKc
+_ZTV15domain_geometry
+_ZN16global_variables10initialiseE15domain_geometry
+_ZN15domain_geometryD1Ev
+_ZN8tinyxml211XMLDocumentD1Ev
+_ZTVN10__cxxabiv117__class_type_infoE

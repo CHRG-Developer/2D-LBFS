@@ -1,0 +1,1990 @@
+GAS LISTING /tmp/ccSoABb0.s 			page 1
+
+
+   1              		.file	"Boundary_Conditions.cpp"
+   2              		.text
+   3              	.Ltext0:
+   4              		.align 2
+   5              		.globl	_ZN19Boundary_ConditionsC2Eii
+   7              	_ZN19Boundary_ConditionsC2Eii:
+   8              	.LFB12:
+   9              		.file 1 "/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp"
+   1:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** #include "Boundary_Conditions.h"
+   2:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** #include <stdlib.h>
+   3:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+   4:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+   5:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** Boundary_Conditions::Boundary_Conditions(int num_x_nodes, int num_y_nodes)
+  10              		.loc 1 5 0
+  11              		.cfi_startproc
+  12 0000 55       		pushq	%rbp
+  13              		.cfi_def_cfa_offset 16
+  14              		.cfi_offset 6, -16
+  15 0001 4889E5   		movq	%rsp, %rbp
+  16              		.cfi_def_cfa_register 6
+  17 0004 4883EC20 		subq	$32, %rsp
+  18 0008 48897DE8 		movq	%rdi, -24(%rbp)
+  19 000c 8975E4   		movl	%esi, -28(%rbp)
+  20 000f 8955E0   		movl	%edx, -32(%rbp)
+  21              	.LBB2:
+  22              		.loc 1 5 0
+  23 0012 BA000000 		movl	$_ZTV19Boundary_Conditions+16, %edx
+  23      00
+  24 0017 488B45E8 		movq	-24(%rbp), %rax
+  25 001b 488910   		movq	%rdx, (%rax)
+  26              	.LBB3:
+   6:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** {
+   7:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     //ctor
+   8:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+   9:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     int total_nodes = num_x_nodes * num_y_nodes;
+  27              		.loc 1 9 0
+  28 001e 8B45E4   		movl	-28(%rbp), %eax
+  29 0021 0FAF45E0 		imull	-32(%rbp), %eax
+  30 0025 8945FC   		movl	%eax, -4(%rbp)
+  10:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  11:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  12:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       // if boundary condition is present for this cell face
+  13:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       bc = new bool [total_nodes +1];
+  31              		.loc 1 13 0
+  32 0028 8B45FC   		movl	-4(%rbp), %eax
+  33 002b 83C001   		addl	$1, %eax
+  34 002e 4898     		cltq
+  35 0030 4889C7   		movq	%rax, %rdi
+  36 0033 E8000000 		call	_Znam
+  36      00
+  37 0038 4889C2   		movq	%rax, %rdx
+  38 003b 488B45E8 		movq	-24(%rbp), %rax
+  39 003f 48895008 		movq	%rdx, 8(%rax)
+  14:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (bc==NULL) exit (1);
+  40              		.loc 1 14 0
+  41 0043 488B45E8 		movq	-24(%rbp), %rax
+  42 0047 488B4008 		movq	8(%rax), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 2
+
+
+  43 004b 4885C0   		testq	%rax, %rax
+  44 004e 750A     		jne	.L2
+  45              		.loc 1 14 0 is_stmt 0 discriminator 1
+  46 0050 BF010000 		movl	$1, %edi
+  46      00
+  47 0055 E8000000 		call	exit
+  47      00
+  48              	.L2:
+  15:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****      bc_include = new bool [total_nodes +1];
+  49              		.loc 1 15 0 is_stmt 1
+  50 005a 8B45FC   		movl	-4(%rbp), %eax
+  51 005d 83C001   		addl	$1, %eax
+  52 0060 4898     		cltq
+  53 0062 4889C7   		movq	%rax, %rdi
+  54 0065 E8000000 		call	_Znam
+  54      00
+  55 006a 4889C2   		movq	%rax, %rdx
+  56 006d 488B45E8 		movq	-24(%rbp), %rax
+  57 0071 48895010 		movq	%rdx, 16(%rax)
+  16:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (bc_include==NULL) exit (1);
+  58              		.loc 1 16 0
+  59 0075 488B45E8 		movq	-24(%rbp), %rax
+  60 0079 488B4010 		movq	16(%rax), %rax
+  61 007d 4885C0   		testq	%rax, %rax
+  62 0080 750A     		jne	.L3
+  63              		.loc 1 16 0 is_stmt 0 discriminator 1
+  64 0082 BF010000 		movl	$1, %edi
+  64      00
+  65 0087 E8000000 		call	exit
+  65      00
+  66              	.L3:
+  17:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       rho = new double [total_nodes +1];
+  67              		.loc 1 17 0 is_stmt 1
+  68 008c 8B45FC   		movl	-4(%rbp), %eax
+  69 008f 83C001   		addl	$1, %eax
+  70 0092 4898     		cltq
+  71 0094 48BA0000 		movabsq	$1143914305352105984, %rdx
+  71      00000000 
+  71      E00F
+  72 009e 4839D0   		cmpq	%rdx, %rax
+  73 00a1 7726     		ja	.L4
+  74              		.loc 1 17 0 is_stmt 0 discriminator 1
+  75 00a3 48C1E003 		salq	$3, %rax
+  76 00a7 4889C7   		movq	%rax, %rdi
+  77 00aa E8000000 		call	_Znam
+  77      00
+  78 00af 4889C2   		movq	%rax, %rdx
+  79 00b2 488B45E8 		movq	-24(%rbp), %rax
+  80 00b6 48895018 		movq	%rdx, 24(%rax)
+  18:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (rho==NULL) exit (1);
+  81              		.loc 1 18 0 is_stmt 1 discriminator 1
+  82 00ba 488B45E8 		movq	-24(%rbp), %rax
+  83 00be 488B4018 		movq	24(%rax), %rax
+  84 00c2 4885C0   		testq	%rax, %rax
+  85 00c5 7511     		jne	.L6
+  86 00c7 EB05     		jmp	.L25
+  87              	.L4:
+GAS LISTING /tmp/ccSoABb0.s 			page 3
+
+
+  17:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       rho = new double [total_nodes +1];
+  88              		.loc 1 17 0 discriminator 2
+  89 00c9 E8000000 		call	__cxa_throw_bad_array_new_length
+  89      00
+  90              	.L25:
+  91              		.loc 1 18 0 discriminator 1
+  92 00ce BF010000 		movl	$1, %edi
+  92      00
+  93 00d3 E8000000 		call	exit
+  93      00
+  94              	.L6:
+  19:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  20:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  21:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       u = new double [total_nodes +1];
+  95              		.loc 1 21 0
+  96 00d8 8B45FC   		movl	-4(%rbp), %eax
+  97 00db 83C001   		addl	$1, %eax
+  98 00de 4898     		cltq
+  99 00e0 48BA0000 		movabsq	$1143914305352105984, %rdx
+  99      00000000 
+  99      E00F
+ 100 00ea 4839D0   		cmpq	%rdx, %rax
+ 101 00ed 7726     		ja	.L7
+ 102              		.loc 1 21 0 is_stmt 0 discriminator 1
+ 103 00ef 48C1E003 		salq	$3, %rax
+ 104 00f3 4889C7   		movq	%rax, %rdi
+ 105 00f6 E8000000 		call	_Znam
+ 105      00
+ 106 00fb 4889C2   		movq	%rax, %rdx
+ 107 00fe 488B45E8 		movq	-24(%rbp), %rax
+ 108 0102 48895020 		movq	%rdx, 32(%rax)
+  22:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (u==NULL) exit (1);
+ 109              		.loc 1 22 0 is_stmt 1 discriminator 1
+ 110 0106 488B45E8 		movq	-24(%rbp), %rax
+ 111 010a 488B4020 		movq	32(%rax), %rax
+ 112 010e 4885C0   		testq	%rax, %rax
+ 113 0111 7511     		jne	.L9
+ 114 0113 EB05     		jmp	.L26
+ 115              	.L7:
+  21:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (u==NULL) exit (1);
+ 116              		.loc 1 21 0 discriminator 2
+ 117 0115 E8000000 		call	__cxa_throw_bad_array_new_length
+ 117      00
+ 118              	.L26:
+ 119              		.loc 1 22 0 discriminator 1
+ 120 011a BF010000 		movl	$1, %edi
+ 120      00
+ 121 011f E8000000 		call	exit
+ 121      00
+ 122              	.L9:
+  23:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       v = new double [total_nodes +1];
+ 123              		.loc 1 23 0
+ 124 0124 8B45FC   		movl	-4(%rbp), %eax
+ 125 0127 83C001   		addl	$1, %eax
+ 126 012a 4898     		cltq
+ 127 012c 48BA0000 		movabsq	$1143914305352105984, %rdx
+ 127      00000000 
+GAS LISTING /tmp/ccSoABb0.s 			page 4
+
+
+ 127      E00F
+ 128 0136 4839D0   		cmpq	%rdx, %rax
+ 129 0139 7726     		ja	.L10
+ 130              		.loc 1 23 0 is_stmt 0 discriminator 1
+ 131 013b 48C1E003 		salq	$3, %rax
+ 132 013f 4889C7   		movq	%rax, %rdi
+ 133 0142 E8000000 		call	_Znam
+ 133      00
+ 134 0147 4889C2   		movq	%rax, %rdx
+ 135 014a 488B45E8 		movq	-24(%rbp), %rax
+ 136 014e 48895028 		movq	%rdx, 40(%rax)
+  24:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (v==NULL) exit (1);
+ 137              		.loc 1 24 0 is_stmt 1 discriminator 1
+ 138 0152 488B45E8 		movq	-24(%rbp), %rax
+ 139 0156 488B4028 		movq	40(%rax), %rax
+ 140 015a 4885C0   		testq	%rax, %rax
+ 141 015d 7511     		jne	.L12
+ 142 015f EB05     		jmp	.L27
+ 143              	.L10:
+  23:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****       v = new double [total_nodes +1];
+ 144              		.loc 1 23 0 discriminator 2
+ 145 0161 E8000000 		call	__cxa_throw_bad_array_new_length
+ 145      00
+ 146              	.L27:
+ 147              		.loc 1 24 0 discriminator 1
+ 148 0166 BF010000 		movl	$1, %edi
+ 148      00
+ 149 016b E8000000 		call	exit
+ 149      00
+ 150              	.L12:
+  25:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  26:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  27:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         /// integer describing the boundary condition type
+  28:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  29:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         // 1: Dirichlet Boundary Condition i.e. constant value at boundary
+  30:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         // 2: Neumann boundary condition i.e. gradient = fixed value.
+  31:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         // 3: Periodic Boundary Condition
+  32:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  33:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****      type_rho = new int [total_nodes +1];
+ 151              		.loc 1 33 0
+ 152 0170 8B45FC   		movl	-4(%rbp), %eax
+ 153 0173 83C001   		addl	$1, %eax
+ 154 0176 4898     		cltq
+ 155 0178 48BA0000 		movabsq	$2287828610704211968, %rdx
+ 155      00000000 
+ 155      C01F
+ 156 0182 4839D0   		cmpq	%rdx, %rax
+ 157 0185 7726     		ja	.L13
+ 158              		.loc 1 33 0 is_stmt 0 discriminator 1
+ 159 0187 48C1E002 		salq	$2, %rax
+ 160 018b 4889C7   		movq	%rax, %rdi
+ 161 018e E8000000 		call	_Znam
+ 161      00
+ 162 0193 4889C2   		movq	%rax, %rdx
+ 163 0196 488B45E8 		movq	-24(%rbp), %rax
+ 164 019a 48895030 		movq	%rdx, 48(%rax)
+  34:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (type_rho==NULL) exit (1);
+GAS LISTING /tmp/ccSoABb0.s 			page 5
+
+
+ 165              		.loc 1 34 0 is_stmt 1 discriminator 1
+ 166 019e 488B45E8 		movq	-24(%rbp), %rax
+ 167 01a2 488B4030 		movq	48(%rax), %rax
+ 168 01a6 4885C0   		testq	%rax, %rax
+ 169 01a9 7511     		jne	.L15
+ 170 01ab EB05     		jmp	.L28
+ 171              	.L13:
+  33:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (type_rho==NULL) exit (1);
+ 172              		.loc 1 33 0 discriminator 2
+ 173 01ad E8000000 		call	__cxa_throw_bad_array_new_length
+ 173      00
+ 174              	.L28:
+ 175              		.loc 1 34 0 discriminator 1
+ 176 01b2 BF010000 		movl	$1, %edi
+ 176      00
+ 177 01b7 E8000000 		call	exit
+ 177      00
+ 178              	.L15:
+  35:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  36:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****      type_vel = new int [total_nodes +1];
+ 179              		.loc 1 36 0
+ 180 01bc 8B45FC   		movl	-4(%rbp), %eax
+ 181 01bf 83C001   		addl	$1, %eax
+ 182 01c2 4898     		cltq
+ 183 01c4 48BA0000 		movabsq	$2287828610704211968, %rdx
+ 183      00000000 
+ 183      C01F
+ 184 01ce 4839D0   		cmpq	%rdx, %rax
+ 185 01d1 7726     		ja	.L16
+ 186              		.loc 1 36 0 is_stmt 0 discriminator 1
+ 187 01d3 48C1E002 		salq	$2, %rax
+ 188 01d7 4889C7   		movq	%rax, %rdi
+ 189 01da E8000000 		call	_Znam
+ 189      00
+ 190 01df 4889C2   		movq	%rax, %rdx
+ 191 01e2 488B45E8 		movq	-24(%rbp), %rax
+ 192 01e6 48895038 		movq	%rdx, 56(%rax)
+  37:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (type_vel==NULL) exit (1);
+ 193              		.loc 1 37 0 is_stmt 1 discriminator 1
+ 194 01ea 488B45E8 		movq	-24(%rbp), %rax
+ 195 01ee 488B4038 		movq	56(%rax), %rax
+ 196 01f2 4885C0   		testq	%rax, %rax
+ 197 01f5 7511     		jne	.L18
+ 198 01f7 EB05     		jmp	.L29
+ 199              	.L16:
+  36:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (type_vel==NULL) exit (1);
+ 200              		.loc 1 36 0 discriminator 2
+ 201 01f9 E8000000 		call	__cxa_throw_bad_array_new_length
+ 201      00
+ 202              	.L29:
+ 203              		.loc 1 37 0 discriminator 1
+ 204 01fe BF010000 		movl	$1, %edi
+ 204      00
+ 205 0203 E8000000 		call	exit
+ 205      00
+ 206              	.L18:
+  38:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+GAS LISTING /tmp/ccSoABb0.s 			page 6
+
+
+  39:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  40:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****      // node u[n] which will source u[0]
+  41:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****      periodic_node = new int [total_nodes +1];
+ 207              		.loc 1 41 0
+ 208 0208 8B45FC   		movl	-4(%rbp), %eax
+ 209 020b 83C001   		addl	$1, %eax
+ 210 020e 4898     		cltq
+ 211 0210 48BA0000 		movabsq	$2287828610704211968, %rdx
+ 211      00000000 
+ 211      C01F
+ 212 021a 4839D0   		cmpq	%rdx, %rax
+ 213 021d 7726     		ja	.L19
+ 214              		.loc 1 41 0 is_stmt 0 discriminator 1
+ 215 021f 48C1E002 		salq	$2, %rax
+ 216 0223 4889C7   		movq	%rax, %rdi
+ 217 0226 E8000000 		call	_Znam
+ 217      00
+ 218 022b 4889C2   		movq	%rax, %rdx
+ 219 022e 488B45E8 		movq	-24(%rbp), %rax
+ 220 0232 48895040 		movq	%rdx, 64(%rax)
+  42:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (periodic_node==NULL) exit (1);
+ 221              		.loc 1 42 0 is_stmt 1 discriminator 1
+ 222 0236 488B45E8 		movq	-24(%rbp), %rax
+ 223 023a 488B4040 		movq	64(%rax), %rax
+ 224 023e 4885C0   		testq	%rax, %rax
+ 225 0241 7511     		jne	.L21
+ 226 0243 EB05     		jmp	.L30
+ 227              	.L19:
+  41:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if (periodic_node==NULL) exit (1);
+ 228              		.loc 1 41 0 discriminator 2
+ 229 0245 E8000000 		call	__cxa_throw_bad_array_new_length
+ 229      00
+ 230              	.L30:
+ 231              		.loc 1 42 0 discriminator 1
+ 232 024a BF010000 		movl	$1, %edi
+ 232      00
+ 233 024f E8000000 		call	exit
+ 233      00
+ 234              	.L21:
+  43:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     neighbour = new int[total_nodes +1];
+ 235              		.loc 1 43 0
+ 236 0254 8B45FC   		movl	-4(%rbp), %eax
+ 237 0257 83C001   		addl	$1, %eax
+ 238 025a 4898     		cltq
+ 239 025c 48BA0000 		movabsq	$2287828610704211968, %rdx
+ 239      00000000 
+ 239      C01F
+ 240 0266 4839D0   		cmpq	%rdx, %rax
+ 241 0269 7726     		ja	.L22
+ 242              		.loc 1 43 0 is_stmt 0 discriminator 1
+ 243 026b 48C1E002 		salq	$2, %rax
+ 244 026f 4889C7   		movq	%rax, %rdi
+ 245 0272 E8000000 		call	_Znam
+ 245      00
+ 246 0277 4889C2   		movq	%rax, %rdx
+ 247 027a 488B45E8 		movq	-24(%rbp), %rax
+ 248 027e 48895048 		movq	%rdx, 72(%rax)
+GAS LISTING /tmp/ccSoABb0.s 			page 7
+
+
+  44:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         if(neighbour == NULL) exit (1);
+ 249              		.loc 1 44 0 is_stmt 1 discriminator 1
+ 250 0282 488B45E8 		movq	-24(%rbp), %rax
+ 251 0286 488B4048 		movq	72(%rax), %rax
+ 252 028a 4885C0   		testq	%rax, %rax
+ 253 028d 7511     		jne	.L32
+ 254 028f EB05     		jmp	.L31
+ 255              	.L22:
+  43:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     neighbour = new int[total_nodes +1];
+ 256              		.loc 1 43 0 discriminator 2
+ 257 0291 E8000000 		call	__cxa_throw_bad_array_new_length
+ 257      00
+ 258              	.L31:
+ 259              		.loc 1 44 0 discriminator 1
+ 260 0296 BF010000 		movl	$1, %edi
+ 260      00
+ 261 029b E8000000 		call	exit
+ 261      00
+ 262              	.L32:
+ 263              	.LBE3:
+ 264              	.LBE2:
+  45:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** }
+ 265              		.loc 1 45 0
+ 266 02a0 90       		nop
+ 267 02a1 C9       		leave
+ 268              		.cfi_def_cfa 7, 8
+ 269 02a2 C3       		ret
+ 270              		.cfi_endproc
+ 271              	.LFE12:
+ 273              		.globl	_ZN19Boundary_ConditionsC1Eii
+ 274              		.set	_ZN19Boundary_ConditionsC1Eii,_ZN19Boundary_ConditionsC2Eii
+ 275 02a3 90       		.align 2
+ 276              		.globl	_ZN19Boundary_ConditionsD2Ev
+ 278              	_ZN19Boundary_ConditionsD2Ev:
+ 279              	.LFB15:
+  46:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  47:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** Boundary_Conditions::~Boundary_Conditions()
+ 280              		.loc 1 47 0
+ 281              		.cfi_startproc
+ 282 02a4 55       		pushq	%rbp
+ 283              		.cfi_def_cfa_offset 16
+ 284              		.cfi_offset 6, -16
+ 285 02a5 4889E5   		movq	%rsp, %rbp
+ 286              		.cfi_def_cfa_register 6
+ 287 02a8 4883EC10 		subq	$16, %rsp
+ 288 02ac 48897DF8 		movq	%rdi, -8(%rbp)
+ 289              	.LBB4:
+ 290              		.loc 1 47 0
+ 291 02b0 BA000000 		movl	$_ZTV19Boundary_Conditions+16, %edx
+ 291      00
+ 292 02b5 488B45F8 		movq	-8(%rbp), %rax
+ 293 02b9 488910   		movq	%rdx, (%rax)
+  48:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** {
+  49:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     //dtor
+  50:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] (bc);
+ 294              		.loc 1 50 0
+ 295 02bc 488B45F8 		movq	-8(%rbp), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 8
+
+
+ 296 02c0 488B4008 		movq	8(%rax), %rax
+ 297 02c4 4885C0   		testq	%rax, %rax
+ 298 02c7 7410     		je	.L34
+ 299              		.loc 1 50 0 is_stmt 0 discriminator 1
+ 300 02c9 488B45F8 		movq	-8(%rbp), %rax
+ 301 02cd 488B4008 		movq	8(%rax), %rax
+ 302 02d1 4889C7   		movq	%rax, %rdi
+ 303 02d4 E8000000 		call	_ZdaPv
+ 303      00
+ 304              	.L34:
+  51:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     bc = NULL;
+ 305              		.loc 1 51 0 is_stmt 1
+ 306 02d9 488B45F8 		movq	-8(%rbp), %rax
+ 307 02dd 48C74008 		movq	$0, 8(%rax)
+ 307      00000000 
+  52:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  53:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] (bc_include);
+ 308              		.loc 1 53 0
+ 309 02e5 488B45F8 		movq	-8(%rbp), %rax
+ 310 02e9 488B4010 		movq	16(%rax), %rax
+ 311 02ed 4885C0   		testq	%rax, %rax
+ 312 02f0 7410     		je	.L35
+ 313              		.loc 1 53 0 is_stmt 0 discriminator 1
+ 314 02f2 488B45F8 		movq	-8(%rbp), %rax
+ 315 02f6 488B4010 		movq	16(%rax), %rax
+ 316 02fa 4889C7   		movq	%rax, %rdi
+ 317 02fd E8000000 		call	_ZdaPv
+ 317      00
+ 318              	.L35:
+  54:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     bc_include = NULL;
+ 319              		.loc 1 54 0 is_stmt 1
+ 320 0302 488B45F8 		movq	-8(%rbp), %rax
+ 321 0306 48C74010 		movq	$0, 16(%rax)
+ 321      00000000 
+  55:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete []  (u);
+ 322              		.loc 1 55 0
+ 323 030e 488B45F8 		movq	-8(%rbp), %rax
+ 324 0312 488B4020 		movq	32(%rax), %rax
+ 325 0316 4885C0   		testq	%rax, %rax
+ 326 0319 7410     		je	.L36
+ 327              		.loc 1 55 0 is_stmt 0 discriminator 1
+ 328 031b 488B45F8 		movq	-8(%rbp), %rax
+ 329 031f 488B4020 		movq	32(%rax), %rax
+ 330 0323 4889C7   		movq	%rax, %rdi
+ 331 0326 E8000000 		call	_ZdaPv
+ 331      00
+ 332              	.L36:
+  56:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     u = NULL;
+ 333              		.loc 1 56 0 is_stmt 1
+ 334 032b 488B45F8 		movq	-8(%rbp), %rax
+ 335 032f 48C74020 		movq	$0, 32(%rax)
+ 335      00000000 
+  57:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete []  (v);
+ 336              		.loc 1 57 0
+ 337 0337 488B45F8 		movq	-8(%rbp), %rax
+ 338 033b 488B4028 		movq	40(%rax), %rax
+ 339 033f 4885C0   		testq	%rax, %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 9
+
+
+ 340 0342 7410     		je	.L37
+ 341              		.loc 1 57 0 is_stmt 0 discriminator 1
+ 342 0344 488B45F8 		movq	-8(%rbp), %rax
+ 343 0348 488B4028 		movq	40(%rax), %rax
+ 344 034c 4889C7   		movq	%rax, %rdi
+ 345 034f E8000000 		call	_ZdaPv
+ 345      00
+ 346              	.L37:
+  58:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     v = NULL;
+ 347              		.loc 1 58 0 is_stmt 1
+ 348 0354 488B45F8 		movq	-8(%rbp), %rax
+ 349 0358 48C74028 		movq	$0, 40(%rax)
+ 349      00000000 
+  59:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete []  (rho);
+ 350              		.loc 1 59 0
+ 351 0360 488B45F8 		movq	-8(%rbp), %rax
+ 352 0364 488B4018 		movq	24(%rax), %rax
+ 353 0368 4885C0   		testq	%rax, %rax
+ 354 036b 7410     		je	.L38
+ 355              		.loc 1 59 0 is_stmt 0 discriminator 1
+ 356 036d 488B45F8 		movq	-8(%rbp), %rax
+ 357 0371 488B4018 		movq	24(%rax), %rax
+ 358 0375 4889C7   		movq	%rax, %rdi
+ 359 0378 E8000000 		call	_ZdaPv
+ 359      00
+ 360              	.L38:
+  60:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     rho = NULL;
+ 361              		.loc 1 60 0 is_stmt 1
+ 362 037d 488B45F8 		movq	-8(%rbp), %rax
+ 363 0381 48C74018 		movq	$0, 24(%rax)
+ 363      00000000 
+  61:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  62:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  63:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] type_rho;
+ 364              		.loc 1 63 0
+ 365 0389 488B45F8 		movq	-8(%rbp), %rax
+ 366 038d 488B4030 		movq	48(%rax), %rax
+ 367 0391 4885C0   		testq	%rax, %rax
+ 368 0394 7410     		je	.L39
+ 369              		.loc 1 63 0 is_stmt 0 discriminator 1
+ 370 0396 488B45F8 		movq	-8(%rbp), %rax
+ 371 039a 488B4030 		movq	48(%rax), %rax
+ 372 039e 4889C7   		movq	%rax, %rdi
+ 373 03a1 E8000000 		call	_ZdaPv
+ 373      00
+ 374              	.L39:
+  64:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     type_rho = NULL;
+ 375              		.loc 1 64 0 is_stmt 1
+ 376 03a6 488B45F8 		movq	-8(%rbp), %rax
+ 377 03aa 48C74030 		movq	$0, 48(%rax)
+ 377      00000000 
+  65:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  66:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  67:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] type_vel;
+ 378              		.loc 1 67 0
+ 379 03b2 488B45F8 		movq	-8(%rbp), %rax
+ 380 03b6 488B4038 		movq	56(%rax), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 10
+
+
+ 381 03ba 4885C0   		testq	%rax, %rax
+ 382 03bd 7410     		je	.L40
+ 383              		.loc 1 67 0 is_stmt 0 discriminator 1
+ 384 03bf 488B45F8 		movq	-8(%rbp), %rax
+ 385 03c3 488B4038 		movq	56(%rax), %rax
+ 386 03c7 4889C7   		movq	%rax, %rdi
+ 387 03ca E8000000 		call	_ZdaPv
+ 387      00
+ 388              	.L40:
+  68:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     type_vel = NULL;
+ 389              		.loc 1 68 0 is_stmt 1
+ 390 03cf 488B45F8 		movq	-8(%rbp), %rax
+ 391 03d3 48C74038 		movq	$0, 56(%rax)
+ 391      00000000 
+  69:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  70:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  71:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] periodic_node;
+ 392              		.loc 1 71 0
+ 393 03db 488B45F8 		movq	-8(%rbp), %rax
+ 394 03df 488B4040 		movq	64(%rax), %rax
+ 395 03e3 4885C0   		testq	%rax, %rax
+ 396 03e6 7410     		je	.L41
+ 397              		.loc 1 71 0 is_stmt 0 discriminator 1
+ 398 03e8 488B45F8 		movq	-8(%rbp), %rax
+ 399 03ec 488B4040 		movq	64(%rax), %rax
+ 400 03f0 4889C7   		movq	%rax, %rdi
+ 401 03f3 E8000000 		call	_ZdaPv
+ 401      00
+ 402              	.L41:
+  72:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     periodic_node = NULL;
+ 403              		.loc 1 72 0 is_stmt 1
+ 404 03f8 488B45F8 		movq	-8(%rbp), %rax
+ 405 03fc 48C74040 		movq	$0, 64(%rax)
+ 405      00000000 
+  73:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  74:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     delete [] neighbour;
+ 406              		.loc 1 74 0
+ 407 0404 488B45F8 		movq	-8(%rbp), %rax
+ 408 0408 488B4048 		movq	72(%rax), %rax
+ 409 040c 4885C0   		testq	%rax, %rax
+ 410 040f 7410     		je	.L42
+ 411              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 412 0411 488B45F8 		movq	-8(%rbp), %rax
+ 413 0415 488B4048 		movq	72(%rax), %rax
+ 414 0419 4889C7   		movq	%rax, %rdi
+ 415 041c E8000000 		call	_ZdaPv
+ 415      00
+ 416              	.L42:
+  75:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     neighbour = NULL;
+ 417              		.loc 1 75 0 is_stmt 1
+ 418 0421 488B45F8 		movq	-8(%rbp), %rax
+ 419 0425 48C74048 		movq	$0, 72(%rax)
+ 419      00000000 
+ 420              	.LBE4:
+  76:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** }
+ 421              		.loc 1 76 0
+ 422 042d B8000000 		movl	$0, %eax
+GAS LISTING /tmp/ccSoABb0.s 			page 11
+
+
+ 422      00
+ 423 0432 85C0     		testl	%eax, %eax
+ 424 0434 740C     		je	.L33
+ 425              		.loc 1 76 0 is_stmt 0 discriminator 1
+ 426 0436 488B45F8 		movq	-8(%rbp), %rax
+ 427 043a 4889C7   		movq	%rax, %rdi
+ 428 043d E8000000 		call	_ZdlPv
+ 428      00
+ 429              	.L33:
+ 430              		.loc 1 76 0
+ 431 0442 C9       		leave
+ 432              		.cfi_def_cfa 7, 8
+ 433 0443 C3       		ret
+ 434              		.cfi_endproc
+ 435              	.LFE15:
+ 437              		.globl	_ZN19Boundary_ConditionsD1Ev
+ 438              		.set	_ZN19Boundary_ConditionsD1Ev,_ZN19Boundary_ConditionsD2Ev
+ 439              		.align 2
+ 440              		.globl	_ZN19Boundary_ConditionsD0Ev
+ 442              	_ZN19Boundary_ConditionsD0Ev:
+ 443              	.LFB17:
+  47:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** {
+ 444              		.loc 1 47 0 is_stmt 1
+ 445              		.cfi_startproc
+ 446 0444 55       		pushq	%rbp
+ 447              		.cfi_def_cfa_offset 16
+ 448              		.cfi_offset 6, -16
+ 449 0445 4889E5   		movq	%rsp, %rbp
+ 450              		.cfi_def_cfa_register 6
+ 451 0448 4883EC10 		subq	$16, %rsp
+ 452 044c 48897DF8 		movq	%rdi, -8(%rbp)
+ 453              		.loc 1 76 0
+ 454 0450 488B45F8 		movq	-8(%rbp), %rax
+ 455 0454 4889C7   		movq	%rax, %rdi
+ 456 0457 E8000000 		call	_ZN19Boundary_ConditionsD1Ev
+ 456      00
+ 457 045c 488B45F8 		movq	-8(%rbp), %rax
+ 458 0460 4889C7   		movq	%rax, %rdi
+ 459 0463 E8000000 		call	_ZdlPv
+ 459      00
+ 460 0468 C9       		leave
+ 461              		.cfi_def_cfa 7, 8
+ 462 0469 C3       		ret
+ 463              		.cfi_endproc
+ 464              	.LFE17:
+ 466              		.align 2
+ 467              		.globl	_ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus
+ 469              	_ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus:
+ 470              	.LFB18:
+  77:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  78:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** void Boundary_Conditions::assign_boundary_conditions(int num_x, int num_y, quad_bcs_plus _bc){
+ 471              		.loc 1 78 0
+ 472              		.cfi_startproc
+ 473 046a 55       		pushq	%rbp
+ 474              		.cfi_def_cfa_offset 16
+ 475              		.cfi_offset 6, -16
+ 476 046b 4889E5   		movq	%rsp, %rbp
+GAS LISTING /tmp/ccSoABb0.s 			page 12
+
+
+ 477              		.cfi_def_cfa_register 6
+ 478 046e 48897DE8 		movq	%rdi, -24(%rbp)
+ 479 0472 8975E4   		movl	%esi, -28(%rbp)
+ 480 0475 8955E0   		movl	%edx, -32(%rbp)
+ 481 0478 48894DD8 		movq	%rcx, -40(%rbp)
+  79:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  80:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     /// this method should be user defined to reflect the geometry of the problem
+  81:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     /// currently set up for quad problem domain-> potential overload of this operator.
+  82:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     int t = 0;
+ 482              		.loc 1 82 0
+ 483 047c C745F400 		movl	$0, -12(%rbp)
+ 483      000000
+ 484              	.LBB5:
+  83:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  84:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     //lid driven cavity conditions
+  85:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     for( int j=0; j < num_y; j++){
+ 485              		.loc 1 85 0
+ 486 0483 C745F800 		movl	$0, -8(%rbp)
+ 486      000000
+ 487              	.L57:
+ 488              		.loc 1 85 0 is_stmt 0 discriminator 1
+ 489 048a 8B45F8   		movl	-8(%rbp), %eax
+ 490 048d 3B45E0   		cmpl	-32(%rbp), %eax
+ 491 0490 0F8D2805 		jge	.L58
+ 491      0000
+ 492              	.LBB6:
+ 493              	.LBB7:
+  86:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         for (int i =0; i < num_x; i++){
+ 494              		.loc 1 86 0 is_stmt 1
+ 495 0496 C745FC00 		movl	$0, -4(%rbp)
+ 495      000000
+ 496              	.L56:
+ 497              		.loc 1 86 0 is_stmt 0 discriminator 1
+ 498 049d 8B45FC   		movl	-4(%rbp), %eax
+ 499 04a0 3B45E4   		cmpl	-28(%rbp), %eax
+ 500 04a3 0F8D0C05 		jge	.L47
+ 500      0000
+  87:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  88:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+  89:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // default status
+  90:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             bc[t] = false;
+ 501              		.loc 1 90 0 is_stmt 1
+ 502 04a9 488B45E8 		movq	-24(%rbp), %rax
+ 503 04ad 488B5008 		movq	8(%rax), %rdx
+ 504 04b1 8B45F4   		movl	-12(%rbp), %eax
+ 505 04b4 4898     		cltq
+ 506 04b6 4801D0   		addq	%rdx, %rax
+ 507 04b9 C60000   		movb	$0, (%rax)
+  91:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             bc_include[t] = true;
+ 508              		.loc 1 91 0
+ 509 04bc 488B45E8 		movq	-24(%rbp), %rax
+ 510 04c0 488B5010 		movq	16(%rax), %rdx
+ 511 04c4 8B45F4   		movl	-12(%rbp), %eax
+ 512 04c7 4898     		cltq
+ 513 04c9 4801D0   		addq	%rdx, %rax
+ 514 04cc C60001   		movb	$1, (%rax)
+  92:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+GAS LISTING /tmp/ccSoABb0.s 			page 13
+
+
+  93:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // West boundary
+  94:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             if( i ==0){
+ 515              		.loc 1 94 0
+ 516 04cf 837DFC00 		cmpl	$0, -4(%rbp)
+ 517 04d3 0F855301 		jne	.L48
+ 517      0000
+  95:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 518              		.loc 1 95 0
+ 519 04d9 488B45E8 		movq	-24(%rbp), %rax
+ 520 04dd 488B5008 		movq	8(%rax), %rdx
+ 521 04e1 8B45F4   		movl	-12(%rbp), %eax
+ 522 04e4 4898     		cltq
+ 523 04e6 4801D0   		addq	%rdx, %rax
+ 524 04e9 C60001   		movb	$1, (%rax)
+  96:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.w_rho;
+ 525              		.loc 1 96 0
+ 526 04ec 488B45E8 		movq	-24(%rbp), %rax
+ 527 04f0 488B4018 		movq	24(%rax), %rax
+ 528 04f4 8B55F4   		movl	-12(%rbp), %edx
+ 529 04f7 4863D2   		movslq	%edx, %rdx
+ 530 04fa 48C1E203 		salq	$3, %rdx
+ 531 04fe 4801C2   		addq	%rax, %rdx
+ 532 0501 488B45D8 		movq	-40(%rbp), %rax
+ 533 0505 F20F1040 		movsd	8(%rax), %xmm0
+ 533      08
+ 534 050a F20F1102 		movsd	%xmm0, (%rdx)
+  97:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.w_u;
+ 535              		.loc 1 97 0
+ 536 050e 488B45E8 		movq	-24(%rbp), %rax
+ 537 0512 488B4020 		movq	32(%rax), %rax
+ 538 0516 8B55F4   		movl	-12(%rbp), %edx
+ 539 0519 4863D2   		movslq	%edx, %rdx
+ 540 051c 48C1E203 		salq	$3, %rdx
+ 541 0520 4801C2   		addq	%rax, %rdx
+ 542 0523 488B45D8 		movq	-40(%rbp), %rax
+ 543 0527 F20F1040 		movsd	16(%rax), %xmm0
+ 543      10
+ 544 052c F20F1102 		movsd	%xmm0, (%rdx)
+  98:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.w_v;
+ 545              		.loc 1 98 0
+ 546 0530 488B45E8 		movq	-24(%rbp), %rax
+ 547 0534 488B4028 		movq	40(%rax), %rax
+ 548 0538 8B55F4   		movl	-12(%rbp), %edx
+ 549 053b 4863D2   		movslq	%edx, %rdx
+ 550 053e 48C1E203 		salq	$3, %rdx
+ 551 0542 4801C2   		addq	%rax, %rdx
+ 552 0545 488B45D8 		movq	-40(%rbp), %rax
+ 553 0549 F20F1040 		movsd	24(%rax), %xmm0
+ 553      18
+ 554 054e F20F1102 		movsd	%xmm0, (%rdx)
+  99:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.w_type_vel;
+ 555              		.loc 1 99 0
+ 556 0552 488B45E8 		movq	-24(%rbp), %rax
+ 557 0556 488B4038 		movq	56(%rax), %rax
+ 558 055a 8B55F4   		movl	-12(%rbp), %edx
+ 559 055d 4863D2   		movslq	%edx, %rdx
+ 560 0560 48C1E202 		salq	$2, %rdx
+GAS LISTING /tmp/ccSoABb0.s 			page 14
+
+
+ 561 0564 4801C2   		addq	%rax, %rdx
+ 562 0567 488B45D8 		movq	-40(%rbp), %rax
+ 563 056b 8B809800 		movl	152(%rax), %eax
+ 563      0000
+ 564 0571 8902     		movl	%eax, (%rdx)
+ 100:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.w_type_rho;
+ 565              		.loc 1 100 0
+ 566 0573 488B45E8 		movq	-24(%rbp), %rax
+ 567 0577 488B4030 		movq	48(%rax), %rax
+ 568 057b 8B55F4   		movl	-12(%rbp), %edx
+ 569 057e 4863D2   		movslq	%edx, %rdx
+ 570 0581 48C1E202 		salq	$2, %rdx
+ 571 0585 4801C2   		addq	%rax, %rdx
+ 572 0588 488B45D8 		movq	-40(%rbp), %rax
+ 573 058c 8B808800 		movl	136(%rax), %eax
+ 573      0000
+ 574 0592 8902     		movl	%eax, (%rdx)
+ 101:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 102:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = (num_x-2) + t;
+ 575              		.loc 1 102 0
+ 576 0594 488B45E8 		movq	-24(%rbp), %rax
+ 577 0598 488B4040 		movq	64(%rax), %rax
+ 578 059c 8B55F4   		movl	-12(%rbp), %edx
+ 579 059f 4863D2   		movslq	%edx, %rdx
+ 580 05a2 48C1E202 		salq	$2, %rdx
+ 581 05a6 4801D0   		addq	%rdx, %rax
+ 582 05a9 8B55E4   		movl	-28(%rbp), %edx
+ 583 05ac 8D4AFE   		leal	-2(%rdx), %ecx
+ 584 05af 8B55F4   		movl	-12(%rbp), %edx
+ 585 05b2 01CA     		addl	%ecx, %edx
+ 586 05b4 8910     		movl	%edx, (%rax)
+ 103:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t + 1;
+ 587              		.loc 1 103 0
+ 588 05b6 488B45E8 		movq	-24(%rbp), %rax
+ 589 05ba 488B4048 		movq	72(%rax), %rax
+ 590 05be 8B55F4   		movl	-12(%rbp), %edx
+ 591 05c1 4863D2   		movslq	%edx, %rdx
+ 592 05c4 48C1E202 		salq	$2, %rdx
+ 593 05c8 4801D0   		addq	%rdx, %rax
+ 594 05cb 8B55F4   		movl	-12(%rbp), %edx
+ 595 05ce 83C201   		addl	$1, %edx
+ 596 05d1 8910     		movl	%edx, (%rax)
+ 104:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 105:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 if (j ==0){
+ 597              		.loc 1 105 0
+ 598 05d3 837DF800 		cmpl	$0, -8(%rbp)
+ 599 05d7 7518     		jne	.L49
+ 106:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = false;
+ 600              		.loc 1 106 0
+ 601 05d9 488B45E8 		movq	-24(%rbp), %rax
+ 602 05dd 488B5010 		movq	16(%rax), %rdx
+ 603 05e1 8B45F4   		movl	-12(%rbp), %eax
+ 604 05e4 4898     		cltq
+ 605 05e6 4801D0   		addq	%rdx, %rax
+ 606 05e9 C60000   		movb	$0, (%rax)
+ 607 05ec E9B70300 		jmp	.L52
+ 607      00
+GAS LISTING /tmp/ccSoABb0.s 			page 15
+
+
+ 608              	.L49:
+ 107:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }else if( j == (num_y-1)){
+ 609              		.loc 1 107 0
+ 610 05f1 8B45E0   		movl	-32(%rbp), %eax
+ 611 05f4 83E801   		subl	$1, %eax
+ 612 05f7 3B45F8   		cmpl	-8(%rbp), %eax
+ 613 05fa 7518     		jne	.L51
+ 108:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = false;
+ 614              		.loc 1 108 0
+ 615 05fc 488B45E8 		movq	-24(%rbp), %rax
+ 616 0600 488B5010 		movq	16(%rax), %rdx
+ 617 0604 8B45F4   		movl	-12(%rbp), %eax
+ 618 0607 4898     		cltq
+ 619 0609 4801D0   		addq	%rdx, %rax
+ 620 060c C60000   		movb	$0, (%rax)
+ 621 060f E9940300 		jmp	.L52
+ 621      00
+ 622              	.L51:
+ 109:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }else{
+ 110:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = true;
+ 623              		.loc 1 110 0
+ 624 0614 488B45E8 		movq	-24(%rbp), %rax
+ 625 0618 488B5010 		movq	16(%rax), %rdx
+ 626 061c 8B45F4   		movl	-12(%rbp), %eax
+ 627 061f 4898     		cltq
+ 628 0621 4801D0   		addq	%rdx, %rax
+ 629 0624 C60001   		movb	$1, (%rax)
+ 630 0627 E97C0300 		jmp	.L52
+ 630      00
+ 631              	.L48:
+ 111:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }
+ 112:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 113:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 114:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 /// east boundary
+ 115:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else if( i == (num_x -1)){
+ 632              		.loc 1 115 0
+ 633 062c 8B45E4   		movl	-28(%rbp), %eax
+ 634 062f 83E801   		subl	$1, %eax
+ 635 0632 3B45FC   		cmpl	-4(%rbp), %eax
+ 636 0635 0F851201 		jne	.L53
+ 636      0000
+ 116:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 637              		.loc 1 116 0
+ 638 063b 488B45E8 		movq	-24(%rbp), %rax
+ 639 063f 488B5008 		movq	8(%rax), %rdx
+ 640 0643 8B45F4   		movl	-12(%rbp), %eax
+ 641 0646 4898     		cltq
+ 642 0648 4801D0   		addq	%rdx, %rax
+ 643 064b C60001   		movb	$1, (%rax)
+ 117:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.e_rho;
+ 644              		.loc 1 117 0
+ 645 064e 488B45E8 		movq	-24(%rbp), %rax
+ 646 0652 488B4018 		movq	24(%rax), %rax
+ 647 0656 8B55F4   		movl	-12(%rbp), %edx
+ 648 0659 4863D2   		movslq	%edx, %rdx
+ 649 065c 48C1E203 		salq	$3, %rdx
+ 650 0660 4801C2   		addq	%rax, %rdx
+GAS LISTING /tmp/ccSoABb0.s 			page 16
+
+
+ 651 0663 488B45D8 		movq	-40(%rbp), %rax
+ 652 0667 F20F1040 		movsd	72(%rax), %xmm0
+ 652      48
+ 653 066c F20F1102 		movsd	%xmm0, (%rdx)
+ 118:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.e_u;
+ 654              		.loc 1 118 0
+ 655 0670 488B45E8 		movq	-24(%rbp), %rax
+ 656 0674 488B4020 		movq	32(%rax), %rax
+ 657 0678 8B55F4   		movl	-12(%rbp), %edx
+ 658 067b 4863D2   		movslq	%edx, %rdx
+ 659 067e 48C1E203 		salq	$3, %rdx
+ 660 0682 4801C2   		addq	%rax, %rdx
+ 661 0685 488B45D8 		movq	-40(%rbp), %rax
+ 662 0689 F20F1040 		movsd	80(%rax), %xmm0
+ 662      50
+ 663 068e F20F1102 		movsd	%xmm0, (%rdx)
+ 119:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.e_v;
+ 664              		.loc 1 119 0
+ 665 0692 488B45E8 		movq	-24(%rbp), %rax
+ 666 0696 488B4028 		movq	40(%rax), %rax
+ 667 069a 8B55F4   		movl	-12(%rbp), %edx
+ 668 069d 4863D2   		movslq	%edx, %rdx
+ 669 06a0 48C1E203 		salq	$3, %rdx
+ 670 06a4 4801C2   		addq	%rax, %rdx
+ 671 06a7 488B45D8 		movq	-40(%rbp), %rax
+ 672 06ab F20F1040 		movsd	88(%rax), %xmm0
+ 672      58
+ 673 06b0 F20F1102 		movsd	%xmm0, (%rdx)
+ 120:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.e_type_vel;
+ 674              		.loc 1 120 0
+ 675 06b4 488B45E8 		movq	-24(%rbp), %rax
+ 676 06b8 488B4038 		movq	56(%rax), %rax
+ 677 06bc 8B55F4   		movl	-12(%rbp), %edx
+ 678 06bf 4863D2   		movslq	%edx, %rdx
+ 679 06c2 48C1E202 		salq	$2, %rdx
+ 680 06c6 4801C2   		addq	%rax, %rdx
+ 681 06c9 488B45D8 		movq	-40(%rbp), %rax
+ 682 06cd 8B80A000 		movl	160(%rax), %eax
+ 682      0000
+ 683 06d3 8902     		movl	%eax, (%rdx)
+ 121:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.e_type_rho;
+ 684              		.loc 1 121 0
+ 685 06d5 488B45E8 		movq	-24(%rbp), %rax
+ 686 06d9 488B4030 		movq	48(%rax), %rax
+ 687 06dd 8B55F4   		movl	-12(%rbp), %edx
+ 688 06e0 4863D2   		movslq	%edx, %rdx
+ 689 06e3 48C1E202 		salq	$2, %rdx
+ 690 06e7 4801C2   		addq	%rax, %rdx
+ 691 06ea 488B45D8 		movq	-40(%rbp), %rax
+ 692 06ee 8B809000 		movl	144(%rax), %eax
+ 692      0000
+ 693 06f4 8902     		movl	%eax, (%rdx)
+ 122:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 123:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 124:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t - (num_x-2) ;
+ 694              		.loc 1 124 0
+ 695 06f6 488B45E8 		movq	-24(%rbp), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 17
+
+
+ 696 06fa 488B4040 		movq	64(%rax), %rax
+ 697 06fe 8B55F4   		movl	-12(%rbp), %edx
+ 698 0701 4863D2   		movslq	%edx, %rdx
+ 699 0704 48C1E202 		salq	$2, %rdx
+ 700 0708 4801D0   		addq	%rdx, %rax
+ 701 070b 8B55E4   		movl	-28(%rbp), %edx
+ 702 070e 8D4AFE   		leal	-2(%rdx), %ecx
+ 703 0711 8B55F4   		movl	-12(%rbp), %edx
+ 704 0714 29CA     		subl	%ecx, %edx
+ 705 0716 8910     		movl	%edx, (%rax)
+ 125:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t - 1;
+ 706              		.loc 1 125 0
+ 707 0718 488B45E8 		movq	-24(%rbp), %rax
+ 708 071c 488B4048 		movq	72(%rax), %rax
+ 709 0720 8B55F4   		movl	-12(%rbp), %edx
+ 710 0723 4863D2   		movslq	%edx, %rdx
+ 711 0726 48C1E202 		salq	$2, %rdx
+ 712 072a 4801D0   		addq	%rdx, %rax
+ 713 072d 8B55F4   		movl	-12(%rbp), %edx
+ 714 0730 83EA01   		subl	$1, %edx
+ 715 0733 8910     		movl	%edx, (%rax)
+ 126:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = false;
+ 716              		.loc 1 126 0
+ 717 0735 488B45E8 		movq	-24(%rbp), %rax
+ 718 0739 488B5010 		movq	16(%rax), %rdx
+ 719 073d 8B45F4   		movl	-12(%rbp), %eax
+ 720 0740 4898     		cltq
+ 721 0742 4801D0   		addq	%rdx, %rax
+ 722 0745 C60000   		movb	$0, (%rax)
+ 723 0748 E95B0200 		jmp	.L52
+ 723      00
+ 724              	.L53:
+ 127:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 128:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // south boundary
+ 129:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else if(j == 0){
+ 725              		.loc 1 129 0
+ 726 074d 837DF800 		cmpl	$0, -8(%rbp)
+ 727 0751 0F851A01 		jne	.L54
+ 727      0000
+ 130:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 728              		.loc 1 130 0
+ 729 0757 488B45E8 		movq	-24(%rbp), %rax
+ 730 075b 488B5008 		movq	8(%rax), %rdx
+ 731 075f 8B45F4   		movl	-12(%rbp), %eax
+ 732 0762 4898     		cltq
+ 733 0764 4801D0   		addq	%rdx, %rax
+ 734 0767 C60001   		movb	$1, (%rax)
+ 131:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.s_rho;
+ 735              		.loc 1 131 0
+ 736 076a 488B45E8 		movq	-24(%rbp), %rax
+ 737 076e 488B4018 		movq	24(%rax), %rax
+ 738 0772 8B55F4   		movl	-12(%rbp), %edx
+ 739 0775 4863D2   		movslq	%edx, %rdx
+ 740 0778 48C1E203 		salq	$3, %rdx
+ 741 077c 4801C2   		addq	%rax, %rdx
+ 742 077f 488B45D8 		movq	-40(%rbp), %rax
+ 743 0783 F20F1040 		movsd	40(%rax), %xmm0
+GAS LISTING /tmp/ccSoABb0.s 			page 18
+
+
+ 743      28
+ 744 0788 F20F1102 		movsd	%xmm0, (%rdx)
+ 132:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.s_u;
+ 745              		.loc 1 132 0
+ 746 078c 488B45E8 		movq	-24(%rbp), %rax
+ 747 0790 488B4020 		movq	32(%rax), %rax
+ 748 0794 8B55F4   		movl	-12(%rbp), %edx
+ 749 0797 4863D2   		movslq	%edx, %rdx
+ 750 079a 48C1E203 		salq	$3, %rdx
+ 751 079e 4801C2   		addq	%rax, %rdx
+ 752 07a1 488B45D8 		movq	-40(%rbp), %rax
+ 753 07a5 F20F1040 		movsd	48(%rax), %xmm0
+ 753      30
+ 754 07aa F20F1102 		movsd	%xmm0, (%rdx)
+ 133:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.s_v;
+ 755              		.loc 1 133 0
+ 756 07ae 488B45E8 		movq	-24(%rbp), %rax
+ 757 07b2 488B4028 		movq	40(%rax), %rax
+ 758 07b6 8B55F4   		movl	-12(%rbp), %edx
+ 759 07b9 4863D2   		movslq	%edx, %rdx
+ 760 07bc 48C1E203 		salq	$3, %rdx
+ 761 07c0 4801C2   		addq	%rax, %rdx
+ 762 07c3 488B45D8 		movq	-40(%rbp), %rax
+ 763 07c7 F20F1040 		movsd	56(%rax), %xmm0
+ 763      38
+ 764 07cc F20F1102 		movsd	%xmm0, (%rdx)
+ 134:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.s_type_vel;
+ 765              		.loc 1 134 0
+ 766 07d0 488B45E8 		movq	-24(%rbp), %rax
+ 767 07d4 488B4038 		movq	56(%rax), %rax
+ 768 07d8 8B55F4   		movl	-12(%rbp), %edx
+ 769 07db 4863D2   		movslq	%edx, %rdx
+ 770 07de 48C1E202 		salq	$2, %rdx
+ 771 07e2 4801C2   		addq	%rax, %rdx
+ 772 07e5 488B45D8 		movq	-40(%rbp), %rax
+ 773 07e9 8B809C00 		movl	156(%rax), %eax
+ 773      0000
+ 774 07ef 8902     		movl	%eax, (%rdx)
+ 135:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.s_type_rho;
+ 775              		.loc 1 135 0
+ 776 07f1 488B45E8 		movq	-24(%rbp), %rax
+ 777 07f5 488B4030 		movq	48(%rax), %rax
+ 778 07f9 8B55F4   		movl	-12(%rbp), %edx
+ 779 07fc 4863D2   		movslq	%edx, %rdx
+ 780 07ff 48C1E202 		salq	$2, %rdx
+ 781 0803 4801C2   		addq	%rax, %rdx
+ 782 0806 488B45D8 		movq	-40(%rbp), %rax
+ 783 080a 8B808C00 		movl	140(%rax), %eax
+ 783      0000
+ 784 0810 8902     		movl	%eax, (%rdx)
+ 136:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 137:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t + (num_y-2) *num_x;
+ 785              		.loc 1 137 0
+ 786 0812 488B45E8 		movq	-24(%rbp), %rax
+ 787 0816 488B4040 		movq	64(%rax), %rax
+ 788 081a 8B55F4   		movl	-12(%rbp), %edx
+ 789 081d 4863D2   		movslq	%edx, %rdx
+GAS LISTING /tmp/ccSoABb0.s 			page 19
+
+
+ 790 0820 48C1E202 		salq	$2, %rdx
+ 791 0824 4801D0   		addq	%rdx, %rax
+ 792 0827 8B55E0   		movl	-32(%rbp), %edx
+ 793 082a 83EA02   		subl	$2, %edx
+ 794 082d 89D1     		movl	%edx, %ecx
+ 795 082f 0FAF4DE4 		imull	-28(%rbp), %ecx
+ 796 0833 8B55F4   		movl	-12(%rbp), %edx
+ 797 0836 01CA     		addl	%ecx, %edx
+ 798 0838 8910     		movl	%edx, (%rax)
+ 138:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t + num_x;
+ 799              		.loc 1 138 0
+ 800 083a 488B45E8 		movq	-24(%rbp), %rax
+ 801 083e 488B4048 		movq	72(%rax), %rax
+ 802 0842 8B55F4   		movl	-12(%rbp), %edx
+ 803 0845 4863D2   		movslq	%edx, %rdx
+ 804 0848 48C1E202 		salq	$2, %rdx
+ 805 084c 4801D0   		addq	%rdx, %rax
+ 806 084f 8B4DF4   		movl	-12(%rbp), %ecx
+ 807 0852 8B55E4   		movl	-28(%rbp), %edx
+ 808 0855 01CA     		addl	%ecx, %edx
+ 809 0857 8910     		movl	%edx, (%rax)
+ 139:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 140:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = true;
+ 810              		.loc 1 140 0
+ 811 0859 488B45E8 		movq	-24(%rbp), %rax
+ 812 085d 488B5010 		movq	16(%rax), %rdx
+ 813 0861 8B45F4   		movl	-12(%rbp), %eax
+ 814 0864 4898     		cltq
+ 815 0866 4801D0   		addq	%rdx, %rax
+ 816 0869 C60001   		movb	$1, (%rax)
+ 817 086c E9370100 		jmp	.L52
+ 817      00
+ 818              	.L54:
+ 141:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 142:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             //north boundary
+ 143:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 144:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else if( j == (num_y-1)){
+ 819              		.loc 1 144 0
+ 820 0871 8B45E0   		movl	-32(%rbp), %eax
+ 821 0874 83E801   		subl	$1, %eax
+ 822 0877 3B45F8   		cmpl	-8(%rbp), %eax
+ 823 087a 0F851501 		jne	.L55
+ 823      0000
+ 145:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 824              		.loc 1 145 0
+ 825 0880 488B45E8 		movq	-24(%rbp), %rax
+ 826 0884 488B5008 		movq	8(%rax), %rdx
+ 827 0888 8B45F4   		movl	-12(%rbp), %eax
+ 828 088b 4898     		cltq
+ 829 088d 4801D0   		addq	%rdx, %rax
+ 830 0890 C60001   		movb	$1, (%rax)
+ 146:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.n_rho;
+ 831              		.loc 1 146 0
+ 832 0893 488B45E8 		movq	-24(%rbp), %rax
+ 833 0897 488B4018 		movq	24(%rax), %rax
+ 834 089b 8B55F4   		movl	-12(%rbp), %edx
+ 835 089e 4863D2   		movslq	%edx, %rdx
+GAS LISTING /tmp/ccSoABb0.s 			page 20
+
+
+ 836 08a1 48C1E203 		salq	$3, %rdx
+ 837 08a5 4801C2   		addq	%rax, %rdx
+ 838 08a8 488B45D8 		movq	-40(%rbp), %rax
+ 839 08ac F20F1040 		movsd	104(%rax), %xmm0
+ 839      68
+ 840 08b1 F20F1102 		movsd	%xmm0, (%rdx)
+ 147:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.n_u;
+ 841              		.loc 1 147 0
+ 842 08b5 488B45E8 		movq	-24(%rbp), %rax
+ 843 08b9 488B4020 		movq	32(%rax), %rax
+ 844 08bd 8B55F4   		movl	-12(%rbp), %edx
+ 845 08c0 4863D2   		movslq	%edx, %rdx
+ 846 08c3 48C1E203 		salq	$3, %rdx
+ 847 08c7 4801C2   		addq	%rax, %rdx
+ 848 08ca 488B45D8 		movq	-40(%rbp), %rax
+ 849 08ce F20F1040 		movsd	112(%rax), %xmm0
+ 849      70
+ 850 08d3 F20F1102 		movsd	%xmm0, (%rdx)
+ 148:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.n_v;
+ 851              		.loc 1 148 0
+ 852 08d7 488B45E8 		movq	-24(%rbp), %rax
+ 853 08db 488B4028 		movq	40(%rax), %rax
+ 854 08df 8B55F4   		movl	-12(%rbp), %edx
+ 855 08e2 4863D2   		movslq	%edx, %rdx
+ 856 08e5 48C1E203 		salq	$3, %rdx
+ 857 08e9 4801C2   		addq	%rax, %rdx
+ 858 08ec 488B45D8 		movq	-40(%rbp), %rax
+ 859 08f0 F20F1040 		movsd	120(%rax), %xmm0
+ 859      78
+ 860 08f5 F20F1102 		movsd	%xmm0, (%rdx)
+ 149:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.n_type_vel;
+ 861              		.loc 1 149 0
+ 862 08f9 488B45E8 		movq	-24(%rbp), %rax
+ 863 08fd 488B4038 		movq	56(%rax), %rax
+ 864 0901 8B55F4   		movl	-12(%rbp), %edx
+ 865 0904 4863D2   		movslq	%edx, %rdx
+ 866 0907 48C1E202 		salq	$2, %rdx
+ 867 090b 4801C2   		addq	%rax, %rdx
+ 868 090e 488B45D8 		movq	-40(%rbp), %rax
+ 869 0912 8B80A400 		movl	164(%rax), %eax
+ 869      0000
+ 870 0918 8902     		movl	%eax, (%rdx)
+ 150:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.n_type_rho;
+ 871              		.loc 1 150 0
+ 872 091a 488B45E8 		movq	-24(%rbp), %rax
+ 873 091e 488B4030 		movq	48(%rax), %rax
+ 874 0922 8B55F4   		movl	-12(%rbp), %edx
+ 875 0925 4863D2   		movslq	%edx, %rdx
+ 876 0928 48C1E202 		salq	$2, %rdx
+ 877 092c 4801C2   		addq	%rax, %rdx
+ 878 092f 488B45D8 		movq	-40(%rbp), %rax
+ 879 0933 8B809400 		movl	148(%rax), %eax
+ 879      0000
+ 880 0939 8902     		movl	%eax, (%rdx)
+ 151:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 152:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t - (num_y-2)* num_x;
+ 881              		.loc 1 152 0
+GAS LISTING /tmp/ccSoABb0.s 			page 21
+
+
+ 882 093b 488B45E8 		movq	-24(%rbp), %rax
+ 883 093f 488B4040 		movq	64(%rax), %rax
+ 884 0943 8B55F4   		movl	-12(%rbp), %edx
+ 885 0946 4863D2   		movslq	%edx, %rdx
+ 886 0949 48C1E202 		salq	$2, %rdx
+ 887 094d 4801D0   		addq	%rdx, %rax
+ 888 0950 8B55E0   		movl	-32(%rbp), %edx
+ 889 0953 83EA02   		subl	$2, %edx
+ 890 0956 0FAF55E4 		imull	-28(%rbp), %edx
+ 891 095a 8B4DF4   		movl	-12(%rbp), %ecx
+ 892 095d 29D1     		subl	%edx, %ecx
+ 893 095f 89CA     		movl	%ecx, %edx
+ 894 0961 8910     		movl	%edx, (%rax)
+ 153:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t - num_x;
+ 895              		.loc 1 153 0
+ 896 0963 488B45E8 		movq	-24(%rbp), %rax
+ 897 0967 488B4048 		movq	72(%rax), %rax
+ 898 096b 8B55F4   		movl	-12(%rbp), %edx
+ 899 096e 4863D2   		movslq	%edx, %rdx
+ 900 0971 48C1E202 		salq	$2, %rdx
+ 901 0975 4801C2   		addq	%rax, %rdx
+ 902 0978 8B45F4   		movl	-12(%rbp), %eax
+ 903 097b 2B45E4   		subl	-28(%rbp), %eax
+ 904 097e 8902     		movl	%eax, (%rdx)
+ 154:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = false;
+ 905              		.loc 1 154 0
+ 906 0980 488B45E8 		movq	-24(%rbp), %rax
+ 907 0984 488B5010 		movq	16(%rax), %rdx
+ 908 0988 8B45F4   		movl	-12(%rbp), %eax
+ 909 098b 4898     		cltq
+ 910 098d 4801D0   		addq	%rdx, %rax
+ 911 0990 C60000   		movb	$0, (%rax)
+ 912 0993 EB13     		jmp	.L52
+ 913              	.L55:
+ 155:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 156:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else {
+ 157:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = false;
+ 914              		.loc 1 157 0
+ 915 0995 488B45E8 		movq	-24(%rbp), %rax
+ 916 0999 488B5008 		movq	8(%rax), %rdx
+ 917 099d 8B45F4   		movl	-12(%rbp), %eax
+ 918 09a0 4898     		cltq
+ 919 09a2 4801D0   		addq	%rdx, %rax
+ 920 09a5 C60000   		movb	$0, (%rax)
+ 921              	.L52:
+ 158:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }
+ 159:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 160:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 161:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 162:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             t++;
+ 922              		.loc 1 162 0 discriminator 2
+ 923 09a8 8345F401 		addl	$1, -12(%rbp)
+  86:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 924              		.loc 1 86 0 discriminator 2
+ 925 09ac 8345FC01 		addl	$1, -4(%rbp)
+ 926 09b0 E9E8FAFF 		jmp	.L56
+ 926      FF
+GAS LISTING /tmp/ccSoABb0.s 			page 22
+
+
+ 927              	.L47:
+ 928              	.LBE7:
+ 929              	.LBE6:
+  85:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         for (int i =0; i < num_x; i++){
+ 930              		.loc 1 85 0 discriminator 2
+ 931 09b5 8345F801 		addl	$1, -8(%rbp)
+ 932 09b9 E9CCFAFF 		jmp	.L57
+ 932      FF
+ 933              	.L58:
+ 934              	.LBE5:
+ 163:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         }
+ 164:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 165:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 166:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     }
+ 167:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** }
+ 935              		.loc 1 167 0
+ 936 09be 90       		nop
+ 937 09bf 5D       		popq	%rbp
+ 938              		.cfi_def_cfa 7, 8
+ 939 09c0 C3       		ret
+ 940              		.cfi_endproc
+ 941              	.LFE18:
+ 943 09c1 90       		.align 2
+ 944              		.globl	_ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs
+ 946              	_ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs:
+ 947              	.LFB19:
+ 168:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** void Boundary_Conditions::assign_boundary_conditions(int num_x, int num_y, quad_bcs _bc){
+ 948              		.loc 1 168 0
+ 949              		.cfi_startproc
+ 950 09c2 55       		pushq	%rbp
+ 951              		.cfi_def_cfa_offset 16
+ 952              		.cfi_offset 6, -16
+ 953 09c3 4889E5   		movq	%rsp, %rbp
+ 954              		.cfi_def_cfa_register 6
+ 955 09c6 48897DE8 		movq	%rdi, -24(%rbp)
+ 956 09ca 8975E4   		movl	%esi, -28(%rbp)
+ 957 09cd 8955E0   		movl	%edx, -32(%rbp)
+ 958 09d0 48894DD8 		movq	%rcx, -40(%rbp)
+ 169:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 170:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 171:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     /// this method should be user defined to reflect the geometry of the problem
+ 172:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     /// currently set up for quad problem domain-> potential overload of this operator.
+ 173:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     int t = 0;
+ 959              		.loc 1 173 0
+ 960 09d4 C745F400 		movl	$0, -12(%rbp)
+ 960      000000
+ 961              	.LBB8:
+ 174:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 175:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     //lid driven cavity conditions
+ 176:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 177:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         for( int j=0; j < num_y; j++){
+ 962              		.loc 1 177 0
+ 963 09db C745F800 		movl	$0, -8(%rbp)
+ 963      000000
+ 964              	.L74:
+ 965              		.loc 1 177 0 is_stmt 0 discriminator 1
+ 966 09e2 8B45F8   		movl	-8(%rbp), %eax
+GAS LISTING /tmp/ccSoABb0.s 			page 23
+
+
+ 967 09e5 3B45E0   		cmpl	-32(%rbp), %eax
+ 968 09e8 0F8D2C05 		jge	.L75
+ 968      0000
+ 969              	.LBB9:
+ 970              	.LBB10:
+ 178:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             for (int i =0; i < num_x; i++){
+ 971              		.loc 1 178 0 is_stmt 1
+ 972 09ee C745FC00 		movl	$0, -4(%rbp)
+ 972      000000
+ 973              	.L73:
+ 974              		.loc 1 178 0 is_stmt 0 discriminator 1
+ 975 09f5 8B45FC   		movl	-4(%rbp), %eax
+ 976 09f8 3B45E4   		cmpl	-28(%rbp), %eax
+ 977 09fb 0F8D1005 		jge	.L61
+ 977      0000
+ 179:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****              // West boundary
+ 180:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             if( i ==0){
+ 978              		.loc 1 180 0 is_stmt 1
+ 979 0a01 837DFC00 		cmpl	$0, -4(%rbp)
+ 980 0a05 0F854C01 		jne	.L62
+ 980      0000
+ 181:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 981              		.loc 1 181 0
+ 982 0a0b 488B45E8 		movq	-24(%rbp), %rax
+ 983 0a0f 488B5008 		movq	8(%rax), %rdx
+ 984 0a13 8B45F4   		movl	-12(%rbp), %eax
+ 985 0a16 4898     		cltq
+ 986 0a18 4801D0   		addq	%rdx, %rax
+ 987 0a1b C60001   		movb	$1, (%rax)
+ 182:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.w_rho;
+ 988              		.loc 1 182 0
+ 989 0a1e 488B45E8 		movq	-24(%rbp), %rax
+ 990 0a22 488B4018 		movq	24(%rax), %rax
+ 991 0a26 8B55F4   		movl	-12(%rbp), %edx
+ 992 0a29 4863D2   		movslq	%edx, %rdx
+ 993 0a2c 48C1E203 		salq	$3, %rdx
+ 994 0a30 4801C2   		addq	%rax, %rdx
+ 995 0a33 488B45D8 		movq	-40(%rbp), %rax
+ 996 0a37 F20F1040 		movsd	8(%rax), %xmm0
+ 996      08
+ 997 0a3c F20F1102 		movsd	%xmm0, (%rdx)
+ 183:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.w_u;
+ 998              		.loc 1 183 0
+ 999 0a40 488B45E8 		movq	-24(%rbp), %rax
+ 1000 0a44 488B4020 		movq	32(%rax), %rax
+ 1001 0a48 8B55F4   		movl	-12(%rbp), %edx
+ 1002 0a4b 4863D2   		movslq	%edx, %rdx
+ 1003 0a4e 48C1E203 		salq	$3, %rdx
+ 1004 0a52 4801C2   		addq	%rax, %rdx
+ 1005 0a55 488B45D8 		movq	-40(%rbp), %rax
+ 1006 0a59 F20F1040 		movsd	16(%rax), %xmm0
+ 1006      10
+ 1007 0a5e F20F1102 		movsd	%xmm0, (%rdx)
+ 184:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.w_v;
+ 1008              		.loc 1 184 0
+ 1009 0a62 488B45E8 		movq	-24(%rbp), %rax
+ 1010 0a66 488B4028 		movq	40(%rax), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 24
+
+
+ 1011 0a6a 8B55F4   		movl	-12(%rbp), %edx
+ 1012 0a6d 4863D2   		movslq	%edx, %rdx
+ 1013 0a70 48C1E203 		salq	$3, %rdx
+ 1014 0a74 4801C2   		addq	%rax, %rdx
+ 1015 0a77 488B45D8 		movq	-40(%rbp), %rax
+ 1016 0a7b F20F1040 		movsd	24(%rax), %xmm0
+ 1016      18
+ 1017 0a80 F20F1102 		movsd	%xmm0, (%rdx)
+ 185:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.w_type;
+ 1018              		.loc 1 185 0
+ 1019 0a84 488B45E8 		movq	-24(%rbp), %rax
+ 1020 0a88 488B4038 		movq	56(%rax), %rax
+ 1021 0a8c 8B55F4   		movl	-12(%rbp), %edx
+ 1022 0a8f 4863D2   		movslq	%edx, %rdx
+ 1023 0a92 48C1E202 		salq	$2, %rdx
+ 1024 0a96 4801C2   		addq	%rax, %rdx
+ 1025 0a99 488B45D8 		movq	-40(%rbp), %rax
+ 1026 0a9d 8B808800 		movl	136(%rax), %eax
+ 1026      0000
+ 1027 0aa3 8902     		movl	%eax, (%rdx)
+ 186:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.w_type;
+ 1028              		.loc 1 186 0
+ 1029 0aa5 488B45E8 		movq	-24(%rbp), %rax
+ 1030 0aa9 488B4030 		movq	48(%rax), %rax
+ 1031 0aad 8B55F4   		movl	-12(%rbp), %edx
+ 1032 0ab0 4863D2   		movslq	%edx, %rdx
+ 1033 0ab3 48C1E202 		salq	$2, %rdx
+ 1034 0ab7 4801C2   		addq	%rax, %rdx
+ 1035 0aba 488B45D8 		movq	-40(%rbp), %rax
+ 1036 0abe 8B808800 		movl	136(%rax), %eax
+ 1036      0000
+ 1037 0ac4 8902     		movl	%eax, (%rdx)
+ 187:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 188:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = (num_x-2)  + t;
+ 1038              		.loc 1 188 0
+ 1039 0ac6 488B45E8 		movq	-24(%rbp), %rax
+ 1040 0aca 488B4040 		movq	64(%rax), %rax
+ 1041 0ace 8B55F4   		movl	-12(%rbp), %edx
+ 1042 0ad1 4863D2   		movslq	%edx, %rdx
+ 1043 0ad4 48C1E202 		salq	$2, %rdx
+ 1044 0ad8 4801D0   		addq	%rdx, %rax
+ 1045 0adb 8B55E4   		movl	-28(%rbp), %edx
+ 1046 0ade 8D4AFE   		leal	-2(%rdx), %ecx
+ 1047 0ae1 8B55F4   		movl	-12(%rbp), %edx
+ 1048 0ae4 01CA     		addl	%ecx, %edx
+ 1049 0ae6 8910     		movl	%edx, (%rax)
+ 189:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t + num_y;
+ 1050              		.loc 1 189 0
+ 1051 0ae8 488B45E8 		movq	-24(%rbp), %rax
+ 1052 0aec 488B4048 		movq	72(%rax), %rax
+ 1053 0af0 8B55F4   		movl	-12(%rbp), %edx
+ 1054 0af3 4863D2   		movslq	%edx, %rdx
+ 1055 0af6 48C1E202 		salq	$2, %rdx
+ 1056 0afa 4801D0   		addq	%rdx, %rax
+ 1057 0afd 8B4DF4   		movl	-12(%rbp), %ecx
+ 1058 0b00 8B55E0   		movl	-32(%rbp), %edx
+ 1059 0b03 01CA     		addl	%ecx, %edx
+GAS LISTING /tmp/ccSoABb0.s 			page 25
+
+
+ 1060 0b05 8910     		movl	%edx, (%rax)
+ 190:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 191:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                  if (j ==0){
+ 1061              		.loc 1 191 0
+ 1062 0b07 837DF800 		cmpl	$0, -8(%rbp)
+ 1063 0b0b 7515     		jne	.L63
+ 192:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = false;
+ 1064              		.loc 1 192 0
+ 1065 0b0d 488B45E8 		movq	-24(%rbp), %rax
+ 1066 0b11 488B5010 		movq	16(%rax), %rdx
+ 1067 0b15 8B45F4   		movl	-12(%rbp), %eax
+ 1068 0b18 4898     		cltq
+ 1069 0b1a 4801D0   		addq	%rdx, %rax
+ 1070 0b1d C60000   		movb	$0, (%rax)
+ 1071 0b20 EB48     		jmp	.L66
+ 1072              	.L63:
+ 193:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }else if( j == (num_y-1)){
+ 1073              		.loc 1 193 0
+ 1074 0b22 8B45E0   		movl	-32(%rbp), %eax
+ 1075 0b25 83E801   		subl	$1, %eax
+ 1076 0b28 3B45F8   		cmpl	-8(%rbp), %eax
+ 1077 0b2b 7515     		jne	.L65
+ 194:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = false;
+ 1078              		.loc 1 194 0
+ 1079 0b2d 488B45E8 		movq	-24(%rbp), %rax
+ 1080 0b31 488B5010 		movq	16(%rax), %rdx
+ 1081 0b35 8B45F4   		movl	-12(%rbp), %eax
+ 1082 0b38 4898     		cltq
+ 1083 0b3a 4801D0   		addq	%rdx, %rax
+ 1084 0b3d C60000   		movb	$0, (%rax)
+ 1085 0b40 EB28     		jmp	.L66
+ 1086              	.L65:
+ 195:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }else{
+ 196:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc_include[t] = true;
+ 1087              		.loc 1 196 0
+ 1088 0b42 488B45E8 		movq	-24(%rbp), %rax
+ 1089 0b46 488B5010 		movq	16(%rax), %rdx
+ 1090 0b4a 8B45F4   		movl	-12(%rbp), %eax
+ 1091 0b4d 4898     		cltq
+ 1092 0b4f 4801D0   		addq	%rdx, %rax
+ 1093 0b52 C60001   		movb	$1, (%rax)
+ 1094 0b55 EB13     		jmp	.L66
+ 1095              	.L62:
+ 197:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 }
+ 198:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 199:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 200:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else{
+ 201:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] =false;
+ 1096              		.loc 1 201 0
+ 1097 0b57 488B45E8 		movq	-24(%rbp), %rax
+ 1098 0b5b 488B5008 		movq	8(%rax), %rdx
+ 1099 0b5f 8B45F4   		movl	-12(%rbp), %eax
+ 1100 0b62 4898     		cltq
+ 1101 0b64 4801D0   		addq	%rdx, %rax
+ 1102 0b67 C60000   		movb	$0, (%rax)
+ 1103              	.L66:
+ 202:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }
+GAS LISTING /tmp/ccSoABb0.s 			page 26
+
+
+ 203:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 204:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // east boundary
+ 205:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             if ( i == (num_x -1)){
+ 1104              		.loc 1 205 0
+ 1105 0b6a 8B45E4   		movl	-28(%rbp), %eax
+ 1106 0b6d 83E801   		subl	$1, %eax
+ 1107 0b70 3B45FC   		cmpl	-4(%rbp), %eax
+ 1108 0b73 0F850F01 		jne	.L67
+ 1108      0000
+ 206:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 1109              		.loc 1 206 0
+ 1110 0b79 488B45E8 		movq	-24(%rbp), %rax
+ 1111 0b7d 488B5008 		movq	8(%rax), %rdx
+ 1112 0b81 8B45F4   		movl	-12(%rbp), %eax
+ 1113 0b84 4898     		cltq
+ 1114 0b86 4801D0   		addq	%rdx, %rax
+ 1115 0b89 C60001   		movb	$1, (%rax)
+ 207:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.e_rho;
+ 1116              		.loc 1 207 0
+ 1117 0b8c 488B45E8 		movq	-24(%rbp), %rax
+ 1118 0b90 488B4018 		movq	24(%rax), %rax
+ 1119 0b94 8B55F4   		movl	-12(%rbp), %edx
+ 1120 0b97 4863D2   		movslq	%edx, %rdx
+ 1121 0b9a 48C1E203 		salq	$3, %rdx
+ 1122 0b9e 4801C2   		addq	%rax, %rdx
+ 1123 0ba1 488B45D8 		movq	-40(%rbp), %rax
+ 1124 0ba5 F20F1040 		movsd	72(%rax), %xmm0
+ 1124      48
+ 1125 0baa F20F1102 		movsd	%xmm0, (%rdx)
+ 208:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.e_u;
+ 1126              		.loc 1 208 0
+ 1127 0bae 488B45E8 		movq	-24(%rbp), %rax
+ 1128 0bb2 488B4020 		movq	32(%rax), %rax
+ 1129 0bb6 8B55F4   		movl	-12(%rbp), %edx
+ 1130 0bb9 4863D2   		movslq	%edx, %rdx
+ 1131 0bbc 48C1E203 		salq	$3, %rdx
+ 1132 0bc0 4801C2   		addq	%rax, %rdx
+ 1133 0bc3 488B45D8 		movq	-40(%rbp), %rax
+ 1134 0bc7 F20F1040 		movsd	80(%rax), %xmm0
+ 1134      50
+ 1135 0bcc F20F1102 		movsd	%xmm0, (%rdx)
+ 209:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.e_v;
+ 1136              		.loc 1 209 0
+ 1137 0bd0 488B45E8 		movq	-24(%rbp), %rax
+ 1138 0bd4 488B4028 		movq	40(%rax), %rax
+ 1139 0bd8 8B55F4   		movl	-12(%rbp), %edx
+ 1140 0bdb 4863D2   		movslq	%edx, %rdx
+ 1141 0bde 48C1E203 		salq	$3, %rdx
+ 1142 0be2 4801C2   		addq	%rax, %rdx
+ 1143 0be5 488B45D8 		movq	-40(%rbp), %rax
+ 1144 0be9 F20F1040 		movsd	88(%rax), %xmm0
+ 1144      58
+ 1145 0bee F20F1102 		movsd	%xmm0, (%rdx)
+ 210:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.e_type;
+ 1146              		.loc 1 210 0
+ 1147 0bf2 488B45E8 		movq	-24(%rbp), %rax
+ 1148 0bf6 488B4038 		movq	56(%rax), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 27
+
+
+ 1149 0bfa 8B55F4   		movl	-12(%rbp), %edx
+ 1150 0bfd 4863D2   		movslq	%edx, %rdx
+ 1151 0c00 48C1E202 		salq	$2, %rdx
+ 1152 0c04 4801C2   		addq	%rax, %rdx
+ 1153 0c07 488B45D8 		movq	-40(%rbp), %rax
+ 1154 0c0b 8B809000 		movl	144(%rax), %eax
+ 1154      0000
+ 1155 0c11 8902     		movl	%eax, (%rdx)
+ 211:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.e_type;
+ 1156              		.loc 1 211 0
+ 1157 0c13 488B45E8 		movq	-24(%rbp), %rax
+ 1158 0c17 488B4030 		movq	48(%rax), %rax
+ 1159 0c1b 8B55F4   		movl	-12(%rbp), %edx
+ 1160 0c1e 4863D2   		movslq	%edx, %rdx
+ 1161 0c21 48C1E202 		salq	$2, %rdx
+ 1162 0c25 4801C2   		addq	%rax, %rdx
+ 1163 0c28 488B45D8 		movq	-40(%rbp), %rax
+ 1164 0c2c 8B809000 		movl	144(%rax), %eax
+ 1164      0000
+ 1165 0c32 8902     		movl	%eax, (%rdx)
+ 212:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 213:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 214:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t - (num_x-2) ;
+ 1166              		.loc 1 214 0
+ 1167 0c34 488B45E8 		movq	-24(%rbp), %rax
+ 1168 0c38 488B4040 		movq	64(%rax), %rax
+ 1169 0c3c 8B55F4   		movl	-12(%rbp), %edx
+ 1170 0c3f 4863D2   		movslq	%edx, %rdx
+ 1171 0c42 48C1E202 		salq	$2, %rdx
+ 1172 0c46 4801D0   		addq	%rdx, %rax
+ 1173 0c49 8B55E4   		movl	-28(%rbp), %edx
+ 1174 0c4c 8D4AFE   		leal	-2(%rdx), %ecx
+ 1175 0c4f 8B55F4   		movl	-12(%rbp), %edx
+ 1176 0c52 29CA     		subl	%ecx, %edx
+ 1177 0c54 8910     		movl	%edx, (%rax)
+ 215:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t - num_y;
+ 1178              		.loc 1 215 0
+ 1179 0c56 488B45E8 		movq	-24(%rbp), %rax
+ 1180 0c5a 488B4048 		movq	72(%rax), %rax
+ 1181 0c5e 8B55F4   		movl	-12(%rbp), %edx
+ 1182 0c61 4863D2   		movslq	%edx, %rdx
+ 1183 0c64 48C1E202 		salq	$2, %rdx
+ 1184 0c68 4801C2   		addq	%rax, %rdx
+ 1185 0c6b 8B45F4   		movl	-12(%rbp), %eax
+ 1186 0c6e 2B45E0   		subl	-32(%rbp), %eax
+ 1187 0c71 8902     		movl	%eax, (%rdx)
+ 216:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 217:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = true;
+ 1188              		.loc 1 217 0
+ 1189 0c73 488B45E8 		movq	-24(%rbp), %rax
+ 1190 0c77 488B5010 		movq	16(%rax), %rdx
+ 1191 0c7b 8B45F4   		movl	-12(%rbp), %eax
+ 1192 0c7e 4898     		cltq
+ 1193 0c80 4801D0   		addq	%rdx, %rax
+ 1194 0c83 C60001   		movb	$1, (%rax)
+ 1195 0c86 EB13     		jmp	.L68
+ 1196              	.L67:
+GAS LISTING /tmp/ccSoABb0.s 			page 28
+
+
+ 218:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 219:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else {
+ 220:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                     bc[t] = false;
+ 1197              		.loc 1 220 0
+ 1198 0c88 488B45E8 		movq	-24(%rbp), %rax
+ 1199 0c8c 488B5008 		movq	8(%rax), %rdx
+ 1200 0c90 8B45F4   		movl	-12(%rbp), %eax
+ 1201 0c93 4898     		cltq
+ 1202 0c95 4801D0   		addq	%rdx, %rax
+ 1203 0c98 C60000   		movb	$0, (%rax)
+ 1204              	.L68:
+ 221:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }
+ 222:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 223:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // south boundary
+ 224:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             if(j == 0){
+ 1205              		.loc 1 224 0
+ 1206 0c9b 837DF800 		cmpl	$0, -8(%rbp)
+ 1207 0c9f 0F851501 		jne	.L69
+ 1207      0000
+ 225:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 1208              		.loc 1 225 0
+ 1209 0ca5 488B45E8 		movq	-24(%rbp), %rax
+ 1210 0ca9 488B5008 		movq	8(%rax), %rdx
+ 1211 0cad 8B45F4   		movl	-12(%rbp), %eax
+ 1212 0cb0 4898     		cltq
+ 1213 0cb2 4801D0   		addq	%rdx, %rax
+ 1214 0cb5 C60001   		movb	$1, (%rax)
+ 226:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.s_rho;
+ 1215              		.loc 1 226 0
+ 1216 0cb8 488B45E8 		movq	-24(%rbp), %rax
+ 1217 0cbc 488B4018 		movq	24(%rax), %rax
+ 1218 0cc0 8B55F4   		movl	-12(%rbp), %edx
+ 1219 0cc3 4863D2   		movslq	%edx, %rdx
+ 1220 0cc6 48C1E203 		salq	$3, %rdx
+ 1221 0cca 4801C2   		addq	%rax, %rdx
+ 1222 0ccd 488B45D8 		movq	-40(%rbp), %rax
+ 1223 0cd1 F20F1040 		movsd	40(%rax), %xmm0
+ 1223      28
+ 1224 0cd6 F20F1102 		movsd	%xmm0, (%rdx)
+ 227:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.s_u;
+ 1225              		.loc 1 227 0
+ 1226 0cda 488B45E8 		movq	-24(%rbp), %rax
+ 1227 0cde 488B4020 		movq	32(%rax), %rax
+ 1228 0ce2 8B55F4   		movl	-12(%rbp), %edx
+ 1229 0ce5 4863D2   		movslq	%edx, %rdx
+ 1230 0ce8 48C1E203 		salq	$3, %rdx
+ 1231 0cec 4801C2   		addq	%rax, %rdx
+ 1232 0cef 488B45D8 		movq	-40(%rbp), %rax
+ 1233 0cf3 F20F1040 		movsd	48(%rax), %xmm0
+ 1233      30
+ 1234 0cf8 F20F1102 		movsd	%xmm0, (%rdx)
+ 228:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.s_v;
+ 1235              		.loc 1 228 0
+ 1236 0cfc 488B45E8 		movq	-24(%rbp), %rax
+ 1237 0d00 488B4028 		movq	40(%rax), %rax
+ 1238 0d04 8B55F4   		movl	-12(%rbp), %edx
+ 1239 0d07 4863D2   		movslq	%edx, %rdx
+GAS LISTING /tmp/ccSoABb0.s 			page 29
+
+
+ 1240 0d0a 48C1E203 		salq	$3, %rdx
+ 1241 0d0e 4801C2   		addq	%rax, %rdx
+ 1242 0d11 488B45D8 		movq	-40(%rbp), %rax
+ 1243 0d15 F20F1040 		movsd	56(%rax), %xmm0
+ 1243      38
+ 1244 0d1a F20F1102 		movsd	%xmm0, (%rdx)
+ 229:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.s_type;
+ 1245              		.loc 1 229 0
+ 1246 0d1e 488B45E8 		movq	-24(%rbp), %rax
+ 1247 0d22 488B4038 		movq	56(%rax), %rax
+ 1248 0d26 8B55F4   		movl	-12(%rbp), %edx
+ 1249 0d29 4863D2   		movslq	%edx, %rdx
+ 1250 0d2c 48C1E202 		salq	$2, %rdx
+ 1251 0d30 4801C2   		addq	%rax, %rdx
+ 1252 0d33 488B45D8 		movq	-40(%rbp), %rax
+ 1253 0d37 8B808C00 		movl	140(%rax), %eax
+ 1253      0000
+ 1254 0d3d 8902     		movl	%eax, (%rdx)
+ 230:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.s_type;
+ 1255              		.loc 1 230 0
+ 1256 0d3f 488B45E8 		movq	-24(%rbp), %rax
+ 1257 0d43 488B4030 		movq	48(%rax), %rax
+ 1258 0d47 8B55F4   		movl	-12(%rbp), %edx
+ 1259 0d4a 4863D2   		movslq	%edx, %rdx
+ 1260 0d4d 48C1E202 		salq	$2, %rdx
+ 1261 0d51 4801C2   		addq	%rax, %rdx
+ 1262 0d54 488B45D8 		movq	-40(%rbp), %rax
+ 1263 0d58 8B808C00 		movl	140(%rax), %eax
+ 1263      0000
+ 1264 0d5e 8902     		movl	%eax, (%rdx)
+ 231:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 232:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t + (num_y-2) *num_x;
+ 1265              		.loc 1 232 0
+ 1266 0d60 488B45E8 		movq	-24(%rbp), %rax
+ 1267 0d64 488B4040 		movq	64(%rax), %rax
+ 1268 0d68 8B55F4   		movl	-12(%rbp), %edx
+ 1269 0d6b 4863D2   		movslq	%edx, %rdx
+ 1270 0d6e 48C1E202 		salq	$2, %rdx
+ 1271 0d72 4801D0   		addq	%rdx, %rax
+ 1272 0d75 8B55E0   		movl	-32(%rbp), %edx
+ 1273 0d78 83EA02   		subl	$2, %edx
+ 1274 0d7b 89D1     		movl	%edx, %ecx
+ 1275 0d7d 0FAF4DE4 		imull	-28(%rbp), %ecx
+ 1276 0d81 8B55F4   		movl	-12(%rbp), %edx
+ 1277 0d84 01CA     		addl	%ecx, %edx
+ 1278 0d86 8910     		movl	%edx, (%rax)
+ 233:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t + 1;
+ 1279              		.loc 1 233 0
+ 1280 0d88 488B45E8 		movq	-24(%rbp), %rax
+ 1281 0d8c 488B4048 		movq	72(%rax), %rax
+ 1282 0d90 8B55F4   		movl	-12(%rbp), %edx
+ 1283 0d93 4863D2   		movslq	%edx, %rdx
+ 1284 0d96 48C1E202 		salq	$2, %rdx
+ 1285 0d9a 4801D0   		addq	%rdx, %rax
+ 1286 0d9d 8B55F4   		movl	-12(%rbp), %edx
+ 1287 0da0 83C201   		addl	$1, %edx
+ 1288 0da3 8910     		movl	%edx, (%rax)
+GAS LISTING /tmp/ccSoABb0.s 			page 30
+
+
+ 234:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 235:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = true;
+ 1289              		.loc 1 235 0
+ 1290 0da5 488B45E8 		movq	-24(%rbp), %rax
+ 1291 0da9 488B5010 		movq	16(%rax), %rdx
+ 1292 0dad 8B45F4   		movl	-12(%rbp), %eax
+ 1293 0db0 4898     		cltq
+ 1294 0db2 4801D0   		addq	%rdx, %rax
+ 1295 0db5 C60001   		movb	$1, (%rax)
+ 1296 0db8 EB13     		jmp	.L70
+ 1297              	.L69:
+ 236:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 237:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 238:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else{
+ 239:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = false;
+ 1298              		.loc 1 239 0
+ 1299 0dba 488B45E8 		movq	-24(%rbp), %rax
+ 1300 0dbe 488B5008 		movq	8(%rax), %rdx
+ 1301 0dc2 8B45F4   		movl	-12(%rbp), %eax
+ 1302 0dc5 4898     		cltq
+ 1303 0dc7 4801D0   		addq	%rdx, %rax
+ 1304 0dca C60000   		movb	$0, (%rax)
+ 1305              	.L70:
+ 240:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }
+ 241:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 242:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             // north boundary
+ 243:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             if( j == (num_y-1)){
+ 1306              		.loc 1 243 0
+ 1307 0dcd 8B45E0   		movl	-32(%rbp), %eax
+ 1308 0dd0 83E801   		subl	$1, %eax
+ 1309 0dd3 3B45F8   		cmpl	-8(%rbp), %eax
+ 1310 0dd6 0F851501 		jne	.L71
+ 1310      0000
+ 244:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = true;
+ 1311              		.loc 1 244 0
+ 1312 0ddc 488B45E8 		movq	-24(%rbp), %rax
+ 1313 0de0 488B5008 		movq	8(%rax), %rdx
+ 1314 0de4 8B45F4   		movl	-12(%rbp), %eax
+ 1315 0de7 4898     		cltq
+ 1316 0de9 4801D0   		addq	%rdx, %rax
+ 1317 0dec C60001   		movb	$1, (%rax)
+ 245:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 rho[t] = _bc.n_rho;
+ 1318              		.loc 1 245 0
+ 1319 0def 488B45E8 		movq	-24(%rbp), %rax
+ 1320 0df3 488B4018 		movq	24(%rax), %rax
+ 1321 0df7 8B55F4   		movl	-12(%rbp), %edx
+ 1322 0dfa 4863D2   		movslq	%edx, %rdx
+ 1323 0dfd 48C1E203 		salq	$3, %rdx
+ 1324 0e01 4801C2   		addq	%rax, %rdx
+ 1325 0e04 488B45D8 		movq	-40(%rbp), %rax
+ 1326 0e08 F20F1040 		movsd	104(%rax), %xmm0
+ 1326      68
+ 1327 0e0d F20F1102 		movsd	%xmm0, (%rdx)
+ 246:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 u[t] = _bc.n_u;
+ 1328              		.loc 1 246 0
+ 1329 0e11 488B45E8 		movq	-24(%rbp), %rax
+ 1330 0e15 488B4020 		movq	32(%rax), %rax
+GAS LISTING /tmp/ccSoABb0.s 			page 31
+
+
+ 1331 0e19 8B55F4   		movl	-12(%rbp), %edx
+ 1332 0e1c 4863D2   		movslq	%edx, %rdx
+ 1333 0e1f 48C1E203 		salq	$3, %rdx
+ 1334 0e23 4801C2   		addq	%rax, %rdx
+ 1335 0e26 488B45D8 		movq	-40(%rbp), %rax
+ 1336 0e2a F20F1040 		movsd	112(%rax), %xmm0
+ 1336      70
+ 1337 0e2f F20F1102 		movsd	%xmm0, (%rdx)
+ 247:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 v[t] = _bc.n_v;
+ 1338              		.loc 1 247 0
+ 1339 0e33 488B45E8 		movq	-24(%rbp), %rax
+ 1340 0e37 488B4028 		movq	40(%rax), %rax
+ 1341 0e3b 8B55F4   		movl	-12(%rbp), %edx
+ 1342 0e3e 4863D2   		movslq	%edx, %rdx
+ 1343 0e41 48C1E203 		salq	$3, %rdx
+ 1344 0e45 4801C2   		addq	%rax, %rdx
+ 1345 0e48 488B45D8 		movq	-40(%rbp), %rax
+ 1346 0e4c F20F1040 		movsd	120(%rax), %xmm0
+ 1346      78
+ 1347 0e51 F20F1102 		movsd	%xmm0, (%rdx)
+ 248:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_vel[t] = _bc.n_type;
+ 1348              		.loc 1 248 0
+ 1349 0e55 488B45E8 		movq	-24(%rbp), %rax
+ 1350 0e59 488B4038 		movq	56(%rax), %rax
+ 1351 0e5d 8B55F4   		movl	-12(%rbp), %edx
+ 1352 0e60 4863D2   		movslq	%edx, %rdx
+ 1353 0e63 48C1E202 		salq	$2, %rdx
+ 1354 0e67 4801C2   		addq	%rax, %rdx
+ 1355 0e6a 488B45D8 		movq	-40(%rbp), %rax
+ 1356 0e6e 8B809400 		movl	148(%rax), %eax
+ 1356      0000
+ 1357 0e74 8902     		movl	%eax, (%rdx)
+ 249:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 type_rho[t] = _bc.n_type;
+ 1358              		.loc 1 249 0
+ 1359 0e76 488B45E8 		movq	-24(%rbp), %rax
+ 1360 0e7a 488B4030 		movq	48(%rax), %rax
+ 1361 0e7e 8B55F4   		movl	-12(%rbp), %edx
+ 1362 0e81 4863D2   		movslq	%edx, %rdx
+ 1363 0e84 48C1E202 		salq	$2, %rdx
+ 1364 0e88 4801C2   		addq	%rax, %rdx
+ 1365 0e8b 488B45D8 		movq	-40(%rbp), %rax
+ 1366 0e8f 8B809400 		movl	148(%rax), %eax
+ 1366      0000
+ 1367 0e95 8902     		movl	%eax, (%rdx)
+ 250:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 251:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 periodic_node[t] = t - (num_y-2)*num_x;
+ 1368              		.loc 1 251 0
+ 1369 0e97 488B45E8 		movq	-24(%rbp), %rax
+ 1370 0e9b 488B4040 		movq	64(%rax), %rax
+ 1371 0e9f 8B55F4   		movl	-12(%rbp), %edx
+ 1372 0ea2 4863D2   		movslq	%edx, %rdx
+ 1373 0ea5 48C1E202 		salq	$2, %rdx
+ 1374 0ea9 4801D0   		addq	%rdx, %rax
+ 1375 0eac 8B55E0   		movl	-32(%rbp), %edx
+ 1376 0eaf 83EA02   		subl	$2, %edx
+ 1377 0eb2 0FAF55E4 		imull	-28(%rbp), %edx
+ 1378 0eb6 8B4DF4   		movl	-12(%rbp), %ecx
+GAS LISTING /tmp/ccSoABb0.s 			page 32
+
+
+ 1379 0eb9 29D1     		subl	%edx, %ecx
+ 1380 0ebb 89CA     		movl	%ecx, %edx
+ 1381 0ebd 8910     		movl	%edx, (%rax)
+ 252:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 neighbour[t] = t - 1;
+ 1382              		.loc 1 252 0
+ 1383 0ebf 488B45E8 		movq	-24(%rbp), %rax
+ 1384 0ec3 488B4048 		movq	72(%rax), %rax
+ 1385 0ec7 8B55F4   		movl	-12(%rbp), %edx
+ 1386 0eca 4863D2   		movslq	%edx, %rdx
+ 1387 0ecd 48C1E202 		salq	$2, %rdx
+ 1388 0ed1 4801D0   		addq	%rdx, %rax
+ 1389 0ed4 8B55F4   		movl	-12(%rbp), %edx
+ 1390 0ed7 83EA01   		subl	$1, %edx
+ 1391 0eda 8910     		movl	%edx, (%rax)
+ 253:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 254:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc_include[t] = false;
+ 1392              		.loc 1 254 0
+ 1393 0edc 488B45E8 		movq	-24(%rbp), %rax
+ 1394 0ee0 488B5010 		movq	16(%rax), %rdx
+ 1395 0ee4 8B45F4   		movl	-12(%rbp), %eax
+ 1396 0ee7 4898     		cltq
+ 1397 0ee9 4801D0   		addq	%rdx, %rax
+ 1398 0eec C60000   		movb	$0, (%rax)
+ 1399 0eef EB13     		jmp	.L72
+ 1400              	.L71:
+ 255:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }else {
+ 256:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****                 bc[t] = false;
+ 1401              		.loc 1 256 0
+ 1402 0ef1 488B45E8 		movq	-24(%rbp), %rax
+ 1403 0ef5 488B5008 		movq	8(%rax), %rdx
+ 1404 0ef9 8B45F4   		movl	-12(%rbp), %eax
+ 1405 0efc 4898     		cltq
+ 1406 0efe 4801D0   		addq	%rdx, %rax
+ 1407 0f01 C60000   		movb	$0, (%rax)
+ 1408              	.L72:
+ 257:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             }
+ 258:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 259:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 260:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             t++;
+ 1409              		.loc 1 260 0 discriminator 2
+ 1410 0f04 8345F401 		addl	$1, -12(%rbp)
+ 178:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****              // West boundary
+ 1411              		.loc 1 178 0 discriminator 2
+ 1412 0f08 8345FC01 		addl	$1, -4(%rbp)
+ 1413 0f0c E9E4FAFF 		jmp	.L73
+ 1413      FF
+ 1414              	.L61:
+ 1415              	.LBE10:
+ 1416              	.LBE9:
+ 177:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****             for (int i =0; i < num_x; i++){
+ 1417              		.loc 1 177 0 discriminator 2
+ 1418 0f11 8345F801 		addl	$1, -8(%rbp)
+ 1419 0f15 E9C8FAFF 		jmp	.L74
+ 1419      FF
+ 1420              	.L75:
+ 1421              	.LBE8:
+ 261:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****         }
+GAS LISTING /tmp/ccSoABb0.s 			page 33
+
+
+ 262:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 263:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 264:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp ****     }
+ 265:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** 
+ 266:/home/brendan/Dropbox/PhD/Code/LBM/2D LBFS/src/Boundary_Conditions.cpp **** }
+ 1422              		.loc 1 266 0
+ 1423 0f1a 90       		nop
+ 1424 0f1b 5D       		popq	%rbp
+ 1425              		.cfi_def_cfa 7, 8
+ 1426 0f1c C3       		ret
+ 1427              		.cfi_endproc
+ 1428              	.LFE19:
+ 1430              		.weak	_ZTV19Boundary_Conditions
+ 1431              		.section	.rodata._ZTV19Boundary_Conditions,"aG",@progbits,_ZTV19Boundary_Conditions,comdat
+ 1432              		.align 8
+ 1435              	_ZTV19Boundary_Conditions:
+ 1436 0000 00000000 		.quad	0
+ 1436      00000000 
+ 1437 0008 00000000 		.quad	_ZTI19Boundary_Conditions
+ 1437      00000000 
+ 1438 0010 00000000 		.quad	_ZN19Boundary_ConditionsD1Ev
+ 1438      00000000 
+ 1439 0018 00000000 		.quad	_ZN19Boundary_ConditionsD0Ev
+ 1439      00000000 
+ 1440              		.weak	_ZTI19Boundary_Conditions
+ 1441              		.section	.rodata._ZTI19Boundary_Conditions,"aG",@progbits,_ZTI19Boundary_Conditions,comdat
+ 1442              		.align 8
+ 1445              	_ZTI19Boundary_Conditions:
+ 1446 0000 00000000 		.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
+ 1446      00000000 
+ 1447 0008 00000000 		.quad	_ZTS19Boundary_Conditions
+ 1447      00000000 
+ 1448              		.weak	_ZTS19Boundary_Conditions
+ 1449              		.section	.rodata._ZTS19Boundary_Conditions,"aG",@progbits,_ZTS19Boundary_Conditions,comdat
+ 1450              		.align 16
+ 1453              	_ZTS19Boundary_Conditions:
+ 1454 0000 3139426F 		.string	"19Boundary_Conditions"
+ 1454      756E6461 
+ 1454      72795F43 
+ 1454      6F6E6469 
+ 1454      74696F6E 
+ 1455              		.text
+ 1456              	.Letext0:
+ 1457              		.file 2 "include/Boundary_Conditions.h"
+GAS LISTING /tmp/ccSoABb0.s 			page 34
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Boundary_Conditions.cpp
+     /tmp/ccSoABb0.s:7      .text:0000000000000000 _ZN19Boundary_ConditionsC2Eii
+     /tmp/ccSoABb0.s:1435   .rodata._ZTV19Boundary_Conditions:0000000000000000 _ZTV19Boundary_Conditions
+     /tmp/ccSoABb0.s:7      .text:0000000000000000 _ZN19Boundary_ConditionsC1Eii
+     /tmp/ccSoABb0.s:278    .text:00000000000002a4 _ZN19Boundary_ConditionsD2Ev
+     /tmp/ccSoABb0.s:278    .text:00000000000002a4 _ZN19Boundary_ConditionsD1Ev
+     /tmp/ccSoABb0.s:442    .text:0000000000000444 _ZN19Boundary_ConditionsD0Ev
+     /tmp/ccSoABb0.s:469    .text:000000000000046a _ZN19Boundary_Conditions26assign_boundary_conditionsEii13quad_bcs_plus
+     /tmp/ccSoABb0.s:946    .text:00000000000009c2 _ZN19Boundary_Conditions26assign_boundary_conditionsEii8quad_bcs
+     /tmp/ccSoABb0.s:1445   .rodata._ZTI19Boundary_Conditions:0000000000000000 _ZTI19Boundary_Conditions
+     /tmp/ccSoABb0.s:1453   .rodata._ZTS19Boundary_Conditions:0000000000000000 _ZTS19Boundary_Conditions
+
+UNDEFINED SYMBOLS
+_Znam
+exit
+__cxa_throw_bad_array_new_length
+_ZdaPv
+_ZdlPv
+_ZTVN10__cxxabiv117__class_type_infoE
