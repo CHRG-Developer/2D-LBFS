@@ -621,8 +621,8 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
     double residual_factor;
     double angular_freq, wom_cos,force;
     std::clock_t start;
-    std::ofstream error_output , vortex_output;
-    std::string output_dir,decay_dir;
+    std::ofstream error_output , vortex_output , max_u;
+    std::string output_dir,decay_dir,max_u_dir;
     vector_var cell_1, cell_2, interface_node, lattice_node, delta_u, delta_v ,delta_w,delta_rho;
     vector_var relative_interface;
     vector_var  vel_lattice,  rho_u_interface , u_interface;
@@ -646,8 +646,10 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
     int bc_node;
     int timesteps;
     //calculate timesteps
-
-
+    int mid_x, mid_y ,center_node;
+    mid_x = ceil(Mesh.get_num_x()/2);
+    mid_y = ceil(Mesh.get_num_y()/2);
+    center_node = Mesh.get_num_x() *mid_y + mid_x;
 
 
     ///Initialisations
@@ -667,12 +669,16 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
     timesteps = ceil( globals.simulation_length/delta_t);
     output_dir = globals.output_file +"/error.txt";
     decay_dir = globals.output_file +"/vortex_error.txt";
+    max_u_dir = globals.output_file +"/max_u.txt";
    // error_output.open("/home/brendan/Dropbox/PhD/Test Cases/Couette Flow/error.txt", ios::out);
     error_output.open(output_dir.c_str(), ios::out);
     vortex_output.open(decay_dir.c_str(), ios::out);
+    max_u.open(max_u_dir.c_str(), ios::out);
+
+
     populate_e_alpha(e_alpha,lattice_weight,c,globals.PI,9);
     time =0;
-    angular_freq = visc* pow(globals.womersley_no,2) / pow(Mesh.get_Y(),2);
+    angular_freq = visc* pow(globals.womersley_no,2) / pow(Mesh.get_Y()/2,2);
     force = -init_conds.pressure_gradient ;
 
     // residual_factor = delta_t/ Mesh.get_s_area(0);
@@ -1199,7 +1205,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                     f3 =f3/f1;
 
                     temp_soln.update(f1,f2,f3,0.0, i);
-                    temp_soln.update(1.0,f2,f3,0.0, i);
+                   // temp_soln.update(1.0,f2,f3,0.0, i);
 
                     //add contributions to
                     soln_t1.add_rho(i, delta_t* rk4.beta[rk] * residual_worker.get_rho(i));
@@ -1211,7 +1217,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                     f3 = soln_t1.get_v(i)/soln_t1.get_rho(i);
 
                     soln.update(f1,f2,f3,0.0, i);
-                    soln.update(1.0,f2,f3,0.0, i);
+                   // soln.update(1.0,f2,f3,0.0, i);
                 }
 
             }
@@ -1221,9 +1227,9 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
 
         for( int i = 0; i < Mesh.get_total_cells(); i++){
                 if( ! bcs.get_bc(i)){
-                    convergence_residual.add_ansys_l2_norm_residuals(soln_t1.get_rho(i),soln_t0.get_rho(i)
+                    convergence_residual.add_l2_norm_residuals(soln_t1.get_rho(i),soln_t0.get_rho(i)
                                     ,soln_t1.get_u(i),soln_t0.get_u(i),
-                                    soln_t1.get_v(i),soln_t0.get_v(i),residual_factor);
+                                    soln_t1.get_v(i),soln_t0.get_v(i));
                        //error checking
                     if (std::isnan(temp_soln.get_rho(i)) || std::isnan(temp_soln.get_u(i))) {
                                     if( mg == 0){
@@ -1231,14 +1237,15 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                     }
                                     return;
                             }
-                    if (temp_soln.get_rho(i) > 10.0){
+                    if (temp_soln.get_rho(i)/init_conds.average_rho > 10.0){
                         return;
                     }
 
                 }
         }
 
-        convergence_residual.ansys_5_iter_rms(t);
+        //convergence_residual.ansys_5_iter_rms(t);
+        convergence_residual.l2_norm_rms();
 
         if( mg == 0 && t%1000 == 1){
             time = t*delta_t;
@@ -1246,8 +1253,9 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
             convergence_residual.rho_rms << ", " << convergence_residual.u_rms << ", " <<
             convergence_residual.v_rms << " , FMG cycle: " << fmg << endl;
             cout << "time t=" << time  << " error e =" << convergence_residual.max_error() << std::endl;
-
+            max_u << t << "," << soln.get_u(center_node) << "," << force << endl;
             tecplot_output solution(globals,Mesh,soln,bcs,2,time,pp);
+            soln.output_centrelines(globals.output_file,globals,Mesh,time);
 
         }
 
@@ -1255,7 +1263,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
             if( mg == 0){
                 error_output.close();
                 vortex_output.close();
-
+                max_u.close();
 
                 // vortex calcs
                 x_gradients.update_gradients(bcs,Mesh,domain,1,temp_soln);
@@ -1263,7 +1271,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                 pp.calc_vorticity(x_gradients,y_gradients);
                  pp.calc_streamfunction(Mesh,globals,bcs);
                  tecplot_output solution(globals,Mesh,soln,bcs,2,time,pp);
-
+                soln.output_centrelines(globals.output_file,globals,Mesh,time);
             }
 
             return ;
@@ -1274,6 +1282,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
     pp.calc_streamfunction(Mesh,globals,bcs);
     error_output.close();
     vortex_output.close();
+    max_u.close();
     tecplot_output solution(globals,Mesh,soln,bcs,2,time,pp);
 
 }

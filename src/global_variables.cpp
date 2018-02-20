@@ -22,7 +22,7 @@ void global_variables::initialise(domain_geometry domain,initial_conditions init
     // viscosity = MA/root(3) /Re
      std::ostringstream s;
      double visc;
-     visc = max_velocity * domain.Y/domain.dt /reynolds_number;
+     visc =  max_velocity * domain.Y/domain.dt /reynolds_number;
     int d_t;
     d_t =1;
      tau = 3*visc/d_t + 0.5;  // non-dimensional dt is 1 here
@@ -31,7 +31,7 @@ void global_variables::initialise(domain_geometry domain,initial_conditions init
     knudsen_number = max_velocity *sqrt(3) / reynolds_number;
     s << "RE_" << reynolds_number << " N_CELLS_" << domain.Y <<
                     " MA_" << max_velocity *sqrt(3)/scale << " dt_" << domain.dt
-                    << " DT_" << time_marching_step;
+                    << " DT_" << time_marching_step << " wom_ " << womersley_no;
     simulation_name = s.str();
     boost::replace_all(simulation_name,".","_");
     output_file = create_output_directory();
@@ -64,9 +64,9 @@ void global_variables::reduce_time_step( ){
 }
 std::string global_variables::create_output_directory(){
 
-    std::string output_file;
+    std::string output_file,plt,ux,vy,max_u;
     std::string folder;
-    std::ostringstream s;
+    std::ostringstream s ,s1,s2,s3,s4;
     //output_file = "C:/Users/brendan/Dropbox/PhD/Test Cases/Poiseuille Flow/";
 
     output_file = output_file_dir;
@@ -74,7 +74,7 @@ std::string global_variables::create_output_directory(){
     if( simulation_name ==  "default"){
         s << "tol " << tolerance << " RE " << reynolds_number
          << " t " << time_marching_step << " gamma " << pre_conditioned_gamma << " tau "
-         << tau;
+         << tau << " wom " << womersley_no;
          folder = s.str();
 
     }else{
@@ -90,6 +90,25 @@ std::string global_variables::create_output_directory(){
 
     boost::filesystem::path dir(output_file);
     boost::filesystem::create_directories(dir);
+
+    // create plt, uy, vx folders
+    s1 << "/plt";
+    plt = output_file + s1.str();
+    boost::filesystem::path dir1(plt);
+    boost::filesystem::create_directories(dir1);
+
+    // create plt, uy, vx folders
+    s2 << "/uy";
+    ux = output_file + s2.str();
+    boost::filesystem::path dir2(ux);
+    boost::filesystem::create_directories(dir2);
+
+    // create plt, uy, vx folders
+    s3 << "/vx";
+    vy = output_file + s3.str();
+    boost::filesystem::path dir3(vy);
+    boost::filesystem::create_directories(dir3);
+
     output_file = output_file;
     return output_file;
 

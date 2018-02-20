@@ -45,7 +45,7 @@ void program::run(char* xml_input){
     int fmg =0; // first full multigrid cycle
     std::clock_t start = clock();
     double duration;
-
+    duration = 0;
 
     preprocessor pre_processor;
 
@@ -56,7 +56,7 @@ void program::run(char* xml_input){
     copyfile(xml_input,globals.output_file);
      // create Mesh
     Mesh mesh(domain,globals);
-
+    output_globals(globals,duration);
     remove_existing_files(globals);
 
     // create boundary conditions
@@ -100,7 +100,7 @@ void program::run(char* xml_input){
 
     soln.post_process(globals.pre_conditioned_gamma,mesh, globals,initial_conds);
     soln.output(globals.output_file, globals, domain);
-    soln.output_centrelines(globals.output_file,globals,mesh);
+    //soln.output_centrelines(globals.output_file,globals,mesh);
     //post_processor.output_vtk_mesh(globals.output_file,globals,domain);
 
     std::clock_t end = clock();
@@ -128,7 +128,8 @@ void program::remove_existing_files(global_variables &globals){
 
             for (fs::directory_iterator it(p); it !=end; ++it){
                 try{
-                    if( fs::is_regular_file(it->status()) && (it->path().extension().compare(".plt") == 0))
+                    if( fs::is_regular_file(it->status()) && (it->path().extension().compare(".plt") == 0 ||
+                    it->path().extension().compare(".dat") == 0))
                     {
                         fs:remove(it->path());
                     }

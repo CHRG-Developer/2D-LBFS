@@ -25,7 +25,7 @@ tecplot_output::tecplot_output(global_variables &globals, Mesh &Mesh, Solution &
     tt << timestamp;
 
     if( fileType_e == 1){
-        output_location = globals.output_file + "/grid.plt";
+        output_location = globals.output_file + "/plt/grid.plt";
         valueLocation = new int[3];
         for(int i = 0; i < 3;i++){
                valueLocation[i] = 1;
@@ -33,7 +33,7 @@ tecplot_output::tecplot_output(global_variables &globals, Mesh &Mesh, Solution &
         strandID  = 0;   /* StaticZone */
 
     }else{
-        output_location = globals.output_file + "/" + tt.str() +".plt";
+        output_location = globals.output_file + "/plt/" + tt.str() +".plt";
         valueLocation = new int[8];
         for(int i = 0; i < 8;i++){
                valueLocation[i] = 0;

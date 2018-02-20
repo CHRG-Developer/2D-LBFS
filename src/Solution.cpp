@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 #include <math.h>
 #include <cmath>
@@ -181,31 +182,32 @@ void Solution::output (std::string output_location, global_variables &globals,
 }
 
 void Solution::output_centrelines (std::string output_location, global_variables &globals,
-        Mesh &mesh){
+        Mesh &mesh, double time){
 
-    std::ofstream rho_txt,u_txt,v_txt ;
-    std::string rho_file, u_file, v_file;
+    std::ofstream rho_txt,u_txt,v_txt;
+    std::string rho_file ;
+    std::ostringstream u_file, v_file;
+    u_file << output_location << "/uy/" << time << ".dat";
+    v_file << output_location << "/vx/" << time << ".dat";
 
-    u_file = output_location + "/uy.dat";
-    v_file = output_location + "/vx.dat";
 
-    u_txt.open(u_file.c_str(), ios::out);
-    v_txt.open(v_file.c_str(), ios::out);
-
+    u_txt.open(u_file.str(), ios::out);
+    v_txt.open(v_file.str(), ios::out);
 
     int mid_x, mid_y;
     mid_x = ceil(mesh.get_num_x()/2);
     mid_y = ceil(mesh.get_num_y()/2);
     int counter ;
     counter = 0;
-    for( int i = 0; i < mesh.get_num_x(); i++){
-        for ( int j =0 ; j < mesh.get_num_y(); j++){
 
-            if (i == mid_x && (j >0) && ( j< (mesh.get_num_y()-1))) {
+    for ( int j =0 ; j < mesh.get_num_y(); j++){
+        for( int i = 0; i < mesh.get_num_x(); i++){
+
+            if (j == mid_y && (j >0) && ( j< (mesh.get_num_y()-1))) {
                 v_txt   << mesh.get_centroid_x(counter)/mesh.get_X() << " ,"  << v[counter]/globals.max_velocity << endl;
 
             }
-            if (j == mid_y && (i >0) && ( i< (mesh.get_num_x()-1))){
+            if ( i == mid_x  && (i >0) && ( i< (mesh.get_num_x()-1))){
                 u_txt << u[counter]/globals.max_velocity << " ," << mesh.get_centroid_y(counter)/mesh.get_Y()    << endl;
             }
 
@@ -214,9 +216,11 @@ void Solution::output_centrelines (std::string output_location, global_variables
 
      }
 
+
     rho_txt.close();
     u_txt.close();
     v_txt.close();
+
 
 }
 

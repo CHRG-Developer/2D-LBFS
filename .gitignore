@@ -1,0 +1,5 @@
+*.[oa]
+*.[o]
+*.o
+obj/Release/src/tecplot_output.o
+obj/Release/src/Solver.o

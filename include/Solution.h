@@ -54,7 +54,7 @@ class Solution
         void update_gradients(Boundary_Conditions &bcs,Mesh &mesh,domain_geometry &domain,
                     int direction, Solution &src );
         void output_centrelines (std::string output_location, global_variables &globals,
-        Mesh &mesh);
+        Mesh &mesh,double time);
 
     protected:
     private:
