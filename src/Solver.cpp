@@ -588,8 +588,6 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
     Solution soln_t0(Mesh.get_total_cells()); // solution at t0 in RK cycle
     Solution soln_t1(Mesh.get_total_cells());
     Solution residual_worker(Mesh.get_total_cells()); // stores residuals
-    Solution rj2(Mesh.get_total_cells()); // stores residuals
-    Solution rj3(Mesh.get_total_cells()); // stores residuals
     Solution vortex_error(Mesh.get_total_cells());
     Solution real_error (Mesh.get_total_cells());
     Solution x_gradients (Mesh.get_total_cells());
@@ -654,15 +652,15 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
 
     ///Initialisations
 
-    dt = 1.0; // timestepping for streaming // non-dim equals 1
+    dt = domain.dt; // timestepping for streaming // non-dim equals 1
     c = 1; // assume lattice spacing is equal to streaming timestep
     cs = c/sqrt(3);
-    visc = (globals.tau -0.5)/3;
+    visc = (globals.tau -0.5)/3 * domain.dt;
     fneq_tau = (globals.tau -0.5);
     dx_2 = Mesh.get_dx()/2;
-    dx_2m1 = dx_2-1; //calculating here save operations in the loop
+    dx_2m1 = dx_2-dt; //calculating here save operations in the loop
     dy_2 = Mesh.get_dy()/2;
-    dy_2m1 = dy_2-1; //calculating here save operations in the loop
+    dy_2m1 = dy_2-dt; //calculating here save operations in the loop
     temp_soln.clone(soln);
     soln_t1.clone(soln);
     local_tolerance = globals.tolerance;
@@ -857,8 +855,11 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                                  cell_2);
 
                         // skip unnessary flux calculations between neighbouring BC cells
-                        if( neighbour == -1){
 
+
+                        //nieghbour is ghost cell
+                        if( neighbour == -1){
+                            //both ghost cells
                         }else if(bcs.get_bc(i) && bcs.get_bc(neighbour)){
 
 
@@ -894,19 +895,19 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                     case 2: // bottom node
 
                                         rho_lattice[k] =  rho_lattice[0] - (y_gradients.get_rho(i)
-                                        + y_gradients.get_rho(neighbour))*0.5;
+                                        + y_gradients.get_rho(neighbour))*0.5 * dt;
                                         u_lattice[k] = u_lattice[0] - (y_gradients.get_u(i)
-                                        + y_gradients.get_u(neighbour))*0.5;
+                                        + y_gradients.get_u(neighbour))*0.5* dt;
                                         v_lattice[k] = v_lattice[0] - (y_gradients.get_v(i)
-                                        + y_gradients.get_v(neighbour))*0.5;
+                                        + y_gradients.get_v(neighbour))*0.5* dt;
                                         break;
                                     case 4: // top node
                                         rho_lattice[k] =  rho_lattice[0] + (y_gradients.get_rho(i)
-                                        + y_gradients.get_rho(neighbour))*0.5;
+                                        + y_gradients.get_rho(neighbour))*0.5* dt;
                                         u_lattice[k] = u_lattice[0] + (y_gradients.get_u(i)
-                                        + y_gradients.get_u(neighbour))*0.5;
+                                        + y_gradients.get_u(neighbour))*0.5* dt;
                                         v_lattice[k] = v_lattice[0] + (y_gradients.get_v(i)
-                                        + y_gradients.get_v(neighbour))*0.5;
+                                        + y_gradients.get_v(neighbour))*0.5* dt;
                                         break;
 
                                     case 1:
@@ -915,14 +916,14 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                         v_lattice[k]  = temp_soln.get_v(i) + x_gradients.get_v(i)* (dx_2m1);
                                         break;
                                     case 5:
-                                        rho_lattice[k] =  rho_lattice[1] - y_gradients.get_rho(i) ;
-                                        u_lattice[k] = u_lattice[1] - y_gradients.get_u(i) ;
-                                        v_lattice[k] = v_lattice[1] - y_gradients.get_v(i);
+                                        rho_lattice[k] =  rho_lattice[1] - y_gradients.get_rho(i) * dt ;
+                                        u_lattice[k] = u_lattice[1] - y_gradients.get_u(i) * dt;
+                                        v_lattice[k] = v_lattice[1] - y_gradients.get_v(i) * dt;
                                         break;
                                     case 8:
-                                        rho_lattice[k] =  rho_lattice[1] + y_gradients.get_rho(i) ;
-                                        u_lattice[k] = u_lattice[1] + y_gradients.get_u(i) ;
-                                        v_lattice[k] = v_lattice[1] + y_gradients.get_v(i);
+                                        rho_lattice[k] =  rho_lattice[1] + y_gradients.get_rho(i) * dt ;
+                                        u_lattice[k] = u_lattice[1] + y_gradients.get_u(i) * dt;
+                                        v_lattice[k] = v_lattice[1] + y_gradients.get_v(i) * dt;
 
                                         break;
 
@@ -932,14 +933,14 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                         v_lattice[k]= temp_soln.get_v(neighbour) - x_gradients.get_v(neighbour)* (dx_2m1);
                                         break;
                                     case 6:
-                                        rho_lattice[k] =  rho_lattice[3] - y_gradients.get_rho(neighbour) ;
-                                        u_lattice[k] = u_lattice[3] - y_gradients.get_u(neighbour) ;
-                                        v_lattice[k] = v_lattice[3] - y_gradients.get_v(neighbour);
+                                        rho_lattice[k] =  rho_lattice[3] - y_gradients.get_rho(neighbour) * dt;
+                                        u_lattice[k] = u_lattice[3] - y_gradients.get_u(neighbour) * dt;
+                                        v_lattice[k] = v_lattice[3] - y_gradients.get_v(neighbour) * dt;
                                         break;
                                     case 7:
-                                        rho_lattice[k] =  rho_lattice[3] + y_gradients.get_rho(neighbour) ;
-                                        u_lattice[k] = u_lattice[3] + y_gradients.get_u(neighbour) ;
-                                        v_lattice[k] = v_lattice[3] + y_gradients.get_v(neighbour);
+                                        rho_lattice[k] =  rho_lattice[3] + y_gradients.get_rho(neighbour) * dt;
+                                        u_lattice[k] = u_lattice[3] + y_gradients.get_u(neighbour) * dt;
+                                        v_lattice[k] = v_lattice[3] + y_gradients.get_v(neighbour) * dt;
 
                                         break;
                                  }
@@ -957,20 +958,20 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                         break;
                                     case 1:
                                         rho_lattice[k] =  rho_lattice[0] - (x_gradients.get_rho(i)
-                                        + x_gradients.get_rho(neighbour))*0.5;
+                                        + x_gradients.get_rho(neighbour))*0.5 * dt;
                                         u_lattice[k] = u_lattice[0] - (x_gradients.get_u(i)
-                                        + x_gradients.get_u(neighbour))*0.5;
+                                        + x_gradients.get_u(neighbour))*0.5 * dt;
                                         v_lattice[k] = v_lattice[0] - (x_gradients.get_v(i)
-                                        + x_gradients.get_v(neighbour))*0.5;
+                                        + x_gradients.get_v(neighbour))*0.5 * dt;
                                         break;
                                     case 3:
 
                                         rho_lattice[k] =  rho_lattice[0] + (x_gradients.get_rho(i)
-                                        + x_gradients.get_rho(neighbour))*0.5;
+                                        + x_gradients.get_rho(neighbour))*0.5 * dt;
                                         u_lattice[k] = u_lattice[0] + (x_gradients.get_u(i)
-                                        + x_gradients.get_u(neighbour))*0.5;
+                                        + x_gradients.get_u(neighbour))*0.5 * dt;
                                         v_lattice[k] = v_lattice[0] + (x_gradients.get_v(i)
-                                        + x_gradients.get_v(neighbour))*0.5;
+                                        + x_gradients.get_v(neighbour))*0.5 * dt;
 
                                         break;
 
@@ -980,14 +981,14 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                         v_lattice[k]= temp_soln.get_v(i) + y_gradients.get_v(i)* (dy_2m1);
                                         break;
                                     case 5:
-                                        rho_lattice[k] =  rho_lattice[2] - x_gradients.get_rho(i) ;
-                                        u_lattice[k] = u_lattice[2] - x_gradients.get_u(i) ;
-                                        v_lattice[k] = v_lattice[2] - x_gradients.get_v(i);
+                                        rho_lattice[k] =  rho_lattice[2] - x_gradients.get_rho(i) * dt ;
+                                        u_lattice[k] = u_lattice[2] - x_gradients.get_u(i) * dt ;
+                                        v_lattice[k] = v_lattice[2] - x_gradients.get_v(i) * dt;
                                         break;
                                     case 6:
-                                        rho_lattice[k] =  rho_lattice[2] + x_gradients.get_rho(i) ;
-                                        u_lattice[k] = u_lattice[2] + x_gradients.get_u(i) ;
-                                        v_lattice[k] = v_lattice[2] + x_gradients.get_v(i);
+                                        rho_lattice[k] =  rho_lattice[2] + x_gradients.get_rho(i) * dt;
+                                        u_lattice[k] = u_lattice[2] + x_gradients.get_u(i) * dt;
+                                        v_lattice[k] = v_lattice[2] + x_gradients.get_v(i) * dt;
 
                                         break;
 
@@ -997,14 +998,14 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                                         v_lattice[k]= temp_soln.get_v(neighbour) - y_gradients.get_v(neighbour)* (dy_2m1);
                                         break;
                                     case 7:
-                                        rho_lattice[k] =  rho_lattice[4] + x_gradients.get_rho(neighbour) ;
-                                        u_lattice[k] = u_lattice[4] + x_gradients.get_u(neighbour) ;
-                                        v_lattice[k] = v_lattice[4] + x_gradients.get_v(neighbour);
+                                        rho_lattice[k] =  rho_lattice[4] + x_gradients.get_rho(neighbour) * dt;
+                                        u_lattice[k] = u_lattice[4] + x_gradients.get_u(neighbour) * dt;
+                                        v_lattice[k] = v_lattice[4] + x_gradients.get_v(neighbour) * dt;
                                         break;
                                     case 8:
-                                        rho_lattice[k] =  rho_lattice[4] - x_gradients.get_rho(neighbour) ;
-                                        u_lattice[k] = u_lattice[4] - x_gradients.get_u(neighbour) ;
-                                        v_lattice[k] = v_lattice[4] - x_gradients.get_v(neighbour);
+                                        rho_lattice[k] =  rho_lattice[4] - x_gradients.get_rho(neighbour) * dt ;
+                                        u_lattice[k] = u_lattice[4] - x_gradients.get_u(neighbour) * dt;
+                                        v_lattice[k] = v_lattice[4] - x_gradients.get_v(neighbour) * dt;
 
 
                                         break;
@@ -1128,10 +1129,7 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                             cell_flux.P =  x_flux.P /interface_area ;
                             cell_flux.momentum_x = x_flux.momentum_x /interface_area ;
                             cell_flux.momentum_y = x_flux.momentum_y /interface_area ;
-                            if ( fabs(cell_flux.momentum_y) > pow(10,-4)){
-                                cell_flux.momentum_y =1;
 
-                            }
 
                         }else{
                             feq_interface[2] = lattice_weight[2] * rho_interface*
@@ -1154,19 +1152,9 @@ void Solver::Uniform_Mesh_Solver_Clean_MK2( Mesh &Mesh , Solution &soln, Boundar
                             cell_flux.momentum_x = y_flux.momentum_x /interface_area ;
                             cell_flux.momentum_y = y_flux.momentum_y /interface_area ;
 
-                            if ( fabs(cell_flux.momentum_x) > pow(10,-4)){
-                                cell_flux.momentum_x =cell_flux.momentum_x;
-
-                            }
 
 
-                        }
-                        if ( j == 2){
-                                rj2.update(cell_flux.P, cell_flux.momentum_x,cell_flux.momentum_y,0.0,i);
-                        }
-                        if (j==3){
 
-                            rj3.update(cell_flux.P, cell_flux.momentum_x,cell_flux.momentum_y,0.0,i);
                         }
 
 

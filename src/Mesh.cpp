@@ -34,8 +34,8 @@ Mesh::Mesh(domain_geometry domain, global_variables globals)
 
 	//dx = X/(num_x_cells-2); // reset dx/dy t0 allow for ceiling
     //dy = Y/(num_y_cells -2);
-        dx =dx/domain.dt; // turn into non-dimensional form
-        dy =dy/domain.dt;
+       // dx =dx/domain.dt; // turn into non-dimensional form
+       // dy =dy/domain.dt;
         // 2.0 as cell is 2 LBM nodes in length
     cs = domain.cs;
 
@@ -128,9 +128,6 @@ Mesh::Mesh(domain_geometry domain, global_variables globals)
         }else{
             this->create_standard_mesh(0,0);
         }
-
-        X = X/domain.dt;
-    Y = Y/domain.dt;
 
 
     }else if(globals.mesh_type == 2){

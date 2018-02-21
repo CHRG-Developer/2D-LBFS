@@ -3,3 +3,9 @@
 *.o
 obj/Release/src/tecplot_output.o
 obj/Release/src/Solver.o
+*.o
+obj/Debug/src/global_variables.o
+*.o
+obj/Debug/src/global_variables.o
+obj/Debug/src/Mesh.o
+obj/Debug/src/program.o
